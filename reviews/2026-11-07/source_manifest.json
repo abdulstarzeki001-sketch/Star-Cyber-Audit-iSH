@@ -1,0 +1,61 @@
+{
+  "review_date": "2026-11-07",
+  "source_count": 10,
+  "public_repo_policy": "Source JS excluded from public repo; publish hashes, derived evidence and historical reports only.",
+  "javascript_files": [
+    {
+      "name": "QRDocument-BJwpoEJY.js",
+      "sha256": "23f8c5d87b6a91511af2a96f57075e8502861bd2f6d92d914a14222db4199400",
+      "bytes": 607716,
+      "publicly_uploaded": false
+    },
+    {
+      "name": "qrStore-B8bgApfd.js",
+      "sha256": "122527b8507637168eeb4365f879f160f02620d1dc997c74e3da1880a1573e77",
+      "bytes": 248,
+      "publicly_uploaded": false
+    },
+    {
+      "name": "AchievementDocument-DEzIzJ3I.js",
+      "sha256": "bec1dbe0a25694f05f30d5dcf6edb253fb2f9276d9e00b583ba416aabc941d7c",
+      "bytes": 11641,
+      "publicly_uploaded": false
+    },
+    {
+      "name": "useExitGate-BvHNutwH.js",
+      "sha256": "9d9a109e58d619a8afdf91bfcbd9f7e45377ddb8236e82e13597b896e56c3306",
+      "bytes": 6027,
+      "publicly_uploaded": false
+    },
+    {
+      "name": "QrCodeReaderCustoms-a-UBVR7y.js",
+      "sha256": "09b62507255c25910a196ca0ca1e5fb6d961be5d10287face07cc777aaf45c0b",
+      "bytes": 16490,
+      "publicly_uploaded": false
+    },
+    {
+      "name": "QRLocal-5TAaXbzM.js",
+      "sha256": "1e3ea9982971b4e4e08bb2ebee1520fe6a5056bc8590de4288fec80456fa9626",
+      "bytes": 10014,
+      "publicly_uploaded": false
+    }
+  ],
+  "prior_reports": [
+    {
+      "name": "UBOOR_qrStore_verified_addendum_2026-11-06.md",
+      "sha256_prefix": "1a34f8f2cc6d"
+    },
+    {
+      "name": "UBOOR_Star_Cyber_Audit_Comprehensive_2026-11-07.html",
+      "sha256_prefix": "c00d2ca07873"
+    },
+    {
+      "name": "UBOOR_verified_update_2026-11-06.md",
+      "sha256_prefix": "e13459ba0a47"
+    },
+    {
+      "name": "UBOOR_AchievementDocument_verified_addendum_2026-11-06.md",
+      "sha256_prefix": "b6941f42b397"
+    }
+  ]
+}
