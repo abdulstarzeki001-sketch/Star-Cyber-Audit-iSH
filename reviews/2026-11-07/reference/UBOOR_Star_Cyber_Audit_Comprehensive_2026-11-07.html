@@ -1,0 +1,304 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>UBOOR — Star Cyber Audit Comprehensive</title><style>
+:root{font-family:system-ui,-apple-system,'Segoe UI',Tahoma,Arial,sans-serif;line-height:1.9;color:#172638;background:#f5f7fb}body{margin:0;padding:24px 14px}main{margin:auto;max-width:1000px;padding:34px;background:white;border-radius:18px;box-shadow:0 8px 40px #162c4b12}h1,h2,h3{line-height:1.45;color:#173d70}h1{font-size:2rem;margin:0 0 1rem;padding-bottom:1.2rem;border-bottom:3px solid #d7e5f4}h2{margin-top:2rem;padding-bottom:.5rem;border-bottom:1px solid #d8e1e8}h3{margin-top:1.6rem}p,li{font-size:1rem}a{color:#1967a7}code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.89em;background:#eef3f8;padding:.15rem .3rem;border-radius:4px;direction:ltr;unicode-bidi:isolate}pre{background:#0e1b2c;color:#e8eff8;border-radius:8px;padding:1rem;overflow:auto;direction:ltr;text-align:left}pre code{background:transparent;color:inherit}table{width:100%;border-collapse:collapse;margin:1rem 0 1.6rem;font-size:.93rem;display:block;overflow-x:auto}td,th{padding:10px 12px;border:1px solid #dae4ef;vertical-align:top;min-width:125px}th{background:#edf3fa;text-align:right;color:#1d4468}blockquote{margin:1rem 0;padding:0 1rem;border-right:4px solid #4b7ca7;background:#f4f7fa}strong{color:#0d3057}footer{color:#6b7280;font-size:.9rem;margin-top:2.5rem} @media (max-width:650px){body{padding:0}main{border-radius:0;padding:18px 14px}h1{font-size:1.6rem}h2{font-size:1.28rem}}@media(prefers-color-scheme:dark){:root{background:#111925;color:#e4e8ee}main{background:#172233;box-shadow:none}h1,h2,h3,strong{color:#b7d9ff}table th{background:#263a4f;color:#d6e8fa}td,th{border-color:#405368}code{background:#25374a;color:#f6f8fb}blockquote{background:#223346}a{color:#9dceff}h1,h2{border-color:#38526a}}
+</style></head><body><main><h1>تقرير Star Cyber Audit الشامل — منصة UBOOR / عبور</h1>
+<p><strong>تاريخ التقرير:</strong> 7 نوفمبر 2026<br />
+<strong>الحالة:</strong> تحليل ثابت لملفات واجهة منشورة ونسخ JavaScript محفوظة؛ لا توجد جلسة مصادقة بالخادم أو فحص اختراق مباشر<br />
+<strong>النطاق:</strong> التعامل مع QR، تسجيل القراءات، حفظها محليًا، الوثائق والمعاينة والطباعة، تسجيل الدخول، بوابتا الدخول والخروج، الرفض والتعطيل، طبقة Huawei Cloud WAF، وتشغيل مختبر iSH.</p>
+<h2>1. ملخص النتائج</h2>
+<ul>
+<li>أكّد تشغيل مختبر iSH تحليل <strong>10 ملفات من 10</strong> كانت محفوظة ضمن <code>offline_samples/</code>، واستخراج <strong>33 مسار API مميزًا</strong> من هذه المجموعة، وإصدار <strong>15 إشارة مراجعة آلية</strong>. الإشارات ليست ثغرات مثبتة ولا تمثل العدد الكامل لنقاط API في النظام.</li>
+<li>فوق تلك المجموعة، روجع نص <strong>10 وحدات JavaScript إضافية</strong> من المصادر العامة خلال المحادثة، على عمق متفاوت. لم تدخل كلها ضمن نتائج العدّ الخاصة بتشغيل iSH، فلا ينبغي جمع عدد مساراتها مع 33 دون إعادة الجرد.</li>
+<li><code>QRCheckpoints</code> شاشة لعرض <code>read_doc</code>، وليست ماسح QR أو مصدر الحقيقة الحكومي. <code>qrStore</code> مخزن <code>localStorage[&quot;qr_readings&quot;]</code>، وليس سجل قراءة رسميًا.</li>
+<li><code>AchievementDocument</code> و<code>ShipmentDoc</code> يمكن أن يصنعا <strong>صورة QR محليًا</strong> من معرّف مستند إذا غاب حقل <code>qr_code</code>؛ ظهور صورة الرمز لا يثبت صدور رمز رسمي موقع.</li>
+<li>أكثر نقاط المراجعة أهمية: تسجيل Bearer في Console؛ احتمال تكرار POST عند أخطاء الاتصال؛ احتمال عرض سجل وثيقة غير مطابقة بسبب fallback؛ اختلاط توكن الموظف وصاحب الشركة في Axios؛ وحفظ بيانات محتملة الحساسية في متصفح مشترك.</li>
+</ul>
+<p><strong>الحد الحاسم:</strong> لم نثبت تزوير الوثائق، أو تجاوز صلاحيات الخادم، أو معرفة مفتاح توقيع QR، أو اعتماد قراءات سيطرات غير صحيحة. أي نتيجة من هذا النوع تحتاج دليلًا من الخادم واختبارات مخولة ومنضبطة.</p>
+<h2>2. مصادر المراجعة</h2>
+<h3>مجموعة iSH المحفوظة (10)</h3>
+<p><code>index-gleMzSil.js</code>، <code>QRLocal-5TAaXbzM.js</code>، <code>QRDocument-BJwpoEJY.js</code>، <code>QrCodeReaderCustoms-a-UBVR7y.js</code>، <code>useExitGate-BvHNutwH.js</code>، <code>AchievementDocument-DEzIzJ3I.js</code>، <code>ShipmentDoc-Dx885_fz.js</code>، <code>CompanyOwnerView-CIdFF3LL.js</code>، <code>qrStore-B8bgApfd.js</code>، <code>QRCheckpoints-Brs0uL0-.js</code>.</p>
+<h3>وحدات عامة إضافية تمت مراجعتها (10)</h3>
+<p><code>QrLocalImporter-DYzNB5Fh.js</code>، <code>QrControlScan-M6uGJnR1.js</code>، <code>useLocalCompany-DfV5kpAj.js</code>، <code>QRReadings-B-a3jcrk.js</code>، <code>ExitGateView-D33Au6wp.js</code>، <code>EntranceGateView-B9IBJo4k.js</code>، <code>DisableDocument-AXBjrkYS.js</code>، <code>RejectedLocalDocuments-CC07EpF_.js</code>، <code>QRImported-C65Oqm1K.js</code>، <code>QRHealthCertificate-Byvh35hk.js</code>.</p>
+<h3>مرجع وظيفي رسمي</h3>
+<p>المركز الوطني للتحول الرقمي العراقي: <a href="https://ndtc.gov.iq/services/aboor-platform">https://ndtc.gov.iq/services/aboor-platform</a>. يصف نطاق TIR والمحلي والمستورد والشهادات الصحية، ويؤرخ الإحصاءات المنشورة <strong>19 أغسطس 2026</strong>. تلك الأرقام ليست قياسًا آنيًا في تاريخ التقرير.</p>
+<h2>3. خريطة تدفق QR الموثقة</h2>
+<h3>أ. المحلي</h3>
+<p><code>QRLocal</code> → فك رمز الكاميرا بـ <code>BarcodeDetector</code> أو <code>jsQR</code> → توحيد قيمة QR إلى رابط عند الحاجة (<code>/robot?url=</code>) → <code>POST local_form/read_doc_company</code> بجسم <code>url</code> وإحداثيات → حفظ نسخة القراءة في <code>qrStore</code> → فتح <code>QRDocument</code> → عرض الوثيقة/قراءات <code>read_doc</code> أو رفضها حسب الواجهة.</p>
+<p><strong>ملاحظة:</strong> قراءات QR ونتائج الخادم تختلف عن سجلات التاريخ المحلية. قبول HTTP أو طباعة QR ليس شهادة أصالة.</p>
+<h3>ب. المستورد وبوابة الخروج</h3>
+<p><code>QrLocalImporter</code> → الكاميرا → <code>searchImportedGoods</code> من <code>useExitGate</code> → <code>POST support_org/read_qr_exitgate</code> مع <code>url</code> و<code>x_coordinate</code> و<code>y_coordinate</code> → وضع البيانات المسترجعة في حالة مشتركة → الانتقال إلى <code>AchievementDocument</code> عند نجاح HTTP وفق الفرع المفحوص. الدالة <code>searchImportedGoods</code> نفسها لا تضيف إلى <code>qrStore</code>.</p>
+<p><code>AchievementDocument</code> عندما يُعطى رقمًا قد يستدعي <code>POST support_org/return_doc_qrcode_export</code> بجسم <code>{doc_number:String(value)}</code>، ويعرض استمارة الناقل وسجل <code>read_doc</code>.</p>
+<h3>ج. الشهادة الصحية</h3>
+<p><code>QRHealthCertificate</code> → <code>POST BorderPort_HS/read_doc_health</code>، مع تخزين بيانات طباعة في <code>sessionStorage[&quot;hc_print&quot;]</code>. تفسّر الواجهة HTTP 402 كوثيقة منتهية الصلاحية، لكن ذلك لا يثبت قانون الصلاحية العام أو كيف يطبّقه الخادم.</p>
+<h3>د. قراءات السيطرات والسجلات</h3>
+<p><code>QRCheckpoints</code> يعرض اسم الجهة ووقت القراءة والإحداثيات. يستقبل <code>props.items</code> أو يستخدم بدائل <code>history.state.read_doc</code> ثم <code>sessionStorage[&quot;qr_read_doc&quot;]</code> ثم <code>route.query.read_doc</code>. <strong>لا يتصل بخادم API بنفسه</strong>.</p>
+<p><code>QrControlScan</code> يعرض سجلًا يتضمن رقم الوثيقة، اسم الموظف، الهاتف، السيطرة، نوع المنتج، الوقت، وملاحظة الرفض. المنطق الفعلي في <code>useLocalCompany</code>.</p>
+<h2>4. فهرس نقاط API ذات الصلة</h2>
+<table>
+<thead>
+<tr>
+  <th>الواجهة/المصدر</th>
+  <th>طريقة HTTP</th>
+  <th>المسار النسبي</th>
+  <th>وظيفة الواجهة المؤكدة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>QRLocal</code>, <code>QRImported</code></td>
+  <td>POST</td>
+  <td><code>local_form/read_doc_company</code></td>
+  <td>إرسال قراءة وثيقة الشركة</td>
+</tr>
+<tr>
+  <td><code>QRDocument</code></td>
+  <td>POST</td>
+  <td><code>local_form/refuse_doc_company</code></td>
+  <td>إرسال قرار رفض وسببه وإحداثياته</td>
+</tr>
+<tr>
+  <td><code>QRDocument</code></td>
+  <td>POST</td>
+  <td><code>BorderPort_HS/path-document-file</code></td>
+  <td>رفع صورة PNG منشأة من عرض الوثيقة</td>
+</tr>
+<tr>
+  <td><code>useExitGate</code></td>
+  <td>POST</td>
+  <td><code>support_org/read_qr_exitgate</code></td>
+  <td>قراءة QR في بوابة الخروج</td>
+</tr>
+<tr>
+  <td><code>useExitGate</code></td>
+  <td>POST</td>
+  <td><code>support_org/paginate_qrcode_reader_import</code></td>
+  <td>سجل قراءات المستورد</td>
+</tr>
+<tr>
+  <td><code>useExitGate</code></td>
+  <td>POST</td>
+  <td><code>support_org/return_doc_qrcode_export</code></td>
+  <td>استرجاع استمارة الناقل</td>
+</tr>
+<tr>
+  <td><code>useExitGate</code></td>
+  <td>POST</td>
+  <td><code>support_org/download_qrcode_readers_import</code></td>
+  <td>تنزيل سجل Excel</td>
+</tr>
+<tr>
+  <td><code>useExitGate</code></td>
+  <td>POST</td>
+  <td><code>BorderPort_HS/return_doc_hc_by_docnumber</code></td>
+  <td>استرجاع شهادة صحية برقم الوثيقة</td>
+</tr>
+<tr>
+  <td><code>useLocalCompany</code></td>
+  <td>POST</td>
+  <td><code>local_form/paginate_qrcode_reader2</code></td>
+  <td>سجل قراءات المحلي في QrControlScan</td>
+</tr>
+<tr>
+  <td><code>useLocalCompany</code></td>
+  <td>POST</td>
+  <td><code>local_form/return_doc_qrcode</code></td>
+  <td>تفاصيل الوثيقة للمعاينة</td>
+</tr>
+<tr>
+  <td><code>useLocalCompany</code></td>
+  <td>POST</td>
+  <td><code>local_form/download_qrcode_readers2</code></td>
+  <td>تصدير Excel</td>
+</tr>
+<tr>
+  <td><code>QRReadings</code></td>
+  <td>POST</td>
+  <td><code>local_form/pagination_qrcode_reader</code></td>
+  <td>سجل قراءات عبر شاشة أخرى</td>
+</tr>
+<tr>
+  <td><code>QRReadings</code></td>
+  <td>POST</td>
+  <td><code>local_form/download_qrcode_readers</code></td>
+  <td>تصدير عبر الشاشة الأخرى</td>
+</tr>
+<tr>
+  <td><code>QRHealthCertificate</code></td>
+  <td>POST</td>
+  <td><code>BorderPort_HS/read_doc_health</code></td>
+  <td>قراءة الشهادات الصحية</td>
+</tr>
+<tr>
+  <td><code>DisableDocument</code></td>
+  <td>POST</td>
+  <td><code>local_form/reset_company_qrcode</code></td>
+  <td>إجراء إعادة ضبط/تعطيل وثيقة وفق تسمية الواجهة</td>
+</tr>
+<tr>
+  <td><code>EntranceGateView</code></td>
+  <td>POST</td>
+  <td><code>carrier_register/scrape_search_goods_gateway_register</code></td>
+  <td>جلب بيانات حمولة مسجلة عند الدخول</td>
+</tr>
+<tr>
+  <td><code>EntranceGateView</code></td>
+  <td>POST</td>
+  <td><code>carrier_register/gateway_decision</code></td>
+  <td>إرسال قرار البوابة مع مرفقات</td>
+</tr>
+<tr>
+  <td><code>index</code></td>
+  <td>POST</td>
+  <td><code>local_form/company_verify_login</code></td>
+  <td>بدء دخول صاحب الشركة برقم الهاتف</td>
+</tr>
+<tr>
+  <td><code>index</code></td>
+  <td>POST</td>
+  <td><code>local_form/company_verification</code></td>
+  <td>التحقق من رمز الشركة</td>
+</tr>
+<tr>
+  <td><code>index</code></td>
+  <td>PUT</td>
+  <td><code>local_form/company_item_reduce</code></td>
+  <td>تحديث بيانات/عنصر شركة</td>
+</tr>
+</tbody>
+</table>
+<p><strong>تنبيه:</strong> هذا فهرس للشيفرة التي روجعت، وليس وثيقة OpenAPI رسمية. اختلاف <code>paginate_qrcode_reader2</code> عن <code>pagination_qrcode_reader</code> حقيقي في نصوص الواجهة، وقد يعكس وحدات أو أدوارًا مختلفة. لا ينبغي توحيدهما بالتخمين.</p>
+<h2>5. إنشاء الوثائق والرموز والطباعة</h2>
+<ul>
+<li><code>AchievementDocument</code>: يعرض رقم الوثيقة <code>doc_id</code> والتاريخ والوقت، المكتب الكمركي، السائق والعجلة والعربة والمحافظة والوزن والوجهة والمخلص والشركة والوصل والمبلغ ونوع الحمولة والملاحظات وقراءات السيطرات.</li>
+<li>يختار مادة QR وفق <code>qr_code || doc_id || doc_number</code>، ثم يرسم QR محليًا باستخدام <code>toDataURL</code>. عند إخفاق الرسم قد يستدعي <code>https://quickchart.io/qr?text=...</code>، ما قد يرسل محتوى QR إلى طرف خارجي عند تحميل الصورة.</li>
+<li><code>ShipmentDoc</code>: يعرض <code>qr_code</code> إن كان متاحًا، وفي بعض غيابه يولّد رمزًا معلوماتيًا من رقم الموافقة أو العجلة أو اسم السائق. لا دليل أنه رمز تحقق حكومي رسمي.</li>
+<li>الطباعة في الواجهتين تنسخ HTML/CSS إلى نافذة جديدة مع إعداد A4؛ لا يعني ذلك إنشاء ملف حكومي موقّع أو PDF معتمد. استخدام <code>height:296mm</code> و<code>overflow:hidden</code> في نموذج الناقل قد يقص المستند الطويل.</li>
+<li><code>QRDocument</code>: قد يلتقط صورة PNG لعنصر المستند ويرفعها إلى <code>BorderPort_HS/path-document-file</code> في سياق علم <code>auto_send</code>. هذا <strong>علم سير عمل محلي</strong>، وليس حالة إصدار رسمية.</li>
+</ul>
+<h2>6. الهوية والصلاحيات</h2>
+<ul>
+<li>لدى صاحب الشركة مسار دخول مكون من رقم هاتف (<code>company_verify_login</code>) ورمز (<code>company_verification</code>) ويحفظ <code>company_owner_token</code> في localStorage.</li>
+<li>لدى الموظف سياق مصادقة مستقل، لكن نسخة الواجهة تُظهر استعمال Axios مشترك؛ إن توفر توكن موظف، فقد يستبدل ترويسة <code>Authorization</code> الخاصة بطلب صاحب الشركة.</li>
+<li>عند HTTP 401 قد ينفّذ المعالج المشترك خروج الموظف وصاحب الشركة معًا؛ هذا خطر التباس جلسات وعيب فصل سياق مستخدمين.</li>
+<li>أزرار المعاينة والتنزيل والرفض محكومة في الواجهة بامتيازات نصية مثل <code>return_doc_qrcode</code>, <code>download_qrcode_readers2</code>, <code>refuse_doc_company</code>. <strong>إخفاء الزر لا يثبت صلاحية أو منعًا داخل الخادم</strong>.</li>
+<li>في <code>QRLocal</code>، يتجه غياب التوكن إلى <code>{name:&quot;Login&quot;}</code> بينما اسم المسار المرصود في Router هو <code>LoginView</code>، ما يستحق إصلاحًا.</li>
+</ul>
+<h2>7. سجلات المتصفح والتحقق من الروابط</h2>
+<ul>
+<li><code>qrStore</code> يحفظ مصفوفة في <code>localStorage['qr_readings']</code> باستخدام <code>unshift</code>. لا يوجد حدّ عدد أو انتهاء آلي أو تحقق من نوع المصفوفة أو إظهار خطأ فشل الحفظ.</li>
+<li>السجل المحلي قد يشمل الرابط الأصلي وبيانات الرد وإحداثيات الموقع وعلم <code>auto_send</code>. لا يُحذف المفتاح في وظائف تسجيل الخروج التي فُحصت.</li>
+<li><code>QRDocument</code> إذا لم يجد ID المعاينة المطلوبة قد يعرض <code>x[0]</code> (عنصرًا آخر من السجل)، وهو خلل ربط واجهة بالوثيقة الصحيحة.</li>
+<li><code>QRCheckpoints</code> قد يقرأ <code>read_doc</code> من Session Storage أو URL دون مقارنة معرف الوثيقة المطلوبة؛ يمكن عرض بيانات غير موثوقة في شاشة العميل، ولا يعني أن السجل الرسمي عُدّل.</li>
+<li>في <code>useLocalCompany</code> تنشأ ثلاثة إدخالات <code>QRCODE:...</code> تجريبية عند غياب <code>qr_readings</code>؛ يجب عدم تفسير كل صف في تخزين المتصفح كسجل صادر من الخادم.</li>
+</ul>
+<h2>8. مؤشرات هندسية مرتبة حسب الأولوية</h2>
+<table>
+<thead>
+<tr>
+  <th>الأهمية المقترحة</th>
+  <th>الدليل في المصدر</th>
+  <th>المشكلة/الأثر المحتمل</th>
+  <th>ما لا يثبته الدليل</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>عالية</td>
+  <td><code>QRLocal</code> يطبع Bearer token</td>
+  <td>تسرب جلسة عبر سجلات Console/بيئات تشخيص</td>
+  <td>لا يثبت أن طرفًا ثالثًا اطلع عليه</td>
+</tr>
+<tr>
+  <td>عالية</td>
+  <td><code>QRLocal</code>, <code>QRImported</code>, <code>DisableDocument</code> تعيد POST تشخيصي بعد خطأ</td>
+  <td>احتمال تكرار طلب غير idempotent</td>
+  <td>لا يثبت تكرار الكتابة بالخادم</td>
+</tr>
+<tr>
+  <td>عالية/متوسطة</td>
+  <td>Axios مشترك للموظف والشركة</td>
+  <td>احتمال استخدام هوية خاطئة أو تسجيل خروج مزدوج</td>
+  <td>لا يثبت تجاوز صلاحيات backend</td>
+</tr>
+<tr>
+  <td>عالية في البيئات المشتركة</td>
+  <td><code>qr_readings</code> يحتفظ برد وإحداثيات</td>
+  <td>بقاء بيانات حساسة بعد الخروج</td>
+  <td>لا يثبت طبيعة كل رد واقعي</td>
+</tr>
+<tr>
+  <td>متوسطة</td>
+  <td>fallback <code>QRDocument</code> و<code>QRCheckpoints</code></td>
+  <td>عرض وثيقة أو سجل قراءة غير مطابق</td>
+  <td>لا يغير سجلات backend</td>
+</tr>
+<tr>
+  <td>متوسطة</td>
+  <td>QR من <code>doc_id</code>/<code>doc_number</code> عند غياب QR حقيقي</td>
+  <td>التباس بين رمز معلوماتي ورمز تحقق</td>
+  <td>لا يثبت التزوير الحكومي</td>
+</tr>
+<tr>
+  <td>متوسطة</td>
+  <td>fallback خارجي <code>quickchart.io</code></td>
+  <td>احتمال إرسال نص QR لطرف ثالث</td>
+  <td>لا يثبت حدوث الطلب بالفعل</td>
+</tr>
+<tr>
+  <td>متوسطة</td>
+  <td>النجاح مستدل عليه برسالة تحتوي <code>تم</code> / HTTP 200</td>
+  <td>تصنيف غير دقيق لحالات الرفض/انتهاء الصلاحية</td>
+  <td>لا يثبت قبول الخادم للوثيقة</td>
+</tr>
+<tr>
+  <td>منخفضة/متوسطة</td>
+  <td><code>QRCheckpoints</code> يعرض UTC في بعض الحالات والوقت المحلي في غيرها</td>
+  <td>اختلاف الساعة لنفس اللحظة</td>
+  <td>لا يثبت تلاعبًا بتاريخ الخادم</td>
+</tr>
+<tr>
+  <td>منخفضة</td>
+  <td>إظهار موقع بإحداثي واحد والفتح باثنين</td>
+  <td>رابط خرائط غير فعال</td>
+  <td>لا يثبت فساد الإحداثيات بالخادم</td>
+</tr>
+<tr>
+  <td>منخفضة/متوسطة</td>
+  <td>ارتفاع A4 ثابت مع قص المحتوى</td>
+  <td>فقدان حقول في نسخة مطبوعة طويلة</td>
+  <td>لا يثبت فقدان بيانات أصلية</td>
+</tr>
+</tbody>
+</table>
+<h2>9. طبقة HuaweiCloudWAF</h2>
+<p>عندما نزل المستخدم ملف <code>QRCheckpoints.js</code> عبر curl على iSH ظهر HTML يحتوي <code>meta http-equiv=&quot;Server&quot; content=&quot;HuaweiCloudWAF&quot;</code>. تلك <strong>صفحة تحدٍ أمني</strong> وليست كود وحدة QRCheckpoints. تجمع بصمة المتصفح عبر FingerprintJS2 وتستخدم CryptoJS AES-CBC لتوليد Cookie <code>wafatclconfirm</code> محددة بمدة 30 دقيقة في الشيفرة المعروضة، وتكشف بعض مؤشرات التشغيل الآلي.</p>
+<p>ليس مفتاح AES الموجود هناك مفتاح إصدار QR الحكومي، ولا يجوز قياس صحة توقيع الوثائق منه. أداة Star Cyber Audit تصنّف هذه الاستجابة كـWAF بدل تحليلها على أنها JS، ولا تتجاوز الحماية.</p>
+<h2>10. ما كشفته عملية iSH الفعلية</h2>
+<p>ثبت بالصور أن المستخدم:</p>
+<ul>
+<li>ركب مجلد Files <code>/mnt/star-audit</code> بواسطة <code>mount -t ios . /mnt/star-audit</code> بعد إلغاء سابق للاختيار.</li>
+<li>نفّذ <code>sh run.sh</code> داخل المجلد وظهرت <code>Star Cyber Audit complete</code>.</li>
+<li>ظهرت <code>JavaScript analyzed: 10 / 10 total files</code> و<code>33</code> مسارًا مختلفًا.</li>
+<li>تشكلت الملفات <code>reports/analysis.json</code>, <code>reports/api_paths.txt</code>, <code>reports/inventory.csv</code>, <code>reports/report.html</code>, <code>reports/review_flags.txt</code>.</li>
+</ul>
+<p>نجح أيضًا اختبار SSH المحلي داخل iSH بـ<code>star@127.0.0.1:2222</code>، لكن <strong>Moshi</strong> لم ينجح وقت الاختبار بسبب timeout على iOS؛ لا توجد جلسة ChatGPT للتحكم المباشر في هاتف iSH. Remote Desktop Commander كان يعرض حاسوب Windows بوضع Offline عند آخر فحص.</p>
+<h2>11. ما الذي بقي مجهولًا؟</h2>
+<ol>
+<li>طريقة إنشاء <code>qr_code</code> على الخادم: هل هو URL، رقم، قيمة موقّعة، أو مزيج؟</li>
+<li>مصدر الحقيقة الرسمي لجدول <code>read_doc</code>: متى تسجّل القراءة، وبأي هوية، وهل يُمنع التكرار؟</li>
+<li>كيف يتحقق Backend من ملكية الوثيقة والصلاحيات وصحتها وإلغائها وانتهائها؟</li>
+<li>كيف تتعامل واجهة <code>return_doc_qrcode</code> مع الأرقام المختلفة في الخادم، وهل يوجد تحقق ترابط للرقم/النوع؟</li>
+<li>هل تسجيل دخول صاحب الشركة والموظف مفصول فعليًا في جميع مسارات Backend؟</li>
+<li>ماذا تعني الاستجابة 402 أو الحقول <code>is_main</code>, <code>company_type</code>, <code>hash_id</code> وفق عقد الخادم الرسمي؟</li>
+<li>ما وضع حماية بيانات QR والإحداثيات في سياسة الاحتفاظ والمراجعة الرسمية؟</li>
+</ol>
+<h2>12. المرحلة القادمة المقترحة (من دون التأثير على الإنتاج)</h2>
+<ol>
+<li>نقل <code>reports/analysis.json</code> و<code>reports/inventory.csv</code> من iSH إلى المحادثة، أو تشغيل نسخة محدثة على الملفات العامة التي جُمعت لاحقًا.</li>
+<li>جمع نسخة محددة الإصدار من <code>useLocalCompany</code>, <code>EntranceGateView</code>, <code>QRHealthCertificate</code>, <code>DisableDocument</code>, <code>QRReadings</code> وتثبيت SHA-256 لها؛ حتى لا تختلط إصدارات منشورة مختلفة.</li>
+<li>بناء «مصفوفة عقود API» لكل نقطة: المدخلات، الاستجابة المتوقعة، الأخطاء، حالة المصادقة، والفروق بين واجهة العميل وقواعد الخادم (مجهولة حتى تُوثق).</li>
+<li>مراجعة الدوال عالية المخاطر في <strong>مختبر نسخ تجريبية</strong>: تكرار POST عند الفشل، تبادل الجلسات، سقوط المعرّف إلى سجل آخر، انتهاء الصلاحية المحلي، والتوقيت.</li>
+<li>إذا توفرت صلاحية رسمية ومصدر Backend، إجراء مراجعة إعدادات وتسجيلات خادم واختبار تحقق آمن على بيئة مرحلية أو سجلات منقحة.</li>
+</ol>
+<h2>النتيجة النهائية</h2>
+<p>وصلنا إلى <strong>خريطة وظيفية واضحة نسبيًا للواجهة الأمامية</strong> للمنصة، وحددنا ثغرات تصميم محتملة وأخطاء واجهة مثبتة. <strong>لم نصل بعد إلى إثبات أصالة أو تزوير أو تجاوز حماية وثيقة حكومية</strong>؛ ولتحقيق ذلك يلزم مصدر Backend مخول، لا مجرد الصور التي يصنعها المتصفح أو النصوص التي يحفظها <code>localStorage</code>.</p>
+<footer>تقرير تحليل ساكن فقط. لا يمثل رأيًا رسميًا للجهة المالكة للمنصة ولا يثبت وجود ثغرة في خادم الإنتاج.</footer></main></body></html>
