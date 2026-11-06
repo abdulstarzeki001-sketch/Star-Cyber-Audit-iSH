@@ -1,0 +1,167 @@
+{
+  "generated_utc": "2026-11-06T21:29:16Z",
+  "static_read_only": true,
+  "scope": "Public static historical sample. Sanitized derived indicators only; no original website assets.",
+  "files": [
+    {
+      "name": "AchievementDocument-DEzIzJ3I.js",
+      "origin": "offline_snapshot",
+      "classification": "JS_SOURCE",
+      "api_paths": [],
+      "flags": [
+        "THIRD_PARTY_QR_SERVICE: investigate if document/QR payload can be sent offsite",
+        "LOCAL_QR_FALLBACK: QR content may fall back to plain document identifier"
+      ],
+      "imports": [],
+      "storage": [],
+      "privilege_literals": []
+    },
+    {
+      "name": "CompanyOwnerView-CIdFF3LL.js",
+      "origin": "offline_snapshot",
+      "classification": "JS_SOURCE",
+      "api_paths": [],
+      "flags": [],
+      "imports": [],
+      "storage": [],
+      "privilege_literals": []
+    },
+    {
+      "name": "QRCheckpoints-Brs0uL0-.js",
+      "origin": "offline_snapshot",
+      "classification": "JS_SOURCE",
+      "api_paths": [],
+      "flags": [
+        "TIMEZONE_FORMATTING: confirm timestamps with/without zone format consistently"
+      ],
+      "imports": [],
+      "storage": [],
+      "privilege_literals": []
+    },
+    {
+      "name": "QRDocument-BJwpoEJY.js",
+      "origin": "offline_snapshot",
+      "classification": "JS_SOURCE",
+      "api_paths": [
+        "BorderPort_HS/path-document-file",
+        "local_form/refuse_doc_company"
+      ],
+      "flags": [
+        "LOCAL_QR_FALLBACK: QR content may fall back to plain document identifier",
+        "PERSISTENT_BROWSER_STORAGE: assess sensitivity, retention and logout cleanup",
+        "TAB_SESSION_STORAGE: check data binding to the current document ID"
+      ],
+      "imports": [],
+      "storage": [],
+      "privilege_literals": []
+    },
+    {
+      "name": "QRLocal-5TAaXbzM.js",
+      "origin": "offline_snapshot",
+      "classification": "JS_SOURCE",
+      "api_paths": [
+        "local_form/read_doc_company"
+      ],
+      "flags": [
+        "POSSIBLE_TOKEN_DEBUG_LOG: check whether auth tokens are written to console",
+        "REVIEW_POST_RETRY: POST and fetch and error handler coexist; inspect for unintended duplicate write",
+        "MESSAGE_REGEX: review language-based success/expiry heuristics; not server validity proof"
+      ],
+      "imports": [],
+      "storage": [],
+      "privilege_literals": []
+    },
+    {
+      "name": "QrCodeReaderCustoms-a-UBVR7y.js",
+      "origin": "offline_snapshot",
+      "classification": "JS_SOURCE",
+      "api_paths": [],
+      "flags": [],
+      "imports": [],
+      "storage": [],
+      "privilege_literals": []
+    },
+    {
+      "name": "ShipmentDoc-Dx885_fz.js",
+      "origin": "offline_snapshot",
+      "classification": "JS_SOURCE",
+      "api_paths": [],
+      "flags": [
+        "LOCAL_QR_FALLBACK: QR content may fall back to plain document identifier"
+      ],
+      "imports": [],
+      "storage": [],
+      "privilege_literals": []
+    },
+    {
+      "name": "index-gleMzSil.js",
+      "origin": "offline_snapshot",
+      "classification": "JS_SOURCE",
+      "api_paths": [
+        "local_form/all_iraqi_company",
+        "local_form/company_field_name",
+        "local_form/company_item_info/",
+        "local_form/company_item_reduce",
+        "local_form/company_items_active/",
+        "local_form/company_items_delete/",
+        "local_form/company_verification",
+        "local_form/company_verify_login",
+        "local_form/download_company_checkpoint",
+        "local_form/download_file",
+        "local_form/download_file_item",
+        "local_form/get_company_items/",
+        "local_form/iraqi_company_active/",
+        "local_form/iraqi_company_delete/",
+        "local_form/iraqi_company_info/",
+        "local_form/iraqi_company_items/",
+        "local_form/iraqi_company_reliable/",
+        "local_form/paginate_company_ceo",
+        "local_form/paginate_company_checkpoint",
+        "local_form/pagination_rejected_qrcode_reader",
+        "local_form/return_company_doc/",
+        "local_form/return_doc_ceo",
+        "local_form/return_doc_qrcode",
+        "local_form/search_iraqi_company",
+        "local_form/send_company_code/"
+      ],
+      "flags": [
+        "REVIEW_POST_RETRY: POST and fetch and error handler coexist; inspect for unintended duplicate write",
+        "PERSISTENT_BROWSER_STORAGE: assess sensitivity, retention and logout cleanup",
+        "TIMEZONE_FORMATTING: confirm timestamps with/without zone format consistently"
+      ],
+      "imports": [],
+      "storage": [],
+      "privilege_literals": []
+    },
+    {
+      "name": "qrStore-B8bgApfd.js",
+      "origin": "offline_snapshot",
+      "classification": "JS_SOURCE",
+      "api_paths": [],
+      "flags": [
+        "PERSISTENT_BROWSER_STORAGE: assess sensitivity, retention and logout cleanup"
+      ],
+      "imports": [],
+      "storage": [],
+      "privilege_literals": []
+    },
+    {
+      "name": "useExitGate-BvHNutwH.js",
+      "origin": "offline_snapshot",
+      "classification": "JS_SOURCE",
+      "api_paths": [
+        "BorderPort_HS/return_doc_hc_by_docnumber",
+        "support_org/download_qrcode_readers_import",
+        "support_org/paginate_qrcode_reader_import",
+        "support_org/read_qr_exitgate",
+        "support_org/return_doc_qrcode_export"
+      ],
+      "flags": [
+        "TAB_SESSION_STORAGE: check data binding to the current document ID"
+      ],
+      "imports": [],
+      "storage": [],
+      "privilege_literals": []
+    }
+  ]
+}
