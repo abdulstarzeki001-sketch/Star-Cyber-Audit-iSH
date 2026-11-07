@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <title> Downloads </title>
+    </head>
+    <body>
+        <h1> Downloads </h1>
+        <ul>
+            <li><a id="https://customs-uboor.ur.gov.iq/company-owner?code=[REDACTED_QR_TOKEN]" href="company-owner/index_code=[REDACTED_QR_TOKEN]_1b47f8b3bf09d581.html"> بوابة أصحاب الشركات </a></li>
+            <li><a id="https://customs-uboor.ur.gov.iq/company-owner?phone=[REDACTED_PHONE]" href="company-owner/index_phone=[REDACTED_PHONE].html"> بوابة أصحاب الشركات </a></li>
+        </ul>
+    </body>
+</html>
