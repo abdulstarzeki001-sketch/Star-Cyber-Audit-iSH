@@ -21,7 +21,8 @@ Choose the folder containing `run.sh` when the iOS Files picker opens. The execu
 ## Options
 
 ```sh
-sh run.sh --local ./my-files  # Read your own local JS/MJS/HTML files
+sh run.sh --local ./my-files  # Recursively scan local JS/MJS/CJS/HTML without executing them
+sh run.sh --local ./research  # Scan archived sources locally; no network calls
 sh run.sh --fetch             # GET four allowlisted static assets
 sh run.sh --fetch-all         # GET twenty allowlisted static assets, lightly paced
 ```
@@ -57,3 +58,10 @@ Cloudflare deployment **is live** on `star-cyber-audit-ish.abo330899.workers.dev
 Do not commit locally captured HTTP requests, personal data, session cookies, access tokens, third-party JavaScript archives, or non-redacted reports. `.gitignore` excludes `offline_samples`, `downloads`, and `reports`. Sample metadata is historical and does not establish current backend behavior or document validity.
 
 See [Arabic documentation](README_AR.md) and [GitHub notes](README_GITHUB_UPLOAD.md).
+
+### Scanner maintenance
+
+The analyzer recursively enumerates local JS/MJS/CJS/HTML, keeps relative paths to
+avoid collisions, includes DMS `/api/verify/` references, and rejects HTML/WAF/JSON
+before using file-extension hints. GitHub Actions tests local fixtures plus archived
+source snapshots; it does **not** query external government systems in CI.
