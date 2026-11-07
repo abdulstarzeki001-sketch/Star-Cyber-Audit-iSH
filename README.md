@@ -204,3 +204,29 @@ Source snapshot SHA-256:
 `36acf66c8a1ad736f6da9bca1d8a9dced9f1bf377451c8913dcf4ddc15eff479`
 (17,870 bytes). The update adds **no new copy** of third-party JS,
 secrets, personal documents or authenticated API response data.
+
+## DisableDocument static audit (8 November 2026)
+
+The [Arabic evidence-based deep review](reviews/2026-11-08/DisableDocument_deep_review_AR.md)
+covers the QR camera's `POST local_form/reset_company_qrcode` flow. Key issues
+include an **optimistic success card** shown before the server confirms a reset,
+an `expired:true` state not respected by the success condition, a diagnostic
+second POST in the error handler, shared token debug logging, and location
+freshness. No government backend was contacted or changed.
+
+A second provided `QRHealthCertificate-Byvh35hk 2.js` file was **byte-identical**
+to the earlier health scanner file (SHA-256:
+`78b26ef2ba7f02c92745bc9bc5e61731d4972a390ba3c866d62ae8e000788936`).
+
+```sh
+python3 tools/ish/disable_document_review.py /path/to/DisableDocument-AXBjrkYS.js \
+  --health "/path/to/QRHealthCertificate-Byvh35hk 2.js"
+python3 -m unittest discover -s tests -p 'test_disable_document_review.py' -v
+```
+
+DisableDocument evidence: 11,505 bytes; SHA-256
+`e8f574544e0f910f8ec66446810627a13352065d7b6ae2a3b1a89c0439f60e01`.
+Seventeen version-specific frontend patterns are review flags, **not**
+confirmed exploitable vulnerabilities. The public repository update does not
+include a new copy of third-party source, session credentials, or government
+document data.
