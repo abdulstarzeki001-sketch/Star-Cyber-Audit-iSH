@@ -1,0 +1,376 @@
+{
+  "generated_utc": "2026-11-06T21:29:16.557030+00:00",
+  "static_read_only": true,
+  "files": [
+    {
+      "name": "AchievementDocument-DEzIzJ3I.js",
+      "origin": "offline_snapshot",
+      "classification": "JS_SOURCE",
+      "bytes": 11641,
+      "sha256": "bec1dbe0a25694f05f30d5dcf6edb253fb2f9276d9e00b583ba416aabc941d7c",
+      "api_paths": [],
+      "api_calls": [],
+      "imports": [
+        "./QRCheckpoints-Brs0uL0-.js",
+        "./browser-3Qg8aFGH.js",
+        "./index-gleMzSil.js",
+        "./iraqEagle-BF406BBV.js",
+        "./qrStore-B8bgApfd.js",
+        "./useExitGate-BvHNutwH.js",
+        "./useHealthCertificate-DVL2cDcP.js"
+      ],
+      "storage": [],
+      "privilege_literals": [],
+      "flags": [
+        "THIRD_PARTY_QR_SERVICE: investigate if document/QR payload can be sent offsite",
+        "LOCAL_QR_FALLBACK: QR content may fall back to plain document identifier"
+      ]
+    },
+    {
+      "name": "CompanyOwnerView-CIdFF3LL.js",
+      "origin": "offline_snapshot",
+      "classification": "JS_SOURCE",
+      "bytes": 24516,
+      "sha256": "d9e911dd70e879030dd064a7517fbc18fe36a06bc9e832f05bf04ef9141cc9b6",
+      "api_paths": [],
+      "api_calls": [],
+      "imports": [
+        "./Badge-D38kfQlj.js",
+        "./BaseModal-DjCaQzje.js",
+        "./Card-CK0Cr5Rk.js",
+        "./Form-C1fcACA6.js",
+        "./Input-XMNBc09N.js",
+        "./ShipmentDoc-Dx885_fz.js",
+        "./Table-CANuQjYe.js",
+        "./Textarea-vxo1mVYX.js",
+        "./browser-3Qg8aFGH.js",
+        "./index-gleMzSil.js",
+        "./iraqEagle-BF406BBV.js",
+        "./vue3-treeselect.min-C4NthLl-.js"
+      ],
+      "storage": [],
+      "privilege_literals": [],
+      "flags": []
+    },
+    {
+      "name": "QRCheckpoints-Brs0uL0-.js",
+      "origin": "offline_snapshot",
+      "classification": "JS_SOURCE",
+      "bytes": 2797,
+      "sha256": "b2f6e7519df369ff58345adedcc4fb1cc2d83416f409cffe0cd93a8869aae53b",
+      "api_paths": [],
+      "api_calls": [],
+      "imports": [
+        "./index-gleMzSil.js"
+      ],
+      "storage": [
+        "qr_read_doc"
+      ],
+      "privilege_literals": [
+        "GMT",
+        "UTC"
+      ],
+      "flags": [
+        "TIMEZONE_FORMATTING: confirm timestamps with/without zone format consistently"
+      ]
+    },
+    {
+      "name": "QRDocument-BJwpoEJY.js",
+      "origin": "offline_snapshot",
+      "classification": "JS_SOURCE",
+      "bytes": 607716,
+      "sha256": "23f8c5d87b6a91511af2a96f57075e8502861bd2f6d92d914a14222db4199400",
+      "api_paths": [
+        "BorderPort_HS/path-document-file",
+        "local_form/refuse_doc_company"
+      ],
+      "api_calls": [
+        "BorderPort_HS/path-document-file",
+        "local_form/refuse_doc_company"
+      ],
+      "imports": [
+        "./Card-CK0Cr5Rk.js",
+        "./FormField-DW4k76E2.js",
+        "./Modal-C_od4hhs.js",
+        "./QRCheckpoints-Brs0uL0-.js",
+        "./browser-3Qg8aFGH.js",
+        "./index-BKvq_4_A.js",
+        "./index-gleMzSil.js",
+        "./index.es-DyhL3sdz.js",
+        "./iraqEagle-BF406BBV.js",
+        "./purify.es-Bzr520pe.js",
+        "./qrStore-B8bgApfd.js"
+      ],
+      "storage": [
+        "qr_preview_entry",
+        "qr_read_doc",
+        "qr_readings"
+      ],
+      "privilege_literals": [
+        "refuse_doc_company"
+      ],
+      "flags": [
+        "LOCAL_QR_FALLBACK: QR content may fall back to plain document identifier",
+        "PERSISTENT_BROWSER_STORAGE: assess sensitivity, retention and logout cleanup",
+        "TAB_SESSION_STORAGE: check data binding to the current document ID"
+      ]
+    },
+    {
+      "name": "QRLocal-5TAaXbzM.js",
+      "origin": "offline_snapshot",
+      "classification": "JS_SOURCE",
+      "bytes": 10014,
+      "sha256": "1e3ea9982971b4e4e08bb2ebee1520fe6a5056bc8590de4288fec80456fa9626",
+      "api_paths": [
+        "local_form/read_doc_company"
+      ],
+      "api_calls": [
+        "local_form/read_doc_company"
+      ],
+      "imports": [
+        "./index-gleMzSil.js",
+        "./jsQR-CKtgBSaS.js",
+        "./qrStore-B8bgApfd.js"
+      ],
+      "storage": [],
+      "privilege_literals": [],
+      "flags": [
+        "POSSIBLE_TOKEN_DEBUG_LOG: check whether auth tokens are written to console",
+        "REVIEW_POST_RETRY: POST and fetch and error handler coexist; inspect for unintended duplicate write",
+        "MESSAGE_REGEX: review language-based success/expiry heuristics; not server validity proof"
+      ]
+    },
+    {
+      "name": "QrCodeReaderCustoms-a-UBVR7y.js",
+      "origin": "offline_snapshot",
+      "classification": "JS_SOURCE",
+      "bytes": 16490,
+      "sha256": "09b62507255c25910a196ca0ca1e5fb6d961be5d10287face07cc777aaf45c0b",
+      "api_paths": [],
+      "api_calls": [],
+      "imports": [
+        "./AppPagination.vue_vue_type_script_setup_true_lang-DzdlD2T5.js",
+        "./Input-XMNBc09N.js",
+        "./Select-DZpjzzNJ.js",
+        "./index-gleMzSil.js",
+        "./qrStore-B8bgApfd.js",
+        "./useExitGate-BvHNutwH.js",
+        "./useFormControl-XQpg82Ny.js",
+        "./useHealthCertificate-DVL2cDcP.js"
+      ],
+      "storage": [],
+      "privilege_literals": [
+        "download_health_qrcode_readers",
+        "time_stamp"
+      ],
+      "flags": []
+    },
+    {
+      "name": "ShipmentDoc-Dx885_fz.js",
+      "origin": "offline_snapshot",
+      "classification": "JS_SOURCE",
+      "bytes": 15472,
+      "sha256": "9487c6f19cdbc88eb10b30ae03f8e5001e504b1a42ace4da0fa8ee3478c02502",
+      "api_paths": [],
+      "api_calls": [],
+      "imports": [
+        "./browser-3Qg8aFGH.js",
+        "./index-gleMzSil.js",
+        "./iraqEagle-BF406BBV.js"
+      ],
+      "storage": [],
+      "privilege_literals": [],
+      "flags": [
+        "LOCAL_QR_FALLBACK: QR content may fall back to plain document identifier"
+      ]
+    },
+    {
+      "name": "index-gleMzSil.js",
+      "origin": "offline_snapshot",
+      "classification": "JS_SOURCE",
+      "bytes": 1416085,
+      "sha256": "83d3f35e2cf05cc56fca81a3531b98381d291dc1e903957be7b6e433466b7ac3",
+      "api_paths": [
+        "local_form/all_iraqi_company",
+        "local_form/company_field_name",
+        "local_form/company_item_info/",
+        "local_form/company_item_reduce",
+        "local_form/company_items_active/",
+        "local_form/company_items_delete/",
+        "local_form/company_verification",
+        "local_form/company_verify_login",
+        "local_form/download_company_checkpoint",
+        "local_form/download_file",
+        "local_form/download_file_item",
+        "local_form/get_company_items/",
+        "local_form/iraqi_company_active/",
+        "local_form/iraqi_company_delete/",
+        "local_form/iraqi_company_info/",
+        "local_form/iraqi_company_items/",
+        "local_form/iraqi_company_reliable/",
+        "local_form/paginate_company_ceo",
+        "local_form/paginate_company_checkpoint",
+        "local_form/pagination_rejected_qrcode_reader",
+        "local_form/return_company_doc/",
+        "local_form/return_doc_ceo",
+        "local_form/return_doc_qrcode",
+        "local_form/search_iraqi_company",
+        "local_form/send_company_code/"
+      ],
+      "api_calls": [
+        "local_form/all_iraqi_company",
+        "local_form/company_field_name",
+        "local_form/company_item_reduce",
+        "local_form/company_verification",
+        "local_form/company_verify_login",
+        "local_form/download_company_checkpoint",
+        "local_form/paginate_company_ceo",
+        "local_form/paginate_company_checkpoint",
+        "local_form/pagination_rejected_qrcode_reader",
+        "local_form/return_doc_ceo",
+        "local_form/return_doc_qrcode",
+        "local_form/search_iraqi_company"
+      ],
+      "imports": [
+        "./AchievementDocument-DEzIzJ3I.js",
+        "./AddHealthCertificateView-BbqkqY_U.js",
+        "./AddItemsToCompany-d4nf8m_I.js",
+        "./AnnouncementsView-DGOiclBm.js",
+        "./AudityStationView-Bgcwn0to.js",
+        "./BoxStationView-CR-7UfFU.js",
+        "./ChangePasswordView-D3kEADp-.js",
+        "./ClearanceAgentView-C92jjI-0.js",
+        "./CompanyItemsContainer-KtpoChjN.js",
+        "./CompanyItemsView-DjXrPSxm.js",
+        "./CompanyOwnerCeoLoadsView-Coghn9Xh.js",
+        "./CompanyOwnerView-CIdFF3LL.js",
+        "./CompletionStationView-D7RH6rtW.js",
+        "./CustomsOfficesView-B3ywLgt6.js",
+        "./DashboardLayout-UQX5kw_a.js",
+        "./DisableDocument-AXBjrkYS.js",
+        "./EditCompanyItemsView-RsXQFIPE.js",
+        "./EditLocalCompanyView-Bfh6OEeY.js",
+        "./EntranceGateView-B9IBJo4k.js",
+        "./ExitGateView-D33Au6wp.js",
+        "./ExternalLoadsInfo-EGDAzETQ.js",
+        "./ExternalLoadsView-CZvc8OH-.js",
+        "./GovernmentAgenciesView-BcNGG8Z-.js",
+        "./GuessingStationView-BzPoiIeN.js",
+        "./HealthCertificateDetailView-KMJAeNY6.js",
+        "./HealthCertificateView-BdGgORxD.js",
+        "./IndexPage-cUNA67sR.js",
+        "./InfoLocalCompanyView-Cs0kIKFF.js",
+        "./InspectionReportView-BQwSG51n.js",
+        "./InspectionView-BPDkJUv9.js",
+        "./LocalCompaniesView-DKobEdU7.js",
+        "./LogEvents-B49JLUkT.js",
+        "./LoginView-CrxVjQ5U.js",
+        "./ManagerView-CahxLUz_.js",
+        "./NationalSecurityRoutesView-ClrZzVkA.js",
+        "./NewCompanyView-BrODRc6L.js",
+        "./OrgsView-DRBKg_Vt.js",
+        "./PrintHealthCertificateView-Q9yNncqz.js",
+        "./PrivilegesView-DX4vxzU4.js",
+        "./QRCheckpoints-Brs0uL0-.js",
+        "./QRCodeReaders-CWXbcE5r.js",
+        "./QRDocument-BJwpoEJY.js",
+        "./QRHealthCertificate-Byvh35hk.js",
+        "./QRImported-C65Oqm1K.js",
+        "./QRLocal-5TAaXbzM.js",
+        "./QRMenu-BPpExo1y.js",
+        "./QRReadings-B-a3jcrk.js",
+        "./QrCodeReaderCustoms-a-UBVR7y.js",
+        "./QrControlScan-M6uGJnR1.js",
+        "./QrLocalImporter-DYzNB5Fh.js",
+        "./RadiationView-D6dWLbew.js",
+        "./RejectedLocalDocuments-CC07EpF_.js",
+        "./RequestById-B7uqW1d0.js",
+        "./RequestsView-CNl_XnGz.js",
+        "./RolesView-B8nIolur.js",
+        "./SonarView-Yp0ATQQd.js",
+        "./StopThecCertificate-VAEug0fb.js",
+        "./SupportOrgView-B9aTRjHU.js",
+        "./UsersView-BZ4SkbYL.js"
+      ],
+      "storage": [
+        "auth",
+        "company_owner_token",
+        "company_user_info_owner",
+        "is_authenticated_owner",
+        "local_companies_pagination"
+      ],
+      "privilege_literals": [
+        "MathML",
+        "action",
+        "bottom",
+        "calendar",
+        "children",
+        "html",
+        "jsdom",
+        "left",
+        "menu",
+        "middle",
+        "right",
+        "shared",
+        "svg",
+        "time",
+        "top"
+      ],
+      "flags": [
+        "REVIEW_POST_RETRY: POST and fetch and error handler coexist; inspect for unintended duplicate write",
+        "PERSISTENT_BROWSER_STORAGE: assess sensitivity, retention and logout cleanup",
+        "TIMEZONE_FORMATTING: confirm timestamps with/without zone format consistently"
+      ]
+    },
+    {
+      "name": "qrStore-B8bgApfd.js",
+      "origin": "offline_snapshot",
+      "classification": "JS_SOURCE",
+      "bytes": 248,
+      "sha256": "122527b8507637168eeb4365f879f160f02620d1dc997c74e3da1880a1573e77",
+      "api_paths": [],
+      "api_calls": [],
+      "imports": [],
+      "storage": [
+        "e"
+      ],
+      "privilege_literals": [],
+      "flags": [
+        "PERSISTENT_BROWSER_STORAGE: assess sensitivity, retention and logout cleanup"
+      ]
+    },
+    {
+      "name": "useExitGate-BvHNutwH.js",
+      "origin": "offline_snapshot",
+      "classification": "JS_SOURCE",
+      "bytes": 6027,
+      "sha256": "9d9a109e58d619a8afdf91bfcbd9f7e45377ddb8236e82e13597b896e56c3306",
+      "api_paths": [
+        "BorderPort_HS/return_doc_hc_by_docnumber",
+        "support_org/download_qrcode_readers_import",
+        "support_org/paginate_qrcode_reader_import",
+        "support_org/read_qr_exitgate",
+        "support_org/return_doc_qrcode_export"
+      ],
+      "api_calls": [
+        "BorderPort_HS/return_doc_hc_by_docnumber",
+        "support_org/download_qrcode_readers_import",
+        "support_org/paginate_qrcode_reader_import",
+        "support_org/read_qr_exitgate",
+        "support_org/return_doc_qrcode_export"
+      ],
+      "imports": [
+        "./index-gleMzSil.js",
+        "./qrStore-B8bgApfd.js",
+        "./useHealthCertificate-DVL2cDcP.js"
+      ],
+      "storage": [
+        "qr_preview_entry"
+      ],
+      "privilege_literals": [],
+      "flags": [
+        "TAB_SESSION_STORAGE: check data binding to the current document ID"
+      ]
+    }
+  ]
+}
