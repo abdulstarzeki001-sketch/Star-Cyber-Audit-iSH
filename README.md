@@ -76,3 +76,20 @@ python3 -m unittest discover -s tests -p 'test_qr_importer_review.py' -v
 ```
 
 The repository stores the SHA-256 and review findings, **not a new copy of the uploaded third-party script**. The review does not contact UBOOR APIs or establish backend vulnerabilities.
+
+## useLocalCompany deep review (8 November 2026)
+
+The [Arabic review](reviews/2026-11-08/useLocalCompany_deep_review_AR.md) documents the
+company/item forms, client-side QR readings, server reading lists, document previews,
+attachment downloads, and log-event API calls.
+
+Run the additional **offline-only** checker on a local copy of the user-supplied source:
+
+```sh
+python3 tools/ish/use_local_company_review.py /path/to/useLocalCompany-DfV5kpAj.js
+python3 -m unittest discover -s tests -p 'test_use_local_company_review.py' -v
+```
+
+Evidence: 16,940 bytes; SHA-256 `2a94cadad67e987ef5fcbce9d443f134bbce8293dea69d6e37220c195afa76f4`.
+The repo does **not** add the third-party source file for this review. Nine source
+indicators are **not** claims of nine exploitable vulnerabilities. No backend API is called.
