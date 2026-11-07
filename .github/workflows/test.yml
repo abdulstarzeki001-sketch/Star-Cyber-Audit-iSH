@@ -69,6 +69,7 @@ jobs:
         run: |
           sh -n tools/ish/sync_and_audit.sh
           sh -n tools/ish/connect_remote.sh
+          sh -n tools/ish/upload_onedrive_archive_private.sh
           sh tools/ish/connect_remote.sh --check
           selected="$(sh tools/ish/sync_and_audit.sh --where)"
           test "$selected" = "$PWD"
