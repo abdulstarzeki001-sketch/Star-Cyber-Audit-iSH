@@ -135,3 +135,27 @@ Source snapshot: 14,489 bytes; SHA-256
 `31c9ac2eadc4a256d0d321317431bcd7655e6eabb06a3d848c4b676e631f7cb9`.
 This addition does not publish a new copy of third-party JS, session tokens,
 user records, or government API responses.
+
+## QRImported static deep review (8 November 2026)
+
+[Read the Arabic report](reviews/2026-11-08/QRImported_deep_comparison_AR.md)
+comparing this import-reader frontend with QRLocal and QrLocalImporter. The most
+significant difference is **camera-image pixel coordinates** being placed in
+`x_coordinate/y_coordinate` rather than browser GPS latitude and longitude.
+Other static indicators cover bearer-token debug logging, duplicate POST
+diagnostics, session defaults, RAF lifecycle, and local response persistence.
+
+Run the offline static checker on **locally obtained source files**:
+
+```sh
+python3 tools/ish/qr_imported_review.py /path/to/QRImported-C65Oqm1K.js \
+  --qr-local /path/to/QRLocal-5TAaXbzM.js \
+  --exit-importer /path/to/QrLocalImporter-DYzNB5Fh.js
+python3 -m unittest discover -s tests -p 'test_qr_imported_review.py' -v
+```
+
+The two comparison flags are optional. Snapshot SHA-256:
+`d2756b08358ced044c8f9982d4da8b19ba9a38996fc7c4f682e0d67148d59eee`
+(8,913 bytes). This repository update contains no new copy of third-party
+government JavaScript, login token, document record, or live backend request.
+Thirteen matched frontend patterns do **not** establish thirteen vulnerabilities.
