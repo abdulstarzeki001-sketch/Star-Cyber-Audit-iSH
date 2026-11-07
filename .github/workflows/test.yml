@@ -38,3 +38,29 @@ jobs:
           print("Offline integration OK:", len(js_files),
                 "JavaScript files,", len(endpoints), "API references")
           PY
+      - name: Scan archived JavaScript without network access
+        run: |
+          python analyze.py --local .
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          payload = json.loads(Path("reports/analysis.json").read_text(encoding="utf-8"))
+          assert payload.get("static_read_only") is True
+          records = payload["files"]
+          by_path = {item["relative_path"]: item for item in records}
+          required = {
+              "research/raw-uploads/2026-11-07/6439.3d46893d(1).js": "/api/verify/",
+              "research/source-archive/2026-11-07/uboor/QRLocal-5TAaXbzM.js": "local_form/read_doc_company",
+              "research/source-archive/2026-11-07/uboor/QRDocument-BJwpoEJY.js": "local_form/refuse_doc_company",
+          }
+          assert len(records) >= 20, f"unexpected scan coverage: {len(records)}"
+          for path, expected_endpoint in required.items():
+              item = by_path.get(path)
+              assert item is not None, f"missing file in recursive scan: {path}"
+              assert item["classification"] == "JS_SOURCE", path
+              assert expected_endpoint in item["api_paths"], (
+                  f"{path} missing {expected_endpoint}: {item['api_paths']}"
+              )
+          print(f"Offline scan verified: {len(records)} archived/source records")
+          PY
