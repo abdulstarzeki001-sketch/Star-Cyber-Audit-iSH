@@ -1,0 +1,204 @@
+{
+  "review_date": "2026-11-07",
+  "method": "static_source_review_only",
+  "repo": "abdulstarzeki001-sketch/Star-Cyber-Audit-iSH",
+  "branch": "main",
+  "github_tree_file_count": 71,
+  "static_findings": [
+    {
+      "id": "SA-01",
+      "severity": "High",
+      "confidence": "Confirmed code pattern; impact unverified",
+      "area": "QRLocal",
+      "title": "طباعة التوكن في console",
+      "evidence": "console.debug(\"[QRLocal] auth token:\",y.token)",
+      "effect": "إفشاء رمز جلسة داخل سجل المتصفح أو منصة تجمع Console إذا كانت موصولة؛ لا دليل على أن طرفًا آخر حصل عليه.",
+      "fix": "احذف طباعة الرمز وبيانات POST الخام؛ اكتفِ بمعرّف طلب اصطناعي ورمز HTTP.",
+      "source": "../../research/source-archive/2026-11-07/uboor/QRLocal-5TAaXbzM.js"
+    },
+    {
+      "id": "SA-02",
+      "severity": "High",
+      "confidence": "Confirmed code pattern; server effect unverified",
+      "area": "QRLocal",
+      "title": "إعادة تنفيذ POST في مسار الاستثناء",
+      "evidence": "catch ... fetch(.../local_form/read_doc_company,{method:\"POST\"...})",
+      "effect": "قد تتكرر عملية مسح أو تسجيل إذا نجح POST الأول خادميًا ثم فشلت معالجته محليًا؛ لا تأكيد لتكرار الفعل في الخادم.",
+      "fix": "احذف طلب التشخيص؛ استخدم تسجيل الأخطاء دون إعادة الإرسال أو مفتاح idempotency بدعم الخادم.",
+      "source": "../../research/source-archive/2026-11-07/uboor/QRLocal-5TAaXbzM.js"
+    },
+    {
+      "id": "SA-03",
+      "severity": "High",
+      "confidence": "Confirmed code pattern; role impact unverified",
+      "area": "Shared Axios client",
+      "title": "احتمال خلط توكن الموظف وصاحب الشركة",
+      "evidence": "interceptors.request.use ... t.headers.Authorization=`Bearer ${nu().token}`",
+      "effect": "طلبات صاحب الشركة تمر عبر نفس عميل API الذي يستطيع كتابة توكن الموظف؛ قد يؤدي إلى خطأ 401/403 أو إسناد هوية غير مقصود، ولا يثبت تجاوز صلاحيات.",
+      "fix": "عميل Axios منفصل لكل هوية، أو الحفاظ على Authorization الصريح وعدم استبداله؛ لا تخلط تدفق logout.",
+      "source": "../../research/raw-uploads/2026-11-07/index-gleMzSil(1).js"
+    },
+    {
+      "id": "SA-04",
+      "severity": "High",
+      "confidence": "Confirmed code pattern; client display only",
+      "area": "QRDocument",
+      "title": "عرض سجل غير مطلوب عند غياب معرف المعاينة",
+      "evidence": "a.value=AA||x[0]||null",
+      "effect": "إذا لم تتطابق قيمة ID في الرابط، تعرض الواجهة أول سجل محلي بدل رسالة عدم العثور؛ قد تسبب التباسًا في المستندات.",
+      "fix": "مع وجود ID: اعرض المطابقة الدقيقة فقط، وإلا \"المستند غير موجود\"؛ اربط السجل بهوية الجلسة.",
+      "source": "../../research/source-archive/2026-11-07/uboor/QRDocument-BJwpoEJY.js"
+    },
+    {
+      "id": "SA-05",
+      "severity": "Medium",
+      "confidence": "Confirmed local data behavior",
+      "area": "qrStore",
+      "title": "سجلات QR في localStorage دون عزل أو مدة احتفاظ",
+      "evidence": "JSON.parse(localStorage.getItem(\"qr_readings\")); a.unshift(t)",
+      "effect": "قد تبقى بيانات نتائج المسح بين جلسات المستخدم على نفس المتصفح، وقد يتضخم التخزين؛ لا يعني أن الخادم يسمح بقراءة سجلات الغير.",
+      "fix": "إيقاف حفظ البيانات الحساسة؛ أو تقليل الحقول، تحديد TTL وعدد السجلات وتقسيم التخزين بحسب الحساب ومسحه عند الخروج.",
+      "source": "../../research/source-archive/2026-11-07/uboor/qrStore-B8bgApfd.js"
+    },
+    {
+      "id": "SA-06",
+      "severity": "Medium",
+      "confidence": "Confirmed code pattern; verification meaning unsupported",
+      "area": "AchievementDocument",
+      "title": "QR بصري بديل من رقم الوثيقة وخدمة خارجية",
+      "evidence": "o.qr_code||o.doc_id||o.doc_number ; quickchart.io/qr?text=",
+      "effect": "يمكن إنشاء صورة QR من معرّف عادي، وإرسال قيمته لخدمة خارجية عند فشل التوليد المحلي. ذلك لا يؤكد توقيعًا رسميًا.",
+      "fix": "اعرض QR المعتمد المعاد من الخادم فقط، مع تمييز واضح عند غيابه؛ تجنب مولدات QR الخارجية للبيانات الحساسة.",
+      "source": "../../research/source-archive/2026-11-07/uboor/AchievementDocument-DEzIzJ3I.js"
+    },
+    {
+      "id": "SA-07",
+      "severity": "Medium",
+      "confidence": "Confirmed code pattern; backend contract unknown",
+      "area": "Exit gate",
+      "title": "الاعتماد على HTTP 200 كإشارة نجاح كافية",
+      "evidence": "if(r.status===200){ w(...); ... return !0 }",
+      "effect": "قد تظهر رسالة نجاح رغم وجود رفض منطقي في جسم الاستجابة إذا كان الخادم يعيد HTTP 200 مع success:false.",
+      "fix": "طبّق تحققًا وفق عقد API الرسمي (مثل success/status/document) وتحقق من البيانات المطلوبة قبل التنقل.",
+      "source": "../../research/source-archive/2026-11-07/uboor/useExitGate-BvHNutwH.js"
+    },
+    {
+      "id": "SA-08",
+      "severity": "Medium",
+      "confidence": "Confirmed code pattern; backend contract unknown",
+      "area": "DMS /qrpubliclink",
+      "title": "نتيجة /api/verify/ لا تتأكد من حالة HTTP",
+      "evidence": "x.onload ... JSON.parse(x.responseText); s.doc=d.document||null",
+      "effect": "وجود document في JSON يكفي لإظهار Valid بصرف النظر عن HTTP status في هذا المكون؛ لا يثبت إمكان تزييف رد فعلي من الخادم.",
+      "fix": "تحقق من حالة HTTP ومن معيار صحة موثّق قبل عرض Valid؛ تعامل مع الردود غير المتوقعة كغير مؤكدة.",
+      "source": "../../research/raw-uploads/2026-11-07/6439.3d46893d(1).js"
+    },
+    {
+      "id": "SA-09",
+      "severity": "Medium",
+      "confidence": "Confirmed code pattern; client-side only",
+      "area": "Owner/employee sessions",
+      "title": "خطأ 401 يطلق إنهاء جلستين مختلفتين",
+      "evidence": "if(s===401){ e.logout(); n.logoutOwner(); }",
+      "effect": "انتهاء صلاحية توكن إحدى الجلستين يُخرج المستخدم من الأخرى، ويعقّد التشخيص.",
+      "fix": "افصل معالجة 401 حسب نوع الجلسة التي أرسلت الطلب، ولا تنفذ logout عامًا.",
+      "source": "../../research/raw-uploads/2026-11-07/index-gleMzSil(1).js"
+    },
+    {
+      "id": "SA-10",
+      "severity": "Medium",
+      "confidence": "Confirmed code pattern; no live route test",
+      "area": "QRLocal routing",
+      "title": "مسار تسجيل الدخول قد يستخدم اسم Route غير موجود",
+      "evidence": "I.push({name:\"Login\"}) vs route name \"LoginView\"",
+      "effect": "قد يفشل الانتقال عند انعدام جلسة المستخدم إذا لم توجد خريطة بديلة للاسم.",
+      "fix": "استخدم اسم route المعرف فعلاً واختبر سيناريو الوصول بدون توكن.",
+      "source": "../../research/source-archive/2026-11-07/uboor/QRLocal-5TAaXbzM.js"
+    },
+    {
+      "id": "SA-11",
+      "severity": "Medium",
+      "confidence": "Confirmed code pattern; no server validity inference",
+      "area": "CompanyOwnerView",
+      "title": "QR احتياطي من بيانات السيارة أو السائق",
+      "evidence": "license_approval_number||vehicle_number||driver_name ... quickchart.io/qr",
+      "effect": "قد ينتج QR بصري يوهم بأنه رمز مستند، وينقل معلومة واردة في الرمز إلى طرف خارجي.",
+      "fix": "لا تصنع رمزًا يوحي بالاعتماد الرسمي من حقول نصية؛ أظهر بوضوح غياب QR المعتمد.",
+      "source": "../../research/raw-uploads/2026-11-07/company-owner-vite/companyownerview-cjdszkn6.js"
+    },
+    {
+      "id": "SA-12",
+      "severity": "Medium",
+      "confidence": "Confirmed code pattern; upload authorization not tested",
+      "area": "QRDocument",
+      "title": "إرسال لقطة PNG آليًا إلى Backend",
+      "evidence": "auto_send ... BorderPort_HS/path-document-file",
+      "effect": "قد ترسل الصفحة لقطة تحتوي بيانات مستند عند تشغيل auto_send؛ قواعد الصلاحيات والاحتفاظ غير ظاهرة في هذه الملفات.",
+      "fix": "وثّق شروط تشغيل auto_send، واحصره بصلاحيات محددة في الخادم، وقلل البيانات المعاد إرسالها.",
+      "source": "../../research/source-archive/2026-11-07/uboor/QRDocument-BJwpoEJY.js"
+    },
+    {
+      "id": "SA-13",
+      "severity": "Medium",
+      "confidence": "Confirmed scanner design gap",
+      "area": "Star Cyber Audit analyzer",
+      "title": "تصنيف خاطئ لأجزاء Webpack صالحة",
+      "evidence": "classify() only matches export/import/const/function tokens; 6439.js and 2752.js are classified UNKNOWN_NOT_VERIFIED",
+      "effect": "نتائج الفحص المحلي قد تفوّت ملفات JavaScript فعلية رغم وجود امتداد .js.",
+      "fix": "اقبل ملفات .js المعروفة بعد رفض HTML/JSON/WAF، وأضف عينات اختبار Webpack.",
+      "source": "../../analyze.py"
+    },
+    {
+      "id": "SA-14",
+      "severity": "Medium",
+      "confidence": "Confirmed scanner design gap",
+      "area": "Star Cyber Audit analyzer",
+      "title": "المسح لا يجتاز المجلدات الفرعية",
+      "evidence": "directory.iterdir() / sorted(directory.iterdir())",
+      "effect": "عند إعطائه مجلد جذر المشروع، لا يفحص ملفات JS الموجودة في research/*/* أو تحت مجلدات أخرى.",
+      "fix": "استخدم rglob مع استثناء .git/node_modules وإضافة حد للحجم/عدد الملفات.",
+      "source": "../../analyze.py"
+    },
+    {
+      "id": "SA-15",
+      "severity": "Medium",
+      "confidence": "Confirmed scanner design gap",
+      "area": "Star Cyber Audit analyzer",
+      "title": "قواعد API ثابتة لا تتعرف على DMS",
+      "evidence": "PAT_API only matches local_form|support_org|BorderPort_HS|carrier_register",
+      "effect": "يتجاهل مسار DMS /api/verify/ والمسارات التي تُركّب في runtime أو تظهر باسم مختلف.",
+      "fix": "وسّع أنماط API وأضف اختبار /api/verify/ مع الإبلاغ عن التغطية واحتمال false positives.",
+      "source": "../../analyze.py"
+    },
+    {
+      "id": "SA-16",
+      "severity": "Low",
+      "confidence": "UI behavior confirmed; backend policy not tested",
+      "area": "OTP UI",
+      "title": "مؤقت OTP مدته 60 ثانية في المتصفح فقط",
+      "evidence": "l.value=60; loginWithOtp(); sendOtp()",
+      "effect": "إغلاق واجهة إعادة الإرسال ليس دليلًا على انتهاء صلاحية رمز OTP لدى الخادم أو حماية ضد الإساءة.",
+      "fix": "تعامل مع سياسة انتهاء OTP وrate limiting كقرار خادمي؛ اختبر UI وفق رسائل الخادم.",
+      "source": "../../research/raw-uploads/2026-11-07/batch-042044/loginview-czys-bdx(20261107-042043).js"
+    },
+    {
+      "id": "SA-17",
+      "severity": "Low",
+      "confidence": "Observed in Worker source; no injection demonstrated",
+      "area": "Cloudflare Worker",
+      "title": "CSP يسمح بالنصوص البرمجية inline",
+      "evidence": "script-src 'unsafe-inline'; style-src 'unsafe-inline'",
+      "effect": "يعتمد أمان إدخال بيانات المستخدم على استخدام textContent الحالي؛ أي إدخال HTML غير آمن مستقبلاً يزيد مخاطر XSS.",
+      "fix": "انقل الشيفرة إلى ملف/وحدة خارجية واستخدم سياسة CSP أقوى، واحتفظ باستخدام textContent.",
+      "source": "../../site/worker.js"
+    }
+  ],
+  "counts": {
+    "high": 4,
+    "medium": 11,
+    "low": 2
+  },
+  "scope_note": "No government backend testing, authentication bypass attempt, or runtime execution",
+  "observed_paths": 33,
+  "dms_path": "/api/verify/"
+}
