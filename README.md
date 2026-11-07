@@ -65,3 +65,14 @@ The analyzer recursively enumerates local JS/MJS/CJS/HTML, keeps relative paths 
 avoid collisions, includes DMS `/api/verify/` references, and rejects HTML/WAF/JSON
 before using file-extension hints. GitHub Actions tests local fixtures plus archived
 source snapshots; it does **not** query external government systems in CI.
+
+## QrLocalImporter deep review (8 November 2026)
+
+Read the [Arabic evidence-based review](reviews/2026-11-08/QrLocalImporter_deep_review_AR.md), then run the new read-only iSH analyzer against **your own local source file**:
+
+```sh
+python3 tools/ish/qr_importer_review.py /path/to/QrLocalImporter-DYzNB5Fh.js
+python3 -m unittest discover -s tests -p 'test_qr_importer_review.py' -v
+```
+
+The repository stores the SHA-256 and review findings, **not a new copy of the uploaded third-party script**. The review does not contact UBOOR APIs or establish backend vulnerabilities.
