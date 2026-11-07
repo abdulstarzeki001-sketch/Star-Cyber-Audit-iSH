@@ -159,3 +159,28 @@ The two comparison flags are optional. Snapshot SHA-256:
 (8,913 bytes). This repository update contains no new copy of third-party
 government JavaScript, login token, document record, or live backend request.
 Thirteen matched frontend patterns do **not** establish thirteen vulnerabilities.
+
+## QRHealthCertificate deep review (8 November 2026)
+
+The [Arabic evidence-based audit](reviews/2026-11-08/QRHealthCertificate_deep_review_AR.md)
+examines the health-certificate camera reader and its
+`POST BorderPort_HS/read_doc_health` flow. Its **client-side 48-hour
+heuristic is conditional**: a substring match in the response message can
+skip the check; otherwise the UI chooses the newest parseable date from
+several unrelated fields, including license approval. This is **not a claim**
+that the government backend permits an expired document.
+
+Use the stdlib-only offline review tool on a locally held copy:
+
+```sh
+python3 tools/ish/qr_health_certificate_review.py /path/to/QRHealthCertificate-Byvh35hk.js \
+  --qr-local /path/to/QRLocal-5TAaXbzM.js \
+  --qr-imported /path/to/QRImported-C65Oqm1K.js
+python3 -m unittest discover -s tests -p 'test_qr_health_certificate_review.py' -v
+```
+
+Comparisons are optional. Snapshot: 10,900 bytes, SHA-256:
+`78b26ef2ba7f02c92745bc9bc5e61731d4972a390ba3c866d62ae8e000788936`.
+There are 16 version-specific source indicators (not proven vulnerabilities).
+No third-party script, secrets, personal records, or live UBOOR API responses
+were added as part of this report.
