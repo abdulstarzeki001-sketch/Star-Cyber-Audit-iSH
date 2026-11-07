@@ -72,6 +72,9 @@ def classify(data, filename=None):
         return "EMPTY_NOT_JS"
     if b"\x00" in data[:1024]:
         return "BINARY_NOT_JS"
+    if head.startswith((b"access denied", b"forbidden", b"not found",
+                        b"request blocked", b"error:", b"too many requests")):
+        return "UNKNOWN_NOT_VERIFIED"
     if head.startswith((b"{", b"[")):
         return "JSON_NOT_JS"
     webpack_markers = (b"webpackjsonp", b"webpackchunk", b"__webpack_require__")
