@@ -55,3 +55,7 @@ sh run.sh                         # تحليل النسخ المحلية offline
 ## لقطات HTML الجديدة — 7 نوفمبر 2026
 
 [عرض الدفعة الثالثة: لقطات QR وDMS المنقّحة](research/html-snapshots/2026-11-07/README_AR.md). الأسماء التي تضمنت رمز QR حساسًا استُبدلت بأسماء آمنة؛ هذه ملفات مرجعية وليست تطبيق تحقق كاملًا.
+
+## CompanyOwnerView Vite — الدفعة الجديدة (7 نوفمبر 2026)
+
+تم حفظ 8 أصول JavaScript/CSS في [مجلد CompanyOwnerView للتحليل](research/raw-uploads/2026-11-07/company-owner-vite/README_AR.md) مع الجرد والاعتمادات المطلوبة؛ لم تنشر خطوط Cairo المرفقة. لا تعد هذه الملفات تطبيقًا حكوميًا مستقلًا.
