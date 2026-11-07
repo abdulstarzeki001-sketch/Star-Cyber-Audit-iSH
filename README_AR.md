@@ -59,3 +59,7 @@ sh run.sh                         # تحليل النسخ المحلية offline
 ## CompanyOwnerView Vite — الدفعة الجديدة (7 نوفمبر 2026)
 
 تم حفظ 8 أصول JavaScript/CSS في [مجلد CompanyOwnerView للتحليل](research/raw-uploads/2026-11-07/company-owner-vite/README_AR.md) مع الجرد والاعتمادات المطلوبة؛ لم تنشر خطوط Cairo المرفقة. لا تعد هذه الملفات تطبيقًا حكوميًا مستقلًا.
+
+## تحديث دفعة 02:17–02:18 (7 نوفمبر 2026)
+
+[جرد جميع الملفات العشرة ونتائج المقارنة](research/raw-uploads/2026-11-07/batch-021750/MANIFEST_AR.md): 3 مصادر جديدة أضيفت و7 مصادر مطابقة للنسخ السابقة، مع توثيق روابطها. لم يتم نشرها على Cloudflare.
