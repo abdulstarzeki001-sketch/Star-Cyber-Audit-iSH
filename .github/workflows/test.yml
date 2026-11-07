@@ -64,3 +64,44 @@ jobs:
               )
           print(f"Offline scan verified: {len(records)} archived/source records")
           PY
+
+      - name: Check iSH update script syntax
+        run: sh -n tools/ish/sync_and_audit.sh
+      - name: Summarize offline scan in GitHub Actions
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          report = json.loads(Path("reports/analysis.json").read_text(encoding="utf-8"))
+          files = report.get("files", [])
+          js_files = [item for item in files if item.get("classification") == "JS_SOURCE"]
+          apis = {p for item in files for p in item.get("api_paths", [])}
+          flags = sum(len(item.get("flags", [])) for item in files)
+          summary = (
+              "## Star Cyber Audit — offline archive check\n\n"
+              "| Metric | Value |\n|---|---:|\n"
+              f"| Files inspected | {len(files)} |\n"
+              f"| JavaScript sources | {len(js_files)} |\n"
+              f"| API references (unique) | {len(apis)} |\n"
+              f"| Heuristic review flags | {flags} |\n\n"
+              "Source: archived repository files only. No authenticated requests, "
+              "no scans of external services. Heuristic flags are **not proven vulnerabilities**.\n"
+          )
+          print(summary)
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as out:
+              out.write(summary)
+          PY
+      - name: Upload offline audit reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: star-cyber-audit-offline-reports
+          path: |
+            reports/analysis.json
+            reports/inventory.csv
+            reports/api_paths.txt
+            reports/review_flags.txt
+            reports/report.html
+          if-no-files-found: error
+          retention-days: 14
