@@ -19,7 +19,7 @@
 - **المحتوى:** ترويسة UBOOR TECH ومنصة ترانزيت العراق، ومقاطع «عن المنصة» و«الدليل الاسترشادي» و«تواصل معنا».
 - **التركيب:** رابطا `assets/index-cseaomal.js` و`assets/index-iqgxgunl.css`، وصور الشعار والبانر. 8 روابط في اللقطة، ومقطعا script، أحدهما inline.
 - **الملاحظة الأمنية:** الصفحة الأصلية تحتوي معلومات اتصال نصية؛ حُذفت من النسخة العامة. وجود الروابط والمسارات لا يثبت أن خدماتها متاحة الآن.
-- **حالة الأرشفة:** [نسخة HTML نصية منقّحة](../../research/onedrive-uboor-capture/2026-11-07/customs-uboor.ur.gov.iq/index.html.txt).
+- **حالة الأرشفة:** [نسخة HTML نصية منقّحة](../../../research/onedrive-uboor-capture/2026-11-07/customs-uboor.ur.gov.iq/index.html.txt).
 
 ## 2 — سجل التنزيلات: `customs-uboor.ur.gov.iq/_downloads.html`
 
@@ -27,7 +27,7 @@
 - **النوع:** HTML بسيط بعنوان Downloads، يحتوي رابطين محفوظين.
 - **المحتوى:** رابط لعرض صفحة صاحب الشركة برمز `code` طويل، ورابط آخر بمعلمة `phone`.
 - **الملاحظة الأمنية:** يحتوي رموز QR/تحقق ومعلومات اتصال في النص ومسار الملف؛ لا يصح نشرها أو اختبار صلاحيتها على خادم الجهة دون تصريح. لا يمكن اعتبارها مفاتيح توقيع من المصدر وحده.
-- **حالة الأرشفة:** [فهرس منقّح](../../research/onedrive-uboor-capture/2026-11-07/customs-uboor.ur.gov.iq/_downloads.html.txt) يحافظ على بنية الفهرس دون القيم الحساسة.
+- **حالة الأرشفة:** [فهرس منقّح](../../../research/onedrive-uboor-capture/2026-11-07/customs-uboor.ur.gov.iq/_downloads.html.txt) يحافظ على بنية الفهرس دون القيم الحساسة.
 
 ## 3 — واجهة صاحب الشركة: `company-owner/index.html`
 
@@ -36,7 +36,7 @@
 - **المحتوى:** بطاقة بوابة صاحب الشركة وواجهة البحث باستخدام «كود الشركة (Hash Code)» المرسل عبر SMS، مع عرض بيانات هوية واتصال في اللقطة الأصلية.
 - **التبعيات:** `index-ccmhdhtn.js`، و`companyownerview-cjdszkn6.js`، و`card-cxdtecyo.js`، و`badge-ddrqdsta.js`، و`form-ldzoexkp.js` وغيرها من مكونات Vite. بعض الأسماء موجودة بالفعل في أرشيف GitHub السابق، والبعض الآخر مفقود من هذا المجلد والمستودع بالاسم نفسه.
 - **الملاحظة الأمنية:** حقل Hash Code في HTML لا يثبت آلية التحقق الخادمِي أو مدة صلاحية رمز SMS. تحتوي النسخة الأصلية بيانات اسم واتصال، وقد حجبت عن النسخة العامة.
-- **حالة الأرشفة:** [نسخة منقّحة](../../research/onedrive-uboor-capture/2026-11-07/customs-uboor.ur.gov.iq/company-owner/index.html.txt).
+- **حالة الأرشفة:** [نسخة منقّحة](../../../research/onedrive-uboor-capture/2026-11-07/customs-uboor.ur.gov.iq/company-owner/index.html.txt).
 
 ## 4 — لقطة فشل التحقق: `company-owner/[QR_TOKEN_REDACTED].html`
 
@@ -45,7 +45,7 @@
 - **المحتوى:** تظهر عبارتا «حدث خطأ أثناء التحقق من صاحب الشركة» و«خطأ في السيرفر»، ثم خيار «تسجيل الدخول عبر بوابة أور».
 - **التبعيات:** تشترك مع صفحة صاحب الشركة في `index-ccmhdhtn.js` وعدة مكونات. تحتوي نموذجًا واحدًا في DOM المحفوظ.
 - **الملاحظة الأمنية:** لا يوجد في هذه اللقطة سجل استجابة HTTP يثبت سبب الفشل أو ما إذا كان الرمز منتهيًا أو غير صحيح؛ الرسالة المعروضة وحدها لا تكفي.
-- **حالة الأرشفة:** [نسخة منقّحة باسم آمن](../../research/onedrive-uboor-capture/2026-11-07/customs-uboor.ur.gov.iq/company-owner/qr-validation-error.html.txt).
+- **حالة الأرشفة:** [نسخة منقّحة باسم آمن](../../../research/onedrive-uboor-capture/2026-11-07/customs-uboor.ur.gov.iq/company-owner/qr-validation-error.html.txt).
 
 ## 5 — ملف الهاتف: `company-owner/[PHONE_REDACTED].html`
 
@@ -53,7 +53,7 @@
 - **النوع:** ليس HTML ذا بنية قابلة للتحليل.
 - **المحتوى:** لا تحتوي النسخة على عناصر أو نص ذي وظيفة. توجد قيمة هاتف في **اسم الملف الأصلي** لا في محتواه.
 - **النتيجة:** لا يستفاد منه لتفسير مصادقة أو استجابة خادم. ينبغي فقط الحفاظ على التوثيق بوجوده دون كشف الرقم.
-- **حالة الأرشفة:** [نسخة ذات اسم آمن](../../research/onedrive-uboor-capture/2026-11-07/customs-uboor.ur.gov.iq/company-owner/empty-phone-file.html.txt).
+- **حالة الأرشفة:** [نسخة ذات اسم آمن](../../../research/onedrive-uboor-capture/2026-11-07/customs-uboor.ur.gov.iq/company-owner/empty-phone-file.html.txt).
 
 ## 6 — صفحة تسجيل الدخول: `user-auth/index.html`
 
@@ -62,7 +62,7 @@
 - **المحتوى:** نموذج يتضمن حقل اسم المستخدم وحقل كلمة المرور، وعنوانًا مرئيًا «Welcome Back».
 - **التبعيات:** `index-cseaomal.js`، و`loginview-czys-bdx.js`، و`form-o25ckf6s.js`، و`input-ce30asl_.js` وغيرها.
 - **الملاحظة الأمنية:** لا تتضمن HTML وحدها رمز دخول صالحًا أو تعريفًا كاملًا بعقود API، ولا تثبت سياسات OTP أو حماية الجلسة في Backend. عدد عناصر `<input>` في اللقطة: 2.
-- **حالة الأرشفة:** [نسخة منقّحة](../../research/onedrive-uboor-capture/2026-11-07/customs-uboor.ur.gov.iq/user-auth/index.html.txt).
+- **حالة الأرشفة:** [نسخة منقّحة](../../../research/onedrive-uboor-capture/2026-11-07/customs-uboor.ur.gov.iq/user-auth/index.html.txt).
 
 ## 7 — صورة `images/customes-logo.png`
 
