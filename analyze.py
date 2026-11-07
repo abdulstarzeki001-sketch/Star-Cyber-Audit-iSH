@@ -9,6 +9,7 @@ import csv
 import hashlib
 import html
 import json
+import os
 import re
 import sys
 import time
@@ -42,26 +43,47 @@ ASSETS = [
     "index-gleMzSil.js",
 ]
 MAX_SIZE = 12_000_000
+MAX_FILES = 3000
+SOURCE_SUFFIXES = {".js", ".mjs", ".cjs", ".html"}
+SKIP_DIRS = {".git", "node_modules", ".venv", "__pycache__", "reports"}
 PAT_API = re.compile(r"\b(?:local_form|support_org|BorderPort_HS|carrier_register)/[A-Za-z0-9_./{}-]+")
+PAT_DMS_API = re.compile(r"(?<![A-Za-z0-9_])/api/verify/")
+PAT_XHR_DMS_CALL = re.compile(r"""\.open\(\s*["\'](GET|POST|PUT|PATCH|DELETE)["\']\s*,\s*["\'](/api/verify/)""", re.I)
 PAT_CALL = re.compile(r"\b(?:post|get|put|patch|delete)\s*\(\s*['\"]((?:local_form|support_org|BorderPort_HS|carrier_register)/[^'\"]+)", re.I)
 PAT_IMPORT = re.compile(r"(?:\bfrom\s*|\bimport\s*\(|\bimport\s*)['\"](\./[^'\"]+)")
 PAT_STORE = re.compile(r"\b(?:localStorage|sessionStorage)\.(?:getItem|setItem|removeItem|clear)\s*\(\s*(?:['\"]([^'\"]{1,90})['\"]|([A-Za-z_$][\w$]{0,40}))")
 PAT_PRIV = re.compile(r"(?:includes|has)\s*\(\s*['\"]([a-zA-Z0-9_]{3,80})['\"]")
 
 
-def classify(data):
+def classify(data, filename=None):
+    """Conservative classification; reject HTML/WAF/JSON before JS or file hints."""
     head = data[:1000].lstrip().lower()
     low = data[:10000].lower()
-    if any(x in low for x in (b"huaweicloudwaf", b"wafatclconfirm", b"please enable javascript and cookie")):
+    looks_html = head.startswith(
+        (b"<!doctype html", b"<html", b"<head", b"<?xml", b"<body")
+    ) or b"<html" in head[:250]
+    waf_markers = (b"huaweicloudwaf", b"wafatclconfirm",
+                   b"please enable javascript and cookie")
+    if looks_html and any(marker in low for marker in waf_markers):
         return "WAF_HTML_NOT_JS"
-    if head.startswith((b"<!doctype html", b"<html", b"<head")) or b"<html" in head[:250]:
+    if looks_html:
         return "HTML_NOT_JS"
+    if not head:
+        return "EMPTY_NOT_JS"
+    if b"\\x00" in data[:1024]:
+        return "BINARY_NOT_JS"
     if head.startswith((b"{", b"[")):
         return "JSON_NOT_JS"
-    if any(x in data for x in (b"export{", b"import{", b"function ", b"const ", b"(()=>{", b"export ", b"import ")):
+    webpack_markers = (b"webpackjsonp", b"webpackchunk", b"__webpack_require__")
+    js_markers = (b"export{", b"import{", b"function ", b"const ",
+                  b"(()=>{", b"export ", b"import ")
+    if any(marker in low for marker in webpack_markers) or any(
+            marker in data for marker in js_markers):
+        return "JS_SOURCE"
+    # A .js/.mjs/.cjs suffix is a useful hint only after rejecting known non-JS.
+    if filename and Path(filename).suffix.lower() in {".js", ".mjs", ".cjs"}:
         return "JS_SOURCE"
     return "UNKNOWN_NOT_VERIFIED"
-
 
 def fetch_assets(names, reports):
     dest = ROOT / "downloads"
@@ -82,7 +104,7 @@ def fetch_assets(names, reports):
                 if len(payload) > MAX_SIZE:
                     entry["status"] = "SKIPPED_TOO_LARGE"
                 else:
-                    entry["status"] = classify(payload)
+                    entry["status"] = classify(payload, filename=name)
                     entry["bytes"] = len(payload)
                     filename = name if entry["status"] == "JS_SOURCE" and response.status == 200 else name + ".rejected.html"
                     (dest / filename).write_bytes(payload)
@@ -95,12 +117,13 @@ def fetch_assets(names, reports):
     (reports / "fetch_status.json").write_text(json.dumps(items, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-def analyze_one(path, origin):
+def analyze_one(path, origin, relative_path=None):
     size = path.stat().st_size
     data = b"" if size > MAX_SIZE else path.read_bytes()
-    status = "SKIPPED_TOO_LARGE" if size > MAX_SIZE else classify(data)
+    status = "SKIPPED_TOO_LARGE" if size > MAX_SIZE else classify(data, filename=path.name)
     item = {
-        "name": path.name, "origin": origin, "classification": status,
+        "name": path.name, "relative_path": relative_path or path.name,
+        "origin": origin, "classification": status,
         "bytes": size, "sha256": hashlib.sha256(data).hexdigest() if data else None,
         "api_paths": [], "api_calls": [], "imports": [], "storage": [],
         "privilege_literals": [], "flags": []
@@ -109,8 +132,10 @@ def analyze_one(path, origin):
         return item
     source = data.decode("utf-8", "replace")
     low = source.lower()
-    item["api_paths"] = sorted(set(PAT_API.findall(source)))
-    item["api_calls"] = sorted(set(PAT_CALL.findall(source)))
+    item["api_paths"] = sorted(set(PAT_API.findall(source)) | set(PAT_DMS_API.findall(source)))
+    xhr_calls = {"{} {}".format(method.upper(), endpoint)
+                 for method, endpoint in PAT_XHR_DMS_CALL.findall(source)}
+    item["api_calls"] = sorted(set(PAT_CALL.findall(source)) | xhr_calls)
     item["imports"] = sorted(set(PAT_IMPORT.findall(source)))[:100]
     item["storage"] = sorted(set((m.group(1) or m.group(2)) for m in PAT_STORE.finditer(source)))
     item["privilege_literals"] = sorted(set(PAT_PRIV.findall(source)))[:100]
@@ -137,10 +162,11 @@ def analyze_one(path, origin):
 def write_csv(path, records):
     with path.open("w", newline="", encoding="utf-8-sig") as out:
         writer = csv.writer(out)
-        writer.writerow(["name", "origin", "classification", "bytes", "sha256",
+        writer.writerow(["name", "relative_path", "origin", "classification", "bytes", "sha256",
                          "api_count", "import_count", "storage_count", "review_flags"])
         for item in records:
-            row = [item["name"], item["origin"], item["classification"], item["bytes"],
+            row = [item["name"], item.get("relative_path", item["name"]),
+                   item["origin"], item["classification"], item["bytes"],
                    item["sha256"] or "", len(item["api_paths"]), len(item["imports"]),
                    len(item["storage"]), " | ".join(item["flags"])]
             writer.writerow(["'" + v if isinstance(v, str) and v.startswith(("=", "+", "-", "@")) else v for v in row])
@@ -158,7 +184,7 @@ def write_html(records, outfile):
         def chips(values):
             return " ".join("<code>{}</code>".format(esc(x)) for x in values[:100]) or "لا توجد"
         sections.append(
-            "<details><summary>{} <small>{}</small></summary>".format(esc(item["name"]), status) +
+            "<details><summary>{} <small>{}</small></summary>".format(esc(item.get("relative_path", item["name"])), status) +
             "<p>المصدر: {} · {} bytes</p>".format(esc(item["origin"]), item["bytes"]) +
             "<p>SHA-256: <code>{}</code></p>".format(esc(item["sha256"] or "n/a")) +
             "<h3>API Paths</h3><div>{}</div>".format(chips(item["api_paths"])) +
@@ -192,6 +218,49 @@ border-radius:5px;background:#273248;font-size:12px}h3{font-size:14px;margin-top
     outfile.write_text(page, encoding="utf-8")
 
 
+
+def iter_source_files(directory, max_files=MAX_FILES):
+    """Walk locally and predictably, ignoring symlinks and common generated dirs."""
+    seen = 0
+    for parent, subdirs, filenames in os.walk(directory, followlinks=False):
+        subdirs[:] = sorted(
+            name for name in subdirs
+            if name not in SKIP_DIRS and not (Path(parent) / name).is_symlink()
+        )
+        for filename in sorted(filenames):
+            path = Path(parent) / filename
+            if path.suffix.lower() not in SOURCE_SUFFIXES:
+                continue
+            if path.is_symlink() or not path.is_file():
+                continue
+            seen += 1
+            if seen > max_files:
+                raise ValueError("source file limit exceeded ({}): {}".format(
+                    max_files, directory))
+            yield path
+
+
+def collect_records(directories):
+    """Keep same-named files in different folders; prefer valid current downloads."""
+    results = {}
+    total = 0
+    for directory, origin in directories:
+        if not directory.is_dir():
+            continue
+        for path in iter_source_files(directory):
+            total += 1
+            if total > MAX_FILES:
+                raise ValueError("total source file limit exceeded ({})".format(MAX_FILES))
+            relative_path = path.relative_to(directory).as_posix()
+            item = analyze_one(path, origin, relative_path=relative_path)
+            previous = results.get(relative_path)
+            if previous and (item["classification"] != "JS_SOURCE" or
+                             (origin == "offline_snapshot" and
+                              previous["origin"] == "downloaded_current")):
+                continue
+            results[relative_path] = item
+    return list(results.values())
+
 def main():
     parser = argparse.ArgumentParser(description="Read-only UBOOR public JavaScript static analyzer")
     group = parser.add_mutually_exclusive_group()
@@ -203,28 +272,20 @@ def main():
     reports.mkdir(exist_ok=True)
     if options.fetch or options.fetch_all:
         fetch_assets(ASSETS if options.fetch_all else ASSETS[:4], reports)
-    sources = []
     if options.local:
         directory = Path(options.local).expanduser().resolve()
         if not directory.is_dir():
             parser.error("local directory is missing: " + str(directory))
-        sources = [(p, "local") for p in sorted(directory.iterdir())
-                   if p.is_file() and p.suffix.lower() in (".js", ".mjs", ".html")]
+        directories = [(directory, "local")]
     else:
-        for directory, origin in ((ROOT / "offline_samples", "offline_snapshot"),
-                                  (ROOT / "downloads", "downloaded_current")):
-            if directory.exists():
-                sources += [(p, origin) for p in sorted(directory.iterdir())
-                            if p.is_file() and p.suffix.lower() in (".js", ".mjs", ".html")]
-    results = {}
-    for path, origin in sources:
-        item = analyze_one(path, origin)
-        previous = results.get(path.name)
-        if previous and (item["classification"] != "JS_SOURCE" or
-                         (origin == "offline_snapshot" and previous["origin"] == "downloaded_current")):
-            continue
-        results[path.name] = item
-    records = list(results.values())
+        directories = [
+            (ROOT / "offline_samples", "offline_snapshot"),
+            (ROOT / "downloads", "downloaded_current"),
+        ]
+    try:
+        records = collect_records(directories)
+    except ValueError as exc:
+        parser.error(str(exc))
     write_csv(reports / "inventory.csv", records)
     (reports / "analysis.json").write_text(json.dumps(
         {"generated_utc": datetime.now(timezone.utc).isoformat(),
@@ -232,11 +293,11 @@ def main():
     with (reports / "api_paths.txt").open("w", encoding="utf-8") as out:
         for item in records:
             for endpoint in item["api_paths"]:
-                out.write("{}\t{}\n".format(item["name"], endpoint))
+                out.write("{}\t{}\n".format(item.get("relative_path", item["name"]), endpoint))
     with (reports / "review_flags.txt").open("w", encoding="utf-8") as out:
         for item in records:
             for flag in item["flags"]:
-                out.write("{}\t{}\n".format(item["name"], flag))
+                out.write("{}\t{}\n".format(item.get("relative_path", item["name"]), flag))
     write_html(records, reports / "report.html")
     print("Star Cyber Audit complete")
     print("JavaScript analyzed: {} / {} total files".format(
