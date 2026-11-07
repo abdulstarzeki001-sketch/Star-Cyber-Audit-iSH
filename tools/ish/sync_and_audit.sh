@@ -4,7 +4,23 @@
 set -eu
 
 REPO_URL="https://github.com/abdulstarzeki001-sketch/Star-Cyber-Audit-iSH.git"
-PROJECT_DIR="${STAR_AUDIT_DIR:-${HOME:-.}/Star-Cyber-Audit-iSH}"
+# Prefer the checkout containing this script, avoiding accidental duplicate clones.
+# STAR_AUDIT_DIR can explicitly select an alternate checkout.
+SCRIPT_DIR="$(CDPATH= cd "$(dirname "$0")" && pwd -P)"
+SCRIPT_PROJECT="$(CDPATH= cd "$SCRIPT_DIR/../.." && pwd -P)"
+if [ -n "${STAR_AUDIT_DIR:-}" ]; then
+    PROJECT_DIR="$STAR_AUDIT_DIR"
+elif [ -d "$SCRIPT_PROJECT/.git" ]; then
+    PROJECT_DIR="$SCRIPT_PROJECT"
+else
+    PROJECT_DIR="${HOME:-.}/Star-Cyber-Audit-iSH"
+fi
+
+# No side effects; useful for checking the selected checkout on a phone.
+if [ "${1:-}" = "--where" ]; then
+    printf '%s\n' "$PROJECT_DIR"
+    exit 0
+fi
 
 fail() { printf 'ERROR: %s\n' "$*" >&2; exit 1; }
 command -v git >/dev/null 2>&1 || fail "git is missing. In iSH run: apk add git"
