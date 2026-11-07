@@ -1,0 +1,126 @@
+{
+  "source": "https://1drv.ms/f/c/c39a63f918f32793/IgA2nSQ7b_hOTbUREmsIQezrAWpZV0ErGJuuREHOd_UlhBo",
+  "folder": "customs-uboor.ur.gov.iq+_1772003025841",
+  "review_date": "2026-11-07",
+  "method": "Read-only OneDrive file listing, text extraction and GitHub filename reference comparison. No remote government API requests.",
+  "file_count": 8,
+  "source_folders": [
+    "customs-uboor.ur.gov.iq",
+    "customs-uboor.ur.gov.iq/company-owner",
+    "customs-uboor.ur.gov.iq/user-auth",
+    "customs-uboor.ur.gov.iq/images",
+    "ur.gov.iq/js (empty)"
+  ],
+  "files": [
+    {
+      "safe_path": "customs-uboor.ur.gov.iq/index.html",
+      "bytes": 19436,
+      "kind": "HTML",
+      "action": "metadata_only",
+      "reason": "contains contact information"
+    },
+    {
+      "safe_path": "customs-uboor.ur.gov.iq/_downloads.html",
+      "bytes": 1883,
+      "kind": "HTML",
+      "action": "metadata_only",
+      "reason": "contains opaque QR values and phone references"
+    },
+    {
+      "safe_path": "customs-uboor.ur.gov.iq/company-owner/index.html",
+      "bytes": 21241,
+      "kind": "HTML",
+      "action": "metadata_only",
+      "reason": "contains person or company identifiers, email and phone"
+    },
+    {
+      "safe_path": "customs-uboor.ur.gov.iq/company-owner/index_code_[REDACTED].html",
+      "bytes": 19185,
+      "kind": "HTML",
+      "action": "metadata_only",
+      "reason": "opaque QR token in original filename; client error snapshot"
+    },
+    {
+      "safe_path": "customs-uboor.ur.gov.iq/company-owner/index_phone_[REDACTED].html",
+      "bytes": 1,
+      "kind": "HTML",
+      "action": "metadata_only",
+      "reason": "phone number in original filename and no useful content"
+    },
+    {
+      "safe_path": "customs-uboor.ur.gov.iq/user-auth/index.html",
+      "bytes": 19581,
+      "kind": "HTML",
+      "action": "metadata_only",
+      "reason": "login form snapshot; frontend-only evidence"
+    },
+    {
+      "safe_path": "customs-uboor.ur.gov.iq/images/customes-logo.png",
+      "bytes": 90851,
+      "kind": "PNG",
+      "action": "metadata_only",
+      "reason": "third-party logo asset"
+    },
+    {
+      "safe_path": "customs-uboor.ur.gov.iq/images/ur-logo.png",
+      "bytes": 19094,
+      "kind": "PNG",
+      "action": "metadata_only",
+      "reason": "third-party logo asset"
+    }
+  ],
+  "pages": [
+    {
+      "page": "homepage",
+      "title": "الرئيسة",
+      "role": "UBOOR TECH transit and navigation page",
+      "main_bundle": "index-cseaomal.js",
+      "css": [
+        "index-iqgxgunl.css"
+      ],
+      "pii_detected": true
+    },
+    {
+      "page": "company-owner",
+      "title": "بوابة أصحاب الشركات",
+      "role": "Company owner page with SMS Hash Code input",
+      "main_bundle": "index-ccmhdhtn.js",
+      "pii_detected": true
+    },
+    {
+      "page": "company-qr-error",
+      "title": "بوابة أصحاب الشركات",
+      "role": "Client snapshot displaying a server verification error",
+      "main_bundle": "index-ccmhdhtn.js",
+      "pii_detected": false
+    },
+    {
+      "page": "login",
+      "title": "تسجيل الدخول",
+      "role": "Username/password form",
+      "main_bundle": "index-cseaomal.js",
+      "pii_detected": false
+    }
+  ],
+  "referenced_but_no_matching_filename_in_git": [
+    "index-cseaomal.js",
+    "index-ccmhdhtn.js",
+    "index-iqgxgunl.css",
+    "card-cxdtecyo.js",
+    "textarea-bgo3bjb3.js",
+    "table-dtmqfnp9.js",
+    "basemodal-c8lwmuhw.js",
+    "vue3-treeselect.min-c1blx3zb.js",
+    "form-ldzoexkp.js",
+    "schemas-b4dorvt-.js",
+    "uboor-banner.jpeg",
+    "customes-logo.png",
+    "ur-logo.png"
+  ],
+  "limits": [
+    "Filename matches in GitHub do not guarantee content hash equivalence",
+    "Client-side page errors do not prove why the server rejected a request",
+    "Raw data was not uploaded to public GitHub",
+    "Image binary content not audited"
+  ]
+}
