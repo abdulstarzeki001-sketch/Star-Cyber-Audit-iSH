@@ -1,0 +1,1 @@
+const e="qr_readings";function n(){try{const t=localStorage.getItem(e);return t?JSON.parse(t):[]}catch{return[]}}function r(t){try{localStorage.setItem(e,JSON.stringify(t))}catch{}}function s(t){const a=n();a.unshift(t),r(a)}export{s as a,n as l};
