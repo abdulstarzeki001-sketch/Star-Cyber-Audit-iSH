@@ -4,7 +4,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-source = Path(__file__).resolve().parent / "qr_health_certificate_review.py"
+source = Path(__file__).resolve().parents[1] / "tools" / "ish" / "qr_health_certificate_review.py"
 spec = importlib.util.spec_from_file_location("qr_health_certificate_review", source)
 checker = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(checker)
