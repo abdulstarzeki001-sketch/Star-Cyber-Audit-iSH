@@ -17,3 +17,24 @@ jobs:
         run: |
           python -m py_compile analyze.py
           python -m unittest discover -s tests -v
+      - name: Integration test using saved source snapshots (offline)
+        run: |
+          python analyze.py --local research
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data = json.loads(Path("reports/analysis.json").read_text(encoding="utf-8"))
+          records = data["files"]
+          js_files = [r for r in records if r["classification"] == "JS_SOURCE"]
+          endpoints = {p for r in records for p in r["api_paths"]}
+          assert len(js_files) >= 20, (len(js_files), len(records))
+          assert "local_form/read_doc_company" in endpoints, endpoints
+          assert "/api/verify/" in endpoints, endpoints
+          assert any(r["name"].startswith("6439.3d46893d") and
+                     r["classification"] == "JS_SOURCE" for r in records)
+          assert any(r["name"].startswith("QRDocument-") and
+                     r["classification"] == "JS_SOURCE" for r in records)
+          assert all(r.get("relative_path") for r in records)
+          print("Offline integration OK:", len(js_files),
+                "JavaScript files,", len(endpoints), "API references")
+          PY
