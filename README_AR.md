@@ -166,3 +166,7 @@ sh tools/ish/connect_remote.sh --connect
 ## نقل ملفات OneDrive الأصلية إلى GitHub خاص
 
 أضفت [أداة استيراد تتحقق من أن مستودع الوجهة **Private**](tools/ish/upload_onedrive_archive_private.sh)، مع [خطوات الاستخدام على iSH/Kali](tools/ish/PRIVATE_ONEDRIVE_IMPORT_AR.md). **لم تتم إضافة الملفات الأصلية إلى GitHub بعد** لأن إنشاء المستودع من المتصفح تعذر بسبب انتهاء صلاحية تسجيل الدخول، ولا يوجد اتصال مباشر بالجهاز. النسخ العامة المنقحة وتقارير التحليل ما زالت محفوظة.
+
+## تدقيق ملفات DMS الموظفين — 8 نوفمبر 2026
+
+أُضيف [تقرير ثابت مفصل لثمانية ملفات مرفقة](reviews/2026-11-08/dms-employee-assets/DETAILED_STATIC_AUDIT_AR.md): صفحة HTML، ثلاث حزم JavaScript، ثلاثة CSS، وملف XLaunch. يشمل التقرير مخاطر تمرير `passRedirect` في عنوان URL، ومعالجة أخطاء Axios، ونسخ Vue وSweetAlert2، وإعداد `DisableAC=True`، وما ينقص من أجزاء Webpack. التقرير **لا يثبت ثغرات خادم** ولم تُرفع الملفات الخام إلى المستودع العام.
