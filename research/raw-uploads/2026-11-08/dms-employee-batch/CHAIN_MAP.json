@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0",
+  "review_date": "2026-11-08",
+  "repository": "abdulstarzeki001-sketch/Star-Cyber-Audit-iSH",
+  "batch_path": "research/raw-uploads/2026-11-08/dms-employee-batch/",
+  "scope": "static-frontend-archive",
+  "execution": "none",
+  "government_endpoints_tested": false,
+  "source_files": [
+    {
+      "name": "dashboard(1).devtools",
+      "source_bytes": 847,
+      "archived_bytes": 847,
+      "blob_sha": "128c9597ec6045e03d60e68f5db875f4ae9f1f58",
+      "type": "html_shell",
+      "role": "entry"
+    },
+    {
+      "name": "chunk-vendors.1b093cc7(20261107-215012).js",
+      "source_bytes": 942388,
+      "archived_bytes": 942388,
+      "blob_sha": "7f1c184216a086a3c901ee4d05d77d34ab9caa0b",
+      "type": "webpack_js",
+      "role": "vendors",
+      "chunk_ids": [
+        4998,
+        3830
+      ]
+    },
+    {
+      "name": "chunk-common.ddcf658a(20261107-215012).js",
+      "source_bytes": 17425,
+      "archived_bytes": 17425,
+      "blob_sha": "522f4320ed0954e1427bfbde6f369989ef8b21f1",
+      "type": "webpack_js",
+      "role": "shared",
+      "chunk_ids": [
+        3064
+      ]
+    },
+    {
+      "name": "employee.21e9f881(20261107-215011).js",
+      "source_bytes": 33085,
+      "archived_bytes": 33085,
+      "blob_sha": "45a027208a4928f9a32dd97e85aafc459cbaf355",
+      "type": "webpack_js",
+      "role": "employee-entry"
+    },
+    {
+      "name": "chunk-vendors.7ac31ae5(1).css",
+      "source_bytes": 322978,
+      "archived_bytes": 322978,
+      "blob_sha": "6e6360388a6dd4100e54d518b61cffa273cbb499",
+      "type": "css",
+      "role": "vendors-styles"
+    },
+    {
+      "name": "chunk-common.04b3f60d(1).css",
+      "source_bytes": 31033,
+      "archived_bytes": 31029,
+      "blob_sha": "2de0c31a59862a93fcf9ac80f323199b70fe478b",
+      "type": "css",
+      "role": "shared-styles",
+      "caveat": "4-byte newline normalization during text extraction"
+    },
+    {
+      "name": "employee.600a28b0(1).css",
+      "source_bytes": 26846,
+      "archived_bytes": 26846,
+      "blob_sha": "cdf8fd55614d8c6118786b4b885a0ea45e8018a0",
+      "type": "css",
+      "role": "employee-styles"
+    },
+    {
+      "name": "config(1).xlaunch",
+      "source_bytes": 395,
+      "archived_bytes": 395,
+      "blob_sha": "dc3054c24f7061af42bd343952aab98834cafe6d",
+      "type": "xml",
+      "role": "unrelated-windows-x11-config",
+      "warning": "DisableAC=True"
+    }
+  ],
+  "links": [
+    {
+      "from": "dashboard(1).devtools",
+      "to": "chunk-vendors.1b093cc7(20261107-215012).js",
+      "type": "script"
+    },
+    {
+      "from": "dashboard(1).devtools",
+      "to": "chunk-common.ddcf658a(20261107-215012).js",
+      "type": "script"
+    },
+    {
+      "from": "dashboard(1).devtools",
+      "to": "employee.21e9f881(20261107-215011).js",
+      "type": "script"
+    },
+    {
+      "from": "dashboard(1).devtools",
+      "to": "chunk-vendors.7ac31ae5(1).css",
+      "type": "stylesheet"
+    },
+    {
+      "from": "dashboard(1).devtools",
+      "to": "chunk-common.04b3f60d(1).css",
+      "type": "stylesheet"
+    },
+    {
+      "from": "dashboard(1).devtools",
+      "to": "employee.600a28b0(1).css",
+      "type": "stylesheet"
+    },
+    {
+      "from": "chunk-common.ddcf658a(20261107-215012).js",
+      "to": "research/raw-uploads/2026-11-07/6439.3d46893d(1).js",
+      "type": "same_DMS_application_family_inferred_not_runtime_import"
+    },
+    {
+      "from": "chunk-common.ddcf658a(20261107-215012).js",
+      "to": "research/raw-uploads/2026-11-07/batch-021750/2752.719f919a(1).js",
+      "type": "same_DMS_application_family_inferred_not_runtime_import"
+    }
+  ],
+  "routes": {
+    "employee": [
+      "/qr",
+      "/trash",
+      "/user-table",
+      "/activitylog",
+      "/reports",
+      "/DocView/:editid",
+      "/DocView2/:editid",
+      "/permissions/:childtype/:editid"
+    ],
+    "common": [
+      "/qrpubliclink",
+      "/employee/dashboard/profile-edit"
+    ],
+    "earlierDMS": [
+      "/ReadQrWithUR",
+      "/qrpubliclink/:qrcode?",
+      "/api/verify/"
+    ]
+  },
+  "related": [
+    "reviews/2026-11-07/DEEP_STATIC_AUDIT_AR.md",
+    "reviews/2026-11-08/dms-employee-assets/DETAILED_STATIC_AUDIT_AR.md",
+    "reviews/2026-11-07/onedrive-uboor-folder/DETAILED_FILE_BY_FILE_AR.md"
+  ],
+  "notes": [
+    "DMS Webpack and UBOOR Vite are distinct frontend builds",
+    "No backend authorization or signature verification proven",
+    "Do not execute XLaunch DisableAC=True on untrusted networks"
+  ]
+}
