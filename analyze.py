@@ -70,7 +70,7 @@ def classify(data, filename=None):
         return "HTML_NOT_JS"
     if not head:
         return "EMPTY_NOT_JS"
-    if b"\\x00" in data[:1024]:
+    if b"\x00" in data[:1024]:
         return "BINARY_NOT_JS"
     if head.startswith((b"{", b"[")):
         return "JSON_NOT_JS"
