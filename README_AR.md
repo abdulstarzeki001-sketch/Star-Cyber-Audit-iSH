@@ -100,3 +100,28 @@ sh run.sh                         # تحليل النسخ المحلية offline
 ## حالة الإصلاحات المنفّذة — 7 نوفمبر 2026
 
 اكتمل [تحديث محلل المصادر واختباراته](reviews/2026-11-07/SCANNER_REMEDIATION_V1_AR.md): تم إصلاح اكتشاف Webpack، ودعم `/api/verify/`، والمسح المتكرر للمجلدات مع حفظ مسار كل ملف. نجح اختبار التكامل على الأرشيف الحقيقي في GitHub Actions. ملاحظات شيفرة UBOOR/DMS الخارجية ما زالت مفتوحة ولم تُغيَّر الملفات الأصلية.
+
+## مزامنة iSH الآمنة وفحص جميع الملفات
+
+**هذا إجراء محلي على جهازك، وليس اتصال SSH من ChatGPT إلى الآيفون.** بعد تشغيله أول مرة، ينقل الشيفرة من GitHub إلى iSH ويفحص الأرشيف محليًا. لا يرسل محتوى التقرير إلى أي خدمة، ولا يتصل ببوابة UBOOR أو DMS.
+
+مرة واحدة داخل تطبيق iSH على الآيفون:
+
+```sh
+apk add git python3 ca-certificates
+git clone https://github.com/abdulstarzeki001-sketch/Star-Cyber-Audit-iSH.git
+cd Star-Cyber-Audit-iSH
+sh tools/ish/sync_and_audit.sh
+```
+
+لأي تحديث لاحق، من مجلد المشروع نفسه:
+
+```sh
+sh tools/ish/sync_and_audit.sh
+```
+
+السكربت يتحقق من المستودع والفرع وعدم وجود تعديلات محلية غير محفوظة ثم ينفذ `git pull --ff-only` دون حذف الملفات أو فرض تحديث. بعدها يشغّل الاختبارات وتحليل الملفات المتداخلة ويكتب `reports/report.html` و`reports/analysis.json`. إذا استعملت مسارًا مخصصًا للمشروع، يمكن ضبط `STAR_AUDIT_DIR` قبل تشغيله.
+
+**تقارير GitHub دون الحاجة إلى iSH:** [GitHub Actions — Offline Audit](https://github.com/abdulstarzeki001-sketch/Star-Cyber-Audit-iSH/actions/workflows/test.yml). اختر أحدث تشغيل ناجح ثم حمّل الملف `star-cyber-audit-offline-reports` من قسم Artifacts. يحتوي JSON وCSV وHTML، ويتم إنتاجه من ملفات الأرشيف العام فقط.
+
+**حد الاتصال المباشر:** Desktop Commander لم يكن يملك جهازًا متصلًا عند المحاولة. لا يستطيع ChatGPT تنفيذ أوامر داخل iSH على هاتفك إلا بعد إتاحة اتصال مصرح به يدعم ذلك.
