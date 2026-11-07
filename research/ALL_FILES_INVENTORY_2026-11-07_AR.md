@@ -42,8 +42,8 @@
 | `6439.3d46893d(1).js` | 1336 | محفوظ في GitHub (أصل أو نسخة موثقة) | `research/raw-uploads/2026-11-07/6439.3d46893d(1).js` |
 | `index.801a60b0(20261107-003201).js` | 7105 | محفوظ في GitHub (أصل أو نسخة موثقة) | `research/raw-uploads/2026-11-07/index.801a60b0(20261107-003201).js` |
 | `978.a8d79244(1).js` | 560 | محفوظ في GitHub (أصل أو نسخة موثقة) | `research/raw-uploads/2026-11-07/978.a8d79244(1).js` |
-| `index﹖code=[REDACTED]_332c1d918f1485(1).html` | 24837 | منشور باسم آمن | `research/html-snapshots/2026-11-07/dms-index-qr-error-snapshot.html` |
-| `ReadQrWithUR﹖code=[REDACTED]_e6787fca6d79a5(1).html` | 24814 | منشور باسم آمن | `research/html-snapshots/2026-11-07/dms-readqrwithur-error-snapshot.html` |
+| `dms-index-[QR_REDACTED].html` | 24837 | منشور باسم آمن | `research/html-snapshots/2026-11-07/dms-index-qr-error-snapshot.html` |
+| `dms-ReadQrWithUR-[QR_REDACTED].html` | 24814 | منشور باسم آمن | `research/html-snapshots/2026-11-07/dms-readqrwithur-error-snapshot.html` |
 | `qrpubliclink(20261107-004752).html` | 832 | منشور باسم آمن | `research/html-snapshots/2026-11-07/dms-qrpubliclink-shell.html` |
 | `input-banvtf9h.js` | 7831 | محفوظ في GitHub (أصل أو نسخة موثقة) | `research/raw-uploads/2026-11-07/company-owner-vite/input-banvtf9h.js` |
 | `companyownerview-citq539c(20261107-015549).css` | 3693 | محفوظ في GitHub (أصل أو نسخة موثقة) | `research/raw-uploads/2026-11-07/company-owner-vite/companyownerview-citq539c(20261107-015549).css` |
