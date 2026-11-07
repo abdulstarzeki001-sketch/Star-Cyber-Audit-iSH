@@ -184,3 +184,23 @@ Comparisons are optional. Snapshot: 10,900 bytes, SHA-256:
 There are 16 version-specific source indicators (not proven vulnerabilities).
 No third-party script, secrets, personal records, or live UBOOR API responses
 were added as part of this report.
+
+## useHealthCertificate deep static review (8 November 2026)
+
+The [Arabic audit](reviews/2026-11-08/useHealthCertificate_deep_review_AR.md)
+analyzes the certificate management composable: 12 relative BorderPort_HS
+API routes, shared singleton state, province/district/subdistrict lookup caches,
+reader lists, document previews, downloads and uploads. Its 13 version-specific
+patterns are **frontend review indicators**, not confirmed server vulnerabilities.
+Unlike the QRHealthCertificate scanner, this module has **no** local 48-hour
+expiry test or camera reader.
+
+```sh
+python3 tools/ish/use_health_certificate_review.py /path/to/useHealthCertificate-DVL2cDcP.js
+python3 -m unittest discover -s tests -p 'test_use_health_certificate_review.py' -v
+```
+
+Source snapshot SHA-256:
+`36acf66c8a1ad736f6da9bca1d8a9dced9f1bf377451c8913dcf4ddc15eff479`
+(17,870 bytes). The update adds **no new copy** of third-party JS,
+secrets, personal documents or authenticated API response data.
