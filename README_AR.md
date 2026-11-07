@@ -125,3 +125,28 @@ sh tools/ish/sync_and_audit.sh
 **تقارير GitHub دون الحاجة إلى iSH:** [GitHub Actions — Offline Audit](https://github.com/abdulstarzeki001-sketch/Star-Cyber-Audit-iSH/actions/workflows/test.yml). اختر أحدث تشغيل ناجح ثم حمّل الملف `star-cyber-audit-offline-reports` من قسم Artifacts. يحتوي JSON وCSV وHTML، ويتم إنتاجه من ملفات الأرشيف العام فقط.
 
 **حد الاتصال المباشر:** Desktop Commander لم يكن يملك جهازًا متصلًا عند المحاولة. لا يستطيع ChatGPT تنفيذ أوامر داخل iSH على هاتفك إلا بعد إتاحة اتصال مصرح به يدعم ذلك.
+
+## ربط ChatGPT بجهاز iSH (تجريبي وبإذن المستخدم فقط)
+
+أعددت [أداة فحص الاتصال الاختيارية](tools/ish/connect_remote.sh). **الربط لم يتم بعد** ولا يمكن تفعيله من GitHub وحده. يحتاج تشغيلًا وموافقة صريحة في iSH. iSH على iPhone ليس نظام Linux مكتبيًا كاملًا، وقد يمنع تشغيل Node.js الحديث أو يستوقف iOS الاتصال في الخلفية.
+
+ابدأ من نسخة المشروع على الآيفون:
+
+```sh
+cd /mnt/star-audit/Star-Cyber-Audit-iSH
+git pull --ff-only origin main
+sh tools/ish/connect_remote.sh --check
+```
+
+هذا الفحص **لا يثبت برامج ولا يفتح منفذًا ولا يربط الجهاز**. إذا لم يكن Node/npm مثبتين، يمكنك اختياريًا تجربتهما بـ`apk add nodejs npm` ثم إعادة الفحص. إذا لم يدعم iSH إصدار Node المطلوب أو ظهر `Illegal instruction`، لا تحاول تعريض SSH للعامة؛ استخدم كمبيوتر Windows/Linux كجهاز Remote Desktop Commander بدلًا منه.
+
+**إذا اجتاز Node فحص التوافق**، لتجربة الربط:
+
+```sh
+sh tools/ish/connect_remote.sh --connect
+```
+
+سيعرض إذنًا واضحًا، ثم يطلب منك إتمام OAuth من رابط وكود ظاهرين في الطرفية باستخدام **نفس حساب Desktop Commander الموصول في ChatGPT**. لا تشارك الكود أو بيانات الدخول داخل المحادثة. أوقف الاتصال بضغط `Ctrl+C`. السكربت يستخدم جلسة بلا حفظ اعتماد دائم `--no-persist-session`، لذا قد يُطلب تأكيد الجهاز في كل مرة. راجع وإلغِ الإذن عبر [لوحة Desktop Commander](https://mcp.desktopcommander.app/).
+
+**تنبيه:** Remote Desktop Commander يمنح صلاحية تنفيذ أوامر وقراءة ملفات بامتيازات مستخدم iSH الحالي (وقد يكون `root`). هذه ليست صلاحية محصورة داخل المشروع. مع نقل iSH إلى الخلفية أو قفل iPhone قد يتوقف الاتصال. لا يوجد اتصال مؤكد قبل ظهور الجهاز Online والتحقق منه.
+
