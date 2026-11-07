@@ -120,7 +120,7 @@ sh tools/ish/sync_and_audit.sh
 sh tools/ish/sync_and_audit.sh
 ```
 
-السكربت يتحقق من المستودع والفرع وعدم وجود تعديلات محلية غير محفوظة ثم ينفذ `git pull --ff-only` دون حذف الملفات أو فرض تحديث. بعدها يشغّل الاختبارات وتحليل الملفات المتداخلة ويكتب `reports/report.html` و`reports/analysis.json`. إذا استعملت مسارًا مخصصًا للمشروع، يمكن ضبط `STAR_AUDIT_DIR` قبل تشغيله.
+السكربت يستخدم **نسخة المشروع التي تشغله منها** تلقائيًا، حتى إذا كانت داخل `/mnt/star-audit`، بدل استنساخ نسخة ثانية في `/root`. يمكن عرض المسار الذي سيستخدمه دون تعديل أي ملف عبر `sh tools/ish/sync_and_audit.sh --where`. ويتحقق من المستودع والفرع وعدم وجود تعديلات محلية غير محفوظة ثم ينفذ `git pull --ff-only` دون حذف الملفات أو فرض تحديث. بعدها يشغّل الاختبارات وتحليل الملفات المتداخلة ويكتب `reports/report.html` و`reports/analysis.json`. إذا استعملت مسارًا مخصصًا للمشروع، يمكن ضبط `STAR_AUDIT_DIR` قبل تشغيله.
 
 **تقارير GitHub دون الحاجة إلى iSH:** [GitHub Actions — Offline Audit](https://github.com/abdulstarzeki001-sketch/Star-Cyber-Audit-iSH/actions/workflows/test.yml). اختر أحدث تشغيل ناجح ثم حمّل الملف `star-cyber-audit-offline-reports` من قسم Artifacts. يحتوي JSON وCSV وHTML، ويتم إنتاجه من ملفات الأرشيف العام فقط.
 
