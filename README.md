@@ -93,3 +93,23 @@ python3 -m unittest discover -s tests -p 'test_use_local_company_review.py' -v
 Evidence: 16,940 bytes; SHA-256 `2a94cadad67e987ef5fcbce9d443f134bbce8293dea69d6e37220c195afa76f4`.
 The repo does **not** add the third-party source file for this review. Nine source
 indicators are **not** claims of nine exploitable vulnerabilities. No backend API is called.
+
+## QrControlScan source review (8 November 2026)
+
+[Arabic deep source review](reviews/2026-11-08/QrControlScan_deep_review_AR.md) joins the
+QrControlScan Vue view to the previously reviewed useLocalCompany composable.
+The UI itself does **not** issue direct government API calls. Its dependency
+handles list, preview and export API actions. The report separates frontend
+evidence and unknown backend authorization.
+
+Run the local, offline checker against the two locally available files:
+
+```sh
+python3 tools/ish/qr_control_scan_review.py /path/to/QrControlScan-M6uGJnR1.js \
+  --dependency /path/to/useLocalCompany-DfV5kpAj.js
+python3 -m unittest discover -s tests -p 'test_qr_control_scan_review.py' -v
+```
+
+Evidence SHA-256: `0848ead8a6082769241885b6e5de6fd26aa783cbfce832f46448780378bbd78c`
+(8,315 bytes). This update adds no copy of the third-party JS source, account
+secrets, HTTP traffic, or document records.
