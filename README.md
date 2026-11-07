@@ -230,3 +230,29 @@ Seventeen version-specific frontend patterns are review flags, **not**
 confirmed exploitable vulnerabilities. The public repository update does not
 include a new copy of third-party source, session credentials, or government
 document data.
+
+## RejectedLocalDocuments static review (8 November 2026)
+
+The [Arabic evidence-based audit](reviews/2026-11-08/RejectedLocalDocuments_deep_review_AR.md)
+reviews the rejected-local-document list, search filters, location links, preview
+records and browser persistence. The list uses `fetchRejectedLocalReaders` from
+the shared `index-gleMzSil.js` bundle, so the **list's actual API endpoint is
+not identifiable from this view alone**. The only direct API call in the view
+is `POST local_form/return_doc_qrcode`.
+
+The findings include document ID number coercion, saved response data, a preview
+button without a **component-local** privilege check, old rows surviving errors,
+and 8-column empty-state markup for a 9-column table. None proves that backend
+authorization can be bypassed or a government record modified.
+
+```sh
+python3 tools/ish/rejected_local_documents_review.py \
+  "/path/to/RejectedLocalDocuments-CC07EpF_.js"
+python3 -m unittest discover -s tests \
+  -p 'test_rejected_local_documents_review.py' -v
+```
+
+Source: 11,186 bytes; SHA-256:
+`b98b04782e1ee00c7e338bd111e22a45479db6e5171e5a67e808a3458a9c7a25`.
+This adds only an offline checker, synthetic regression tests and a written
+report—no copy of third-party source JS, private credentials or real documents.
