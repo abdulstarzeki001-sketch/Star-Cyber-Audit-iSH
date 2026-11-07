@@ -113,3 +113,25 @@ python3 -m unittest discover -s tests -p 'test_qr_control_scan_review.py' -v
 Evidence SHA-256: `0848ead8a6082769241885b6e5de6fd26aa783cbfce832f46448780378bbd78c`
 (8,315 bytes). This update adds no copy of the third-party JS source, account
 secrets, HTTP traffic, or document records.
+
+## QRReadings deep comparison (8 November 2026)
+
+The [Arabic deep comparison](reviews/2026-11-08/QRReadings_deep_comparison_AR.md)
+covers the QRReadings view, `QrControlScan`, and `useLocalCompany`:
+distinct list/export endpoints; a shared document-preview API; client-side demo
+rows, session storage, console logging, and authorization UI. The work is
+**read-only** and does not establish backend access or document validity.
+
+Use the offline checker on locally held sources:
+
+```sh
+python3 tools/ish/qr_readings_offline_review.py /path/to/QRReadings-B-a3jcrk.js \
+  --control /path/to/QrControlScan-M6uGJnR1.js \
+  --composable /path/to/useLocalCompany-DfV5kpAj.js
+python3 -m unittest discover -s tests -p 'test_qr_readings_offline_review.py' -v
+```
+
+Source snapshot: 14,489 bytes; SHA-256
+`31c9ac2eadc4a256d0d321317431bcd7655e6eabb06a3d848c4b676e631f7cb9`.
+This addition does not publish a new copy of third-party JS, session tokens,
+user records, or government API responses.
