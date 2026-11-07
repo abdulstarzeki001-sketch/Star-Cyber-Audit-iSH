@@ -65,8 +65,13 @@ jobs:
           print(f"Offline scan verified: {len(records)} archived/source records")
           PY
 
-      - name: Check iSH update script syntax
-        run: sh -n tools/ish/sync_and_audit.sh
+      - name: Check iSH update script syntax and checkout selection
+        run: |
+          sh -n tools/ish/sync_and_audit.sh
+          selected="$(sh tools/ish/sync_and_audit.sh --where)"
+          test "$selected" = "$PWD"
+          selected="$(STAR_AUDIT_DIR=/tmp/star-audit-custom sh tools/ish/sync_and_audit.sh --where)"
+          test "$selected" = "/tmp/star-audit-custom"
       - name: Summarize offline scan in GitHub Actions
         run: |
           python - <<'PY'
