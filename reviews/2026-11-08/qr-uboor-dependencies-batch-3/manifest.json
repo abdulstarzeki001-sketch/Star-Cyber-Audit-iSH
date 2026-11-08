@@ -1,0 +1,92 @@
+{
+  "date": "2026-11-08",
+  "scope": "offline source-only review; no API requests, JS execution, real QR codes or credentials",
+  "batch": 3,
+  "files": [
+    {
+      "file": "jsQR-CKtgBSaS.js",
+      "bytes": 130725,
+      "sha256": "7b28d8063265694524209c30a0b20471c0ae3f85cf5c260a469907740bcb28a4",
+      "git_blob_sha1": "5637da39055a91d13afb4a8953f12aa828d312c6",
+      "status": "new",
+      "role": "QR scan/decode library"
+    },
+    {
+      "file": "StationsDetailsModal.vue_vue_type_script_setup_true_lang-CppuJXhm.js",
+      "bytes": 2550,
+      "sha256": "8afe444c1fe2203397347394dd66b198ec611fc657f8907f933b6e78269d4b94",
+      "git_blob_sha1": "072e14dad95552f66bbd82bf6cd7d8cece5f691e",
+      "status": "new",
+      "role": "station detail/attachments emitter"
+    },
+    {
+      "file": "Modal-C_od4hhs.js",
+      "bytes": 12127,
+      "sha256": "04830b150d5a6dda684a75c954409c44b5b1c1e2ecd685b198deb49217a25194",
+      "git_blob_sha1": "f11de11e7a9fdc172a567f40b88dead11c63e1fe",
+      "status": "new",
+      "role": "accessible dialog component"
+    },
+    {
+      "file": "index-BKvq_4_A.js",
+      "bytes": 13327,
+      "sha256": "25bd2f9df43d5ed1ae182f1dd68d1c05f735a5352ce7fe9149af501a1c706f05",
+      "git_blob_sha1": "bb03a671757d47ffcf7736f61c7a7fe8fe8979d9",
+      "status": "new",
+      "role": "DOM-to-image Blob"
+    },
+    {
+      "file": "browser-3Qg8aFGH.js",
+      "bytes": 25785,
+      "sha256": "ac20dcd5e80b582864e38bd16a87f2068f938b6b32785f5ddd5a4b9ed7b3e0af",
+      "git_blob_sha1": "6311e59c56f6aa4f022f1ba4363e70862de999ab",
+      "status": "new",
+      "role": "QR generator"
+    },
+    {
+      "file": "Select-DZpjzzNJ.js",
+      "bytes": 34010,
+      "sha256": "0c230f2ecf805c6253fbe14adc9ce43944a85074b098024a2513f2fd4a348254",
+      "git_blob_sha1": "40583101996ee4f76bb077e9a27410c1cc8d6635",
+      "status": "new",
+      "role": "select control"
+    },
+    {
+      "file": "QrLocalImporter-DYzNB5Fh(2).js",
+      "bytes": 7222,
+      "sha256": "59ff26bfbc4b731799101527e9604fc736c170e80e4988eb69be672990cf8208",
+      "git_blob_sha1": "3bf2a9cbf59936a855b37cf9d6202fa11d505fac",
+      "status": "duplicate",
+      "role": "already reviewed QR importer"
+    },
+    {
+      "file": "CompanyOwnerView-CIdFF3LL(3).js",
+      "bytes": 24517,
+      "sha256": "78af159ff95bf493a5050b4fb0fe6e4068ee49576100829ce1783644f92d2b2d",
+      "git_blob_sha1": "dc20bd53f1ba6a04f53860d008f6a2a1d93bab87",
+      "status": "duplicate",
+      "role": "already reviewed company owner"
+    },
+    {
+      "file": "FormField-DW4k76E2.js",
+      "bytes": 3491,
+      "sha256": "a88958cbe6ad3a4b53f9e4c93cc129553ecdae580144f96d6a60596aa84ccca7",
+      "git_blob_sha1": "9aea90f236952c9f775d8ec91aa3bc86a4f70995",
+      "status": "new",
+      "role": "form field errors/labels"
+    },
+    {
+      "file": "useAttachments-YD2hRx7D.js",
+      "bytes": 747,
+      "sha256": "384aa93decf853b8135044a50511b472c7860c564e81467565b43b87ed40d173",
+      "git_blob_sha1": "02df174500a760b551c23bb39548599816205226",
+      "status": "new",
+      "role": "attachment downloader"
+    }
+  ],
+  "distribution": {
+    "new": 8,
+    "duplicate": 2
+  },
+  "notice": "Public GitHub commits contain only reports and test utilities; originals remain private in user uploads."
+}
