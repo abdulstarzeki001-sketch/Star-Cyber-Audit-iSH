@@ -227,11 +227,11 @@
         },
         {
           "id": "C-05",
-          "needle": "o.load?.doc_number&&_(\"print\"",
-          "offset_utf16": -1,
-          "physical_line": null,
+          "needle": "_(\"print\",p.load.doc_number",
+          "offset_utf16": 3447,
+          "physical_line": 1,
           "note": "Emits print event with document number and company type",
-          "found": false
+          "found": true
         },
         {
           "id": "C-06",
@@ -275,11 +275,11 @@
         },
         {
           "id": "C-11",
-          "needle": "const c=Number(b)",
-          "offset_utf16": -1,
-          "physical_line": null,
+          "needle": "c=Number(b)",
+          "offset_utf16": 11006,
+          "physical_line": 1,
           "note": "Numeric conversion risks losing leading zeros/large IDs",
-          "found": false
+          "found": true
         },
         {
           "id": "C-12",
