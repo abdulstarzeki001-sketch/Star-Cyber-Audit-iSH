@@ -465,3 +465,36 @@ Future audits should consult this reference alongside the individual
 treating the browser's QR rendering or localStorage data as evidence of
 official document validity. Do not add live QR tokens, credentials, driver
 details, or authentic government documents to this public repository.
+
+## 10-file UBOOR QR and temporary-document review (8 November 2026)
+
+A new [10-file Arabic review](reviews/2026-11-08/qr-uboor-10-file-batch/FILE_BY_FILE_AR.md)
+documents each uploaded module individually, and the
+[SHA-256/Git-blob manifest](reviews/2026-11-08/qr-uboor-10-file-batch/manifest.json)
+fixes the exact input versions. Nine files are identical to versions
+previously reviewed; `ShipmentDoc-Dx885_fz(1).js` (15,473 bytes, SHA-256
+`fb7034cc56552ec33c4a79674697dcd3691ec0dec8862fbd66c00e3ab1cfcf5b`)
+now has a [full source-based review](reviews/2026-11-08/ShipmentDoc_deep_review_AR.md).
+
+**Key distinctions:** `ShipmentDoc` only renders/prints a document and
+QR; it does not call an issuance API or decrypt the official QR. It can
+render the provided `qr_code`, extract the text after `robot?url=`,
+treat a long Base64-looking value as an image, or fall back to
+a license/vehicle/driver information QR. Such a fallback is **not**
+proof of official document validity. This module has no QuickChart
+fallback (the earlier `AchievementDocument` module does). Print styling
+uses fixed A4 height plus `overflow:hidden` which may clip long pages.
+
+For offline audit on iSH, Linux, or Windows:
+
+```sh
+python3 tools/ish/shipment_doc_review.py \
+  "/path/to/ShipmentDoc-Dx885_fz(1).js"
+python3 -m unittest discover -s tests -p 'test_shipment_doc_review.py' -v
+```
+
+The new checker inventories 26 literal source indicators, with
+33 synthetic tests. These are not evidence of 26 confirmed security
+vulnerabilities or backend authentication bypass. This public update
+contains reports, hash manifest and testing utilities only, not new
+copies of third-party government JS, QR tokens, accounts or documents.
