@@ -1,0 +1,399 @@
+{
+  "date": "2026-11-08",
+  "purpose": "searchable per-source statement anchors for minified JavaScript; not executable code",
+  "notes": "offset_utf16 counts JS string code units, not bytes. 'found:false' requires manual re-evaluation. Anchors point to literal text in committed source.",
+  "files": [
+    {
+      "name": "IndexPage-cUNA67sR.js",
+      "source_repo_path": "research/user-supplied/2026-11-08/IndexPage-cUNA67sR.js",
+      "source_git_blob_sha": "394abb18f19949d96a109c831e05f8cb22fd88d1",
+      "physical_lines": 1,
+      "anchors": [
+        {
+          "id": "I-01",
+          "needle": "ge(\"dashboard\"",
+          "offset_utf16": 391,
+          "physical_line": 1,
+          "note": "Pinia dashboard store, state and actions",
+          "found": true
+        },
+        {
+          "id": "I-02",
+          "needle": "async fetchKpiOverview()",
+          "offset_utf16": 584,
+          "physical_line": 1,
+          "note": "POST metrics/kpi; loading and timestamp",
+          "found": true
+        },
+        {
+          "id": "I-03",
+          "needle": "async fetchEmployeePerformance()",
+          "offset_utf16": 853,
+          "physical_line": 1,
+          "note": "POST employee processing time metrics",
+          "found": true
+        },
+        {
+          "id": "I-04",
+          "needle": "async fetchVehicleStay(",
+          "offset_utf16": 1223,
+          "physical_line": 1,
+          "note": "POST vehicle stay duration + pagination",
+          "found": true
+        },
+        {
+          "id": "I-05",
+          "needle": "async fetchAllMetrics()",
+          "offset_utf16": 1535,
+          "physical_line": 1,
+          "note": "Three parallel API requests",
+          "found": true
+        },
+        {
+          "id": "I-06",
+          "needle": "async updateDateRange(",
+          "offset_utf16": 1661,
+          "physical_line": 1,
+          "note": "Applied date-range refresh",
+          "found": true
+        },
+        {
+          "id": "I-07",
+          "needle": "async resetFilters()",
+          "offset_utf16": 1757,
+          "physical_line": 1,
+          "note": "Reset and refresh",
+          "found": true
+        },
+        {
+          "id": "I-08",
+          "needle": "getters:{",
+          "offset_utf16": 1854,
+          "physical_line": 1,
+          "note": "Computed KPI and vehicle statistics",
+          "found": true
+        },
+        {
+          "id": "I-09",
+          "needle": "criticalVehicles:t=>",
+          "offset_utf16": 2361,
+          "physical_line": 1,
+          "note": "Potential data-array shape assumption",
+          "found": true
+        },
+        {
+          "id": "I-10",
+          "needle": "function Se()",
+          "offset_utf16": 3704,
+          "physical_line": 1,
+          "note": "Chart transform and configuration helpers",
+          "found": true
+        },
+        {
+          "id": "I-11",
+          "needle": "__name:\"KpiCard\"",
+          "offset_utf16": 7267,
+          "physical_line": 1,
+          "note": "KPI value/trend component",
+          "found": true
+        },
+        {
+          "id": "I-12",
+          "needle": "__name:\"ChartSection\"",
+          "offset_utf16": 9301,
+          "physical_line": 1,
+          "note": "Charts, loading, empty state",
+          "found": true
+        },
+        {
+          "id": "I-13",
+          "needle": "__name:\"DateRangeFilter\"",
+          "offset_utf16": 11942,
+          "physical_line": 1,
+          "note": "Preset dates and emitted filters",
+          "found": true
+        },
+        {
+          "id": "I-14",
+          "needle": "toISOString().split(\"T\")[0]",
+          "offset_utf16": 12689,
+          "physical_line": 1,
+          "note": "UTC dates may shift local date",
+          "found": true
+        },
+        {
+          "id": "I-15",
+          "needle": "__name:\"IndexPage\"",
+          "offset_utf16": 16921,
+          "physical_line": 1,
+          "note": "Main dashboard view",
+          "found": true
+        },
+        {
+          "id": "I-16",
+          "needle": "S.user_privileges",
+          "offset_utf16": 17312,
+          "physical_line": 1,
+          "note": "Role/view permissions",
+          "found": true
+        },
+        {
+          "id": "I-17",
+          "needle": "S.user_permissions",
+          "offset_utf16": 17375,
+          "physical_line": 1,
+          "note": "Feature visibility permission",
+          "found": true
+        },
+        {
+          "id": "I-18",
+          "needle": "await p.fetchAllMetrics()",
+          "offset_utf16": 17869,
+          "physical_line": 1,
+          "note": "Initial fetch and filtering",
+          "found": true
+        },
+        {
+          "id": "I-19",
+          "needle": "be(()=>{p.fetchAllMetrics()},300*1e3)",
+          "offset_utf16": 17897,
+          "physical_line": 1,
+          "note": "Five-minute refresh configured",
+          "found": true
+        },
+        {
+          "id": "I-20",
+          "needle": "Q.value.includes(\"tracking\")",
+          "offset_utf16": 18657,
+          "physical_line": 1,
+          "note": "Frontend-only main-dashboard access gate",
+          "found": true
+        },
+        {
+          "id": "I-21",
+          "needle": "M.value.includes(\"tir_report_view\")",
+          "offset_utf16": 19416,
+          "physical_line": 1,
+          "note": "TIR subpanel visibility",
+          "found": true
+        },
+        {
+          "id": "I-22",
+          "needle": "onPageChanged:ae",
+          "offset_utf16": 26587,
+          "physical_line": 1,
+          "note": "Pagination of vehicles via AppPagination",
+          "found": true
+        }
+      ]
+    },
+    {
+      "name": "CompanyOwnerCeoLoadsView-Coghn9Xh.js",
+      "source_repo_path": "research/user-supplied/2026-11-08/CompanyOwnerCeoLoadsView-Coghn9Xh.js",
+      "source_git_blob_sha": "d36b373c039dcd97544da4c3eff0d9f9aeb02da6",
+      "physical_lines": 1,
+      "anchors": [
+        {
+          "id": "C-01",
+          "needle": "__name:\"CompanyOwnerCeoLoadDetailModal\"",
+          "offset_utf16": 3053,
+          "physical_line": 1,
+          "note": "Details modal: company, truck, license, location",
+          "found": true
+        },
+        {
+          "id": "C-02",
+          "needle": "toLocaleDateString(\"ar-IQ\"",
+          "offset_utf16": 3300,
+          "physical_line": 1,
+          "note": "Document date display and Invalid Date handling",
+          "found": true
+        },
+        {
+          "id": "C-03",
+          "needle": "new Date(n)",
+          "offset_utf16": 3288,
+          "physical_line": 1,
+          "note": "Date parsing in modal",
+          "found": true
+        },
+        {
+          "id": "C-04",
+          "needle": "`+964 ${n}`",
+          "offset_utf16": 3396,
+          "physical_line": 1,
+          "note": "Phone label construction (possible formatting duplication)",
+          "found": true
+        },
+        {
+          "id": "C-05",
+          "needle": "o.load?.doc_number&&_(\"print\"",
+          "offset_utf16": -1,
+          "physical_line": null,
+          "note": "Emits print event with document number and company type",
+          "found": false
+        },
+        {
+          "id": "C-06",
+          "needle": "https://www.google.com/maps?q=${o.load.x_coordinate}",
+          "offset_utf16": 6943,
+          "physical_line": 1,
+          "note": "Google Maps link built from raw coordinates",
+          "found": true
+        },
+        {
+          "id": "C-07",
+          "needle": "__name:\"CompanyOwnerCeoLoads\"",
+          "offset_utf16": 10154,
+          "physical_line": 1,
+          "note": "Record listing and filters",
+          "found": true
+        },
+        {
+          "id": "C-08",
+          "needle": "a.push({driver_name:",
+          "offset_utf16": 10809,
+          "physical_line": 1,
+          "note": "Driver search filter",
+          "found": true
+        },
+        {
+          "id": "C-09",
+          "needle": "a.push({vehicle_number:",
+          "offset_utf16": 10862,
+          "physical_line": 1,
+          "note": "Vehicle search filter",
+          "found": true
+        },
+        {
+          "id": "C-10",
+          "needle": "a.push({checkpoint_name_control:",
+          "offset_utf16": 10918,
+          "physical_line": 1,
+          "note": "Checkpoint filter",
+          "found": true
+        },
+        {
+          "id": "C-11",
+          "needle": "const c=Number(b)",
+          "offset_utf16": -1,
+          "physical_line": null,
+          "note": "Numeric conversion risks losing leading zeros/large IDs",
+          "found": false
+        },
+        {
+          "id": "C-12",
+          "needle": "p.fetchCompanyCeoLoads(",
+          "offset_utf16": 11087,
+          "physical_line": 1,
+          "note": "Fetch paginated outgoing company loads",
+          "found": true
+        },
+        {
+          "id": "C-13",
+          "needle": "p.returnDocCeo(",
+          "offset_utf16": 12935,
+          "physical_line": 1,
+          "note": "Re-fetch printable document data",
+          "found": true
+        },
+        {
+          "id": "C-14",
+          "needle": "__name:\"CompanyOwnerCeoLoadsView\"",
+          "offset_utf16": 18769,
+          "physical_line": 1,
+          "note": "Owner-specific view and layout",
+          "found": true
+        },
+        {
+          "id": "C-15",
+          "needle": "g.checkUserAuthentication().then(",
+          "offset_utf16": 18914,
+          "physical_line": 1,
+          "note": "Client-side session check/redirection",
+          "found": true
+        },
+        {
+          "id": "C-16",
+          "needle": "onPageChanged:R",
+          "offset_utf16": 17934,
+          "physical_line": 1,
+          "note": "Pagination component event",
+          "found": true
+        },
+        {
+          "id": "C-17",
+          "needle": "name:\"CompanyOwner\"",
+          "offset_utf16": 18987,
+          "physical_line": 1,
+          "note": "Navigation back to company portal",
+          "found": true
+        },
+        {
+          "id": "C-18",
+          "needle": "title:\"وثيقة الشحن للطباعة\"",
+          "offset_utf16": 18252,
+          "physical_line": 1,
+          "note": "Print modal renders ShipmentDoc",
+          "found": true
+        },
+        {
+          "id": "C-19",
+          "needle": "o.load.checkpoint_is_active!==!1",
+          "offset_utf16": 4124,
+          "physical_line": 1,
+          "note": "Boolean active badge defaults to active for undefined",
+          "found": true
+        },
+        {
+          "id": "C-20",
+          "needle": "o.load.factory_is_active!==!1",
+          "offset_utf16": 4468,
+          "physical_line": 1,
+          "note": "Factory status inferred by not-false",
+          "found": true
+        }
+      ]
+    },
+    {
+      "name": "useFormControl-XQpg82Ny.js",
+      "source_repo_path": "research/user-supplied/2026-11-08/useFormControl-XQpg82Ny.js",
+      "source_git_blob_sha": "246689ed85d4019d1aeb9bfc7373b8ed0422bff6",
+      "physical_lines": 1,
+      "anchors": [
+        {
+          "id": "F-01",
+          "needle": "from\"./index-gleMzSil.js\"",
+          "offset_utf16": 30,
+          "physical_line": 1,
+          "note": "Imports computed and Vue element-unref helpers",
+          "found": true
+        },
+        {
+          "id": "F-02",
+          "needle": "function n(o)",
+          "offset_utf16": 56,
+          "physical_line": 1,
+          "note": "Returns a computed condition",
+          "found": true
+        },
+        {
+          "id": "F-03",
+          "needle": "r(o)?!!t(o)?.closest(\"form\"):!0",
+          "offset_utf16": 83,
+          "physical_line": 1,
+          "note": "When input is a ref-like target, checks ancestor form; otherwise true",
+          "found": true
+        },
+        {
+          "id": "F-04",
+          "needle": "export{n as u}",
+          "offset_utf16": 116,
+          "physical_line": 1,
+          "note": "Exports helper as u",
+          "found": true
+        }
+      ]
+    }
+  ]
+}
