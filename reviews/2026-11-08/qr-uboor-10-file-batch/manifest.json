@@ -1,0 +1,88 @@
+{
+  "date": "2026-11-08",
+  "scope": "static, read-only; no execution of third-party JavaScript; no government API request",
+  "repository": "abdulstarzeki001-sketch/Star-Cyber-Audit-iSH",
+  "policy": "new third-party JavaScript copies not added to public repository; retain analysis, SHA-256 and regression tests",
+  "files": [
+    {
+      "filename": "QRLocal-5TAaXbzM(5).js",
+      "bytes": 10014,
+      "sha256": "1e3ea9982971b4e4e08bb2ebee1520fe6a5056bc8590de4288fec80456fa9626",
+      "git_blob_sha1": "b36aa6e06c9fdc421f47bb4c59434b5989b59894",
+      "status": "byte-identical to archived source",
+      "review": "reviews/2026-11-08/QRLocal_revalidation_AR.md"
+    },
+    {
+      "filename": "QRReadings-B-a3jcrk(1).js",
+      "bytes": 14489,
+      "sha256": "31c9ac2eadc4a256d0d321317431bcd7655e6eabb06a3d848c4b676e631f7cb9",
+      "git_blob_sha1": "9fb8ca64d00d44af57008a1f319f08c6df17af79",
+      "status": "matches previously reviewed source",
+      "review": "reviews/2026-11-08/QRReadings_deep_comparison_AR.md"
+    },
+    {
+      "filename": "QRImported-C65Oqm1K(1).js",
+      "bytes": 8913,
+      "sha256": "d2756b08358ced044c8f9982d4da8b19ba9a38996fc7c4f682e0d67148d59eee",
+      "git_blob_sha1": "b6c0c078caf1fc9bfcfff3e133ac2ac19872a4b8",
+      "status": "matches previously reviewed source",
+      "review": "reviews/2026-11-08/QRImported_deep_comparison_AR.md"
+    },
+    {
+      "filename": "useExitGate-BvHNutwH(3).js",
+      "bytes": 6027,
+      "sha256": "9d9a109e58d619a8afdf91bfcbd9f7e45377ddb8236e82e13597b896e56c3306",
+      "git_blob_sha1": "b24b64ad0a5a66ad0492cdc4c8974c6ddc93f2d8",
+      "status": "byte-identical to archived source",
+      "review": "reviews/2026-11-07/reference/UBOOR_verified_update_2026-11-06.md"
+    },
+    {
+      "filename": "QrLocalImporter-DYzNB5Fh(1).js",
+      "bytes": 7222,
+      "sha256": "59ff26bfbc4b731799101527e9604fc736c170e80e4988eb69be672990cf8208",
+      "git_blob_sha1": "3bf2a9cbf59936a855b37cf9d6202fa11d505fac",
+      "status": "matches previously reviewed source",
+      "review": "reviews/2026-11-08/QrLocalImporter_deep_review_AR.md"
+    },
+    {
+      "filename": "useLocalCompany-DfV5kpAj(1).js",
+      "bytes": 16940,
+      "sha256": "2a94cadad67e987ef5fcbce9d443f134bbce8293dea69d6e37220c195afa76f4",
+      "git_blob_sha1": "1d71629e5354476e476dc7286eab58ae82715b4a",
+      "status": "matches previously reviewed source",
+      "review": "reviews/2026-11-08/useLocalCompany_deep_review_AR.md"
+    },
+    {
+      "filename": "qrStore-B8bgApfd(2).js",
+      "bytes": 248,
+      "sha256": "122527b8507637168eeb4365f879f160f02620d1dc997c74e3da1880a1573e77",
+      "git_blob_sha1": "8ccefa1736a3d7da3a800075c9a7a51e6acc6c30",
+      "status": "byte-identical to archived source",
+      "review": "reviews/2026-11-08/qrStore_deep_review_AR.md"
+    },
+    {
+      "filename": "RejectedLocalDocuments-CC07EpF_(1).js",
+      "bytes": 11186,
+      "sha256": "b98b04782e1ee00c7e338bd111e22a45479db6e5171e5a67e808a3458a9c7a25",
+      "git_blob_sha1": "41b7a5f6196d9d9cbebaff85ff68909f2e892128",
+      "status": "matches previously reviewed source",
+      "review": "reviews/2026-11-08/RejectedLocalDocuments_deep_review_AR.md"
+    },
+    {
+      "filename": "QRHealthCertificate-Byvh35hk(2).js",
+      "bytes": 10900,
+      "sha256": "78b26ef2ba7f02c92745bc9bc5e61731d4972a390ba3c866d62ae8e000788936",
+      "git_blob_sha1": "f3b96afdf2d25720d8b1f7c8f82b35f86a419048",
+      "status": "matches previously reviewed source",
+      "review": "reviews/2026-11-08/QRHealthCertificate_deep_review_AR.md"
+    },
+    {
+      "filename": "ShipmentDoc-Dx885_fz(1).js",
+      "bytes": 15473,
+      "sha256": "fb7034cc56552ec33c4a79674697dcd3691ec0dec8862fbd66c00e3ab1cfcf5b",
+      "git_blob_sha1": "865204a645d0fd610d4c63962b8f7adfed34e3c8",
+      "status": "new full source for first detailed review in this repository",
+      "review": "reviews/2026-11-08/ShipmentDoc_deep_review_AR.md"
+    }
+  ]
+}
