@@ -403,3 +403,50 @@ The uploaded source is byte-identical to the archived Git blob
 `8ccefa1736a3d7da3a800075c9a7a51e6acc6c30`, so no additional
 third-party JavaScript, real QR records, credentials or user data were
 committed. There are 13 source indicators and 20 synthetic tests.
+
+## CompanyOwnerView and QRLocal integration audit (8 November 2026)
+
+The source-based [CompanyOwnerView Arabic review](reviews/2026-11-08/CompanyOwnerView_deep_review_AR.md)
+documents the owner verification and company search/stock reduction flows.
+The user-supplied CompanyOwnerView chunk (24,517 bytes; SHA-256
+`78af159ff95bf493a5050b4fb0fe6e4068ee49576100829ce1783644f92d2b2d`)
+contains four Vue components. Correlation with the earlier
+`index-gleMzSil` bundle resolves the relevant **frontend-declared** APIs:
+
+```text
+POST /api/local_form/company_verify_login
+POST /api/local_form/company_verification
+POST /api/local_form/search_iraqi_company
+GET  /api/local_form/get_company_items/{hash}
+PUT  /api/local_form/company_item_reduce
+POST /api/local_form/return_company_doc/{hash}
+```
+
+Review points include an unawaited owner session check and redirect in
+a verification `finally` branch; phone in URLs and company hash in
+debug logs; client-side quantity and geolocation checks; and the literal
+`vihcle_info` payload key (the server's API contract is not confirmed).
+
+The [QRLocal version comparison](reviews/2026-11-08/QRLocal_revalidation_AR.md)
+shows that `QRLocal-5TAaXbzM(3).js` is byte-identical to the archived
+source (10,014 bytes, SHA-256
+`1e3ea9982971b4e4e08bb2ebee1520fe6a5056bc8590de4288fec80456fa9626`).
+The local QR scanner uses GPS, POSTs to `read_doc_company`, and can set
+`auto_send` from `is_main` before navigation to QRDocument. It does
+**not** call the company shipment reduction endpoint.
+
+Offline analysis and **35 synthetic tests**:
+
+```sh
+python3 tools/ish/company_owner_review.py \
+  "/path/to/CompanyOwnerView-CIdFF3LL.js" \
+  --main "/path/to/index-gleMzSil(1)(1).js" \
+  --qr-local "/path/to/QRLocal-5TAaXbzM(3).js"
+python3 -m unittest discover -s tests -p 'test_company_owner_review.py' -v
+```
+
+The tool can be run without the two optional flags; with both, its rule
+inventory spans 22 view indicators, 8 main-store indicators, and 10 QRLocal
+indicators. These are not 40 confirmed vulnerabilities. The new public
+commits include only analysis/checker/tests, no copies of third-party JS,
+credentials, private documents or genuine person/location records.
