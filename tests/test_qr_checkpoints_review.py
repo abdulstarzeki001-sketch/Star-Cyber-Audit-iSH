@@ -83,7 +83,7 @@ class TestQrCheckpointsReview(unittest.TestCase):
     def test_git_blob_sha(self):
         raw = b"test"
         self.assertEqual(
-            "30d74d258442c7c65512eafab474568dd706c430d",
+            "30d74d258442c7c65512eafab474568dd706c430",
             audit.fingerprint(raw)["git_blob_sha1"],
         )
 
