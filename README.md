@@ -288,3 +288,32 @@ Source SHA-256:
 The 15 indicators include factual source findings and review conditions,
 **not** confirmed exploits. No new copy of the government JS, credentials or
 user document records was added to this public repository.
+
+## Health certificate print data-flow audit (8 November 2026)
+
+The [Arabic source-based report](reviews/2026-11-08/PrintHealthCertificateView_deep_review_AR.md)
+maps `QRHealthCertificate` -> `sessionStorage["hc_print"]` ->
+`PrintHealthCertificateView` -> `HealthCertificatePrint`. Key review items:
+a local print page without document-authenticity verification, cross-record
+fallback from `hc_detail`, a three-day default validity label versus the
+reader's conditional 48-hour check, a veterinarian-name fallback to the
+current user, and a **conditional** screenshot upload when `auto_send` is
+present. Checkpoint maps, animal-table layout and ordinary browser printing
+are documented as separate frontend behaviors.
+
+Run the offline source reviewer with an optional matching scanner:
+
+```sh
+python3 tools/ish/health_certificate_print_review.py \
+  "/path/to/PrintHealthCertificateView-Q9yNncqz.js" \
+  --scanner "/path/to/QRHealthCertificate-Byvh35hk.js"
+python3 -m unittest discover -s tests \
+  -p 'test_health_certificate_print_review.py' -v
+```
+
+Source: 15,501 bytes; SHA-256
+`6feebf08f92578b7d4121a929de756e17f0d0b48a8ddb001a539a165006f9361`.
+The 17 matched signals are **not** proven exploitable vulnerabilities, and
+locally rendered ministry text or a QR image does not verify official issuance.
+No new copy of third-party source, personal data, credentials or documents
+has been committed as part of the audit.
