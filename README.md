@@ -536,3 +536,22 @@ These are descriptive indicators, **not 27 proven vulnerabilities**. The
 repository update does not publish new copies of third-party government
 frontend source, live QR values, credentials, or personal records. No
 government backend API was contacted.
+
+## Canva ↔ GitHub: EntranceGateView review
+
+The [second source revalidation](reviews/2026-11-08/EntranceGateView_revalidation_canva_AR.md)
+rechecked `EntranceGateView-B9IBJo4k.js` against the uploaded 21,501-byte
+source (SHA-256 `d48910ae500903a80deaf740cba67485c76e3af789fcff2e1f4d6f86d2419988`).
+It adds source-backed notes about camera vs manual URL validation, stale
+goods data on failed search, decision status messaging, manual input clearing
+after logical failure, UI-only privileges, and GPS-zero handling.
+
+The review is now imported as an **editable Canva document**:
+
+- [Edit the Canva review](https://www.canva.com/d/2KT9l32tZst5Yav)
+- [View the Canva review](https://www.canva.com/d/LbSzOHP1oR_s3AP)
+- [Canva ↔ GitHub file map and update rules](docs/integrations/CANVA_EntranceGateView_AR.md)
+
+This is a **linked document snapshot**, not live source-code syncing or
+Canva execution of government code. To reflect future commits in Canva,
+import the updated public Markdown again and update the design link here.
