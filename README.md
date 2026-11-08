@@ -450,3 +450,18 @@ inventory spans 22 view indicators, 8 main-store indicators, and 10 QRLocal
 indicators. These are not 40 confirmed vulnerabilities. The new public
 commits include only analysis/checker/tests, no copies of third-party JS,
 credentials, private documents or genuine person/location records.
+
+## Permanent project reference — QR / UBOOR / UR / DMS
+
+The [recovered Arabic project memory](docs/project-memory/QR_UBOOR_UR_RECOVERED_PROJECT_MEMORY_2026-11-08_AR.md)
+is the **durable, versioned reference** for earlier chats and source-based
+audit work on QR document flows, customs UBOOR, the UR/DMS verification
+frontend, and offline Star-Cyber-Audit-iSH tools (through 8 November 2026).
+The record separates what was actually checked or committed from proposed
+labs, assumptions, and server-side behavior not available in source code.
+
+Future audits should consult this reference alongside the individual
+`reviews/2026-11-07/` and `reviews/2026-11-08/` reports rather than
+treating the browser's QR rendering or localStorage data as evidence of
+official document validity. Do not add live QR tokens, credentials, driver
+details, or authentic government documents to this public repository.
