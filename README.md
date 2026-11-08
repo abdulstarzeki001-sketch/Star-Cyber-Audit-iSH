@@ -317,3 +317,32 @@ The 17 matched signals are **not** proven exploitable vulnerabilities, and
 locally rendered ministry text or a QR image does not verify official issuance.
 No new copy of third-party source, personal data, credentials or documents
 has been committed as part of the audit.
+
+## QRDocument preview, rejection and print audit (8 November 2026)
+
+The [Arabic deep review](reviews/2026-11-08/QRDocument_deep_review_AR.md)
+documents the QRDocument UI and RefuseDocModal, the source precedence
+(`history.state.preview`, `qrStore`, and `qr_preview_entry`), browser
+printing, and QR rendering. The component can fall back to the **first saved
+reading if a requested ID is not found**, risking a wrong-document preview.
+
+Two distinct POSTs are visible: `local_form/refuse_doc_company` (after the
+explicit rejection dialog, with frontend `is_main`/privilege gating) and
+`BorderPort_HS/path-document-file` (only when local `auto_send` is true).
+These are **not** proof of backend authorization issues. The component does not
+consume `autoPrint`/`autoDownload` route flags. Its conditional screenshot
+upload uses a 100 ms delay versus the health print page's 500 ms.
+
+The uploaded file (607,716 bytes, SHA-256
+`23f8c5d87b6a91511af2a96f57075e8502861bd2f6d92d914a14222db4199400`)
+is byte-identical to the already archived source, Git blob
+`47fe6096a16379cfa8e079e15f46b07d6007e0af`. **No second copy** was
+committed.
+
+```sh
+python3 tools/ish/qr_document_review.py '/path/to/QRDocument-BJwpoEJY(2).js'
+python3 -m unittest discover -s tests -p 'test_qr_document_review.py' -v
+```
+
+The checker returns 21 version-specific source indicators, not 21 proven
+vulnerabilities. Its 25 synthetic tests never call UBOOR APIs or execute JS.
