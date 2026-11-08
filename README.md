@@ -590,3 +590,47 @@ python3 -m unittest discover -s tests -p 'test_qr_dependencies_batch3_review.py'
 The public repository stores derived reports, checksums and offline audit
 utilities, not additional third-party government JavaScript or personal
 transaction data. Canva is a document snapshot; it is not live source sync.
+
+## 15-file uploaded JS archive and source-level review (8 November 2026)
+
+**15 user-supplied filenames → 13 unique byte-exact frontend JavaScript sources** are now archived at
+[research/user-supplied/2026-11-08](research/user-supplied/2026-11-08/).
+The archive is **public** and includes a
+[NOTICE](research/user-supplied/2026-11-08/NOTICE.md) about original rights,
+republication limitations, and lack of official affiliation. Sources
+were verified against original Git blob SHA-1 and were not executed against
+a government API. Do not place credentials, real QR payloads or personal
+records in the archive.
+
+- [Arabic function-by-function explanation of all 15 uploads](reviews/2026-11-08/uploaded-js-batch-4/LINE_BY_LINE_AR.md)
+- [Source manifest (all names, SHA-256, physical-line counts)](reviews/2026-11-08/uploaded-js-batch-4/manifest.json)
+- [46 exact source anchors and offsets in the 3 newly studied files](reviews/2026-11-08/uploaded-js-batch-4/SOURCE_ANCHORS.json)
+- [Offline batch inspector](tools/ish/uploaded_js_batch4_review.py)
+- [36 synthetic regression tests](tests/test_uploaded_js_batch4_review.py)
+
+**Newly documented components:** `IndexPage-cUNA67sR.js` contains dashboard
+metrics for KPI overview, employee processing time and vehicle stay duration.
+`CompanyOwnerCeoLoadsView-Coghn9Xh.js` shows owner outgoing shipments and
+calls `fetchCompanyCeoLoads` and `returnDocCeo` from the shared store,
+corresponding to `POST local_form/paginate_company_ceo` and
+`POST local_form/return_doc_ceo`. Printable data renders through
+`ShipmentDoc`. `useFormControl-XQpg82Ny.js` is a small computed UI helper
+for testing whether a control belongs to a form.
+
+The source files are **minified**; a physical line may contain hundreds of
+expressions. The report explains semantic segments, and the source anchor
+index provides exact positions rather than fictitious line numbering.
+
+Offline check, after cloning the repo:
+
+```sh
+python3 tools/ish/uploaded_js_batch4_review.py \
+  --directory research/user-supplied/2026-11-08 \
+  --main-bundle "research/raw-uploads/2026-11-07/index-gleMzSil(1).js"
+python3 -m unittest discover -s tests \
+  -p 'test_uploaded_js_batch4_review.py' -v
+```
+
+The checker is an offline *frontend indicator inventory*, not a backend
+authentication test or certificate signature validator. Existing Canva
+documentation is a snapshot and is not automatically synced to these commits.
