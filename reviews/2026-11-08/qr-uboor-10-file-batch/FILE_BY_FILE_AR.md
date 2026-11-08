@@ -122,8 +122,8 @@
 - يستخدم watcher عميقًا وغير متزامنًا لإعادة رسم QR؛ لا يظهر حارس يمنع نتيجة قديمة من الكتابة بعد تحديث أحدث.
 
 **تقرير جديد:** [ShipmentDoc_deep_review_AR.md](../ShipmentDoc_deep_review_AR.md).  
-**فاحص:** [shipment_doc_review.py](../../../../tools/ish/shipment_doc_review.py).  
-**اختبارات:** [test_shipment_doc_review.py](../../../../tests/test_shipment_doc_review.py).
+**فاحص:** [shipment_doc_review.py](../../../tools/ish/shipment_doc_review.py).  
+**اختبارات:** [test_shipment_doc_review.py](../../../tests/test_shipment_doc_review.py).
 
 ## الربط النهائي بين الملفات
 
