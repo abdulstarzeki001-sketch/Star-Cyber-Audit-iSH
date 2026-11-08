@@ -346,3 +346,32 @@ python3 -m unittest discover -s tests -p 'test_qr_document_review.py' -v
 
 The checker returns 21 version-specific source indicators, not 21 proven
 vulnerabilities. Its 25 synthetic tests never call UBOOR APIs or execute JS.
+
+## QRCheckpoints source and provenance review (8 November 2026)
+
+The [Arabic deep review](reviews/2026-11-08/QRCheckpoints_deep_review_AR.md)
+documents the QRCheckpoints Vue component, which **does not issue API requests**
+or alter any document. Its display list is supplied via `props.items` or
+fallbacks through `history.state.read_doc`, `sessionStorage["qr_read_doc"]`
+and a JSON `read_doc` route-query value. The parent `QRDocument` normally
+passes its computed `response.read_doc` through `items` and also writes
+`qr_read_doc` to sessionStorage. An unbound fallback can potentially show
+out-of-context checkpoints, while an empty history array suppresses later
+fallbacks. The map visibility predicate uses an OR of coordinates, but its
+click handler requires both, and its UTC display depends on timestamp syntax.
+
+Run the **offline** reviewer, optionally comparing a local copy of QRDocument:
+
+```sh
+python3 tools/ish/qr_checkpoints_review.py \
+  "/path/to/QRCheckpoints-Brs0uL0-.js" \
+  --parent "/path/to/QRDocument-BJwpoEJY.js"
+python3 -m unittest discover -s tests \
+  -p 'test_qr_checkpoints_review.py' -v
+```
+
+Source: 2,797 bytes; SHA-256
+`b2f6e7519df369ff58345adedcc4fb1cc2d83416f409cffe0cd93a8869aae53b`.
+There are 14 version-specific observations, **not 14 backend vulnerabilities**.
+No government source code, personal coordinates, document records or sessions
+are uploaded in this addition to the public repository.
