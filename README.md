@@ -498,3 +498,41 @@ The new checker inventories 26 literal source indicators, with
 vulnerabilities or backend authentication bypass. This public update
 contains reports, hash manifest and testing utilities only, not new
 copies of third-party government JS, QR tokens, accounts or documents.
+
+## Second 10-file UBOOR/UR gate audit (8 November 2026)
+
+This batch comprises **10 user-uploaded JavaScript frontend bundles**. Exact
+byte sizes and SHA-256/Git blob SHA-1 are preserved in the
+[batch manifest](reviews/2026-11-08/qr-uboor-10-files-batch-2/manifest.json),
+and the [Arabic file-by-file review](reviews/2026-11-08/qr-uboor-10-files-batch-2/FILE_BY_FILE_AR.md)
+covers each. Eight files match versions already audited; two gate-view
+components received new dedicated reviews:
+
+- [EntranceGateView](reviews/2026-11-08/EntranceGateView_deep_review_AR.md):
+  `POST carrier_register/scrape_search_goods_gateway_register` for goods
+  lookup, and `POST carrier_register/gateway_decision` for
+  `APPROVED/REJECTED` decisions with `FormData` attachments. Camera-scanned
+  text is limited to HTTPS by a frontend condition, unlike manual input.
+  The success toast is generic even when sending a rejected decision.
+- [ExitGateView](reviews/2026-11-08/ExitGateView_deep_review_AR.md):
+  camera + jsQR -> `useExitGate.searchImportedGoods`, whose external
+  composable uses `POST support_org/read_qr_exitgate`. The component
+  itself has no decision form, server endpoint, or additional GPS fetch.
+  Its camera URL validation differs from manual input and entrance.
+
+**Offline scanner and tests**, no network requests:
+
+```sh
+python3 tools/ish/gate_views_review.py \
+  "/path/to/EntranceGateView-B9IBJo4k.js" --view entrance
+python3 tools/ish/gate_views_review.py \
+  "/path/to/ExitGateView-D33Au6wp.js" --view exit
+python3 -m unittest discover -s tests -p 'test_gate_views_review.py' -v
+```
+
+The checker matches **18 entrance and 9 exit source indicators**; **34
+synthetic tests** cover this source-pattern inventory and invalid input.
+These are descriptive indicators, **not 27 proven vulnerabilities**. The
+repository update does not publish new copies of third-party government
+frontend source, live QR values, credentials, or personal records. No
+government backend API was contacted.
