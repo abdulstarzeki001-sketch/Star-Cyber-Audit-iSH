@@ -34,3 +34,21 @@
 ## حدود الأمان
 
 المستودع عام. لا تُرفع نسخ إضافية من حزم JS الحكومية أو كلمات مرور أو رموز QR فعلية أو سجلات شركات وأشخاص. النص المستورد تدقيق واجهة عام، وليس مستندًا رسميًا أو نتيجة اختبار Backend.
+
+## الدفعة الثالثة — الاعتماديات ومرفقات المحطات (8 نوفمبر 2026)
+
+أُضيفت ثمانية ملفات اعتماديات لم تُدرس بعمق في الدفعات السابقة، مع نسختين مكررتين (QrLocalImporter وCompanyOwnerView). أهم اكتشاف هو أن `EntranceGateView` يمرّر `attachments-register`، بينما `StationsDetailsModal` لا يعرّف `attachmentsRegister` أو يعرض مرفقات التسجيل؛ ويُحمّل المرفقات الأخرى عبر `useAttachments.downloadAttachment` الذي يستدعي `GET carrier_register/download_file`.
+
+**Canva — نسخة قابلة للتحرير من التقرير الجديد:**
+- [فتح Canva للتعديل](https://www.canva.com/d/pr1o_Gkq3JRyzY-)
+- [عرض Canva](https://www.canva.com/d/V4sZWdbVjXpXZ1T)
+- Design ID: `DAHaVQXvXQw`
+
+**مصدر البيانات النصية المراجَع على GitHub:**
+- [تقرير الملفات العشرة الجديد](../../reviews/2026-11-08/qr-uboor-dependencies-batch-3/FILE_BY_FILE_AR.md)
+- [بصمات الملفات](../../reviews/2026-11-08/qr-uboor-dependencies-batch-3/manifest.json)
+- [فاحص الاعتماديات دون شبكة](../../tools/ish/qr_dependencies_batch3_review.py)
+- [اختبارات الفاحص](../../tests/test_qr_dependencies_batch3_review.py)
+- [تقرير EntranceGateView الأساسي](../../reviews/2026-11-08/EntranceGateView_deep_review_AR.md)
+
+النسخة في Canva مستند بصري مأخوذ من Markdown عام؛ لا تحوي JS حكوميًا أصليًا أو QR فعليًا ولا تتم مزامنتها تلقائيًا عند أي commit.
