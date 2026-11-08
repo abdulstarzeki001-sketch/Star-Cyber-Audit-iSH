@@ -1,0 +1,159 @@
+{
+  "date": "2026-11-08",
+  "repo": "abdulstarzeki001-sketch/Star-Cyber-Audit-iSH",
+  "public_repository": true,
+  "source_directory": "research/user-supplied/2026-11-08/",
+  "uploaded_files": 15,
+  "unique_sources": 13,
+  "new_to_previous_reviews": 3,
+  "duplicates_of_previously_reviewed": 12,
+  "files": [
+    {
+      "name": "browser-3Qg8aFGH.js",
+      "original_upload_names": [
+        "browser-3Qg8aFGH(1).js"
+      ],
+      "bytes": 25785,
+      "sha256": "ac20dcd5e80b582864e38bd16a87f2068f938b6b32785f5ddd5a4b9ed7b3e0af",
+      "physical_lines": 8,
+      "role": "مكتبة إنشاء QR",
+      "repository_path": "research/user-supplied/2026-11-08/browser-3Qg8aFGH.js"
+    },
+    {
+      "name": "CompanyOwnerView-CIdFF3LL.js",
+      "original_upload_names": [
+        "CompanyOwnerView-CIdFF3LL(4).js"
+      ],
+      "bytes": 24517,
+      "sha256": "78af159ff95bf493a5050b4fb0fe6e4068ee49576100829ce1783644f92d2b2d",
+      "physical_lines": 2,
+      "role": "واجهة صاحب الشركة؛ نسخة مطابقة",
+      "repository_path": "research/user-supplied/2026-11-08/CompanyOwnerView-CIdFF3LL.js"
+    },
+    {
+      "name": "IndexPage-cUNA67sR.js",
+      "original_upload_names": [
+        "IndexPage-cUNA67sR.js"
+      ],
+      "bytes": 28700,
+      "sha256": "05da0739f9e5ea3ea5b3f22d80ab4f63d29197b9250577ca95e2072f231b7f42",
+      "physical_lines": 1,
+      "role": "لوحة مؤشرات الأداء — جديد",
+      "repository_path": "research/user-supplied/2026-11-08/IndexPage-cUNA67sR.js"
+    },
+    {
+      "name": "Modal-C_od4hhs.js",
+      "original_upload_names": [
+        "Modal-C_od4hhs(1).js",
+        "Modal-C_od4hhs(2).js"
+      ],
+      "bytes": 12127,
+      "sha256": "04830b150d5a6dda684a75c954409c44b5b1c1e2ecd685b198deb49217a25194",
+      "physical_lines": 1,
+      "role": "مكتبة Dialog",
+      "repository_path": "research/user-supplied/2026-11-08/Modal-C_od4hhs.js"
+    },
+    {
+      "name": "index-BKvq_4_A.js",
+      "original_upload_names": [
+        "index-BKvq_4_A(1).js",
+        "index-BKvq_4_A(2).js"
+      ],
+      "bytes": 13327,
+      "sha256": "25bd2f9df43d5ed1ae182f1dd68d1c05f735a5352ce7fe9149af501a1c706f05",
+      "physical_lines": 2,
+      "role": "تصدير DOM إلى صور",
+      "repository_path": "research/user-supplied/2026-11-08/index-BKvq_4_A.js"
+    },
+    {
+      "name": "jsQR-CKtgBSaS.js",
+      "original_upload_names": [
+        "jsQR-CKtgBSaS(1).js"
+      ],
+      "bytes": 130725,
+      "sha256": "7b28d8063265694524209c30a0b20471c0ae3f85cf5c260a469907740bcb28a4",
+      "physical_lines": 1,
+      "role": "مكتبة فك صورة QR",
+      "repository_path": "research/user-supplied/2026-11-08/jsQR-CKtgBSaS.js"
+    },
+    {
+      "name": "CompanyOwnerCeoLoadsView-Coghn9Xh.js",
+      "original_upload_names": [
+        "CompanyOwnerCeoLoadsView-Coghn9Xh.js"
+      ],
+      "bytes": 20697,
+      "sha256": "fcc33ae6957649ab3a6881196b231e1891dd7ec0d1a440b376ab45bcffefcacd",
+      "physical_lines": 1,
+      "role": "سجل الحمولات الخارجة — جديد",
+      "repository_path": "research/user-supplied/2026-11-08/CompanyOwnerCeoLoadsView-Coghn9Xh.js"
+    },
+    {
+      "name": "FormField-DW4k76E2.js",
+      "original_upload_names": [
+        "FormField-DW4k76E2(1).js"
+      ],
+      "bytes": 3491,
+      "sha256": "a88958cbe6ad3a4b53f9e4c93cc129553ecdae580144f96d6a60596aa84ccca7",
+      "physical_lines": 1,
+      "role": "عناصر الحقول والتحقق",
+      "repository_path": "research/user-supplied/2026-11-08/FormField-DW4k76E2.js"
+    },
+    {
+      "name": "useFormControl-XQpg82Ny.js",
+      "original_upload_names": [
+        "useFormControl-XQpg82Ny.js"
+      ],
+      "bytes": 132,
+      "sha256": "dc0ca24e3e96bdba6e574672096fdc1f93186559ba74a2db2bc5fcaf28657b2b",
+      "physical_lines": 1,
+      "role": "التحقق من وجود عنصر تحكم داخل form — جديد",
+      "repository_path": "research/user-supplied/2026-11-08/useFormControl-XQpg82Ny.js"
+    },
+    {
+      "name": "QrLocalImporter-DYzNB5Fh.js",
+      "original_upload_names": [
+        "QrLocalImporter-DYzNB5Fh(3).js"
+      ],
+      "bytes": 7222,
+      "sha256": "59ff26bfbc4b731799101527e9604fc736c170e80e4988eb69be672990cf8208",
+      "physical_lines": 2,
+      "role": "قارئ المستورد؛ نسخة مطابقة",
+      "repository_path": "research/user-supplied/2026-11-08/QrLocalImporter-DYzNB5Fh.js"
+    },
+    {
+      "name": "useAttachments-YD2hRx7D.js",
+      "original_upload_names": [
+        "useAttachments-YD2hRx7D(1).js"
+      ],
+      "bytes": 747,
+      "sha256": "384aa93decf853b8135044a50511b472c7860c564e81467565b43b87ed40d173",
+      "physical_lines": 1,
+      "role": "تنزيل المرفقات",
+      "repository_path": "research/user-supplied/2026-11-08/useAttachments-YD2hRx7D.js"
+    },
+    {
+      "name": "Select-DZpjzzNJ.js",
+      "original_upload_names": [
+        "Select-DZpjzzNJ(1).js"
+      ],
+      "bytes": 34010,
+      "sha256": "0c230f2ecf805c6253fbe14adc9ce43944a85074b098024a2513f2fd4a348254",
+      "physical_lines": 1,
+      "role": "قائمة اختيار مع دعم النموذج",
+      "repository_path": "research/user-supplied/2026-11-08/Select-DZpjzzNJ.js"
+    },
+    {
+      "name": "StationsDetailsModal.vue_vue_type_script_setup_true_lang-CppuJXhm.js",
+      "original_upload_names": [
+        "StationsDetailsModal.vue_vue_type_script_setup_true_lang-CppuJXhm(1).js"
+      ],
+      "bytes": 2550,
+      "sha256": "8afe444c1fe2203397347394dd66b198ec611fc657f8907f933b6e78269d4b94",
+      "physical_lines": 1,
+      "role": "عرض تفاصيل المحطات",
+      "repository_path": "research/user-supplied/2026-11-08/StationsDetailsModal.vue_vue_type_script_setup_true_lang-CppuJXhm.js"
+    }
+  ],
+  "review_scope": "offline frontend static source only; minified files have many JS statements per physical line",
+  "important_note": "The public snapshot contains third-party frontend code supplied by the user; consult NOTICE.md for rights and reuse caveats."
+}
