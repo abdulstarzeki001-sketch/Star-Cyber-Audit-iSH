@@ -375,3 +375,31 @@ Source: 2,797 bytes; SHA-256
 There are 14 version-specific observations, **not 14 backend vulnerabilities**.
 No government source code, personal coordinates, document records or sessions
 are uploaded in this addition to the public repository.
+
+## qrStore browser storage audit (8 November 2026)
+
+The [Arabic qrStore deep review](reviews/2026-11-08/qrStore_deep_review_AR.md)
+links the 248-byte module's `localStorage["qr_readings"]` add/list behavior
+to the previously reviewed `QRDocument` and `QRCheckpoints` flows.
+The store prepends new records but does not validate `JSON.parse` as an
+array, silently ignores storage errors, has no retention limit or user
+namespace, and rewrites the full list on every addition. A later
+`QRDocument` fallback to the first local entry when an ID is unmatched
+could display a different document. These are **browser-side review findings
+and design risks**, not confirmed government backend vulnerabilities.
+
+Use the offline stdlib-only checker with optional local comparison sources:
+
+```sh
+python3 tools/ish/qr_store_review.py "/path/to/qrStore-B8bgApfd(1).js" \
+  --document "/path/to/QRDocument-BJwpoEJY.js" \
+  --checkpoints "/path/to/QRCheckpoints-Brs0uL0-.js"
+python3 -m unittest discover -s tests -p 'test_qr_store_review.py' -v
+```
+
+Both comparison flags are optional **together**. Source SHA-256:
+`122527b8507637168eeb4365f879f160f02620d1dc997c74e3da1880a1573e77`.
+The uploaded source is byte-identical to the archived Git blob
+`8ccefa1736a3d7da3a800075c9a7a51e6acc6c30`, so no additional
+third-party JavaScript, real QR records, credentials or user data were
+committed. There are 13 source indicators and 20 synthetic tests.
