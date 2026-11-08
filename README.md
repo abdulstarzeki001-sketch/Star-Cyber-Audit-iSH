@@ -555,3 +555,38 @@ The review is now imported as an **editable Canva document**:
 This is a **linked document snapshot**, not live source-code syncing or
 Canva execution of government code. To reflect future commits in Canva,
 import the updated public Markdown again and update the design link here.
+
+## Third QR/gate dependency review (8 November 2026)
+
+The [Arabic third 10-file review](reviews/2026-11-08/qr-uboor-dependencies-batch-3/FILE_BY_FILE_AR.md)
+now covers QR decoding (`jsQR`), QR rendering (`browser-3Qg8aFGH`),
+DOM-to-image export (`index-BKvq_4_A`), station attachments, modal/select/form
+controls, and two unchanged duplicate builds. Exact SHA-256/Git blob values:
+[batch manifest](reviews/2026-11-08/qr-uboor-dependencies-batch-3/manifest.json).
+
+**Cross-component finding:** the `EntranceGateView` parent passes
+`attachments-register` but `StationsDetailsModal` defines only
+`attachmentsEntrance` and `attachmentsSonography`; registration
+attachments are not rendered in that child. `download-file` is an
+event; `useAttachments.downloadAttachment` performs the actual
+`GET carrier_register/download_file` using `hash_id,url,station_name`.
+The backend authorization and file-path restrictions remain unknown.
+
+- [Canva editable document](https://www.canva.com/d/pr1o_Gkq3JRyzY-)
+- [GitHub ↔ Canva link map](docs/integrations/CANVA_EntranceGateView_AR.md)
+- [Offline batch inspector](tools/ish/qr_dependencies_batch3_review.py)
+- [Synthetic tests](tests/test_qr_dependencies_batch3_review.py)
+
+Run the read-only inspector on a folder containing all 10 named JS files
+(and optionally the EntranceGateView parent):
+
+```sh
+python3 tools/ish/qr_dependencies_batch3_review.py \
+  --root /path/to/uploaded-js \
+  --entrance /path/to/EntranceGateView-B9IBJo4k.js
+python3 -m unittest discover -s tests -p 'test_qr_dependencies_batch3_review.py' -v
+```
+
+The public repository stores derived reports, checksums and offline audit
+utilities, not additional third-party government JavaScript or personal
+transaction data. Canva is a document snapshot; it is not live source sync.
