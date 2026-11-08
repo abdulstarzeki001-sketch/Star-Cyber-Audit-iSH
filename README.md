@@ -256,3 +256,35 @@ Source: 11,186 bytes; SHA-256:
 `b98b04782e1ee00c7e338bd111e22a45479db6e5171e5a67e808a3458a9c7a25`.
 This adds only an offline checker, synthetic regression tests and a written
 report—no copy of third-party source JS, private credentials or real documents.
+
+## Main UBOOR bundle: rejected QR route and auth (8 November 2026)
+
+The [Arabic source-based deep review](reviews/2026-11-08/index_gleMzSil_rejected_route_deep_review_AR.md)
+analyzes the supplied 1,416,085-byte `index-gleMzSil` main JS bundle and
+**resolves** the previously unknown rejected-local list API:
+
+```text
+POST https://customs-uboor.ur.gov.iq/api/local_form/pagination_rejected_qrcode_reader
+/dashboard/qr/local-rejected -> RejectedLocalDocuments -> fetchRejectedLocalReaders
+```
+
+The `/dashboard` parent requires frontend authentication; the visible router
+guard does not itself check a route-specific privilege. This is **not** evidence
+that the backend accepts unauthorized requests. The review also documents a
+logical-failure payload still returned after an error toast and a possible
+stale Axios default Authorization header after logout. It also identifies the
+correct health-certificate print chunk:
+`PrintHealthCertificateView-Q9yNncqz.js`.
+
+Run the offline checker against a **locally held copy**:
+
+```sh
+python3 tools/ish/index_rejected_route_review.py "/path/to/index-gleMzSil(1)(1).js"
+python3 -m unittest discover -s tests -p 'test_index_rejected_route_review.py' -v
+```
+
+Source SHA-256:
+`83d3f35e2cf05cc56fca81a3531b98381d291dc1e903957be7b6e433466b7ac3`.
+The 15 indicators include factual source findings and review conditions,
+**not** confirmed exploits. No new copy of the government JS, credentials or
+user document records was added to this public repository.
