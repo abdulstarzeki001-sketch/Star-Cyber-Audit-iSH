@@ -1,0 +1,88 @@
+{
+  "date": "2026-11-08",
+  "batch": "qr-uboor-10-files-batch-2",
+  "method": "local full-file byte hashing, read-only JS static comparison, no government APIs",
+  "files": [
+    {
+      "name": "QrControlScan-M6uGJnR1(1).js",
+      "bytes": 8315,
+      "sha256": "0848ead8a6082769241885b6e5de6fd26aa783cbfce832f46448780378bbd78c",
+      "git_blob_sha1": "eb684925e9ef412df54680e0f4044ded07c331bf",
+      "review_status": "previous-review",
+      "review_path": "reviews/2026-11-08/QrControlScan_deep_review_AR.md"
+    },
+    {
+      "name": "DisableDocument-AXBjrkYS(1).js",
+      "bytes": 11505,
+      "sha256": "e8f574544e0f910f8ec66446810627a13352065d7b6ae2a3b1a89c0439f60e01",
+      "git_blob_sha1": "730eb98b60c0e8b9758ed0b28a940d88c3df9876",
+      "review_status": "previous-review",
+      "review_path": "reviews/2026-11-08/DisableDocument_deep_review_AR.md"
+    },
+    {
+      "name": "EntranceGateView-B9IBJo4k.js",
+      "bytes": 21501,
+      "sha256": "d48910ae500903a80deaf740cba67485c76e3af789fcff2e1f4d6f86d2419988",
+      "git_blob_sha1": "df106a07815f7272f2e79c894956912f90d6caec",
+      "review_status": "dedicated-review",
+      "review_path": "reviews/2026-11-08/EntranceGateView_deep_review_AR.md"
+    },
+    {
+      "name": "QRCheckpoints-Brs0uL0-(1).js",
+      "bytes": 2797,
+      "sha256": "b2f6e7519df369ff58345adedcc4fb1cc2d83416f409cffe0cd93a8869aae53b",
+      "git_blob_sha1": "e022ad21f1905371f950d51502a5deb5a4b30492",
+      "review_status": "previous-review",
+      "review_path": "reviews/2026-11-08/QRCheckpoints_deep_review_AR.md"
+    },
+    {
+      "name": "CompanyOwnerView-CIdFF3LL(2).js",
+      "bytes": 24517,
+      "sha256": "78af159ff95bf493a5050b4fb0fe6e4068ee49576100829ce1783644f92d2b2d",
+      "git_blob_sha1": "dc20bd53f1ba6a04f53860d008f6a2a1d93bab87",
+      "review_status": "previous-review",
+      "review_path": "reviews/2026-11-08/CompanyOwnerView_deep_review_AR.md"
+    },
+    {
+      "name": "QrCodeReaderCustoms-a-UBVR7y(3).js",
+      "bytes": 16490,
+      "sha256": "09b62507255c25910a196ca0ca1e5fb6d961be5d10287face07cc777aaf45c0b",
+      "git_blob_sha1": "95a2c2807045163a3cc8a59508a5f32557de6ba3",
+      "review_status": "previous-review",
+      "review_path": "reviews/2026-11-07/reference/UBOOR_verified_update_2026-11-06.md"
+    },
+    {
+      "name": "QRDocument-BJwpoEJY(4).js",
+      "bytes": 607716,
+      "sha256": "23f8c5d87b6a91511af2a96f57075e8502861bd2f6d92d914a14222db4199400",
+      "git_blob_sha1": "47fe6096a16379cfa8e079e15f46b07d6007e0af",
+      "review_status": "previous-review",
+      "review_path": "reviews/2026-11-08/QRDocument_deep_review_AR.md"
+    },
+    {
+      "name": "AchievementDocument-DEzIzJ3I(3).js",
+      "bytes": 11641,
+      "sha256": "bec1dbe0a25694f05f30d5dcf6edb253fb2f9276d9e00b583ba416aabc941d7c",
+      "git_blob_sha1": "3d2ab3d4217437e7b50e97d5c37db17f662d23d0",
+      "review_status": "previous-review",
+      "review_path": "reviews/2026-11-07/reference/UBOOR_AchievementDocument_verified_addendum_2026-11-06.md"
+    },
+    {
+      "name": "ExitGateView-D33Au6wp.js",
+      "bytes": 4468,
+      "sha256": "4c7d47c65b845c7b00143dfed244f28435cf5e2c64d6da9330820b3b53fbdc52",
+      "git_blob_sha1": "33cf453d5d99d15ed4e0f23720c5ec8c087c03ff",
+      "review_status": "dedicated-review",
+      "review_path": "reviews/2026-11-08/ExitGateView_deep_review_AR.md"
+    },
+    {
+      "name": "employee.21e9f881(20261108-121032).js",
+      "bytes": 33085,
+      "sha256": "265169d6dbf0cf25cbcb654d61f50c1468b7e088ae56e43598f82218642a12f5",
+      "git_blob_sha1": "45a027208a4928f9a32dd97e85aafc459cbaf355",
+      "review_status": "previous-review",
+      "review_path": "reviews/2026-11-08/dms-employee-assets/DETAILED_STATIC_AUDIT_AR.md"
+    }
+  ],
+  "publication_policy": "only hashes, reports, offline checker and synthetic tests; not additional third-party JavaScript or real user/session/QR data"
+}
