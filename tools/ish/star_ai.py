@@ -17,7 +17,7 @@ ROOT = Path(__file__).resolve().parents[2]
 DOC_ROOTS = ('docs', 'reviews', 'tools/ish')
 ROOT_FILES = ('README.md', 'README_AR.md', 'UBOOR_FLOW_NOTES_AR.md',
               'analyze.py', 'run.sh', 'site/worker.js')
-SUFFIXES = {'.md', '.txt', '.py', '.sh'}
+SUFFIXES = {'.md', '.txt', '.py', '.sh', '.js'}
 EXCLUDE = {'.git', '.github', 'research', 'reports', 'downloads',
            'offline_samples', 'node_modules', '.venv', '__pycache__',
            'fixtures', 'secrets'}
