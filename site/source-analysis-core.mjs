@@ -87,7 +87,7 @@ export function analyzeSource(name, source, sha256=null) {
   },0) + (secret_candidates.length?30:0));
   return {
     name:path.split("/").pop(),relative_path:path,origin:"local_browser_source",
-    classification:"JS_SOURCE",bytes,sha256,api_paths,
+    classification:/\.py$/i.test(path)?"PY_SOURCE":/\.html$/i.test(path)?"HTML_SOURCE":"JS_SOURCE",bytes,sha256,api_paths,
     api_calls:[],imports,storage,privilege_literals:[],
     flags:findings.map(formatFlag),
     findings,secret_candidates,
