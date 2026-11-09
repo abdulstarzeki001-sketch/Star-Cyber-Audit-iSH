@@ -1,0 +1,81 @@
+{
+  "date": "2026-11-09",
+  "batch_id": "qr-uboor-batch-5",
+  "scope": "offline static frontend code review, not government API testing",
+  "uploaded_count": 7,
+  "unique_new_sources": 2,
+  "byte_identical_to_previously_archived": 5,
+  "files": [
+    {
+      "uploaded_name": "QrLocalImporter-DYzNB5Fh(5).js",
+      "canonical_name": "QrLocalImporter-DYzNB5Fh.js",
+      "bytes": 7222,
+      "sha256": "59ff26bfbc4b731799101527e9604fc736c170e80e4988eb69be672990cf8208",
+      "git_blob_sha1": "3bf2a9cbf59936a855b37cf9d6202fa11d505fac",
+      "status": "duplicate",
+      "repository_path": "research/user-supplied/2026-11-08/QrLocalImporter-DYzNB5Fh.js",
+      "physical_lines": 2
+    },
+    {
+      "uploaded_name": "AppPagination.vue_vue_type_script_setup_true_lang-DzdlD2T5(1).js",
+      "canonical_name": "AppPagination.vue_vue_type_script_setup_true_lang-DzdlD2T5.js",
+      "bytes": 11774,
+      "sha256": "7c94b32bcc68a625b8136dee16767e8c59e066cefeadbb958f5fdec5bc02c4f5",
+      "git_blob_sha1": "191ac0cf643a77d5e7354addc6e8c1cc2e57af1b",
+      "status": "new",
+      "repository_path": "research/user-supplied/2026-11-09/AppPagination.vue_vue_type_script_setup_true_lang-DzdlD2T5.js",
+      "physical_lines": 1
+    },
+    {
+      "uploaded_name": "BaseModal-DjCaQzje(1).js",
+      "canonical_name": "BaseModal-DjCaQzje.js",
+      "bytes": 3587,
+      "sha256": "035b2869ad0e11fbfc228fde484c732225d2d9e197356a9172bf5d429b06b842",
+      "git_blob_sha1": "74e0c2be0b1cbdf8cf9a61d19c0ea12936d9df30",
+      "status": "new",
+      "repository_path": "research/user-supplied/2026-11-09/BaseModal-DjCaQzje.js",
+      "physical_lines": 1
+    },
+    {
+      "uploaded_name": "CompanyOwnerCeoLoadsView-Coghn9Xh(2).js",
+      "canonical_name": "CompanyOwnerCeoLoadsView-Coghn9Xh.js",
+      "bytes": 20697,
+      "sha256": "fcc33ae6957649ab3a6881196b231e1891dd7ec0d1a440b376ab45bcffefcacd",
+      "git_blob_sha1": "d36b373c039dcd97544da4c3eff0d9f9aeb02da6",
+      "status": "duplicate",
+      "repository_path": "research/user-supplied/2026-11-08/CompanyOwnerCeoLoadsView-Coghn9Xh.js",
+      "physical_lines": 1
+    },
+    {
+      "uploaded_name": "useExitGate-BvHNutwH(5).js",
+      "canonical_name": "useExitGate-BvHNutwH.js",
+      "bytes": 6027,
+      "sha256": "9d9a109e58d619a8afdf91bfcbd9f7e45377ddb8236e82e13597b896e56c3306",
+      "git_blob_sha1": "b24b64ad0a5a66ad0492cdc4c8974c6ddc93f2d8",
+      "status": "duplicate",
+      "repository_path": "research/source-archive/2026-11-07/uboor/useExitGate-BvHNutwH.js",
+      "physical_lines": 1
+    },
+    {
+      "uploaded_name": "CompanyOwnerView-CIdFF3LL(6).js",
+      "canonical_name": "CompanyOwnerView-CIdFF3LL.js",
+      "bytes": 24517,
+      "sha256": "78af159ff95bf493a5050b4fb0fe6e4068ee49576100829ce1783644f92d2b2d",
+      "git_blob_sha1": "dc20bd53f1ba6a04f53860d008f6a2a1d93bab87",
+      "status": "duplicate",
+      "repository_path": "research/user-supplied/2026-11-08/CompanyOwnerView-CIdFF3LL.js",
+      "physical_lines": 2
+    },
+    {
+      "uploaded_name": "index-gleMzSil(3).js",
+      "canonical_name": "index-gleMzSil.js",
+      "bytes": 1416085,
+      "sha256": "83d3f35e2cf05cc56fca81a3531b98381d291dc1e903957be7b6e433466b7ac3",
+      "git_blob_sha1": "01838b7f9a67928e9924f6719a8d9856ac539b87",
+      "status": "duplicate",
+      "repository_path": "research/raw-uploads/2026-11-07/index-gleMzSil(1).js",
+      "physical_lines": 946
+    }
+  ],
+  "publication_note": "Two new uploaded JS bundles added to public archive; five byte-identical sources were not duplicated. Do not republish credentials, customer transactions or live QR contents."
+}
