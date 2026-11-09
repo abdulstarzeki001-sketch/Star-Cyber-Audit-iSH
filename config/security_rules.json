@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "description": "Offline heuristic-only static review rules. These are not confirmed vulnerabilities.",
+  "rules": [
+    {
+      "id": "SC-EVAL",
+      "title": "Dynamic code execution primitive",
+      "severity": "high",
+      "extensions": [
+        ".js",
+        ".jsx",
+        ".mjs",
+        ".cjs",
+        ".ts",
+        ".tsx"
+      ],
+      "pattern": "\\b(?:eval\\s*\\(|new\\s+Function\\s*\\()",
+      "recommendation": "Confirm inputs are trusted; avoid dynamic execution and enforce CSP."
+    },
+    {
+      "id": "SC-HTML",
+      "title": "Potential HTML injection sink",
+      "severity": "medium",
+      "extensions": [
+        ".js",
+        ".jsx",
+        ".mjs",
+        ".cjs",
+        ".ts",
+        ".tsx"
+      ],
+      "pattern": "\\.\\s*(?:innerHTML|outerHTML)\\s*=",
+      "recommendation": "Trace dataflow and prefer safe DOM APIs or context-aware sanitization."
+    },
+    {
+      "id": "SC-POSTMSG",
+      "title": "Wildcard postMessage target",
+      "severity": "medium",
+      "extensions": [
+        ".js",
+        ".jsx",
+        ".mjs",
+        ".cjs",
+        ".ts",
+        ".tsx"
+      ],
+      "pattern": "\\.postMessage\\s*\\([^,\\n]+,\\s*['\"]\\*['\"]",
+      "recommendation": "Validate message origin and use a specific trusted targetOrigin."
+    },
+    {
+      "id": "SC-STORAGE",
+      "title": "Potential sensitive browser storage",
+      "severity": "medium",
+      "extensions": [
+        ".js",
+        ".jsx",
+        ".mjs",
+        ".cjs",
+        ".ts",
+        ".tsx"
+      ],
+      "pattern": "(?:localStorage|sessionStorage)\\.setItem\\s*\\(\\s*['\"](?:token|access_token|refresh_token|auth|jwt|session)",
+      "recommendation": "Review token handling, lifetime, XSS exposure and storage alternatives."
+    },
+    {
+      "id": "SC-HTTP",
+      "title": "Non-TLS external HTTP reference",
+      "severity": "low",
+      "extensions": [
+        ".py",
+        ".js",
+        ".jsx",
+        ".ts",
+        ".tsx",
+        ".sh",
+        ".json",
+        ".yml",
+        ".yaml"
+      ],
+      "pattern": "\\bhttp://(?!localhost\\b|127\\.0\\.0\\.1\\b)[A-Za-z0-9.-]+",
+      "recommendation": "Confirm whether network transmission needs HTTPS; localhost is excluded."
+    },
+    {
+      "id": "SC-TLS",
+      "title": "Potential TLS certificate verification bypass",
+      "severity": "high",
+      "extensions": [
+        ".py",
+        ".js",
+        ".jsx",
+        ".ts",
+        ".tsx"
+      ],
+      "pattern": "\\b(?:verify\\s*=\\s*False|rejectUnauthorized\\s*:\\s*false)\\b",
+      "recommendation": "Confirm certificate validation cannot be disabled in production."
+    },
+    {
+      "id": "SC-SHELL",
+      "title": "Shell invocation review",
+      "severity": "medium",
+      "extensions": [
+        ".py"
+      ],
+      "pattern": "\\bshell\\s*=\\s*True\\b",
+      "recommendation": "Use argument arrays and avoid shell=True with dynamic input."
+    },
+    {
+      "id": "SC-QRFALLBACK",
+      "title": "Unverified QR fallback indicator",
+      "severity": "medium",
+      "extensions": [
+        ".js",
+        ".jsx",
+        ".mjs",
+        ".cjs",
+        ".ts",
+        ".tsx"
+      ],
+      "pattern": "\\bqr_code\\s*\\|\\|",
+      "recommendation": "Inspect the trust boundary: a frontend QR fallback is not proof of signed official verification."
+    }
+  ]
+}
