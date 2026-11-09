@@ -1,0 +1,82 @@
+{
+  "date": "2026-11-09",
+  "batch": "user-html-snapshots-4",
+  "capture_type": "browser-saved rendered HTML snapshots supplied by user",
+  "method": "read-only inspection of mounted conversation HTML sources and public repository asset inventory; no requests to government endpoints",
+  "privacy": "Do not upload original HTML or original names; one filename includes a token-like value and other snapshots contain personal/company contact data.",
+  "snapshots": [
+    {
+      "id": "H01",
+      "bytes": 19185,
+      "title": "بوابة أصحاب الشركات",
+      "ui_state": "owner verification error; UR login option",
+      "entry_script": "../assets/index-ccmhdhtn.js",
+      "preloaded_primary": "../assets/companyownerview-cjdszkn6.js",
+      "app_rendered": true,
+      "contains_personal_contact_details": false
+    },
+    {
+      "id": "H02",
+      "bytes": 21241,
+      "title": "بوابة أصحاب الشركات",
+      "ui_state": "owner-view rendered with company-code search and personal contact display",
+      "entry_script": "../assets/index-ccmhdhtn.js",
+      "preloaded_primary": "../assets/companyownerview-cjdszkn6.js",
+      "app_rendered": true,
+      "contains_personal_contact_details": true
+    },
+    {
+      "id": "H03",
+      "bytes": 19436,
+      "title": "الرئيسة",
+      "ui_state": "UBOOR TECH public home; TIR overview and guide/contact",
+      "entry_script": "assets/index-cseaomal.js",
+      "preloaded_primary": null,
+      "app_rendered": true,
+      "contains_personal_contact_details": true
+    },
+    {
+      "id": "H04",
+      "bytes": 19581,
+      "title": "تسجيل الدخول",
+      "ui_state": "username/password form; no visible credentials",
+      "entry_script": "../assets/index-cseaomal.js",
+      "preloaded_primary": "../assets/loginview-czys-bdx.js",
+      "app_rendered": true,
+      "contains_personal_contact_details": false
+    }
+  ],
+  "linked_sources": {
+    "already_archived": [
+      "research/raw-uploads/2026-11-07/company-owner-vite/companyownerview-cjdszkn6.js",
+      "research/raw-uploads/2026-11-07/company-owner-vite/index-dxnlxmd6.css"
+    ],
+    "not_in_review_archive": [
+      "index-ccmhdhtn.js",
+      "index-cseaomal.js",
+      "loginview-czys-bdx.js",
+      "basemodal-c8lwmuhw.js"
+    ],
+    "additional_assets_declared_by_H01_H02": [
+      "card-cxdtecyo.js",
+      "badge-ddrqdsta.js",
+      "input-banvtf9h.js",
+      "textarea-bgo3bjb3.js",
+      "table-dtmqfnp9.js",
+      "vue3-treeselect.min-c1blx3zb.js",
+      "form-ldzoexkp.js"
+    ],
+    "additional_assets_declared_by_H04": [
+      "form-o25ckf6s.js",
+      "formfield-dm6xmaiy.js",
+      "input-ce30asl_.js",
+      "schemas-b4dorvt-.js"
+    ]
+  },
+  "limitations": [
+    "An HTML snapshot is not the referenced JS bundle or the server response that produced it.",
+    "Observed UI states do not independently prove successful server-side authentication.",
+    "These files are not evidence of official document issuance, a signed QR, or backend authorization rules.",
+    "No original HTML, token-like filename, email address or telephone number was published."
+  ]
+}
