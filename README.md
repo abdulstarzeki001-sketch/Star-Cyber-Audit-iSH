@@ -692,3 +692,19 @@ contains a token-like value, and other HTML snapshots include personal
 contact information. Only the redacted description, neutral H01–H04 IDs,
 and non-sensitive asset paths were committed. HTML UI states do not
 prove backend authentication, official issuance, or QR signature validity.
+
+### Owner portal follow-up HTML snapshot (H05)
+
+A fifth sensitive company-owner HTML snapshot shows the owner/company
+license panels, goods table and success notification for loaded company items,
+plus a document-regeneration action. The snapshot's **actual Vue entrypoint
+remains `index-ccmhdhtn.js`**; the separately uploaded
+`index-gleMzSil(4).js` points to the older
+`CompanyOwnerView-CIdFF3LL.js` build and is **not an equivalent replacement**.
+
+- [Redacted H05 audit report](reviews/2026-11-09/uboor-html-snapshots/OWNER_ITEMS_ADDITIONAL_SNAPSHOT_AR.md)
+- [Sanitized H01–H05 manifest](reviews/2026-11-09/uboor-html-snapshots/manifest.json)
+
+The original HTML, its phone-number-bearing filename, the owner's contact
+details, and the populated company code were **not published**. An HTML
+button or success toast is not proof of a backend-issued official document.
