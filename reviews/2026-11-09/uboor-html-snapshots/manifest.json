@@ -3,7 +3,7 @@
   "batch": "user-html-snapshots-4",
   "capture_type": "browser-saved rendered HTML snapshots supplied by user",
   "method": "read-only inspection of mounted conversation HTML sources and public repository asset inventory; no requests to government endpoints",
-  "privacy": "Do not upload original HTML or original names; one filename includes a token-like value and other snapshots contain personal/company contact data.",
+  "privacy": "Only sanitized analysis and neutral H01–H05 aliases publicly shared. H05 original filename contains phone digits; HTML contains personally identifying company details and populated code input.",
   "snapshots": [
     {
       "id": "H01",
@@ -44,6 +44,18 @@
       "preloaded_primary": "../assets/loginview-czys-bdx.js",
       "app_rendered": true,
       "contains_personal_contact_details": false
+    },
+    {
+      "id": "H05",
+      "bytes": 38256,
+      "title": "بوابة أصحاب الشركات",
+      "ui_state": "company material list and license/owner panels visible; success toast 'تم جلب عناصر الشركة بنجاح'; document regeneration button rendered",
+      "entry_script": "../assets/index-ccmhdhtn.js",
+      "preloaded_primary": "../assets/companyownerview-cjdszkn6.js",
+      "app_rendered": true,
+      "contains_personal_contact_details": true,
+      "contains_nonempty_company_code_input": true,
+      "raw_upload_policy": "do not publish original file, original filename or personal/company-code field values"
     }
   ],
   "linked_sources": {
@@ -78,5 +90,12 @@
     "Observed UI states do not independently prove successful server-side authentication.",
     "These files are not evidence of official document issuance, a signed QR, or backend authorization rules.",
     "No original HTML, token-like filename, email address or telephone number was published."
-  ]
+  ],
+  "additional_companion_js": {
+    "name": "index-gleMzSil(4).js",
+    "bytes": 1416085,
+    "identified_as": "older UBOOR/Vite build with CompanyOwnerView-CIdFF3LL.js import map",
+    "sha256_confirmed": false,
+    "publication": "no duplicate upload; compare to earlier archive before claiming byte-identical"
+  }
 }
