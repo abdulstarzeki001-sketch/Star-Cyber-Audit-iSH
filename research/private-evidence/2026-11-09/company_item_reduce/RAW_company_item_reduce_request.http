@@ -1,0 +1,37 @@
+PUT /api/local_form/company_item_reduce HTTP/1.1
+
+Host: customs-uboor.ur.gov.iq
+
+Cookie: _ga_58SDZGZF8B=GS2.1.s1769178343$o1$g1$t1769178429$j57$l0$h0; _ga=GA1.1.1851935723.1769178344
+
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:134.0) Gecko/20100101 Firefox/134.0
+
+Accept: application/json, text/plain, */*
+
+Accept-Language: ar,en-US;q=0.9,en;q=0.8
+
+Accept-Encoding: gzip, deflate, br
+
+Content-Type: application/json
+
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2OTE3ODQyOCwianRpIjoiMDE3ZjllZDctNTk4OS00ODc2LWEyY2UtZDlkM2YzNWJkN2UzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Ijk2NDc3MzQ1NTQzNDYiLCJuYmYiOjE3NjkxNzg0MjgsImV4cCI6MTc2OTIwNzIyOCwic3UxIjoxNTM2LCJzdTIiOiI5NjQ3NzM0NTU0MzQ2Iiwic3U2IjoxNTM2LCJzdTciOiJsb2NhbF9jb21wYW55Iiwic3U4IjpudWxsLCJzdTkiOm51bGx9.fb70BNffU2NjB3KwjtSQKAIgczC3P3tcfc2RgJdnF9w
+
+Content-Length: 555
+
+Origin: https://customs-uboor.ur.gov.iq
+
+Referer: https://customs-uboor.ur.gov.iq/company-owner?phone=9647734554346
+
+Sec-Fetch-Dest: empty
+
+Sec-Fetch-Mode: cors
+
+Sec-Fetch-Site: same-origin
+
+Priority: u=0
+
+Te: trailers
+
+Connection: keep-alive
+
+{"item1":{"hash_id":"dcaadad1cfce437735b81ab025f776e5857e4855","production_capacity":1},"vihcle_info":{"driver_name":"اااال","licence_number":"30834","checkpoint_name_control":"سيطرة دارمان","company_name":"معمل عبد المجيد محمد سعيد مجيد لانتاج المنظفات السائلة","vehicle_number":"1234","registration_governorate":"اربيل","cargo_typedetails":"منظفات","weight_quantity":"1","destination_governorate":"بصرة","x_coordinate":"36.211330881694174","y_coordinate":"43.96140047406667"}}
