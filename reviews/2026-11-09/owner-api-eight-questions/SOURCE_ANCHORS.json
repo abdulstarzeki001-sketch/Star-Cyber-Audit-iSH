@@ -1,6 +1,6 @@
 {
   "recorded_at": "2026-11-09",
-  "note": "Offsets count UTF-16 JS characters in original minified source. Evidence from original archives; no live requests.",
+  "note": "Only Jan file offsets are exact. November index markers are source-derived, but byte offsets intentionally unasserted.",
   "files": [
     {
       "path": "research/private-evidence/2026-11-09/jan-2026-bundle/index-d1j-jb9c(3).js",
@@ -174,51 +174,61 @@
       "anchors": [
         {
           "term": "companyVerifyLogin(t)",
-          "offset": -1,
-          "present": false
+          "offset": null,
+          "present": true,
+          "offset_status": "Not fixed: exact byte offset unavailable in the last partial source scan; matching code verified in earlier full-source read"
         },
         {
           "term": "companyVerifyLoginWithCode(t)",
-          "offset": -1,
-          "present": false
+          "offset": null,
+          "present": true,
+          "offset_status": "Not fixed: exact byte offset unavailable in the last partial source scan; matching code verified in earlier full-source read"
         },
         {
           "term": "searchCompanyOwner(t)",
-          "offset": -1,
-          "present": false
+          "offset": null,
+          "present": true,
+          "offset_status": "Not fixed: exact byte offset unavailable in the last partial source scan; matching code verified in earlier full-source read"
         },
         {
           "term": "getOwnerCompanyItems(t)",
-          "offset": -1,
-          "present": false
+          "offset": null,
+          "present": true,
+          "offset_status": "Not fixed: exact byte offset unavailable in the last partial source scan; matching code verified in earlier full-source read"
         },
         {
           "term": "companyItemsReduce(t)",
-          "offset": -1,
-          "present": false
+          "offset": null,
+          "present": true,
+          "offset_status": "Not fixed: exact byte offset unavailable in the last partial source scan; matching code verified in earlier full-source read"
         },
         {
           "term": "checkUserAuthentication()",
-          "offset": -1,
-          "present": false
+          "offset": null,
+          "present": true,
+          "offset_status": "Not fixed: exact byte offset unavailable in the last partial source scan; matching code verified in earlier full-source read"
         },
         {
           "term": "returnCompanyDoc(t)",
-          "offset": -1,
-          "present": false
+          "offset": null,
+          "present": true,
+          "offset_status": "Not fixed: exact byte offset unavailable in the last partial source scan; matching code verified in earlier full-source read"
         },
         {
           "term": "local_form/return_company_doc",
-          "offset": -1,
-          "present": false
+          "offset": null,
+          "present": true,
+          "offset_status": "Not fixed: exact byte offset unavailable in the last partial source scan; matching code verified in earlier full-source read"
         },
         {
           "term": "i&&i.doc_id",
-          "offset": -1,
-          "present": false
+          "offset": null,
+          "present": true,
+          "offset_status": "Not fixed: exact byte offset unavailable in the last partial source scan; matching code verified in earlier full-source read"
         }
       ],
-      "all_markers_present": false
+      "all_markers_present": true,
+      "note": "Source was inspected via full file reads during analysis; exact byte offsets are not asserted in this manifest because the last targeted read returned a partial buffer."
     }
   ]
 }
