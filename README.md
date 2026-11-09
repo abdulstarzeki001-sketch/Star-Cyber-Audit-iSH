@@ -669,3 +669,26 @@ python3 -m unittest discover -s tests -p 'test_qr_batch5_integrity.py' -v
 
 The GitHub repository is public. No authenticated government API requests
 were sent, and no live QR data, passwords or personal records were included.
+
+## Four privacy-redacted UBOOR HTML snapshots (9 November 2026)
+
+Four user-supplied **rendered HTML** snapshots were reviewed offline, and
+the [Arabic file-by-file analysis](reviews/2026-11-09/uboor-html-snapshots/FILE_BY_FILE_AR.md)
+and [sanitized asset manifest](reviews/2026-11-09/uboor-html-snapshots/manifest.json)
+were added to the repo.
+
+- **H01/H02:** company-owner portal, both referencing
+  `index-ccmhdhtn.js` and `companyownerview-cjdszkn6.js`; H01
+  shows a verification error and an UR sign-in option, whereas H02
+  displays the owner portal's company hash-code search.
+- **H03/H04:** UBOOR TECH homepage and login, both referencing
+  `index-cseaomal.js`; H04 additionally preloads `loginview-czys-bdx.js`.
+- **Still missing:** the actual JS bundles `index-ccmhdhtn.js`,
+  `index-cseaomal.js`, and `loginview-czys-bdx.js`.
+  `companyownerview-cjdszkn6.js` is already in the archive.
+
+**Privacy:** the original HTML files were **not uploaded**: one filename
+contains a token-like value, and other HTML snapshots include personal
+contact information. Only the redacted description, neutral H01–H04 IDs,
+and non-sensitive asset paths were committed. HTML UI states do not
+prove backend authentication, official issuance, or QR signature validity.
