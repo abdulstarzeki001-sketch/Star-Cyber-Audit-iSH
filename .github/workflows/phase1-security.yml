@@ -1,0 +1,60 @@
+name: Phase 1 Security Gate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  security:
+    name: Offline Security Gate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout without persistent credentials
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Syntax checks
+        run: |
+          python -m compileall -q tools/security
+          sh -n tools/ish/phase1_security.sh
+      - name: All unit and regression tests (offline)
+        run: python -m unittest discover -s tests -v
+      - name: Run heuristic rule engine (non-blocking findings)
+        run: python -m tools.security.rule_engine --root . --json reports/security_rules.json
+      - name: Block committed high-confidence credentials
+        run: python -m tools.security.secret_scan --root . --json reports/secret_scan.json --fail-on-secrets
+      - name: GitHub Actions summary (no secret values)
+        if: always()
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+          rules = Path("reports/security_rules.json")
+          secrets = Path("reports/secret_scan.json")
+          summary = ["## Star Cyber Audit — Phase 1 Security Gate", ""]
+          if rules.exists():
+              data = json.loads(rules.read_text(encoding="utf-8"))
+              summary.append("- Local files examined by rule engine: {}".format(data["files_scanned"]))
+              summary.append("- Heuristic review indicators: {} (not proven vulnerabilities)".format(len(data["findings"])))
+          else:
+              summary.append("- Rule report unavailable (check failed step)")
+          if secrets.exists():
+              data = json.loads(secrets.read_text(encoding="utf-8"))
+              summary.append("- High-confidence credential candidates: {}".format(len(data["findings"])))
+          else:
+              summary.append("- Secret report unavailable (check failed step)")
+          summary.append("")
+          summary.append("Only first-party checkout sources are scanned by default; offline archives are excluded.")
+          summary.append("No target network requests or credential values are included in this summary.")
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as fh:
+              fh.write("\n".join(summary) + "\n")
+          PY
