@@ -753,3 +753,32 @@ python3 -m unittest discover -s tests -p 'test_uboor_73_integrity.py' -v
 The private source includes phone/company-related details from the user's
 upload. Restrict collaborator access; do **not** commit active credentials,
 cookies, or long-lived session tokens, even to a private repository.
+
+## Recovered January 2026 owner portal source and eight unanswered questions
+
+Found the actual **January 2026** frontend bundles in the user's file
+library and archived them byte-for-byte unchanged in this **private**
+repository. Also recovered the previously missing later Vite entrypoint:
+
+- [January original `index-D1j-Jb9C.js`](research/private-evidence/2026-11-09/jan-2026-bundle/index-d1j-jb9c(3).js), 1,378,888 bytes
+- [January original `CompanyOwnerView-DWbcwxR4.js`](research/private-evidence/2026-11-09/jan-2026-bundle/companyownerview-dwbcwxr4.js), 38,636 bytes
+- [Later original `index-ccmhdhtn.js`](research/private-evidence/2026-11-09/nov-2026-bundle/index-ccmhdhtn.js), 1,380,214 bytes
+
+**New source-backed finding:** `returnCompanyDoc` sends POST with owner
+Bearer, reads `response.data.data`, and requires `data.doc_id`.
+A successful HTTP 200 was photographed, but the **actual response body
+was never captured in the provided evidence**. The `ShipmentDoc` component
+renders the returned object to **HTML/A4 print**, reading
+`doc.qr_code || doc.response?.qr_code`; it can render a QR image via
+QuickChart. None of that proves the server's QR signing or validation
+process. Owner flow includes `company_verify_login` and
+`company_verification` with an `access_token`; the server-side
+authorization checks are still unknown. Contradictory CORS excerpts
+are not attributable to one individual HTTP response from screenshots.
+
+- [Arabic answers to all eight questions](reviews/2026-11-09/owner-api-eight-questions/ANSWER_8_QUESTIONS_AR.md)
+- [Source anchors for original minified files](reviews/2026-11-09/owner-api-eight-questions/SOURCE_ANCHORS.json)
+- [Twelve offline regression assertions](tests/test_owner_api_eight_questions.py)
+
+The three stored originals remain unmodified. No government endpoints
+were called as part of this analysis.
