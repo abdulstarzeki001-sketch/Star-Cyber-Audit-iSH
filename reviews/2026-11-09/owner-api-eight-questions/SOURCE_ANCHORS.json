@@ -1,0 +1,224 @@
+{
+  "recorded_at": "2026-11-09",
+  "note": "Offsets count UTF-16 JS characters in original minified source. Evidence from original archives; no live requests.",
+  "files": [
+    {
+      "path": "research/private-evidence/2026-11-09/jan-2026-bundle/index-d1j-jb9c(3).js",
+      "anchors": [
+        {
+          "term": "companyVerifyLogin(t)",
+          "offset": 583658,
+          "present": true
+        },
+        {
+          "term": "local_form/company_verify_login",
+          "offset": 583723,
+          "present": true
+        },
+        {
+          "term": "companyVerifyLoginWithCode(t)",
+          "offset": 583954,
+          "present": true
+        },
+        {
+          "term": "local_form/company_verification",
+          "offset": 584019,
+          "present": true
+        },
+        {
+          "term": "localStorage.setItem(\"company_owner_token\"",
+          "offset": 584308,
+          "present": true
+        },
+        {
+          "term": "searchCompanyOwner(t)",
+          "offset": 584580,
+          "present": true
+        },
+        {
+          "term": "local_form/search_iraqi_company",
+          "offset": 579613,
+          "present": true
+        },
+        {
+          "term": "getOwnerCompanyItems(t)",
+          "offset": 585220,
+          "present": true
+        },
+        {
+          "term": "local_form/get_company_items",
+          "offset": 585286,
+          "present": true
+        },
+        {
+          "term": "companyItemsReduce(t)",
+          "offset": 585587,
+          "present": true
+        },
+        {
+          "term": "local_form/company_item_reduce",
+          "offset": 585680,
+          "present": true
+        },
+        {
+          "term": "checkUserAuthentication()",
+          "offset": 586198,
+          "present": true
+        },
+        {
+          "term": "returnCompanyDoc(t)",
+          "offset": 586554,
+          "present": true
+        },
+        {
+          "term": "local_form/return_company_doc",
+          "offset": 586680,
+          "present": true
+        },
+        {
+          "term": "i&&i.doc_id",
+          "offset": 586868,
+          "present": true
+        },
+        {
+          "term": "bt.interceptors.request.use",
+          "offset": 588470,
+          "present": true
+        }
+      ],
+      "all_markers_present": true
+    },
+    {
+      "path": "research/private-evidence/2026-11-09/jan-2026-bundle/companyownerview-dwbcwxr4.js",
+      "anchors": [
+        {
+          "term": "__name:\"ShipmentDoc\"",
+          "offset": 5778,
+          "present": true
+        },
+        {
+          "term": "m.doc?.qr_code||m.doc?.response?.qr_code",
+          "offset": 6054,
+          "present": true
+        },
+        {
+          "term": "quickchart.io/qr?text=",
+          "offset": 6283,
+          "present": true
+        },
+        {
+          "term": "window.print()",
+          "offset": 6677,
+          "present": true
+        },
+        {
+          "term": "@page { size: A4",
+          "offset": 7204,
+          "present": true
+        },
+        {
+          "term": "__name:\"CompanyOwnerItems\"",
+          "offset": 15628,
+          "present": true
+        },
+        {
+          "term": "vihcle_info",
+          "offset": 18170,
+          "present": true
+        },
+        {
+          "term": "doc:C.value",
+          "offset": 23856,
+          "present": true
+        },
+        {
+          "term": "doc:n.value",
+          "offset": 32913,
+          "present": true
+        },
+        {
+          "term": "__name:\"AppUrLogin\"",
+          "offset": 33548,
+          "present": true
+        },
+        {
+          "term": "client_id=261",
+          "offset": 33782,
+          "present": true
+        },
+        {
+          "term": "__name:\"CompanyOwnerView\"",
+          "offset": 34828,
+          "present": true
+        },
+        {
+          "term": "m.returnCompanyDoc(_)",
+          "offset": 26975,
+          "present": true
+        },
+        {
+          "term": "m.companyVerifyLogin(s.value)",
+          "offset": 35265,
+          "present": true
+        },
+        {
+          "term": "m.companyVerifyLoginWithCode(z.value)",
+          "offset": 35316,
+          "present": true
+        }
+      ],
+      "all_markers_present": true
+    },
+    {
+      "path": "research/private-evidence/2026-11-09/nov-2026-bundle/index-ccmhdhtn.js",
+      "anchors": [
+        {
+          "term": "companyVerifyLogin(t)",
+          "offset": -1,
+          "present": false
+        },
+        {
+          "term": "companyVerifyLoginWithCode(t)",
+          "offset": -1,
+          "present": false
+        },
+        {
+          "term": "searchCompanyOwner(t)",
+          "offset": -1,
+          "present": false
+        },
+        {
+          "term": "getOwnerCompanyItems(t)",
+          "offset": -1,
+          "present": false
+        },
+        {
+          "term": "companyItemsReduce(t)",
+          "offset": -1,
+          "present": false
+        },
+        {
+          "term": "checkUserAuthentication()",
+          "offset": -1,
+          "present": false
+        },
+        {
+          "term": "returnCompanyDoc(t)",
+          "offset": -1,
+          "present": false
+        },
+        {
+          "term": "local_form/return_company_doc",
+          "offset": -1,
+          "present": false
+        },
+        {
+          "term": "i&&i.doc_id",
+          "offset": -1,
+          "present": false
+        }
+      ],
+      "all_markers_present": false
+    }
+  ]
+}
