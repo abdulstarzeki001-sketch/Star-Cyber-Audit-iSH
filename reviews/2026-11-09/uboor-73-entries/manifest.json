@@ -1,0 +1,77 @@
+{
+  "date": "2026-11-09",
+  "task": "line-by-line defensive static review of user-uploaded historical UBOOR DevTools screenshot transcription",
+  "repository_visibility_at_upload": "private",
+  "original_file": "research/private-evidence/2026-11-09/UBOOR_ALL_73_IMAGES_COMPLETE_TEXT_2026-11-09 2.txt",
+  "original_file_bytes": 137148,
+  "original_file_lines": 2291,
+  "original_git_blob_sha1": "54282a0c7d4711a7b493d394712e02a7fb820e2f",
+  "byte_exact_git_copy_verified": true,
+  "user_document_claims": {
+    "analytical_entries": 73,
+    "original_jerpegs": 65,
+    "previous_original_images": 55,
+    "new_images_in_appendix": 10,
+    "source_snapshot_date": "2026-01-21",
+    "windows_event_date": "2025-12-29",
+    "report_assembly_date": "2026-11-09"
+  },
+  "created_review_files": [
+    "reviews/2026-11-09/uboor-73-entries/DEEP_LINE_BY_LINE_ANALYSIS_AR.md",
+    "reviews/2026-11-09/uboor-73-entries/ANNOTATED_LINE_INDEX.tsv",
+    "reviews/2026-11-09/uboor-73-entries/EVIDENCE_GRAPH.json",
+    "tools/ish/uboor_73_integrity.py",
+    "tests/test_uboor_73_integrity.py"
+  ],
+  "scope_limits": [
+    "Only TXT is supplied in current request; original screenshots not reverified pixel by pixel",
+    "Text includes OCR uncertain and reconstructed JSON; do not treat as raw HAR",
+    "No authenticated or unauthenticated government API requests were sent",
+    "No government QR signature, PDF authenticity, backend authorization or IDOR was confirmed",
+    "No complete active JWT, Fernet or Bearer token pattern found in supplied text; not a guarantee of total secret absence"
+  ],
+  "source_structural_ranges": [
+    {
+      "from": 1,
+      "to": 103,
+      "topic": "preamble and image list"
+    },
+    {
+      "from": 104,
+      "to": 444,
+      "topic": "network consolidated text and independent paper"
+    },
+    {
+      "from": 445,
+      "to": 1014,
+      "topic": "historical images 1-18"
+    },
+    {
+      "from": 1015,
+      "to": 1274,
+      "topic": "historical images 19-36"
+    },
+    {
+      "from": 1275,
+      "to": 1452,
+      "topic": "historical images 37-45"
+    },
+    {
+      "from": 1453,
+      "to": 1652,
+      "topic": "historical images 46-54"
+    },
+    {
+      "from": 1653,
+      "to": 1894,
+      "topic": "historical images 55-63"
+    },
+    {
+      "from": 1895,
+      "to": 2291,
+      "topic": "new appendix images 64-73"
+    }
+  ],
+  "sensitive_elements": "Private evidence file retains provided phone/company identifiers and historical document fields as-is. GitHub collaborators may access it. No full working Authorization token was included in the received text.",
+  "relationship_to_previous_work": "Build in 2026-01 screenshots uses index-D1j-Jb9C.js + CompanyOwnerView-DWbcwxR4.js, which must not be silently equated with older index-gleMzSil.js or later index-ccmhdhtn.js builds."
+}
