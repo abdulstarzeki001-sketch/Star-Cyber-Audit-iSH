@@ -1,0 +1,27 @@
+name: V2 Plus Source Analyzer
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  source-engine:
+    name: Source Engine & Worker
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Syntax-check source and worker modules
+        run: |
+          node --check site/source-analysis-core.mjs
+          node --check site/source-engine-ui.mjs
+          node --check site/worker-v2plus.mjs
+      - name: Test static analysis engine
+        run: node tests/source_engine_v2.test.mjs
+      - name: Test worker integration and privacy
+        run: node tests/worker_v2plus.test.mjs
