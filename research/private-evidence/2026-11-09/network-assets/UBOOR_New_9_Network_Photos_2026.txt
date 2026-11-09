@@ -1,0 +1,199 @@
+تكملة تحليل Network — المجموعة الثانية (الصور 10 إلى 18)
+===========================================================
+المادة: تسع صور جديدة من شاشة Microsoft Edge DevTools، مأخوذة من متصفح يفتح بوابة أصحاب الشركات.
+الموقع الظاهر: https://customs-uboor.ur.gov.iq
+التاريخ الظاهر في شريط Windows ضمن عدد من الصور: 21/01/2026 عند 16:23–16:24 (وقت الجهاز الظاهر في الصورة، وليس إثباتاً مستقلاً لوقت تنفيذ الطلب).
+المنهج: نسخ النص المرئي ثم تفسيره دون اختراع قيم ناقصة. تعني علامة (...) أن النص مقطوع في الصورة. حالات 200 تخص HTTP، وليست دليلاً كافياً على اعتماد الوثيقة أو قوة المصادقة.
+
+-----------------------------------------------------------
+الصورة 10 — IMG_6033_Original.jpeg (أول صورة في المجموعة الثانية)
+-----------------------------------------------------------
+المشهد: DevTools > Network، الطلب الرئيسي index-D1j-Jb9C.js محدد في القائمة اليسرى، والتبويب الفرعي Initiator مفتوح.
+تظهر في Initiator روابط موارد جرى تحميلها ضمن مسار تشغيل الواجهة.
+الروابط المهمة المقروءة من الصورة:
+- https://customs-uboor.ur.gov.iq/assets/CompanyOwnerView-DWbcwxR4.js
+- https://customs-uboor.ur.gov.iq/assets/Card-CZWmUXpA.js
+- https://customs-uboor.ur.gov.iq/assets/Badge-DqlBKNZz.js
+- https://customs-uboor.ur.gov.iq/assets/Input-CQ8L9pvo.js
+- https://customs-uboor.ur.gov.iq/assets/iraqEagle-BF406BBV.js
+- https://customs-uboor.ur.gov.iq/assets/Textarea-BbPyTmzv.js
+- https://customs-uboor.ur.gov.iq/assets/Table-CksvXkpH.js
+- https://customs-uboor.ur.gov.iq/assets/BaseModal-Cj4w6vKq.js
+- https://customs-uboor.ur.gov.iq/assets/BaseModal-DrrLsYCw.css
+- https://customs-uboor.ur.gov.iq/api/local_form/search_iraqi_company
+- https://customs-uboor.ur.gov.iq/api/local_form/get_company_items/bf31e6128301d31bb4014faf6b1e0f05f3ab8877
+- https://customs-uboor.ur.gov.iq/api/local_form/return_company_doc/75764f1ead79fecd
+- https://customs-uboor.ur.gov.iq/images/Customs.jpg
+- https://customs-uboor.ur.gov.iq/images/iraqEagle.png
+كما يظهر رابط خدمة QR الخارجية quickchart.io/qr?text=...، وروابط أيقونات api.iconify.design/lucide.json?icons=...
+الاستنتاج: اكتشاف المسارات الكاملة لثلاث واجهات API مهمة. الصورة لا تعرض المحتوى الداخلي لأي استجابة.
+
+-----------------------------------------------------------
+الصورة 11 — IMG_6032_Original(1).jpeg (ثاني صورة)
+-----------------------------------------------------------
+المشهد: قائمة جميع طلبات Network دون فتح تفاصيل الطلب.
+الأرقام المعروضة: 35 requests، 688 kB transferred، 3.4 MB resources، Finish 1.6 min، DOMContentLoaded 687 ms، Load 747 ms.
+الطلبات الجديدة/المهمة في القسم السفلي:
+- longpooling?get&nocache=...
+- ur-logo.png
+- customes-logo.png (مرتان)
+- lucide.json?icons=building-2...
+- lucide.json?icons=circle-x
+- search_iraqi_company
+- lucide.json?icons=loader-circle
+- bf31e6128301d31bb4014faf6b1e0f05f3ab8877
+- lucide.json?icons=factory%2Cfile-text%2Cmap-pin...
+- 75764f1ead79fecd
+- Customs.jpg
+- iraqEagle.png
+- qr?text=gAAAAA... (نص الصورة غير كامل)
+الحالة المقروءة للطلبات المتجاورة: 200. المصطلح Finish 1.6 min يشير إلى انتهاء نشاط الشبكة المسجل لا زمن عرض صفحة الموقع؛ حيث Load 747 ms.
+الاستنتاج: هذه اللقطة تؤكد وجود طلبات البحث والأصناف والوثيقة وQR ضمن الجلسة نفسها، لكنها لا تعرض مساراتها الكاملة، وهي مكملة للصورة 10.
+
+-----------------------------------------------------------
+الصورة 12 — IMG_6032_Original.jpeg (ثالث صورة)
+-----------------------------------------------------------
+المشهد: تكبير أفقي للقسم السفلي من قائمة Network.
+الطلب search_iraqi_company مصنف XHR مع Status 200 وInitiator ظاهر من index-D1j-Jb9C.js:22.
+الطلب الذي اسمه bf31e6128301d31bb4014faf6b1e0f05f3ab8877 مصنف XHR مع Status 200.
+الطلب الذي اسمه 75764f1ead79fecd مصنف XHR مع Status 200.
+الطلب qr?text=... مصنف PNG مع Status 200. صور Customs.jpg وiraqEagle.png بحالة 200.
+الاستنتاج: تمييز طلبات API الحقيقية عن ملفات الواجهة والأيقونات. Status 200 لا يثبت من تلقاء نفسه نجاح العملية التجارية.
+
+-----------------------------------------------------------
+الصورة 13 — IMG_6034_Original.jpeg (رابع صورة)
+-----------------------------------------------------------
+المشهد: تبويب Initiator للطلب الرئيسي مع إظهار قائمة روابط الأصول وواجهات API في أسفل العرض، بالإضافة إلى ورقة مطبوعة أمام اللابتوب.
+أبرز المسارات الواضحة:
+- /api/local_form/search_iraqi_company
+- /api/local_form/get_company_items/bf31e6128301d31bb4014faf6b1e0f05f3ab8877
+- /api/local_form/return_company_doc/75764f1ead79fecd
+- /images/Customs.jpg
+- /images/iraqEagle.png
+- https://quickchart.io/qr?text=...
+وتظهر ملفات vue3-treeselect.min-CxYj0h6r.js، vue3-treeselect-BzQE87YR.css، Form-CrcvXBv-.js، CompanyOwnerView-CiTq539C.css.
+الاستنتاج: واجهة أصحاب الشركات تستخدم مواردها المحلية بالإضافة إلى خدمات خارجية للأيقونات والـQR. الورقة الموجودة خارج الشاشة تحتوي جدول أصناف وكميات وإجماليات لكنها ليست إثباتاً لمحتوى طلبات الشبكة.
+
+-----------------------------------------------------------
+الصورة 14 — IMG_6034_Original(1).jpeg (خامس صورة)
+-----------------------------------------------------------
+المشهد: لقطة قريبة وواضحة لجزء من تبويب Initiator.
+روابط مهمة مرئية بالنص الكامل (أهمها):
+https://customs-uboor.ur.gov.iq/api/local_form/search_iraqi_company
+https://customs-uboor.ur.gov.iq/api/local_form/get_company_items/bf31e6128301d31bb4014faf6b1e0f05f3ab8877
+https://customs-uboor.ur.gov.iq/api/local_form/return_company_doc/75764f1ead79fecd
+https://customs-uboor.ur.gov.iq/images/Customs.jpg
+https://customs-uboor.ur.gov.iq/images/iraqEagle.png
+https://quickchart.io/qr?text=gAAAAA...
+كما تظهر موارد خطي Cairo-Regular وCairo-Bold محمّلة من ملف CSS رئيسي.
+الاستنتاج: تُعرف الآن أسماء الخدمات والأصول بدقة. يتضح أيضاً أن صورة QR تُحمّل من نطاق quickchart.io الخارجي، وأن قيمة text تُوضع في رابط الطلب. قد يعني ذلك إرسال تلك القيمة إلى مزوّد QR الخارجي؛ هل القيمة حساسة فعلاً؟ يتوقف على طبيعتها، وهي غير واضحة بالكامل من الصورة.
+
+-----------------------------------------------------------
+الصورة 15 — IMG_6033_Original(1).jpeg (سادس صورة)
+-----------------------------------------------------------
+المشهد: تبويب Initiator ورؤية أعلى القائمة مقارنة بالصور السابقة، مع التركيز على assets وAPI.
+روابط واجهة:
+/assets/CompanyOwnerView-DWbcwxR4.js
+/assets/Card-CZWmUXpA.js
+/assets/Badge-DqlBKNZz.js
+/assets/Input-CQ8L9pvo.js
+/assets/iraqEagle-BF406BBV.js
+/assets/Textarea-BbPyTmzv.js
+/assets/Table-CksvXkpH.js
+/assets/BaseModal-Cj4w6vKq.js
+/assets/BaseModal-DrrLsYCw.css
+/assets/vue3-treeselect.min-CxYj0h6r.js
+/assets/Form-CrcvXBv-.js
+/assets/CompanyOwnerView-CiTq539C.css
+واجهات API:
+/api/local_form/search_iraqi_company
+/api/local_form/get_company_items/bf31e6128301d31bb4014faf6b1e0f05f3ab8877
+/api/local_form/return_company_doc/75764f1ead79fecd
+الاستنتاج: الصور 10 و13 و14 و15 توثق لقطات متداخلة من نفس المعلومات، ولا تعني أربعة اكتشافات مستقلة أو أربعة طلبات جديدة.
+
+-----------------------------------------------------------
+الصورة 16 — IMG_6035_Original.jpeg (سابع صورة)
+-----------------------------------------------------------
+المشهد: طلب search_iraqi_company محدد، والتبويب الفرعي Payload مفتوح.
+القيم المقروءة حرفياً من Request Payload:
+{
+  "page": 1,
+  "per_page": 10,
+  "searchdata": [
+    {"company_hash_code": "75764f1ead79fecd"}
+  ],
+  "sort_by": "id",
+  "sort_dir": "desc"
+}
+الشرح:
+- page = 1: الصفحة الأولى من النتائج.
+- per_page = 10: حد أقصى/حجم صفحة مطلوب، وليس تأكيداً لوجود عشر شركات.
+- searchdata: قائمة شروط البحث. هنا شرط company_hash_code بقيمة نصية واحدة.
+- sort_by = id: الترتيب باستخدام حقل id.
+- sort_dir = desc: ترتيب تنازلي.
+المعلومة الأساسية: 75764f1ead79fecd مستعمل هنا كقيمة بحث وليس بالضرورة كلمة مرور أو إثبات هوية. طريقة HTTP وبيانات Authorization غير ظاهرة في Payload وحده.
+
+-----------------------------------------------------------
+الصورة 17 — IMG_6035_Original(1).jpeg (ثامن صورة)
+-----------------------------------------------------------
+المشهد: لقطة أوسع لنفس شاشة Payload للطلب search_iraqi_company.
+تظهر القيم نفسها في الصورة السابقة دون اختلاف موثق:
+page: 1
+per_page: 10
+searchdata[0].company_hash_code: "75764f1ead79fecd"
+sort_by: "id"
+sort_dir: "desc"
+أرقام Network في الأسفل تقريباً: 35 requests، 688 KB transferred، 3.4 MB resources.
+الاستنتاج: هذه صورة تأكيد بزاوية أخرى للحمولة ولا تقدم طلباً جديداً مختلفاً.
+
+-----------------------------------------------------------
+الصورة 18 — IMG_6036_Original.jpeg (تاسع صورة)
+-----------------------------------------------------------
+المشهد: الطلب search_iraqi_company محدد، والتبويب الفرعي Preview مفتوح. تُعرض استجابة خادم على شكل كائن data، وقد استُخرجت أسماء الحقول وقيم القراءة الواضحة.
+حقول الاستجابة الظاهرة:
+brand: وصف/سلسلة عربية طويلة تتضمن تسميات منتجات (غير مقروءة بالكامل).
+company_hash_code: "75764f1ead79fecd"
+company_name_project: اسم معمل لإنتاج المنظفات السائلة (النص الطويل غير واضح بما يكفي للنقل الحرفي).
+company_phone_number: 9647734554346
+company_type: "داخل الاقليم"
+governorate_name: "اربيل"
+granting_license_approval: يظهر وصف جهة ترخيص صناعي في إقليم كردستان (النص غير واضح بالكامل).
+hash_id: "bf31e6128301d31bb4014faf6b1e0f05f3ab8877"
+is_active: true
+is_delete: false
+license_approval_date: "Tue, 24 Jan 2023 00:00:00 GMT"
+license_approval_number: يظهر رقم ترخيص، غير مؤكد عند التكبير (يبدو قريباً من 30834؛ لا تعتمد هذا الرقم دون قراءة مباشرة من Response).
+license_text_specialization: "انتاج المنظفات السائلة" (قراءة مرجحة من الصورة).
+monthly_yearly: يظهر مقدار 4500 طن/سنة تقريباً؛ صياغته الدقيقة غير مؤكدة.
+owner_name: اسم شخص عربي ظاهر، لكن النص لا يسمح بنسخه حرفياً دون خطأ.
+production_capacity: "2674" (الرقم الظاهر مرجح، تحقق مباشرة في المتصفح).
+reliable: true
+type_industry_production: حقل يصف نوع الإنتاج، وتتضمن قيمته مواد كيمياوية/منظفات بحسب القراءة التقريبية.
+
+التحليل:
+1) يوجد ترابط صريح بين company_hash_code في Payload والرد Preview، لأن القيمة 75764f1ead79fecd تظهر في الاثنين.
+2) يوجد ترابط ظاهر بين hash_id في Preview ومسار get_company_items/{hash_id} الظاهر في صور Initiator.
+3) يوجد ترابط ظاهر بين company_hash_code ومسار return_company_doc/{company_hash_code}.
+4) الاستجابة تحمل بيانات شركة وترخيص وحالة سجل، لكن لا يوجد هنا ما يثبت أن مستخدماً غير مخوّل يستطيع الوصول إليها؛ يجب مراجعة آلية التفويض من جهة الخادم.
+5) الحقول is_active وreliable هي قيم يرسلها الخادم ضمن هذا الرد، وليست تأكيداً مستقلاً بصحة الرخصة أو الاعتماد الرسمي.
+
+===========================================================
+الخلاصة التقنية للمجموعة الثانية
+===========================================================
+مسار العمل الظاهر، بوصفه ترابطاً للطلبات وليس مخططاً معتمداً موثقاً للخادم:
+واجهة company-owner -> search_iraqi_company [طلب بحث يحمل company_hash_code] -> استجابة شركة بها company_hash_code وhash_id -> get_company_items/{hash_id} وreturn_company_doc/{company_hash_code} -> تحميل صور محلية وصورة QR من quickchart.io.
+
+تمييز المعرّفين:
+- company_hash_code = 75764f1ead79fecd، يظهر في Payload وPreview وفي مسار return_company_doc.
+- hash_id = bf31e6128301d31bb4014faf6b1e0f05f3ab8877، يظهر في Preview وفي مسار get_company_items.
+
+ملاحظات أمنية مهنية:
+- إرسال قيمة تتعلق بشركة في مسار URL أو في استعلام إلى خدمة QR قد يترك أثراً في السجلات ومزوّد الطرف الثالث. لا يمكن اعتبار السلسلة سرية أو عامة دون التحقق من استخدامها.
+- لا يُستنتج وجود تسريب بيانات أو اختراق صلاحيات من HTTP 200 أو القدرة على مشاهدة رد داخل جلسة مصرح بها.
+- مراجعة المصادقة والتفويض وحماية البيانات يجب أن تتم فقط من خلال فحص مخصص مأذون به.
+- تجنب مشاركة ملفات HAR غير المنقّحة: قد تحتوي Cookie، Authorization أو بيانات شخصية من الاستجابات.
+- لاستكمال الدراسة: افتح Headers وResponse للطلبات الثلاثة، ثم انسخ الحقول اللازمة بعد تنقيح الأسرار ومعرّفات الجلسات. لا تعتمد على صورة فوتوغرافية لقراءة قيم طويلة.
+
+ملاحظة بخصوص الورقة أمام الحاسوب: يظهر فيها جدول أصناف وكميات/أرقام إجمالية؛ لا دليل من الصور يربط هذا المستند الورقي ببيانات الشركة المُعادة في API، لذلك لم تُدمج أرقامه مع نتيجة البحث.
+
+نهاية تكملة الصور التسع.

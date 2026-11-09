@@ -1,0 +1,251 @@
+تقرير تحليلي نصي | مجموعة الصور الجديدة (19–36)
+بوابة أصحاب الشركات — customs-uboor.ur.gov.iq
+تاريخ تحرير التقرير: 09/11/2026
+تاريخ جلسة المتصفح الظاهر في الصور: 21/01/2026
+إعداد: تحليل ما يظهر في صور شاشة Microsoft Edge DevTools، وليس اختبارًا مباشرًا للخادم.
+
+مهم بخصوص الخصوصية:
+- يوجد في الصور رمز تفويض تحت ترويسة Authorization: Bearer، وقد حُجبت قيمته من هذا التقرير؛ لا تُنشر الصور الأصلية دون تنقيح الترويسة.
+- بعض الصور تعرض رقم هاتف شركة وبيانات جهات؛ اكتفيت بوصفها دون إعادة نسخ بيانات الاتصال الشخصية.
+- إذا كان رمز التفويض ما زال صالحًا، ينبغي إبطال الجلسة/تدوير الرمز من المسار الإداري الرسمي.
+- حالة 200 OK تعني نجاح الاستجابة عبر HTTP، ولا تثبت صحة الصلاحيات أو شرعية الوثيقة.
+
+====================
+ملخص جديد مؤكّد
+====================
+الواجهة: https://customs-uboor.ur.gov.iq/company-owner
+الطلب المركزي: https://customs-uboor.ur.gov.iq/api/local_form/search_iraqi_company
+HTTP Method: POST
+HTTP Status: 200 OK
+Remote Address (كما يظهر): 78.41.60.7:443
+Referrer Policy: strict-origin-when-cross-origin
+Request Content-Type: application/json
+Request Content-Length: 113
+Response Content-Type: application/json
+Response Content-Length: 3009
+Response Server: elb
+Response Date: Wed, 21 Jan 2026 13:20:54 GMT تقريبًا (قراءة الشاشة)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, OPTIONS
+Connection: keep-alive
+
+حمولة طلب البحث كما تظهر في تبويب Payload:
+{
+  "page": 1,
+  "per_page": 10,
+  "searchdata": [
+    {"company_hash_code": "75764f1ead79fecd"}
+  ],
+  "sort_by": "id",
+  "sort_dir": "desc"
+}
+
+مسارات API التي ظهرت في هذه اللقطات أو مجموعة الصور السابقة المتصلة بها:
+1) /api/local_form/search_iraqi_company
+2) /api/local_form/get_company_items/bf31e6128301d31bb4014faf6b1e0f05f3ab8877
+3) /api/local_form/return_company_doc/75764f1ead79fecd
+مهم: المساران 2 و3 ظهرا في Initiator كعناوين موارد مطلوبة، لكن محتوى استجاباتهما غير معروض في اللقطات. لا يصح استنتاج شروط التفويض أو بياناتهما الداخلية.
+
+====================
+الصور واحدة واحدة
+====================
+
+[الصورة 19] IMG_6032_Original.jpeg
+التبويب الظاهر: Network — قائمة All.
+المحتوى: عدة طلبات (ملفات JS وCSS وصور وطلبات XHR) مع أعمدة Name وStatus وType وInitiator.
+القراءة: عودة HTTP 200 للعديد من الموارد؛ تبدأ القائمة بملفات واجهة الشركات. هذه لقطة تمهيدية للمسار الذي تحلله الصور التالية.
+ملاحظة: الطلبات المتكررة/الملفات لا تعني تشغيل إجراءات خادم متعددة بالضرورة.
+
+[الصورة 20] IMG_6032_Original(1).jpeg
+التبويب الظاهر: Network — قائمة All من زاوية أوسع.
+المحتوى: أسماء ملفات الواجهة نفسها تقريبًا: CompanyOwnerView وForm وTreeselect وBaseModal وغيرها.
+القراءة: تؤكد تحميل موارد الواجهة، لكنها لا تكشف محتوى APIs.
+
+[الصورة 21] IMG_6033_Original.jpeg
+التبويب الظاهر: Initiator لأحد طلبات الصفحة.
+المحتوى: قائمة روابط الموارد التي بادر بها الموقع أو ظهرت في سلسلة التحميل.
+روابط واضحة جزئيًا أو كاملة:
+- https://customs-uboor.ur.gov.iq/assets/CompanyOwnerView-DWbcwxR4.js
+- https://customs-uboor.ur.gov.iq/api/local_form/search_iraqi_company
+- https://customs-uboor.ur.gov.iq/api/local_form/get_company_items/bf31e6128301d31bb4014faf6b1e0f05f3ab8877
+- https://customs-uboor.ur.gov.iq/api/local_form/return_company_doc/75764f1ead79fecd
+- https://quickchart.io/qr?text=... [طويل ومختصر؛ لا يمكن نسخه بدقة من الصورة]
+القراءة: يربط ذلك واجهة CompanyOwnerView بالبحث، وجلب أصناف الشركة، واسترجاع الوثيقة، وعرض QR. لا يثبت كل خطوة في الترتيب الزمني.
+
+[الصورة 22] IMG_6033_Original(1).jpeg
+التبويب الظاهر: Initiator — تقريب على الروابط.
+المحتوى: تتضح عناوين API والموارد التابعة لبوابة عبور وapi.iconify.design وquickchart.io.
+القراءة: بعض الأيقونات تُطلب من api.iconify.design، وصورة QR من quickchart.io. ينبغي تقييم الخصوصية عند تمرير بيانات الوثائق إلى خدمة طرف ثالث، لكن الصورة لا تكشف مضمون text كاملًا.
+
+[الصورة 23] IMG_6034_Original.jpeg
+التبويب الظاهر: Initiator مع تمرير للأسفل.
+المحتوى: تحميل /assets/index-RnlGKhol.css وخطّي Cairo Regular وCairo Bold، مع طلبات صور وشعارات.
+القراءة: تدعم أن الواجهة تستخدم موارد CSS وخطوط عربية. لا تكشف بيانات الجلسة.
+
+[الصورة 24] IMG_6034_Original(1).jpeg
+التبويب الظاهر: Initiator — زاوية مقربة.
+المحتوى: المزيد من الروابط ومن ضمنها /images/Customs.jpg و/images/iraqEagle.png، إضافة إلى quickchart.io/qr?text=....
+القراءة: صورة QR تُقدّم عبر خدمة خارجية وفق الرابط الظاهر؛ لا يوجد من هذه الصورة وحدها إثبات صلاحية QR لدى النظام الرسمي.
+
+[الصورة 25] IMG_6035_Original.jpeg
+التبويب الظاهر: Payload للطلب search_iraqi_company.
+النص المستخرج:
+page: 1
+per_page: 10
+searchdata: [{company_hash_code: "75764f1ead79fecd"}]
+sort_by: "id"
+sort_dir: "desc"
+القراءة: البحث مصفّح بعشرة سجلات في الصفحة، ومرتّب تنازليًا حسب id. اسم company_hash_code يدل على مفتاح بحث، لكنه لا يُثبت أنه سر أو رمز مصادقة.
+
+[الصورة 26] IMG_6035_Original(1).jpeg
+التبويب الظاهر: Payload — لقطة من زاوية أخرى.
+المحتوى: البنية نفسها للطلب بما فيها page وper_page وsearchdata وsort_by وsort_dir.
+القراءة: تؤكد شكل JSON الظاهر في الصورة 25 دون إضافة حقل مؤكد جديد.
+
+[الصورة 27] IMG_6036_Original.jpeg
+التبويب الظاهر: Preview للاستجابة الخاصة بالبحث.
+البنية المرئية: {data: { ... }} أو ما يقاربها، وفيها سجل شركة.
+حقول مقروءة:
+brands
+company_hash_code
+company_name_project
+company_phone_number
+company_type
+governorate_name
+granting_license_approval
+hash_id
+is_active
+is_delete
+license_approval_date
+license_approval_number
+license_text_specialization
+monthly_yearly
+owner_name
+production_capacity
+reliable
+type_industry_production
+قيم واضحة نسبيًا:
+company_hash_code: "75764f1ead79fecd"
+hash_id: "bf31e6128301d31bb4014faf6b1e0f05f3ab8877" [من الرابط السابق، ومتسق مع الحقل الظاهر]
+is_active: true
+is_delete: false
+reliable: true
+license_approval_date: "Tue, 24 Jan 2023 00:00:00 GMT" (قراءة الشاشة، يفضّل تأكيدها من نص الاستجابة)
+المحافظة تبدو: أربيل، ونوع الشركة يبدو: داخل الإقليم.
+ملاحظة: أسماء المؤسسات والقيم العربية الأخرى غير واضحة بما يكفي لنقلها حرفيًا، لذا لم أملأها بالتخمين.
+
+[الصورة 28] IMG_6036_Original(1).jpeg
+التبويب الظاهر: Preview — لقطة أبعد لنفس الاستجابة.
+المحتوى: يؤكد ظهور حقول السجل المعروضة في الصورة 27. لا يظهر كل JSON ولا قائمة جميع القيم.
+القراءة: المؤشرات is_active وis_delete وreliable تبدو قيمًا من قاعدة بيانات الموقع؛ لا تُعد شهادة مستقلة بصحة أو نفاذ مستند حكومي.
+
+[الصورة 29] IMG_6037_Original.jpeg
+التبويب الظاهر: Headers > General للطلب search_iraqi_company.
+حقول النص الظاهرة:
+Request URL: https://customs-uboor.ur.gov.iq/api/local_form/search_iraqi_company
+Request Method: POST
+Status Code: 200 OK
+Remote Address: 78.41.60.7:443
+Referrer Policy: strict-origin-when-cross-origin
+القراءة: هذه الأدلة المباشرة التي تثبت عنوان البحث وطريقة POST والاستجابة الناجحة عبر HTTP.
+
+[الصورة 30] IMG_6037_Original(1).jpeg
+التبويب الظاهر: Headers > General + Response Headers بتقريب أكبر.
+حقول استجابة مرئية:
+Access-Control-Allow-Headers: DNT, User-Agent, X-Requested-With, If-Modified-Since, Cache-Control, Content-Type, Range
+Access-Control-Allow-Methods: GET, POST, OPTIONS
+Access-Control-Allow-Origin: *
+Connection: keep-alive
+Content-Length: 3009
+Content-Type: application/json
+Date: Wed, 21 Jan 2026 13:20:54 GMT (تقريبي)
+Server: elb
+القراءة: إرجاع JSON والسماح بأصل عام ضمن سياسة CORS كما يظهر، مع أن صلاحيات الخادم والاعتماد على التوكن غير معروفة. علامة * وحدها لا تبرهن على تجاوز المصادقة.
+
+[الصورة 31] IMG_6038_Original.jpeg
+التبويب الظاهر: Headers > Response Headers.
+المحتوى: Access-Control-Allow-Origin وAccess-Control-Allow-Methods وContent-Type وContent-Length وتاريخ الاستجابة.
+القراءة: نفس ترويسات الصورة السابقة دون أدلة مستقلة على خطأ أمني.
+
+[الصورة 32] IMG_6038_Original(1).jpeg
+التبويب الظاهر: Headers — تفاصيل Response Headers، يليها بداية Request Headers.
+المحتوى: يوضح أن الاستجابة JSON ويبدأ عرض Accept وAccept-Encoding.
+القراءة: يجب تقييم الترويسات مع كون الطلب من نفس الأصل (Origin) ووصوله مع رمز Bearer؛ لا يكفي هذا لإثبات سوء إعداد CORS.
+
+[الصورة 33] IMG_6039_Original.jpeg
+التبويب الظاهر: Headers > Request Headers.
+الحقول المقروءة:
+Accept: application/json, text/plain, */*
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US, en;q=0.9, en-GB;q=0.8 (قيمة تقريبية)
+Authorization: Bearer [REDACTED]
+Connection: keep-alive
+Content-Length: 113
+Content-Type: application/json
+Cookie: [REDACTED — Analytics cookies visible]
+Host: customs-uboor.ur.gov.iq
+Origin: https://customs-uboor.ur.gov.iq
+Referer: https://customs-uboor.ur.gov.iq/company-owner?phone=[REDACTED]
+Sec-CH-UA: Microsoft Edge / Chromium (تفاصيل الإصدار غير ضرورية للتحليل)
+القراءة: وجود Authorization: Bearer يعني أن المتصفح أرسل توكن مصادقة في الطلب. لا يدل وحده على صلاحيته الحالية أو أن الخادم يتحقق من ملكية الشركة موضوع البحث.
+
+[الصورة 34] IMG_6039_Original(1).jpeg
+التبويب الظاهر: Request Headers — زاوية أبعد.
+المحتوى: نفس حقول Accept وAuthorization وCookie وOrigin وReferer.
+القراءة: تُظهر أن Origin يعود إلى الدومين نفسه، لذلك ليس لدينا هنا تجربة مباشرة لطلب عابر للأصول (cross-origin) تختبر CORS.
+
+[الصورة 35] IMG_6040_Original.jpeg
+التبويب الظاهر: Headers > Request Headers مع وضوح نسبي.
+المحتوى: تأكيد أن Authorization يحمل Bearer token طويل، وأن Content-Type للطلب هو application/json، مع وجود Cookie وHost وOrigin وReferer.
+القراءة: لا نُعيد نسخ الـ Bearer لأن نشره قد يسمح بإعادة استخدام صلاحياته إن كان صالحًا. في بيئة مخوّلة، افحص عمر الصلاحية والتجديد والربط بنطاق الشركة دون مشاركة الرمز.
+
+[الصورة 36] IMG_6040_Original(1).jpeg
+التبويب الظاهر: Headers > Request Headers — نفس الطلب وبياناته من لقطة أخرى.
+المحتوى: يظهر رقم الهاتف ضمن Referer، وقد حُجب عمدًا هنا، وAuthorization وCookie ضمن بيانات الطلب.
+القراءة: رابط الشركة في Referer يثير ملاحظة خصوصية محتملة (وجود رقم في URL)، لا إثبات تسريب مباشر لطرف خارجي لأن Referrer Policy الظاهرة strict-origin-when-cross-origin تُقيد ما يرسل إلى الأصول الأخرى عادةً.
+
+====================
+الترابط التقني المدعوم بالصور
+====================
+1. صفحة company-owner تحمل مكونات Vue والأنماط والموارد.
+2. واجهة أصحاب الشركات تتيح بحثًا يطلق طلب POST إلى search_iraqi_company.
+3. JSON المرسل يحتوي company_hash_code مع ترقيم صفحات وترتيب تنازلي.
+4. تستجيب الخدمة بحالة 200 وتُظهر Preview بيانات شركة وحالات is_active وis_delete وreliable.
+5. قائمة Initiator تعرض أيضًا روابط get_company_items وreturn_company_doc، لكن استجاباتهما التفصيلية غير معروضة.
+6. توجد صور وشعارات وطلب QR يُجلب من quickchart.io وفق رابط يحتوي text.
+7. يوجد Bearer token في ترويسات طلب البحث، مع بعض ملفات تعريف ارتباط للتحليل وإحصاء الاستخدام.
+
+====================
+القراءة الأمنية — من دون ادعاء وجود ثغرة
+====================
+[1] المصادقة والتفويض:
+وجود Authorization: Bearer يثبت استخدام رمز في الطلب المصوّر. يلزم فحص تحقق الخادم من حقوق المستخدم على السجل المطلوب؛ لا تظهر الصور اختبارًا لهذه الخاصية.
+
+[2] الاستعلام بالمُعرّف:
+company_hash_code هو مفتاح بحث في JSON؛ لا يعني اسمه أنه رمز وصول أو أن تغيير قيمته يتيح الاطلاع على سجلات أخرى. يتطلب ذلك اختبار تفويض مصرحًا به على بيئة مخصصة للاختبار.
+
+[3] CORS:
+تظهر Access-Control-Allow-Origin: * مع GET,POST,OPTIONS. هذه ملاحظة مراجعة؛ لا تعني تلقائيًا تجاوز التحكم بالوصول، ولا توجد بالصور تجربة من أصل مختلف.
+
+[4] الرموز والخصوصية:
+رمز Bearer ظهر كاملًا في لقطات أصلية؛ ينبغي عدم مشاركة نسخه خارج نطاق العمل المخوّل. وجود رقم هاتف في رابط الصفحة قد يستدعي مراجعة سياسة تخزين عناوين URL والسجلات.
+
+[5] خدمة QR الخارجية:
+ظهور quickchart.io/qr?text=... يعني أن قيمة نصية من التطبيق قد تمر عبر خدمة خارجية لإنشاء صورة QR. يجب التأكد من عدم نقل أسرار أو معرّفات حساسة إليها، لكن المحتوى الكامل غير مقروء في الصور.
+
+[6] إثبات صحة الوثائق:
+لا توجد صور كافية تثبت قبول QR رسميًا أو إثبات صحة وثيقة أو اكتمال عملية طباعة أو اعتماد حكومي، بغض النظر عن HTTP 200.
+
+[7] حدود الصورة:
+لقطات متعددة لنفس الطلب، وليست بالضرورة طلبات مستقلة. بعض القيم العربية وطوابع الوقت غير واضحة؛ لا تُحوّل هذه القيم إلى بيانات نهائية دون Response نصي منقول من مصدر مأذون.
+
+====================
+خطوات توثيق إضافية آمنة
+====================
+- في جلسة تملك صلاحية استخدامها، انتقل إلى Network > Fetch/XHR > search_iraqi_company.
+- احفظ أسماء الحقول، طريقة HTTP، ورمز الحالة، مع حجب Authorization وCookie والمعرّفات الشخصية قبل مشاركة أي مواد.
+- تحقق من شكل Response المنقح (بعد إزالة الاسم ورقم الهاتف وأرقام الرخص إن لم تكن ضرورية).
+- افصل بين بيانات الشركة الناتجة عن البحث، وقائمة أصنافها، وطلب وثيقتها؛ هذه خدمات متمايزة.
+- لا تستخدم أي توكن مسرب من صورة لإعادة إجراء طلبات أو نسخ جلسة شخص آخر.
+
+نهاية التقرير.

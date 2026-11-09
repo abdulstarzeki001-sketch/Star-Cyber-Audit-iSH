@@ -1,0 +1,2291 @@
+===============================================================================
+UBOOR — أرشيف التفريغ النصي الموحّد | 73 مدخلاً تحليلياً / 65 صورة أصلية
+===============================================================================
+آخر تحديث: 09 نوفمبر 2026
+هذا الملف يضم التقرير السابق للمدخلات 1–63 بنصه الكامل، ويليه ملحق تفصيلي
+جديد بالمدخلات 64–73 اعتماداً على الصور العشر الأخيرة.
+
+الإطار الزمني: الصور المصوّرة للمتصفح تعود إلى 21 يناير 2026، وصورة Event
+Viewer تُظهر أحداثاً بتاريخ 29 ديسمبر 2025. لا تمثل سجلات حيّة في نوفمبر.
+
+منهج التفريغ:
+• يُنسخ النص المقروء والأرقام ومعرّفات السجلات والعناوين الدقيقة ما أمكن.
+• [مقتطع] = لا يظهر بقية النص؛ [قراءة مرجحة] = النص ضبابي ولا يمكن الجزم بحروفه.
+• القيم الظاهرة في اللقطات قد تكون مخفية جزءاً أو متداخلة من نفس جلسة Network.
+• لا تُنسخ قيمة رمز Authorization Bearer الصالحة للاستعمال أو Cookie جلسة،
+  لكن يُوثّق وجود الترويسات وأسماء الحقول. هذا لا يحذف الأرقام العادية أو
+  معرّفات الشركات التي تظهر في الصور.
+• النصوص المصوّرة ليست HAR أو JSON أصلياً؛ لا يُقدّم تخمين على أنه استجابة حرفية.
+• بعض الصور نسخ مكبرة أو مكررة من نفس التسجيل؛ يذكر ذلك ولا يدمجها بصمت.
+
+===============================================================================
+التقرير التاريخي الكامل — المدخلات 1–63 (منسوخ دون حذف)
+===============================================================================
+
+===============================================================================
+UBOOR — الملف النصي الموحد للمجموعات المصورة — إصدار الصور 1–63
+===============================================================================
+الإعداد: 09 نوفمبر 2026
+المواد: 55 صورة JPEG أصلية متاحة في مساحة المحادثة، موزعة على 63 إدخالاً
+تحليلياً تاريخياً بحسب مجموعات إرسال المستخدم (توجد لقطات متكررة للطلبات نفسها).
+اللغة/الترميز: العربية + أسماء تقنية أصلية | UTF-8
+
+مهم حول الدقة:
+• القيم أدناه مأخوذة من الصور المتاحة والتقرير التاريخي السابق؛ ليست استجابة
+  إلكترونية أصلية أو تحقيقاً مباشراً من الخادم.
+• النص المقطوع أو الضبابي يشار إليه بـ [غير واضح] أو [مقتطع] ولا يُستكمل تخميناً.
+• احتفظنا بالأرقام، معرّفات الشركات، أرقام المنتجات، التواريخ والروابط المقروءة.
+• اسم ترويسة Authorization ووجود Bearer مثبتان؛ لا ننسخ قيمة رمز المصادقة
+  القابل للاستخدام، خصوصاً أن الصورة لا تضمن قراءته بالكامل.
+• صور المتصفح تعرض توقيت يناير 2026، ولا تثبت حالة الخادم اليوم.
+
+الفهرس الشامل للصور الأصلية — 55 ملفاً:
+01. IMG_6027_Original(1).jpeg
+02. IMG_6027_Original.jpeg
+03. IMG_6028_Original(1).jpeg
+04. IMG_6028_Original.jpeg
+05. IMG_6029_Original(1).jpeg
+06. IMG_6029_Original.jpeg
+07. IMG_6030_Original(1).jpeg
+08. IMG_6030_Original.jpeg
+09. IMG_6031_Original(1).jpeg
+10. IMG_6031_Original.jpeg
+11. IMG_6032_Original(1).jpeg
+12. IMG_6032_Original.jpeg
+13. IMG_6033_Original(1).jpeg
+14. IMG_6033_Original.jpeg
+15. IMG_6034_Original(1).jpeg
+16. IMG_6034_Original.jpeg
+17. IMG_6035_Original(1).jpeg
+18. IMG_6035_Original.jpeg
+19. IMG_6036_Original(1).jpeg
+20. IMG_6036_Original.jpeg
+21. IMG_6037_Original(1).jpeg
+22. IMG_6037_Original.jpeg
+23. IMG_6038_Original(1).jpeg
+24. IMG_6038_Original.jpeg
+25. IMG_6039_Original(1).jpeg
+26. IMG_6039_Original.jpeg
+27. IMG_6040_Original(1).jpeg
+28. IMG_6040_Original(3).jpeg
+29. IMG_6040_Original.jpeg
+30. IMG_6041_Original(2).jpeg
+31. IMG_6041_Original(20261109-043331).jpeg
+32. IMG_6042_Original(2).jpeg
+33. IMG_6042_Original(20261109-043330).jpeg
+34. IMG_6043_Original(2).jpeg
+35. IMG_6043_Original(3).jpeg
+36. IMG_6044_Original(2).jpeg
+37. IMG_6044_Original(3).jpeg
+38. IMG_6045_Original(1).jpeg
+39. IMG_6045_Original.jpeg
+40. IMG_6046_Original(1).jpeg
+41. IMG_6046_Original.jpeg
+42. IMG_6047_Original(1).jpeg
+43. IMG_6047_Original.jpeg
+44. IMG_6048_Original(1).jpeg
+45. IMG_6048_Original.jpeg
+46. IMG_6049_Original(1).jpeg
+47. IMG_6049_Original.jpeg
+48. IMG_6050_Original(1).jpeg
+49. IMG_6050_Original.jpeg
+50. IMG_6051_Original(1).jpeg
+51. IMG_6051_Original.jpeg
+52. IMG_6052_Original(1).jpeg
+53. IMG_6052_Original.jpeg
+54. IMG_6053_Original.jpeg
+55. IMG_6054_Original.jpeg
+
+
+===============================================================================
+الأرشيف السابق: النص الكامل للصور 1–54 محفوظ أدناه كما سُلّم في النسخة السابقة
+===============================================================================
+
+==========================================================================
+UBOOR / CUSTOMS-UBOOR — جميع النصوص المنسوخة من صور DevTools
+ملف TXT واحد شامل — النسخة الموسعة
+تاريخ إعداد الملف: 2026-11-09
+اللغة: العربية + أسماء ومفاتيح تقنية أصلية بالإنجليزية
+الترميز: UTF-8
+==========================================================================
+
+طلب المستخدم: جمع كل النصوص والبيانات والأرقام والمعرّفات المقروءة من الصور السابقة في ملف TXT واحد.
+
+مصادر العمل:
+- 46 ملف صورة JPEG أصلي موجود ضمن المحادثة.
+- ملف التقرير الموحّد السابق الذي يحتوي 54 مدخلاً تحليلياً بحسب دفعات الإرسال؛ بعض المداخل صور مكررة لنفس الشاشة، لذلك عدد المداخل لا يساوي عدد ملفات الصور المختلفة.
+- ملفات HTML/JS/CSS المرفوعة سابقًا تُذكر عند التطابق مع اسم مورد في الشاشة، لكنها ليست بديلاً عن الصور أو Response أصلي.
+
+ضوابط دقة النسخ:
+(1) نص الصور المقروء ينقل، بما في ذلك أرقام الهواتف وتواريخ وشفرات المعرفات وIP ورقم الفاتورة.
+(2) [غير واضح] = النص يظهر لكن لا يمكن استنتاجه حرفياً بصورة موثوقة.
+(3) [مقتطع] = واجهة DevTools قطعت النص بأداة العرض/حافة الصورة.
+(4) [قراءة مرجحة] = قراءة بصرية يفضل تأكيدها من نص المصدر.
+(5) JSON المُعاد بناؤه للتوضيح ليس نسخاً إلكترونياً من جسم الاستجابة.
+(6) رمز Authorization Bearer ظاهر على الصور، لكن حروفه كاملة غير قابلة لنسخ مضمون من الصورة؛ يذكر موضعه وشكله بلا اختلاق قيمة.
+(7) لا يُجري هذا الملف طلبات جديدة ولا يثبت أن API ما زال يعمل في 09 نوفمبر 2026؛ وقت الصور في Windows يظهر 21 يناير 2026.
+
+ملفات الصور الأصلية المتاحة — فهرس كامل (46 صورة):
+01. IMG_6027_Original(1).jpeg
+02. IMG_6027_Original.jpeg
+03. IMG_6028_Original(1).jpeg
+04. IMG_6028_Original.jpeg
+05. IMG_6029_Original(1).jpeg
+06. IMG_6029_Original.jpeg
+07. IMG_6030_Original(1).jpeg
+08. IMG_6030_Original.jpeg
+09. IMG_6031_Original(1).jpeg
+10. IMG_6031_Original.jpeg
+11. IMG_6032_Original(1).jpeg
+12. IMG_6032_Original.jpeg
+13. IMG_6033_Original(1).jpeg
+14. IMG_6033_Original.jpeg
+15. IMG_6034_Original(1).jpeg
+16. IMG_6034_Original.jpeg
+17. IMG_6035_Original(1).jpeg
+18. IMG_6035_Original.jpeg
+19. IMG_6036_Original(1).jpeg
+20. IMG_6036_Original.jpeg
+21. IMG_6037_Original(1).jpeg
+22. IMG_6037_Original.jpeg
+23. IMG_6038_Original(1).jpeg
+24. IMG_6038_Original.jpeg
+25. IMG_6039_Original(1).jpeg
+26. IMG_6039_Original.jpeg
+27. IMG_6040_Original(1).jpeg
+28. IMG_6040_Original(3).jpeg
+29. IMG_6040_Original.jpeg
+30. IMG_6041_Original(2).jpeg
+31. IMG_6041_Original(20261109-043331).jpeg
+32. IMG_6042_Original(2).jpeg
+33. IMG_6042_Original(20261109-043330).jpeg
+34. IMG_6043_Original(2).jpeg
+35. IMG_6043_Original(3).jpeg
+36. IMG_6044_Original(2).jpeg
+37. IMG_6044_Original(3).jpeg
+38. IMG_6045_Original(1).jpeg
+39. IMG_6045_Original.jpeg
+40. IMG_6046_Original(1).jpeg
+41. IMG_6046_Original.jpeg
+42. IMG_6047_Original(1).jpeg
+43. IMG_6047_Original.jpeg
+44. IMG_6048_Original(1).jpeg
+45. IMG_6048_Original.jpeg
+46. IMG_6049_Original.jpeg
+
+==========================================================================
+القسم الأول — تفريغ تقني شامل عبر جميع الصور: النصوص/الأرقام/الروابط
+==========================================================================
+
+[1] اسم الموقع والصفحة
+- Domain: customs-uboor.ur.gov.iq
+- URL: https://customs-uboor.ur.gov.iq/company-owner?phone=9647734554346
+- Route: /company-owner
+- Query parameter name: phone
+- Query parameter value: 9647734554346
+- الصفحة العربية: بوابة أصحاب الشركات
+- المتصفح الظاهر: Microsoft Edge مع DevTools
+- موضع الفحص: Network (All / Fetch-XHR / Headers / Preview / Payload / Response / Initiator / Timing / Cookies)
+- شريط Windows يُظهر تاريخ 21/01/2026 وأوقات تتراوح تقريباً من 16:23 إلى 16:25 في بعض اللقطات.
+
+[2] الإحصائيات المنسوخة حرفياً كما ظهرت في لقطات متعددة
+- 25 requests | 679 kB transferred | 2.8 MB resources | Finish 882 ms | DOMContentLoaded 742 ms | Load 785 ms
+- 31 requests | 683 kB transferred | 2.9 MB resources | Finish 6.06 s | DOMContentLoaded 687 ms | Load 747 ms
+- 35 requests | 688 kB transferred | 3.4 MB resources | Finish 1.6 min | DOMContentLoaded 687 ms | Load 747 ms
+- لا تجمع هذه القيم حسابياً، فهي لقطات متكررة أو مراحل لنفس التسجيل ولا تمثل ثلاث عينات مستقلة بالضرورة.
+
+[3] المسارات/الطلبات التي أمكن استخراجها كاملة
+https://customs-uboor.ur.gov.iq/api/local_form/search_iraqi_company
+https://customs-uboor.ur.gov.iq/api/local_form/get_company_items/bf31e6128301d31bb4014faf6b1e0f05f3ab8877
+https://customs-uboor.ur.gov.iq/api/local_form/return_company_doc/75764f1ead79fecd
+https://customs-uboor.ur.gov.iq/images/Customs.jpg
+https://customs-uboor.ur.gov.iq/images/iraqEagle.png
+https://customs-uboor.ur.gov.iq/assets/CompanyOwnerView-DWbcwxR4.js
+https://customs-uboor.ur.gov.iq/assets/Card-CZWmUXpA.js
+https://customs-uboor.ur.gov.iq/assets/Badge-DqlBKNZz.js
+https://customs-uboor.ur.gov.iq/assets/Input-CQ8L9pvo.js
+https://customs-uboor.ur.gov.iq/assets/iraqEagle-BF406BBV.js
+https://customs-uboor.ur.gov.iq/assets/Textarea-BbPyTmzv.js
+https://customs-uboor.ur.gov.iq/assets/Table-CksvXkpH.js
+https://customs-uboor.ur.gov.iq/assets/BaseModal-Cj4w6vKq.js
+https://customs-uboor.ur.gov.iq/assets/BaseModal-DrrLsYCw.css
+https://customs-uboor.ur.gov.iq/assets/vue3-treeselect.min-CxYj0h6r.js
+https://customs-uboor.ur.gov.iq/assets/vue3-treeselect-BzQE87YR.css
+https://customs-uboor.ur.gov.iq/assets/Form-CrcvXBv-.js
+https://customs-uboor.ur.gov.iq/assets/CompanyOwnerView-CiTq539C.css
+https://api.iconify.design/lucide.json?icons=loader-circle
+https://api.iconify.design/lucide.json?icons=circle-x
+https://quickchart.io/qr?text=gAAAAA... [مقتطع؛ قيمة text الأصلية غير مكتملة في الصور]
+
+ملاحظة: السلاسل ذات الأحرف الكبيرة/الصغيرة في أسماء ملفات assets من لوحات DevTools المصورة. الملفات المرفوعة إلى هذه الجلسة قد تكون أسماؤها محولة لحروف صغيرة على القرص.
+
+[4] طلب البحث عن شركة عراقية — Network > Headers / Payload / Preview
+- Name: search_iraqi_company
+- Request URL: https://customs-uboor.ur.gov.iq/api/local_form/search_iraqi_company
+- Request Method: POST
+- Status Code: 200 OK
+- Remote Address: 78.41.60.7:443
+- Referrer Policy: strict-origin-when-cross-origin
+- Initiator (حسب القائمة): index-D1j-Jb9C.js:22
+- Request Content-Length: 113
+- Response Content-Length: 3009
+- Response Content-Type: application/json
+- Response Server: elb
+- Response Date الظاهر في صورة: Wed, 21 Jan 2026 13:20:54 GMT [قراءة مرجحة لآخر الثواني]
+
+Request Payload كما يظهر منظماً في الصورة:
+{
+  "page": 1,
+  "per_page": 10,
+  "searchdata": [{"company_hash_code": "75764f1ead79fecd"}],
+  "sort_by": "id",
+  "sort_dir": "desc"
+}
+
+Request Headers المنسوخة:
+Accept: application/json, text/plain, */*
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,en-GB;q=0.8 [قراءة مرجحة للفواصل]
+Authorization: Bearer [قيمة طويلة غير قابلة للاستخراج الحرفي بثقة من التصوير]
+Connection: keep-alive
+Content-Length: 113
+Content-Type: application/json
+Cookie: _ga=... ; _ga_...=... [قيمة معرّفات التحليلات لا يمكن نسخها كاملة بثقة]
+Host: customs-uboor.ur.gov.iq
+Origin: https://customs-uboor.ur.gov.iq
+Referer: https://customs-uboor.ur.gov.iq/company-owner?phone=9647734554346
+Sec-CH-UA: "Microsoft Edge";v="129", "Not A(Brand";v="8", "Chromium";v="129" [قراءة تقريبية]
+Sec-CH-UA-Mobile: ?0
+
+Response Headers المنسوخة من اللقطات:
+Access-Control-Allow-Headers: DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range
+Access-Control-Allow-Methods: GET, POST, OPTIONS
+Access-Control-Allow-Origin: *
+Connection: keep-alive
+Content-Length: 3009
+Content-Type: application/json
+Date: Wed, 21 Jan 2026 13:20:54 GMT [قراءة مرجحة]
+Server: elb
+
+[5] Preview الخاص بالبحث عن الشركة — أسماء الحقول كما ظهرت
+brand / brands: وصف طويل لنشاط/علامة الشركة [مقتطع]
+company_hash_code: "75764f1ead79fecd"
+company_name_project: نص عربي يبدأ باسم معمل منظفات سائلة [غير واضح تماماً]
+company_phone_number: 9647734554346
+company_type: "داخل الاقليم" [قراءة مرجحة]
+governorate_name: "اربيل" [قراءة مرجحة]
+granting_license_approval: هيئة/جهة ترخيص صناعي بإقليم كردستان [نص أطول غير واضح]
+hash_id: "bf31e6128301d31bb4014faf6b1e0f05f3ab8877"
+is_active: true
+is_delete: false
+license_approval_date: "Tue, 24 Jan 2023 00:00:00 GMT"
+license_approval_number: "30834" [قراءة مرجحة وغير مؤكدة]
+license_text_specialization: "انتاج المنظفات السائلة" [قراءة مرجحة]
+monthly_yearly: يحتوي على مقدار نحو 4500 طن/سنة [النص الحرفي غير واضح]
+owner_name: اسم مالك عربي [غير واضح بالكامل]
+production_capacity: "2674" [قراءة مرجحة من لقطة سابقة؛ يجب التأكد بالنقل النصي]
+reliable: true
+type_industry_production: وصف منتج/صناعة [غير واضح بالكامل]
+
+[6] طلب جلب أصناف الشركة — Network > GET / Response / Preview
+- Request URL: https://customs-uboor.ur.gov.iq/api/local_form/get_company_items/bf31e6128301d31bb4014faf6b1e0f05f3ab8877
+- Request Method: GET
+- Status Code: 200 OK
+- Remote Address: 78.41.60.7:443
+- Referrer Policy: strict-origin-when-cross-origin
+- Access-Control-Allow-Credentials: true (تظهر في بعض لقطات هذا الطلب)
+- Access-Control-Allow-Methods: GET,POST,OPTIONS
+- Access-Control-Allow-Origin: http://localhost:5173 (تظهر في لقطة)
+- Access-Control-Allow-Origin: * (تظهر أيضاً في لقطة؛ يلزم تأكيد إن كانا سطرين أو تداخل عرض)
+- Content-Type: application/json
+- Content-Length: 467 [قراءة مرجحة]
+
+الحقول المعروضة في استجابة JSON لقائمة الأصناف، مع القيم المقروءة:
+{
+  "items": [
+    {
+      "hash_id": "dcaadad1cfce437735b81ab025f776e5857e4855",
+      "is_active": true,
+      "is_delete": false,
+      "item_name": "منظفات سائلة",
+      "monthly_yearly": "سنوية",
+      "production_capacity": "1837",
+      "time_stamp": "2026-01-05 10:09:36",
+      "unit": "طن"
+    }
+  ],
+  "parent_hash_id": "bf31e6128301d31bb4014faf6b1e0f05f3ab8877",
+  "total_items": 1
+}
+[تمثيل مُعاد بناؤه يدوياً من لقطة Response؛ item hash_id يحتاج تأكيداً حرفياً من Copy Response]
+
+[7] طلب وثيقة الشركة
+- Request URL: https://customs-uboor.ur.gov.iq/api/local_form/return_company_doc/75764f1ead79fecd
+- يظهر ضمن قائمة Initiator وNetwork، ويظهر Status=200 في قائمة اللقطات.
+- جسم الاستجابة الكامل غير ظاهر في الصور المعروضة؛ لا نفترض نوعه أو صحته أو محتواه.
+
+[8] طلب تحميل رمز QR الخارجي
+- Host: quickchart.io
+- Path: /qr
+- Query: text=gAAAAA... [النص المقطوع غير قابل للنسخ كاملاً]
+- نوع المورد في قائمة Network: png
+- Status: 200 في اللقطات التي يظهر فيها
+- تكوين رمز QR قد ينقل قيمة Query إلى طرف خارجي؛ لا يمكن استنتاج محتواها الأصلي الكامل من صور الشبكة.
+
+[9] طلب أيقونة انتظار Lucide عبر Iconify
+Request URL: https://api.iconify.design/lucide.json?icons=loader-circle
+Request Method: GET
+Status Code: 200 OK (from disk cache)
+Remote Address: 172.67.71.159:443
+Referrer Policy: strict-origin-when-cross-origin
+
+Response Headers:
+Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Accept-Encoding
+Access-Control-Allow-Methods: GET, OPTIONS
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 86400
+Age: 16360 [قراءة مرجحة]
+Cache-Control: public, max-age=604800, min-refresh=604800, immutable
+CF-Cache-Status: HIT
+CF-Ray: ...-EBL [جزء غير واضح]
+Content-Encoding: br
+Content-Type: application/json; charset=utf-8
+Cross-Origin-Resource-Policy: cross-origin
+Date: Sat, 17 Jan 2026 11:58:23 GMT [قراءة مرجحة]
+Last-Modified: Sat, 17 Jan 2026 07:25:43 GMT [قراءة مرجحة]
+NEL: [قيمة تقرير شبكة طويلة غير مكتملة بصرياً]
+Report-To: [قيمة تقرير شبكة طويلة غير مكتملة بصرياً]
+Server: cloudflare
+Vary: accept-encoding
+
+Preview / Response (بنية النص المقروءة):
+{
+  "prefix": "lucide",
+  "lastModified": 1768633885,
+  "aliases": {},
+  "width": 24,
+  "height": 24,
+  "icons": {
+    "loader-circle": {
+      "body": "<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"...\" />"
+    }
+  }
+}
+[قيمة d الطويلة مقطوعة في صورة الشبكة، لذلك عُرضت ... عوضاً عن نص غير موثق]
+تحذير DevTools الظاهر: Provisional headers are shown. Disable cache to see full headers.
+
+[10] ملفات الموارد والأسماء كما تتكرر في لقطات Network
+company-owner?phone=9647734554346
+index-D1j-Jb9C.js
+index-RnlGKhol.css
+main.js?attr=...
+main.css?attr=...
+init?data=...
+Cairo-Regular-CB0NqkA_.ttf
+Cairo-Bold-CFhkSe12.ttf
+CompanyOwnerView-DWbcwxR4.js
+Card-CZWmUXpA.js
+Badge-DqlBKNZz.js
+Input-CQ8L9pvo.js
+iraqEagle-BF406BBV.js
+Textarea-BbPyTmzv.js
+Table-CksvXkpH.js
+BaseModal-Cj4w6vKq.js
+BaseModal-DrrLsYCw.css
+vue3-treeselect.min-CxYj0h6r.js
+vue3-treeselect-BzQE87YR.css
+Form-CrcvXBv-.js
+CompanyOwnerView-CiTq539C.css
+longpooling?get&nocache=131a7&tm=2026-01-21T13%3A20%3A49.90... [مقتطع]
+customes-logo.png
+ur-logo.png
+lucide.json?icons=building-2...
+lucide.json?icons=circle-x
+search_iraqi_company
+lucide.json?icons=loader-circle
+bf31e6128301d31bb4014faf6b1e0f05f3ab8877
+lucide.json?icons=factory%2Cfile-text%2Cmap-pin%2Cphone%2Cprinter...
+75764f1ead79fecd
+Customs.jpg
+iraqEagle.png
+qr?text=gAAAAA... [مقتطع]
+
+==========================================================================
+القسم الثاني — تفريغ النصوص من الورقة المطبوعة الظاهرة أسفل شاشة الكمبيوتر
+==========================================================================
+تظهر ورقة مطبوعة في عدد كبير من الصور، وغالباً هي ذات الورقة نفسها من زوايا متعددة.
+ملاحظة: تفاصيل الورقة ليست جزءاً من Response الخاص بDevTools؛ هي مستند ورقي منفصل في إطار الصورة.
+
+العنوان باللون الأزرق: طلبية المعامل
+حقل علوي مقابل عنوان باللغة الإنجليزية: "lawlsian" [قراءة بصرية مرجحة؛ غير واضح تماماً]
+البلد: USA
+رقم الفاتورة: 3656
+تاريخ الفاتورة: 18/01/2026
+عناوين الجدول: # / اسم المادة — Item / Service / الوحدة — Unit / العدد — Quantity / بونص — Bonus
+الصفوف الستة (الأسماء العربية أدناه تقريبية حيث التصوير ضبابي):
+1 | ملمع زجاج لاويل 12×750 مل | كارتون | Quantity 23 | Bonus 0
+2 | معطر أرضيات لاويل 4 لتر × 4 | كارتون | Quantity 53 | Bonus 0
+3 | فلاش لاويل 4 لتر × 4 | كارتون | Quantity 11 | Bonus 0
+4 | صابون لاويل 4 لتر × 4 — كركوبا/كركويا [غير واضح] | كارتون | Quantity 70 | Bonus 0
+5 | صابون لاويل 4 لتر × 4 — جوز هند | كارتون | Quantity 69 | Bonus 0
+6 | فلاش لاويل 1 لتر × 12 | كارتون | Quantity 60 | Bonus 0
+
+المجاميع المقروءة:
+- إجمالي الكمية: 286 [23+53+11+70+69+60 = 286]
+- إجمالي الوزن: 4,175 [كما طُبع، وليس ناتج حساب مؤكد من أعمدة الجدول]
+- إجمالي الفاتورة: 1,661.75
+- اسم الموصل: [خانة غير معبأة/غير مقروءة]
+- التوقيع: [خانة]
+- اسم المجهز: [خانة]
+- التوقيع: [خانة]
+
+أرقام عمودية إضافية في نسخ أخرى من الصورة: 207، 848، 716، 1120، 1104، 720. اسم العمود الذي يفسرها غير واضح، لذلك لا نصفها كأوزان مؤكدة.
+
+==========================================================================
+القسم الثالث — التقرير التفصيلي السابق كاملاً (54 مدخلاً)
+==========================================================================
+النص التالي نُقل من التقرير السابق دون حذف الأقسام التحليلية، مع إعادة رقم الهاتف إلى شكله المقروء في الصور.
+
+UBOOR | التقرير الموحّد — 54 صورة من DevTools Network
+تاريخ التحرير: 09 نوفمبر 2026
+يشمل: التحليل السابق (الصور 1–45) + التحليل الجديد (الصور 46–54).
+هذا ملف تجميعي لسجلات الصور، لا اختبار حي لأنظمة الموقع أو إثبات رسمي لصحة الوثائق.
+أُثبتت الأرقام والمعرّفات المتاحة كما تظهر في الصور، مع توضيح الأجزاء غير المقروءة. لم يُدرج رمز الجلسة الكامل.
+
+تقرير موحد محدث — 45 صورة من DevTools Network | بوابة عبور
+تاريخ التحديث: 09-11-2026
+في هذه النسخة أُعيدت الأرقام المقروءة من الصور، ومنها رقم الهاتف. لم يُنسخ رمز Bearer كاملاً لتعذر تفريغه حرفياً بثقة من صور الشاشة.
+
+تقرير موحّد — 36 صورة من بوابة عبور
+تجميع المجموعتين السابقتين (1–18) ومجموعة Headers/Payload/Preview الجديدة (19–36)
+تاريخ تحرير التقرير 09-11-2026
+ملاحظة: حُجبت أسرار المصادقة ولم تُنسخ قيم Bearer أو Cookie.
+
+تقرير موحّد | تحليل 18 صورة من DevTools Network — بوابة عبور الكمركية
+===========================================================================
+
+القسم الأول: الصور التسع السابقة
+--------------------------------------------------
+
+تحليل الصور التسع — Network | بوابة عبور الكمركية
+===================================================
+
+الموقع: https://customs-uboor.ur.gov.iq
+الصفحة المعروضة: https://customs-uboor.ur.gov.iq/company-owner?phone=9647734554346
+أداة التحليل: Microsoft Edge DevTools — تبويب Network
+
+هذا الملف يجمع تحليل الصور التسع بالترتيب الذي أُرسلت به، وأسماء الملفات والطلبات الظاهرة، ومعلومات الأداء، والاستنتاجات والحدود التي لا يمكن تجاوزها اعتماداً على الصور وحدها.
+
+===================================================
+الصورة 1 — ملفات واجهة أصحاب الشركات
+IMG_6028_Original.jpeg
+===================================================
+معلومات الشاشة:
+- DevTools: Network
+- عدد الطلبات: 25
+- البيانات المنقولة: 679 KB
+- إجمالي الموارد: 2.8 MB
+- Finish: 882 ms
+- DOMContentLoaded: 742 ms
+- Load: 785 ms
+- حالة الملفات المعروضة: HTTP 200
+
+النص المستخرج من قائمة الملفات:
+CompanyOwnerView-DWbcwxR4.js
+Card-CZWmUXpA.js
+Badge-DqlBKNZz.js
+Input-CQ8L9pvo.js
+iraqEagle-BF406BBV.js
+Textarea-BbPyTmzv.js
+Table-CksvXkpH.js
+BaseModal-Cj4w6vKq.js
+BaseModal-DrrLsYCw.css
+vue3-treeselect.min-CxYj0h6r.js
+vue3-treeselect-BzQE87YR.css
+Form-CrcvXBv-.js
+CompanyOwnerView-CiTq539C.css
+
+التحليل:
+تظهر الملفات المسؤولة عن واجهة أصحاب الشركات وعناصر النماذج والجداول والقوائم والنوافذ المنبثقة. الملفات المقروءة في الصورة محمّلة بنجاح على مستوى HTTP.
+
+===================================================
+الصورة 2 — رابط مكتبة Vue Treeselect
+IMG_6028_Original(1).jpeg
+===================================================
+هذه لقطة مقربة من الصورة الأولى، وتعرض الرابط الكامل عند تمرير مؤشر الفأرة على الملف.
+
+الرابط الظاهر:
+https://customs-uboor.ur.gov.iq/assets/vue3-treeselect.min-CxYj0h6r.js
+
+معلومات الملف:
+- الاسم: vue3-treeselect.min-CxYj0h6r.js
+- النوع: JavaScript
+- الحالة: HTTP 200
+- Initiator: index-D1j-Jb9C.js:20
+- المكتبة: Vue3 Treeselect
+
+ملفات وطلبات أخرى ظاهرة:
+vue3-treeselect-BzQE87YR.css
+Form-CrcvXBv-.js
+CompanyOwnerView-CiTq539C.css
+longpooling?get&nocache=...
+customes-logo.png
+ur-logo.png
+lucide.json?icons=building-2...
+
+التحليل:
+Vue3 Treeselect مكتبة للقوائم المنسدلة والاختيار المتعدد أو الاختيار من بنية هرمية. يمكن أن تُستخدم لتصنيفات أو محافظات أو أصناف، لكن الصور وحدها لا تحدد ما هي البيانات التي تملأ القوائم.
+طلب longpooling مصنف XHR؛ الاسم يوحي باستطلاع أو تحديثات، لكن لا يمكن إثبات الوظيفة من الاسم وحده.
+
+===================================================
+الصورة 3 — تحميل الصفحة وطلب التهيئة
+IMG_6027_Original(1).jpeg
+===================================================
+رابط الصفحة:
+https://customs-uboor.ur.gov.iq/company-owner?phone=9647734554346
+
+الطلبات الظاهرة:
+company-owner?phone=9647734554346
+index-D1j-Jb9C.js
+index-RnlGKhol.css
+main.js?attr=...
+main.css?attr=...
+init?data=...
+Cairo-Regular-CB0NqkA_.ttf
+Cairo-Bold-CFhkSe12.ttf
+CompanyOwnerView-DWbcwxR4.js
+Card-CZWmUXpA.js
+Badge-DqlBKNZz.js
+Input-CQ8L9pvo.js
+iraqEagle-BF406BBV.js
+Textarea-BbPyTmzv.js
+Table-CksvXkpH.js
+BaseModal-Cj4w6vKq.js
+BaseModal-DrrLsYCw.css
+
+ملخص الطلبات المهمة:
+- company-owner?phone=... | Document | 200
+- index-D1j-Jb9C.js | Script | 200
+- main.js?attr=... | Script | 200
+- init?data=... | XHR | 200
+- CompanyOwnerView-DWbcwxR4.js | Script | 200
+
+التحليل:
+1) يطلب المتصفح صفحة company-owner.
+2) يحمّل ملفات JavaScript وCSS الرئيسية.
+3) يظهر طلب تهيئة باسم init?data=...
+4) تُحمّل واجهة أصحاب الشركات ومكوّناتها.
+
+وجود رقم الهاتف في الرابط يعني أنه يُمرَّر كمعامل URL، لكنه لا يثبت أن الخادم يستخدمه وحده لتحديد هوية المستخدم. يلزم الاطلاع على Header وResponse لطلب init لتحديد مصدره ووظيفته، مع إخفاء الرموز الحساسة.
+
+===================================================
+الصورة 4 — الاتصال Long Polling
+IMG_6030_Original.jpeg
+===================================================
+إحصائيات الصورة:
+- عدد الطلبات: 35
+- البيانات المنقولة: 688 KB
+- حجم الموارد: 3.4 MB
+- Finish: 1.6 min
+- DOMContentLoaded: 687 ms
+- Load: 747 ms
+
+أسماء الملفات والطلبات الظاهرة:
+Cairo-Regular-CB0NqkA_.ttf
+Cairo-Bold-CFhkSe12.ttf
+CompanyOwnerView-DWbcwxR4.js
+Card-CZWmUXpA.js
+Badge-DqlBKNZz.js
+Input-CQ8L9pvo.js
+iraqEagle-BF406BBV.js
+Textarea-BbPyTmzv.js
+Table-CksvXkpH.js
+BaseModal-Cj4w6vKq.js
+vue3-treeselect.min-CxYj0h6r.js
+BaseModal-DrrLsYCw.css
+Form-CrcvXBv-.js
+vue3-treeselect-BzQE87YR.css
+CompanyOwnerView-CiTq539C.css
+longpooling?get&nocache=...
+ur-logo.png
+customes-logo.png
+
+التحليل:
+Finish: 1.6 min لا يعني أن الصفحة بقيت دقيقة ونصف قبل الظهور؛ Load يساوي 747 ms. قد تكون مدة التسجيل أو اتصال يستمر بعد تحميل الصفحة سبباً في امتداد Finish. للتحقق افتح Timing للطلب المعني.
+
+===================================================
+الصورة 5 — طلب البحث عن الشركات العراقية
+IMG_6029_Original.jpeg
+===================================================
+الطلب الرئيسي:
+search_iraqi_company
+
+- الحالة الظاهرة: HTTP 200
+- نوع الطلب: XHR
+- Initiator: index-D1j-Jb9C.js:22
+
+إحصائيات الشاشة:
+- Requests: 31
+- Transferred: 683 KB
+- Resources: 2.9 MB
+- Finish: 6.06 s
+- DOMContentLoaded: 687 ms
+- Load: 747 ms
+
+طلبات أخرى:
+lucide.json?icons=building-2...
+lucide.json?icons=circle-x
+search_iraqi_company
+lucide.json?icons=loader-circle
+bf31e6128301d31bb4014faf6b1e0f05f3ab8877
+lucide.json?icons=factory%2Cfile-text%2Cmap-pin...
+
+التحليل:
+- search_iraqi_company طلب XHR ناجح على مستوى HTTP.
+- bf31e612... اسم طلب يتضمن سلسلة سداسية عشرية. لا نعرف إن كانت معرفاً لمورد، أو مسار خدمة، أو بيانات أخرى دون فتح تفاصيل الطلب.
+- loader-circle متعلق بتحميل أيقونة الانتظار؛ ليس بحد ذاته دليلاً على نوع معالجة الخادم.
+- أيقونات factory وfile-text وmap-pin قد تشير إلى عناصر للمنشأة والوثائق والموقع الجغرافي في الواجهة، ولكن وجودها لا يثبت وصول تلك البيانات.
+
+النتيجة: يظهر طلب بحث عن شركة عراقية وحالة HTTP 200، دون ظهور محتوى نتيجة البحث في الصور.
+
+===================================================
+الصورة 6 — تفاصيل الطلبات بعد البحث
+IMG_6029_Original(1).jpeg
+===================================================
+بيانات الأداء:
+- Requests: 31
+- Transferred: 683 KB
+- Resources: 2.9 MB
+- Finish: 6.06 s
+- DOMContentLoaded: 687 ms
+- Load: 747 ms
+
+أسماء الملفات والطلبات:
+Table-CksvXkpH.js
+BaseModal-Cj4w6vKq.js
+vue3-treeselect.min-CxYj0h6r.js
+BaseModal-DrrLsYCw.css
+Form-CrcvXBv-.js
+vue3-treeselect-BzQE87YR.css
+CompanyOwnerView-CiTq539C.css
+longpooling?get&nocache=...
+ur-logo.png
+customes-logo.png
+lucide.json?icons=building-2...
+lucide.json?icons=circle-x
+search_iraqi_company
+lucide.json?icons=loader-circle
+bf31e6128301d31bb4014faf6b1e0f05f3ab8877
+
+التحليل:
+الطلبان الأهم للتحليل هما search_iraqi_company والطلب المسمّى بمعرف سداسي عشري. كلاهما ظاهر كـ XHR بحالة 200. لا يظهر من الصور هل الطريقة GET أو POST، ولا جسم الطلب Payload أو جسم الاستجابة Response.
+
+===================================================
+الصورة 7 — ظهور ملفات الوثيقة وQR
+IMG_6031_Original.jpeg
+===================================================
+إحصائيات الصورة:
+- Requests: 35
+- Transferred: 688 KB
+- Resources: 3.4 MB
+- Finish: 1.6 min
+- DOMContentLoaded: 687 ms
+- Load: 747 ms
+
+الطلبات الإضافية الظاهرة:
+search_iraqi_company
+bf31e6128301d31bb4014faf6b1e0f05f3ab8877
+75764f1ead79fecd
+Customs.jpg
+iraqEagle.png
+qr?text=gAAAAABpcMVbFh7E_...
+
+التصنيف:
+- search_iraqi_company | XHR | 200
+- bf31e612... | XHR | 200
+- 75764f1ead79fecd | XHR | 200
+- Customs.jpg | JPEG | 200
+- iraqEagle.png | PNG | 200
+- qr?text=... | PNG | 200
+
+التحليل:
+الطلب qr?text=... يحمل معامل نص وينتهي باستجابة مصنفة PNG. هذا يتوافق مع جلب أو توليد صورة رمز QR، لكنه لا يثبت أن رمز QR صادر من جهة رسمية أو أن محتواه يتحقق داخل نظام عبور. يلزم الاطلاع على تفاصيل الاستجابة وجهة التحقق.
+
+===================================================
+الصورة 8 — القائمة الأقرب لطلبات API
+IMG_6031_Original(1).jpeg
+===================================================
+النصوص الظاهرة تقريباً:
+Form-CrcvXBv-.js
+vue3-treeselect-BzQE87YR.css
+CompanyOwnerView-CiTq539C.css
+longpooling?get&nocache=...
+ur-logo.png
+customes-logo.png
+customes-logo.png
+lucide.json?icons=building-2...
+lucide.json?icons=circle-x
+search_iraqi_company
+lucide.json?icons=loader-circle
+bf31e6128301d31bb4014faf6b1e0f05f3ab8877
+lucide.json?icons=factory%2Cfile-text%2Cmap-pin...
+75764f1ead79fecd
+Customs.jpg
+iraqEagle.png
+qr?text=gAAAAABpcMVbFh7E_...
+
+طلبات محورية:
+- search_iraqi_company | Initiator: index-D1j-Jb9C.js:22 | طلب XHR بحالة 200
+- bf31e612... | Initiator: index-D1j-Jb9C.js:22 | طلب XHR بحالة 200
+- 75764f1ead79fecd | Initiator: index-D1j-Jb9C.js:22 | طلب XHR بحالة 200
+- Customs.jpg | Initiator: index-D1j-Jb9C.js:5 | تحميل صورة
+- iraqEagle.png | Initiator: index-D1j-Jb9C.js:5 | تحميل صورة
+- qr?text=... | Initiator: index-D1j-Jb9C.js:5 | تحميل PNG
+
+التحليل:
+أسماء الطلبات التي تبدو كسلاسل سداسية عشرية لا تكفي للحكم بأنها أرقام وثائق أو مفاتيح سرية أو معرفات شركات. يلزم فتح Headers وResponse لتحديد نوعها ووظيفتها.
+
+===================================================
+الصورة 9 — القائمة الموسعة ومدة تسجيل الشبكة
+IMG_6030_Original(1).jpeg
+===================================================
+الإحصائيات:
+- Requests: 35
+- Transferred: 688 KB
+- Resources: 3.4 MB
+- Finish: 1.6 min
+- DOMContentLoaded: 687 ms
+- Load: 747 ms
+
+الملفات الظاهرة:
+vue3-treeselect.min-CxYj0h6r.js
+vue3-treeselect-BzQE87YR.css
+CompanyOwnerView-CiTq539C.css
+Form-CrcvXBv-.js
+BaseModal-Cj4w6vKq.js
+BaseModal-DrrLsYCw.css
+longpooling?get&nocache=...
+ur-logo.png
+customes-logo.png
+
+التحليل:
+تؤكد الصورة تحميل ملفات الواجهة والقوائم والنماذج، مع ظهور طلب longpooling. تشابه البيانات مع الصور 4 و7 و8 يدل على أنها لقطات متداخلة أو قريبة زمنياً لنفس جلسة المراقبة، وليس دليلاً على أربع جلسات مستقلة.
+
+===================================================
+مقارنة شاملة بين الصور التسع
+===================================================
+الصورة 1 | 25 طلباً | Finish 882 ms | مكونات الواجهة
+الصورة 2 | 25 طلباً | Finish 882 ms | رابط مكتبة Vue
+الصورة 3 | 25 طلباً | Finish 882 ms | تحميل الصفحة وinit
+الصورة 4 | 35 طلباً | Finish 1.6 min | Long Polling
+الصورة 5 | 31 طلباً | Finish 6.06 s | search_iraqi_company
+الصورة 6 | 31 طلباً | Finish 6.06 s | البحث ومعرّف سداسي
+الصورة 7 | 35 طلباً | Finish 1.6 min | الصور وQR
+الصورة 8 | 35 طلباً | Finish 1.6 min | طلبات XHR إضافية
+الصورة 9 | 35 طلباً | Finish 1.6 min | القائمة الموسعة
+
+ملاحظة: هذه الإحصائيات كما تظهر في DevTools؛ قد تعود صور متعددة إلى نفس تسجيل الشبكة.
+
+===================================================
+أهم ستة طلبات ظاهرة
+===================================================
+1. search_iraqi_company — طلب البحث عن الشركات العراقية.
+2. bf31e612...b8877 — طلب XHR باسم معرّف غير معروف الوظيفة.
+3. 75764f1ead79fecd — طلب XHR إضافي.
+4. init?data=... — طلب تهيئة يحتاج فحصاً في Headers وResponse.
+5. qr?text=... — تحميل صورة QR محتملة.
+6. longpooling?get&nocache=... — اتصال قد يستخدم الاستطلاع أو التحديث الدوري.
+
+===================================================
+النتيجة والخطوة التالية
+===================================================
+- الصور تؤكد أسماء ملفات وطلبات وحالات HTTP وبعض مؤشرات الأداء.
+- الاستجابة HTTP 200 لا تثبت وحدها صحة نتيجة المعاملة أو صلاحية التفويض.
+- لا يمكن معرفة محتوى البيانات أو طريقة الطلب أو قواعد التفويض من القائمة وحدها.
+- للفحص في جلسة مصرح بها: Network > Fetch/XHR، ثم اختيار search_iraqi_company ومراجعة Headers وPayload وResponse وTiming.
+- عند مشاركة النتائج، أخفِ Cookie وAuthorization وTokens وأي بيانات حساسة.
+- قارن بعد ذلك نتائج الطلبات المسماة بمعرّفات سداسية عشرية وطلب QR بالوظائف الفعلية للواجهة.
+
+نهاية الملف.
+
+
+
+القسم الثاني: الصور التسع الجديدة (لقطات Initiator وPayload وPreview)
+--------------------------------------------------
+
+تكملة تحليل Network — المجموعة الثانية (الصور 10 إلى 18)
+===========================================================
+المادة: تسع صور جديدة من شاشة Microsoft Edge DevTools، مأخوذة من متصفح يفتح بوابة أصحاب الشركات.
+الموقع الظاهر: https://customs-uboor.ur.gov.iq
+التاريخ الظاهر في شريط Windows ضمن عدد من الصور: 21/01/2026 عند 16:23–16:24 (وقت الجهاز الظاهر في الصورة، وليس إثباتاً مستقلاً لوقت تنفيذ الطلب).
+المنهج: نسخ النص المرئي ثم تفسيره دون اختراع قيم ناقصة. تعني علامة (...) أن النص مقطوع في الصورة. حالات 200 تخص HTTP، وليست دليلاً كافياً على اعتماد الوثيقة أو قوة المصادقة.
+
+-----------------------------------------------------------
+الصورة 10 — IMG_6033_Original.jpeg (أول صورة في المجموعة الثانية)
+-----------------------------------------------------------
+المشهد: DevTools > Network، الطلب الرئيسي index-D1j-Jb9C.js محدد في القائمة اليسرى، والتبويب الفرعي Initiator مفتوح.
+تظهر في Initiator روابط موارد جرى تحميلها ضمن مسار تشغيل الواجهة.
+الروابط المهمة المقروءة من الصورة:
+- https://customs-uboor.ur.gov.iq/assets/CompanyOwnerView-DWbcwxR4.js
+- https://customs-uboor.ur.gov.iq/assets/Card-CZWmUXpA.js
+- https://customs-uboor.ur.gov.iq/assets/Badge-DqlBKNZz.js
+- https://customs-uboor.ur.gov.iq/assets/Input-CQ8L9pvo.js
+- https://customs-uboor.ur.gov.iq/assets/iraqEagle-BF406BBV.js
+- https://customs-uboor.ur.gov.iq/assets/Textarea-BbPyTmzv.js
+- https://customs-uboor.ur.gov.iq/assets/Table-CksvXkpH.js
+- https://customs-uboor.ur.gov.iq/assets/BaseModal-Cj4w6vKq.js
+- https://customs-uboor.ur.gov.iq/assets/BaseModal-DrrLsYCw.css
+- https://customs-uboor.ur.gov.iq/api/local_form/search_iraqi_company
+- https://customs-uboor.ur.gov.iq/api/local_form/get_company_items/bf31e6128301d31bb4014faf6b1e0f05f3ab8877
+- https://customs-uboor.ur.gov.iq/api/local_form/return_company_doc/75764f1ead79fecd
+- https://customs-uboor.ur.gov.iq/images/Customs.jpg
+- https://customs-uboor.ur.gov.iq/images/iraqEagle.png
+كما يظهر رابط خدمة QR الخارجية quickchart.io/qr?text=...، وروابط أيقونات api.iconify.design/lucide.json?icons=...
+الاستنتاج: اكتشاف المسارات الكاملة لثلاث واجهات API مهمة. الصورة لا تعرض المحتوى الداخلي لأي استجابة.
+
+-----------------------------------------------------------
+الصورة 11 — IMG_6032_Original(1).jpeg (ثاني صورة)
+-----------------------------------------------------------
+المشهد: قائمة جميع طلبات Network دون فتح تفاصيل الطلب.
+الأرقام المعروضة: 35 requests، 688 kB transferred، 3.4 MB resources، Finish 1.6 min، DOMContentLoaded 687 ms، Load 747 ms.
+الطلبات الجديدة/المهمة في القسم السفلي:
+- longpooling?get&nocache=...
+- ur-logo.png
+- customes-logo.png (مرتان)
+- lucide.json?icons=building-2...
+- lucide.json?icons=circle-x
+- search_iraqi_company
+- lucide.json?icons=loader-circle
+- bf31e6128301d31bb4014faf6b1e0f05f3ab8877
+- lucide.json?icons=factory%2Cfile-text%2Cmap-pin...
+- 75764f1ead79fecd
+- Customs.jpg
+- iraqEagle.png
+- qr?text=gAAAAA... (نص الصورة غير كامل)
+الحالة المقروءة للطلبات المتجاورة: 200. المصطلح Finish 1.6 min يشير إلى انتهاء نشاط الشبكة المسجل لا زمن عرض صفحة الموقع؛ حيث Load 747 ms.
+الاستنتاج: هذه اللقطة تؤكد وجود طلبات البحث والأصناف والوثيقة وQR ضمن الجلسة نفسها، لكنها لا تعرض مساراتها الكاملة، وهي مكملة للصورة 10.
+
+-----------------------------------------------------------
+الصورة 12 — IMG_6032_Original.jpeg (ثالث صورة)
+-----------------------------------------------------------
+المشهد: تكبير أفقي للقسم السفلي من قائمة Network.
+الطلب search_iraqi_company مصنف XHR مع Status 200 وInitiator ظاهر من index-D1j-Jb9C.js:22.
+الطلب الذي اسمه bf31e6128301d31bb4014faf6b1e0f05f3ab8877 مصنف XHR مع Status 200.
+الطلب الذي اسمه 75764f1ead79fecd مصنف XHR مع Status 200.
+الطلب qr?text=... مصنف PNG مع Status 200. صور Customs.jpg وiraqEagle.png بحالة 200.
+الاستنتاج: تمييز طلبات API الحقيقية عن ملفات الواجهة والأيقونات. Status 200 لا يثبت من تلقاء نفسه نجاح العملية التجارية.
+
+-----------------------------------------------------------
+الصورة 13 — IMG_6034_Original.jpeg (رابع صورة)
+-----------------------------------------------------------
+المشهد: تبويب Initiator للطلب الرئيسي مع إظهار قائمة روابط الأصول وواجهات API في أسفل العرض، بالإضافة إلى ورقة مطبوعة أمام اللابتوب.
+أبرز المسارات الواضحة:
+- /api/local_form/search_iraqi_company
+- /api/local_form/get_company_items/bf31e6128301d31bb4014faf6b1e0f05f3ab8877
+- /api/local_form/return_company_doc/75764f1ead79fecd
+- /images/Customs.jpg
+- /images/iraqEagle.png
+- https://quickchart.io/qr?text=...
+وتظهر ملفات vue3-treeselect.min-CxYj0h6r.js، vue3-treeselect-BzQE87YR.css، Form-CrcvXBv-.js، CompanyOwnerView-CiTq539C.css.
+الاستنتاج: واجهة أصحاب الشركات تستخدم مواردها المحلية بالإضافة إلى خدمات خارجية للأيقونات والـQR. الورقة الموجودة خارج الشاشة تحتوي جدول أصناف وكميات وإجماليات لكنها ليست إثباتاً لمحتوى طلبات الشبكة.
+
+-----------------------------------------------------------
+الصورة 14 — IMG_6034_Original(1).jpeg (خامس صورة)
+-----------------------------------------------------------
+المشهد: لقطة قريبة وواضحة لجزء من تبويب Initiator.
+روابط مهمة مرئية بالنص الكامل (أهمها):
+https://customs-uboor.ur.gov.iq/api/local_form/search_iraqi_company
+https://customs-uboor.ur.gov.iq/api/local_form/get_company_items/bf31e6128301d31bb4014faf6b1e0f05f3ab8877
+https://customs-uboor.ur.gov.iq/api/local_form/return_company_doc/75764f1ead79fecd
+https://customs-uboor.ur.gov.iq/images/Customs.jpg
+https://customs-uboor.ur.gov.iq/images/iraqEagle.png
+https://quickchart.io/qr?text=gAAAAA...
+كما تظهر موارد خطي Cairo-Regular وCairo-Bold محمّلة من ملف CSS رئيسي.
+الاستنتاج: تُعرف الآن أسماء الخدمات والأصول بدقة. يتضح أيضاً أن صورة QR تُحمّل من نطاق quickchart.io الخارجي، وأن قيمة text تُوضع في رابط الطلب. قد يعني ذلك إرسال تلك القيمة إلى مزوّد QR الخارجي؛ هل القيمة حساسة فعلاً؟ يتوقف على طبيعتها، وهي غير واضحة بالكامل من الصورة.
+
+-----------------------------------------------------------
+الصورة 15 — IMG_6033_Original(1).jpeg (سادس صورة)
+-----------------------------------------------------------
+المشهد: تبويب Initiator ورؤية أعلى القائمة مقارنة بالصور السابقة، مع التركيز على assets وAPI.
+روابط واجهة:
+/assets/CompanyOwnerView-DWbcwxR4.js
+/assets/Card-CZWmUXpA.js
+/assets/Badge-DqlBKNZz.js
+/assets/Input-CQ8L9pvo.js
+/assets/iraqEagle-BF406BBV.js
+/assets/Textarea-BbPyTmzv.js
+/assets/Table-CksvXkpH.js
+/assets/BaseModal-Cj4w6vKq.js
+/assets/BaseModal-DrrLsYCw.css
+/assets/vue3-treeselect.min-CxYj0h6r.js
+/assets/Form-CrcvXBv-.js
+/assets/CompanyOwnerView-CiTq539C.css
+واجهات API:
+/api/local_form/search_iraqi_company
+/api/local_form/get_company_items/bf31e6128301d31bb4014faf6b1e0f05f3ab8877
+/api/local_form/return_company_doc/75764f1ead79fecd
+الاستنتاج: الصور 10 و13 و14 و15 توثق لقطات متداخلة من نفس المعلومات، ولا تعني أربعة اكتشافات مستقلة أو أربعة طلبات جديدة.
+
+-----------------------------------------------------------
+الصورة 16 — IMG_6035_Original.jpeg (سابع صورة)
+-----------------------------------------------------------
+المشهد: طلب search_iraqi_company محدد، والتبويب الفرعي Payload مفتوح.
+القيم المقروءة حرفياً من Request Payload:
+{
+  "page": 1,
+  "per_page": 10,
+  "searchdata": [
+    {"company_hash_code": "75764f1ead79fecd"}
+  ],
+  "sort_by": "id",
+  "sort_dir": "desc"
+}
+الشرح:
+- page = 1: الصفحة الأولى من النتائج.
+- per_page = 10: حد أقصى/حجم صفحة مطلوب، وليس تأكيداً لوجود عشر شركات.
+- searchdata: قائمة شروط البحث. هنا شرط company_hash_code بقيمة نصية واحدة.
+- sort_by = id: الترتيب باستخدام حقل id.
+- sort_dir = desc: ترتيب تنازلي.
+المعلومة الأساسية: 75764f1ead79fecd مستعمل هنا كقيمة بحث وليس بالضرورة كلمة مرور أو إثبات هوية. طريقة HTTP وبيانات Authorization غير ظاهرة في Payload وحده.
+
+-----------------------------------------------------------
+الصورة 17 — IMG_6035_Original(1).jpeg (ثامن صورة)
+-----------------------------------------------------------
+المشهد: لقطة أوسع لنفس شاشة Payload للطلب search_iraqi_company.
+تظهر القيم نفسها في الصورة السابقة دون اختلاف موثق:
+page: 1
+per_page: 10
+searchdata[0].company_hash_code: "75764f1ead79fecd"
+sort_by: "id"
+sort_dir: "desc"
+أرقام Network في الأسفل تقريباً: 35 requests، 688 KB transferred، 3.4 MB resources.
+الاستنتاج: هذه صورة تأكيد بزاوية أخرى للحمولة ولا تقدم طلباً جديداً مختلفاً.
+
+-----------------------------------------------------------
+الصورة 18 — IMG_6036_Original.jpeg (تاسع صورة)
+-----------------------------------------------------------
+المشهد: الطلب search_iraqi_company محدد، والتبويب الفرعي Preview مفتوح. تُعرض استجابة خادم على شكل كائن data، وقد استُخرجت أسماء الحقول وقيم القراءة الواضحة.
+حقول الاستجابة الظاهرة:
+brand: وصف/سلسلة عربية طويلة تتضمن تسميات منتجات (غير مقروءة بالكامل).
+company_hash_code: "75764f1ead79fecd"
+company_name_project: اسم معمل لإنتاج المنظفات السائلة (النص الطويل غير واضح بما يكفي للنقل الحرفي).
+company_phone_number: 9647734554346
+company_type: "داخل الاقليم"
+governorate_name: "اربيل"
+granting_license_approval: يظهر وصف جهة ترخيص صناعي في إقليم كردستان (النص غير واضح بالكامل).
+hash_id: "bf31e6128301d31bb4014faf6b1e0f05f3ab8877"
+is_active: true
+is_delete: false
+license_approval_date: "Tue, 24 Jan 2023 00:00:00 GMT"
+license_approval_number: يظهر رقم ترخيص، غير مؤكد عند التكبير (يبدو قريباً من 30834؛ لا تعتمد هذا الرقم دون قراءة مباشرة من Response).
+license_text_specialization: "انتاج المنظفات السائلة" (قراءة مرجحة من الصورة).
+monthly_yearly: يظهر مقدار 4500 طن/سنة تقريباً؛ صياغته الدقيقة غير مؤكدة.
+owner_name: اسم شخص عربي ظاهر، لكن النص لا يسمح بنسخه حرفياً دون خطأ.
+production_capacity: "2674" (الرقم الظاهر مرجح، تحقق مباشرة في المتصفح).
+reliable: true
+type_industry_production: حقل يصف نوع الإنتاج، وتتضمن قيمته مواد كيمياوية/منظفات بحسب القراءة التقريبية.
+
+التحليل:
+1) يوجد ترابط صريح بين company_hash_code في Payload والرد Preview، لأن القيمة 75764f1ead79fecd تظهر في الاثنين.
+2) يوجد ترابط ظاهر بين hash_id في Preview ومسار get_company_items/{hash_id} الظاهر في صور Initiator.
+3) يوجد ترابط ظاهر بين company_hash_code ومسار return_company_doc/{company_hash_code}.
+4) الاستجابة تحمل بيانات شركة وترخيص وحالة سجل، لكن لا يوجد هنا ما يثبت أن مستخدماً غير مخوّل يستطيع الوصول إليها؛ يجب مراجعة آلية التفويض من جهة الخادم.
+5) الحقول is_active وreliable هي قيم يرسلها الخادم ضمن هذا الرد، وليست تأكيداً مستقلاً بصحة الرخصة أو الاعتماد الرسمي.
+
+===========================================================
+الخلاصة التقنية للمجموعة الثانية
+===========================================================
+مسار العمل الظاهر، بوصفه ترابطاً للطلبات وليس مخططاً معتمداً موثقاً للخادم:
+واجهة company-owner -> search_iraqi_company [طلب بحث يحمل company_hash_code] -> استجابة شركة بها company_hash_code وhash_id -> get_company_items/{hash_id} وreturn_company_doc/{company_hash_code} -> تحميل صور محلية وصورة QR من quickchart.io.
+
+تمييز المعرّفين:
+- company_hash_code = 75764f1ead79fecd، يظهر في Payload وPreview وفي مسار return_company_doc.
+- hash_id = bf31e6128301d31bb4014faf6b1e0f05f3ab8877، يظهر في Preview وفي مسار get_company_items.
+
+ملاحظات أمنية مهنية:
+- إرسال قيمة تتعلق بشركة في مسار URL أو في استعلام إلى خدمة QR قد يترك أثراً في السجلات ومزوّد الطرف الثالث. لا يمكن اعتبار السلسلة سرية أو عامة دون التحقق من استخدامها.
+- لا يُستنتج وجود تسريب بيانات أو اختراق صلاحيات من HTTP 200 أو القدرة على مشاهدة رد داخل جلسة مصرح بها.
+- مراجعة المصادقة والتفويض وحماية البيانات يجب أن تتم فقط من خلال فحص مخصص مأذون به.
+- تجنب مشاركة ملفات HAR غير المنقّحة: قد تحتوي Cookie، Authorization أو بيانات شخصية من الاستجابات.
+- لاستكمال الدراسة: افتح Headers وResponse للطلبات الثلاثة، ثم انسخ الحقول اللازمة بعد تنقيح الأسرار ومعرّفات الجلسات. لا تعتمد على صورة فوتوغرافية لقراءة قيم طويلة.
+
+ملاحظة بخصوص الورقة أمام الحاسوب: يظهر فيها جدول أصناف وكميات/أرقام إجمالية؛ لا دليل من الصور يربط هذا المستند الورقي ببيانات الشركة المُعادة في API، لذلك لم تُدمج أرقامه مع نتيجة البحث.
+
+نهاية تكملة الصور التسع.
+
+
+=================================================================
+المجموعة الجديدة: الصور 19–36
+=================================================================
+
+تقرير تحليلي نصي | مجموعة الصور الجديدة (19–36)
+بوابة أصحاب الشركات — customs-uboor.ur.gov.iq
+تاريخ تحرير التقرير: 09/11/2026
+تاريخ جلسة المتصفح الظاهر في الصور: 21/01/2026
+إعداد: تحليل ما يظهر في صور شاشة Microsoft Edge DevTools، وليس اختبارًا مباشرًا للخادم.
+
+مهم بخصوص الخصوصية:
+- يوجد في الصور رمز تفويض تحت ترويسة Authorization: Bearer، وقد حُجبت قيمته من هذا التقرير؛ لا تُنشر الصور الأصلية دون تنقيح الترويسة.
+- بعض الصور تعرض رقم هاتف شركة وبيانات جهات؛ اكتفيت بوصفها دون إعادة نسخ بيانات الاتصال الشخصية.
+- إذا كان رمز التفويض ما زال صالحًا، ينبغي إبطال الجلسة/تدوير الرمز من المسار الإداري الرسمي.
+- حالة 200 OK تعني نجاح الاستجابة عبر HTTP، ولا تثبت صحة الصلاحيات أو شرعية الوثيقة.
+
+====================
+ملخص جديد مؤكّد
+====================
+الواجهة: https://customs-uboor.ur.gov.iq/company-owner
+الطلب المركزي: https://customs-uboor.ur.gov.iq/api/local_form/search_iraqi_company
+HTTP Method: POST
+HTTP Status: 200 OK
+Remote Address (كما يظهر): 78.41.60.7:443
+Referrer Policy: strict-origin-when-cross-origin
+Request Content-Type: application/json
+Request Content-Length: 113
+Response Content-Type: application/json
+Response Content-Length: 3009
+Response Server: elb
+Response Date: Wed, 21 Jan 2026 13:20:54 GMT تقريبًا (قراءة الشاشة)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, OPTIONS
+Connection: keep-alive
+
+حمولة طلب البحث كما تظهر في تبويب Payload:
+{
+  "page": 1,
+  "per_page": 10,
+  "searchdata": [
+    {"company_hash_code": "75764f1ead79fecd"}
+  ],
+  "sort_by": "id",
+  "sort_dir": "desc"
+}
+
+مسارات API التي ظهرت في هذه اللقطات أو مجموعة الصور السابقة المتصلة بها:
+1) /api/local_form/search_iraqi_company
+2) /api/local_form/get_company_items/bf31e6128301d31bb4014faf6b1e0f05f3ab8877
+3) /api/local_form/return_company_doc/75764f1ead79fecd
+مهم: المساران 2 و3 ظهرا في Initiator كعناوين موارد مطلوبة، لكن محتوى استجاباتهما غير معروض في اللقطات. لا يصح استنتاج شروط التفويض أو بياناتهما الداخلية.
+
+====================
+الصور واحدة واحدة
+====================
+
+[الصورة 19] IMG_6032_Original.jpeg
+التبويب الظاهر: Network — قائمة All.
+المحتوى: عدة طلبات (ملفات JS وCSS وصور وطلبات XHR) مع أعمدة Name وStatus وType وInitiator.
+القراءة: عودة HTTP 200 للعديد من الموارد؛ تبدأ القائمة بملفات واجهة الشركات. هذه لقطة تمهيدية للمسار الذي تحلله الصور التالية.
+ملاحظة: الطلبات المتكررة/الملفات لا تعني تشغيل إجراءات خادم متعددة بالضرورة.
+
+[الصورة 20] IMG_6032_Original(1).jpeg
+التبويب الظاهر: Network — قائمة All من زاوية أوسع.
+المحتوى: أسماء ملفات الواجهة نفسها تقريبًا: CompanyOwnerView وForm وTreeselect وBaseModal وغيرها.
+القراءة: تؤكد تحميل موارد الواجهة، لكنها لا تكشف محتوى APIs.
+
+[الصورة 21] IMG_6033_Original.jpeg
+التبويب الظاهر: Initiator لأحد طلبات الصفحة.
+المحتوى: قائمة روابط الموارد التي بادر بها الموقع أو ظهرت في سلسلة التحميل.
+روابط واضحة جزئيًا أو كاملة:
+- https://customs-uboor.ur.gov.iq/assets/CompanyOwnerView-DWbcwxR4.js
+- https://customs-uboor.ur.gov.iq/api/local_form/search_iraqi_company
+- https://customs-uboor.ur.gov.iq/api/local_form/get_company_items/bf31e6128301d31bb4014faf6b1e0f05f3ab8877
+- https://customs-uboor.ur.gov.iq/api/local_form/return_company_doc/75764f1ead79fecd
+- https://quickchart.io/qr?text=... [طويل ومختصر؛ لا يمكن نسخه بدقة من الصورة]
+القراءة: يربط ذلك واجهة CompanyOwnerView بالبحث، وجلب أصناف الشركة، واسترجاع الوثيقة، وعرض QR. لا يثبت كل خطوة في الترتيب الزمني.
+
+[الصورة 22] IMG_6033_Original(1).jpeg
+التبويب الظاهر: Initiator — تقريب على الروابط.
+المحتوى: تتضح عناوين API والموارد التابعة لبوابة عبور وapi.iconify.design وquickchart.io.
+القراءة: بعض الأيقونات تُطلب من api.iconify.design، وصورة QR من quickchart.io. ينبغي تقييم الخصوصية عند تمرير بيانات الوثائق إلى خدمة طرف ثالث، لكن الصورة لا تكشف مضمون text كاملًا.
+
+[الصورة 23] IMG_6034_Original.jpeg
+التبويب الظاهر: Initiator مع تمرير للأسفل.
+المحتوى: تحميل /assets/index-RnlGKhol.css وخطّي Cairo Regular وCairo Bold، مع طلبات صور وشعارات.
+القراءة: تدعم أن الواجهة تستخدم موارد CSS وخطوط عربية. لا تكشف بيانات الجلسة.
+
+[الصورة 24] IMG_6034_Original(1).jpeg
+التبويب الظاهر: Initiator — زاوية مقربة.
+المحتوى: المزيد من الروابط ومن ضمنها /images/Customs.jpg و/images/iraqEagle.png، إضافة إلى quickchart.io/qr?text=....
+القراءة: صورة QR تُقدّم عبر خدمة خارجية وفق الرابط الظاهر؛ لا يوجد من هذه الصورة وحدها إثبات صلاحية QR لدى النظام الرسمي.
+
+[الصورة 25] IMG_6035_Original.jpeg
+التبويب الظاهر: Payload للطلب search_iraqi_company.
+النص المستخرج:
+page: 1
+per_page: 10
+searchdata: [{company_hash_code: "75764f1ead79fecd"}]
+sort_by: "id"
+sort_dir: "desc"
+القراءة: البحث مصفّح بعشرة سجلات في الصفحة، ومرتّب تنازليًا حسب id. اسم company_hash_code يدل على مفتاح بحث، لكنه لا يُثبت أنه سر أو رمز مصادقة.
+
+[الصورة 26] IMG_6035_Original(1).jpeg
+التبويب الظاهر: Payload — لقطة من زاوية أخرى.
+المحتوى: البنية نفسها للطلب بما فيها page وper_page وsearchdata وsort_by وsort_dir.
+القراءة: تؤكد شكل JSON الظاهر في الصورة 25 دون إضافة حقل مؤكد جديد.
+
+[الصورة 27] IMG_6036_Original.jpeg
+التبويب الظاهر: Preview للاستجابة الخاصة بالبحث.
+البنية المرئية: {data: { ... }} أو ما يقاربها، وفيها سجل شركة.
+حقول مقروءة:
+brands
+company_hash_code
+company_name_project
+company_phone_number
+company_type
+governorate_name
+granting_license_approval
+hash_id
+is_active
+is_delete
+license_approval_date
+license_approval_number
+license_text_specialization
+monthly_yearly
+owner_name
+production_capacity
+reliable
+type_industry_production
+قيم واضحة نسبيًا:
+company_hash_code: "75764f1ead79fecd"
+hash_id: "bf31e6128301d31bb4014faf6b1e0f05f3ab8877" [من الرابط السابق، ومتسق مع الحقل الظاهر]
+is_active: true
+is_delete: false
+reliable: true
+license_approval_date: "Tue, 24 Jan 2023 00:00:00 GMT" (قراءة الشاشة، يفضّل تأكيدها من نص الاستجابة)
+المحافظة تبدو: أربيل، ونوع الشركة يبدو: داخل الإقليم.
+ملاحظة: أسماء المؤسسات والقيم العربية الأخرى غير واضحة بما يكفي لنقلها حرفيًا، لذا لم أملأها بالتخمين.
+
+[الصورة 28] IMG_6036_Original(1).jpeg
+التبويب الظاهر: Preview — لقطة أبعد لنفس الاستجابة.
+المحتوى: يؤكد ظهور حقول السجل المعروضة في الصورة 27. لا يظهر كل JSON ولا قائمة جميع القيم.
+القراءة: المؤشرات is_active وis_delete وreliable تبدو قيمًا من قاعدة بيانات الموقع؛ لا تُعد شهادة مستقلة بصحة أو نفاذ مستند حكومي.
+
+[الصورة 29] IMG_6037_Original.jpeg
+التبويب الظاهر: Headers > General للطلب search_iraqi_company.
+حقول النص الظاهرة:
+Request URL: https://customs-uboor.ur.gov.iq/api/local_form/search_iraqi_company
+Request Method: POST
+Status Code: 200 OK
+Remote Address: 78.41.60.7:443
+Referrer Policy: strict-origin-when-cross-origin
+القراءة: هذه الأدلة المباشرة التي تثبت عنوان البحث وطريقة POST والاستجابة الناجحة عبر HTTP.
+
+[الصورة 30] IMG_6037_Original(1).jpeg
+التبويب الظاهر: Headers > General + Response Headers بتقريب أكبر.
+حقول استجابة مرئية:
+Access-Control-Allow-Headers: DNT, User-Agent, X-Requested-With, If-Modified-Since, Cache-Control, Content-Type, Range
+Access-Control-Allow-Methods: GET, POST, OPTIONS
+Access-Control-Allow-Origin: *
+Connection: keep-alive
+Content-Length: 3009
+Content-Type: application/json
+Date: Wed, 21 Jan 2026 13:20:54 GMT (تقريبي)
+Server: elb
+القراءة: إرجاع JSON والسماح بأصل عام ضمن سياسة CORS كما يظهر، مع أن صلاحيات الخادم والاعتماد على التوكن غير معروفة. علامة * وحدها لا تبرهن على تجاوز المصادقة.
+
+[الصورة 31] IMG_6038_Original.jpeg
+التبويب الظاهر: Headers > Response Headers.
+المحتوى: Access-Control-Allow-Origin وAccess-Control-Allow-Methods وContent-Type وContent-Length وتاريخ الاستجابة.
+القراءة: نفس ترويسات الصورة السابقة دون أدلة مستقلة على خطأ أمني.
+
+[الصورة 32] IMG_6038_Original(1).jpeg
+التبويب الظاهر: Headers — تفاصيل Response Headers، يليها بداية Request Headers.
+المحتوى: يوضح أن الاستجابة JSON ويبدأ عرض Accept وAccept-Encoding.
+القراءة: يجب تقييم الترويسات مع كون الطلب من نفس الأصل (Origin) ووصوله مع رمز Bearer؛ لا يكفي هذا لإثبات سوء إعداد CORS.
+
+[الصورة 33] IMG_6039_Original.jpeg
+التبويب الظاهر: Headers > Request Headers.
+الحقول المقروءة:
+Accept: application/json, text/plain, */*
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US, en;q=0.9, en-GB;q=0.8 (قيمة تقريبية)
+Authorization: Bearer [REDACTED]
+Connection: keep-alive
+Content-Length: 113
+Content-Type: application/json
+Cookie: [REDACTED — Analytics cookies visible]
+Host: customs-uboor.ur.gov.iq
+Origin: https://customs-uboor.ur.gov.iq
+Referer: https://customs-uboor.ur.gov.iq/company-owner?phone=9647734554346
+Sec-CH-UA: Microsoft Edge / Chromium (تفاصيل الإصدار غير ضرورية للتحليل)
+القراءة: وجود Authorization: Bearer يعني أن المتصفح أرسل توكن مصادقة في الطلب. لا يدل وحده على صلاحيته الحالية أو أن الخادم يتحقق من ملكية الشركة موضوع البحث.
+
+[الصورة 34] IMG_6039_Original(1).jpeg
+التبويب الظاهر: Request Headers — زاوية أبعد.
+المحتوى: نفس حقول Accept وAuthorization وCookie وOrigin وReferer.
+القراءة: تُظهر أن Origin يعود إلى الدومين نفسه، لذلك ليس لدينا هنا تجربة مباشرة لطلب عابر للأصول (cross-origin) تختبر CORS.
+
+[الصورة 35] IMG_6040_Original.jpeg
+التبويب الظاهر: Headers > Request Headers مع وضوح نسبي.
+المحتوى: تأكيد أن Authorization يحمل Bearer token طويل، وأن Content-Type للطلب هو application/json، مع وجود Cookie وHost وOrigin وReferer.
+القراءة: لا نُعيد نسخ الـ Bearer لأن نشره قد يسمح بإعادة استخدام صلاحياته إن كان صالحًا. في بيئة مخوّلة، افحص عمر الصلاحية والتجديد والربط بنطاق الشركة دون مشاركة الرمز.
+
+[الصورة 36] IMG_6040_Original(1).jpeg
+التبويب الظاهر: Headers > Request Headers — نفس الطلب وبياناته من لقطة أخرى.
+المحتوى: يظهر رقم الهاتف ضمن Referer، والذي نُسخ في هذه النسخة بوضوح، وAuthorization وCookie ضمن بيانات الطلب.
+القراءة: رابط الشركة في Referer يثير ملاحظة خصوصية محتملة (وجود رقم في URL)، لا إثبات تسريب مباشر لطرف خارجي لأن Referrer Policy الظاهرة strict-origin-when-cross-origin تُقيد ما يرسل إلى الأصول الأخرى عادةً.
+
+====================
+الترابط التقني المدعوم بالصور
+====================
+1. صفحة company-owner تحمل مكونات Vue والأنماط والموارد.
+2. واجهة أصحاب الشركات تتيح بحثًا يطلق طلب POST إلى search_iraqi_company.
+3. JSON المرسل يحتوي company_hash_code مع ترقيم صفحات وترتيب تنازلي.
+4. تستجيب الخدمة بحالة 200 وتُظهر Preview بيانات شركة وحالات is_active وis_delete وreliable.
+5. قائمة Initiator تعرض أيضًا روابط get_company_items وreturn_company_doc، لكن استجاباتهما التفصيلية غير معروضة.
+6. توجد صور وشعارات وطلب QR يُجلب من quickchart.io وفق رابط يحتوي text.
+7. يوجد Bearer token في ترويسات طلب البحث، مع بعض ملفات تعريف ارتباط للتحليل وإحصاء الاستخدام.
+
+====================
+القراءة الأمنية — من دون ادعاء وجود ثغرة
+====================
+[1] المصادقة والتفويض:
+وجود Authorization: Bearer يثبت استخدام رمز في الطلب المصوّر. يلزم فحص تحقق الخادم من حقوق المستخدم على السجل المطلوب؛ لا تظهر الصور اختبارًا لهذه الخاصية.
+
+[2] الاستعلام بالمُعرّف:
+company_hash_code هو مفتاح بحث في JSON؛ لا يعني اسمه أنه رمز وصول أو أن تغيير قيمته يتيح الاطلاع على سجلات أخرى. يتطلب ذلك اختبار تفويض مصرحًا به على بيئة مخصصة للاختبار.
+
+[3] CORS:
+تظهر Access-Control-Allow-Origin: * مع GET,POST,OPTIONS. هذه ملاحظة مراجعة؛ لا تعني تلقائيًا تجاوز التحكم بالوصول، ولا توجد بالصور تجربة من أصل مختلف.
+
+[4] الرموز والخصوصية:
+رمز Bearer ظهر كاملًا في لقطات أصلية؛ ينبغي عدم مشاركة نسخه خارج نطاق العمل المخوّل. وجود رقم هاتف في رابط الصفحة قد يستدعي مراجعة سياسة تخزين عناوين URL والسجلات.
+
+[5] خدمة QR الخارجية:
+ظهور quickchart.io/qr?text=... يعني أن قيمة نصية من التطبيق قد تمر عبر خدمة خارجية لإنشاء صورة QR. يجب التأكد من عدم نقل أسرار أو معرّفات حساسة إليها، لكن المحتوى الكامل غير مقروء في الصور.
+
+[6] إثبات صحة الوثائق:
+لا توجد صور كافية تثبت قبول QR رسميًا أو إثبات صحة وثيقة أو اكتمال عملية طباعة أو اعتماد حكومي، بغض النظر عن HTTP 200.
+
+[7] حدود الصورة:
+لقطات متعددة لنفس الطلب، وليست بالضرورة طلبات مستقلة. بعض القيم العربية وطوابع الوقت غير واضحة؛ لا تُحوّل هذه القيم إلى بيانات نهائية دون Response نصي منقول من مصدر مأذون.
+
+====================
+خطوات توثيق إضافية آمنة
+====================
+- في جلسة تملك صلاحية استخدامها، انتقل إلى Network > Fetch/XHR > search_iraqi_company.
+- احفظ أسماء الحقول، طريقة HTTP، ورمز الحالة، مع حجب Authorization وCookie والمعرّفات الشخصية قبل مشاركة أي مواد.
+- تحقق من شكل Response المنقح (بعد إزالة الاسم ورقم الهاتف وأرقام الرخص إن لم تكن ضرورية).
+- افصل بين بيانات الشركة الناتجة عن البحث، وقائمة أصنافها، وطلب وثيقتها؛ هذه خدمات متمايزة.
+- لا تستخدم أي توكن مسرب من صورة لإعادة إجراء طلبات أو نسخ جلسة شخص آخر.
+
+نهاية التقرير.
+
+
+================================================================
+إضافة جديدة — الصور 37–45 (Iconify وRequest Headers للبحث)
+================================================================
+
+تقرير تحليل 9 صور جديدة — DevTools Network / Iconify Loader Circle
+بوابة عبور | ملف نصي UTF-8 | 09-11-2026
+============================================================
+
+نطاق التقرير
+------------
+تحليل الصور التسع المرفوعة في الدفعة الحالية حسب ترتيب الإرسال، استنادًا إلى ما يظهر على الشاشة فقط. لا يتضمن التقرير إجراء اتصالات بالموقع أو إعادة استخدام رموز الوصول أو اختبارًا حيًا للخادم. الصور من جلسة Windows/Edge سابقة يظهر في شريط المهام أن وقتها 21-01-2026 حوالى 16:25؛ وهذا تاريخ الشاشة المصورة، وليس وقت التحليل.
+
+الخلاصة التقنية الدقيقة
+----------------------
+- معظم اللقطات تعرض المورد المختار lucide.json?icons=loader-circle؛ لكن الصورة 3 تُظهر Request Headers لطلب search_iraqi_company مختلف. لا يجوز دمج الترويسات بينهما.
+- الطلب الحقيقي الظاهر: https://api.iconify.design/lucide.json?icons=loader-circle
+- الطريقة: GET.
+- النتيجة: 200 OK (from disk cache)؛ أي إن المتصفح استخدم نسخة مخزنة محليًا من المورد بدل تنزيل نسخة جديدة كاملة لهذه اللقطة.
+- المورد هو بيانات أيقونة Lucide (الاسم loader-circle)، وليس API للبحث عن شركة أو توليد وثيقة.
+- الخادم الظاهر في الاستجابة: cloudflare؛ والعنوان البعيد المبيّن للموارد: 172.67.71.159:443.
+- ترويسة السماح بالمصدر: Access-Control-Allow-Origin: * تخص مورد الأيقونة العامة في هذه اللقطة، ولا تثبت ثغرة في API بوابة عبور.
+- Preview يعرض كائن JSON: prefix="lucide"، icons.loader-circle، width=24، height=24، aliases={}، lastModified=1768633885.
+- القائمة الجانبية تعرض 35 طلبًا، 688 KB منقولة، 3.4 MB موارد (وفق اللقطات الحالية)، لكنها تشمل ملفات الموقع والمحتوى الآخر، وليس مورد Iconify وحده.
+
+============================================================
+الصورة 1 — IMG_6041_Original(20261109-043331).jpeg
+============================================================
+المشهد: لقطة مقرّبة لتبويب Headers > General، والعنصر المحدد هو lucide.json?icons=loader-circle.
+القيم المقروءة:
+Request URL: https://api.iconify.design/lucide.json?icons=loader-circle
+Request Method: GET
+Status Code: 200 OK (from disk cache)
+Remote Address: 172.67.71.159:443
+Referrer Policy: strict-origin-when-cross-origin
+Response Headers (ظاهرة في الجزء الأول):
+Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Accept-Encoding
+Access-Control-Allow-Methods: GET, OPTIONS
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 86400
+Age: نحو 16360 (الرقم غير حاسم بسبب زاوية الصورة)
+Cache-Control: public, max-age=604800, min-refresh=604800, immutable
+CF-Cache-Status: HIT
+تفسير: هذه ترويسات ملف أيقونة عام. حالة HIT وتخزين القرص تدلان على الاستفادة من التخزين المؤقت. لا توجد في هذه الصورة بيانات Request Payload تخص الشركة.
+
+============================================================
+الصورة 2 — IMG_6041_Original(2).jpeg
+============================================================
+المشهد: لقطة أبعد تتضمن الشاشة والورقة المطبوعة، والاختيار لا يزال على ملف Iconify نفسه.
+المعلومات المؤكدة: General وResponse Headers والحالة 200 من disk cache، مع استمرار ظهور قائمة search_iraqi_company وطلبات المعرفات على يسار الشاشة.
+الورقة في أسفل الصورة تحتوي جدول عناصر وكميات وخانات اسم الموطن/التوقيع، لكن وجودها بجانب الحاسوب لا يعني أن المورد المختار في Network منشئ تلك الوثيقة.
+تفسير: لقطة توثيق لسياق العمل، وليس طلبًا جديدًا مختلفًا.
+
+============================================================
+الصورة 3 — IMG_6040_Original(3).jpeg
+============================================================
+المشهد: Headers > Request Headers لطلب search_iraqi_company، وليس مورد Iconify؛ يُستدل على ذلك من تحديد السطر search_iraqi_company في القائمة اليسرى والترويسات التي تتضمن Host لنطاق عبور.
+القيم الظاهرة:
+Accept: application/json, text/plain, */*
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,en-GB;q=0.8
+Authorization: Bearer [رمز مصادقة محجوب عمدًا]
+Connection: keep-alive
+Content-Length: 113
+Content-Type: application/json
+Cookie: [قيم محجوبة عمدًا]
+Host: customs-uboor.ur.gov.iq
+Origin: https://customs-uboor.ur.gov.iq
+Referer: https://customs-uboor.ur.gov.iq/company-owner?phone=9647734554346
+Sec-CH-UA: Microsoft Edge وChromium (v129 وفق اللقطة)
+Sec-CH-UA-Mobile: ?0
+تفسير: الطلب موجه إلى API بوابة عبور ومصحوب برمز Bearer ورأس Content-Type: application/json، وهو مغاير تمامًا لطلب GET الخاص بأيقونة loader-circle. لا يمكن من هذه الصورة وحدها تقرير صحة التفويض أو مدى صلاحياته. لا تُشارك الرمز الظاهر في أصل الصورة؛ قد يكون حساسًا إن بقي صالحًا.
+
+============================================================
+الصورة 4 — IMG_6043_Original(2).jpeg
+============================================================
+المشهد: Headers > Response Headers بالتمرير إلى أسفل.
+القيم المقروءة:
+CF-Ray: قيمة تعريف تمرير عبر Cloudflare تنتهي تقريبًا بـ EBL، لكن كامل القيمة غير مؤكد.
+Content-Encoding: br
+Content-Type: application/json; charset=utf-8
+Cross-Origin-Resource-Policy: cross-origin
+Date: Sat, 17 Jan 2026 11:58:23 GMT (قراءة مرجحة)
+Last-Modified: Sat, 17 Jan 2026 07:25:43 GMT (قراءة مرجحة)
+NEL: إعداد إرسال تقارير أعطال/شبكة إلى خدمة المراقبة
+Report-To: وجهة الإبلاغ المرتبطة بإعداد NEL
+Server: cloudflare
+Vary: accept-encoding
+رسالة DevTools: Provisional headers are shown. Disable cache to see full headers.
+تفسير: هذه ترويسات CDN لمورد الأيقونات، وليست سياسة الأمان لخادم customs-uboor. لا يظهر تسرب أو اختراق من هذه البيانات.
+
+============================================================
+الصورة 5 — IMG_6042_Original(2).jpeg
+============================================================
+المشهد: لقطة أوسع من General + Response Headers للطلب نفسه.
+Request URL: https://api.iconify.design/lucide.json?icons=loader-circle
+Request Method: GET
+Status: 200 OK (from disk cache)
+Remote Address: 172.67.71.159:443
+Referrer Policy: strict-origin-when-cross-origin
+Access-Control-Allow-Methods: GET, OPTIONS
+Access-Control-Allow-Origin: *
+Cache-Control: public, max-age=604800, min-refresh=604800, immutable
+CF-Cache-Status: HIT
+تفسير: الصورة تدعم أن الأيقونة مُخزنة ويمكن إعادة استخدامها بكفاءة. لا تدعم افتراض أن بوابة عبور تسمح CORS للجميع، لأن الخادم المختار هنا api.iconify.design.
+
+============================================================
+الصورة 6 — IMG_6042_Original(20261109-043330).jpeg
+============================================================
+المشهد: لقطة أقرب لتبويب Headers > General.
+القيم المتكررة: URL الأيقونة، GET، 200 (from disk cache)، عنوان Cloudflare البعيد، strict-origin-when-cross-origin، ترويسات CORS وCache-Control.
+تفسير: ليست حالة API جديدة؛ تكرار للطلب المختار مع تحسين زاوية القراءة. محمّل الأيقونات قد يستخدم أثناء البحث أو الانتظار في واجهة المستخدم، لكن توقيت ظهوره وحده لا يثبت نجاح أو فشل البحث.
+
+============================================================
+الصورة 7 — IMG_6044_Original(3).jpeg
+============================================================
+المشهد: تبويب Preview — وليس Headers — لمورد lucide.json?icons=loader-circle، والصورة تعرض الشاشة كاملة مع المستند الموضوع أسفلها.
+القيم المرئية في معاينة JSON:
+prefix: "lucide"
+icons: { "loader-circle": { ... } }
+lastModified: 1768633885
+aliases: {}
+width: 24
+height: 24
+تفسير: معاينة تعريف أيقونة رسوم متجهة تستخدمها الواجهة. ليست استجابة API خاصة بالشركات ولا تحتوي بيانات وثيقة أو كود QR. وجود طلبات search_iraqi_company وget_company_items وreturn_company_doc في عمود Name لا يجعل اللوحة المعروضة تفاصيل لهذه الطلبات.
+
+============================================================
+الصورة 8 — IMG_6044_Original(2).jpeg
+============================================================
+المشهد: تبويب Preview للعنصر المحدد lucide.json?icons=loader-circle.
+قالب JSON المستخرج من القيم المرئية (تمثيل تقريبي للتسلسل؛ تفاصيل جسم SVG المطوي لم تُعرض):
+{
+  "prefix": "lucide",
+  "lastModified": 1768633885,
+  "aliases": {},
+  "icons": {
+    "loader-circle": { "...": "تعريف أيقونة مطوي في DevTools" }
+  },
+  "width": 24,
+  "height": 24
+}
+تفسير: 24×24 هي الأبعاد الافتراضية للأيقونة، وليست دقة QR ولا قياس الوثيقة. لا توجد بيانات شركة ولا رقم موافقة ولا رمز PDF في Preview المعروض.
+
+============================================================
+الصورة 9 — IMG_6043_Original(3).jpeg
+============================================================
+المشهد: مقربة من أسفل Response Headers.
+الحقول الظاهرة:
+CF-Ray: [قيمة Cloudflare غير منسوخة لعدم اكتمال القراءة]
+Content-Encoding: br
+Content-Type: application/json; charset=utf-8
+Cross-Origin-Resource-Policy: cross-origin
+Date: Sat, 17 Jan 2026 11:58:23 GMT (مرجح)
+Last-Modified: Sat, 17 Jan 2026 07:25:43 GMT (مرجح)
+NEL: إعداد تقارير شبكة
+Report-To: إعداد تقارير الشبكة المرتبط بـ NEL
+Server: cloudflare
+Vary: accept-encoding
+تحذير DevTools: Provisional headers are shown. Disable cache to see full headers.
+تفسير: لا يعني التحذير وجود مشكلة أمنية؛ هو توضيح أن المعاينة قد لا تعرض كل ترويسات الطلب بسبب استخدام الذاكرة المؤقتة.
+
+============================================================
+ربط مع المجموعات السابقة
+============================================================
+1) سبق توثيق طلب POST إلى https://customs-uboor.ur.gov.iq/api/local_form/search_iraqi_company.
+2) بيانات POST السابقة تضمنت page=1 وper_page=10 وsearchdata[0].company_hash_code وsort_by=id وsort_dir=desc.
+3) الطلب المختار في الصور التسع الحالية مختلف تمامًا: GET إلى api.iconify.design لتحميل بيانات SVG لأيقونة loader-circle.
+4) ظهور طلب Iconify أثناء نشاط الواجهة لا يثبت وجود خطأ في البحث، ولا نجاح تجهيز مستند، ولا تنفيذ إجراء على الخادم. الصورة 3 تعود لطلب البحث وتُظهر توثيق Bearer، لا لمورد الأيقونة.
+5) لا تستخدم ترويسات Cloudflare الخاصة بـ Iconify للاستنتاج المباشر عن إعدادات CORS أو Cache الخاصة بخادم عبور.
+6) أيقونة التحميل (loader-circle) عنصر واجهة؛ وQR والوثيقة يعودان إلى طلبات أخرى ظهرت في الصور السابقة، لا إلى GET الخاص بـ Iconify.
+
+ملاحظات السلامة والخصوصية
+------------------------
+- الصورة 3 تتضمن Authorization: Bearer وCookie لطلب search_iraqi_company، وقد حُجبت قيمهما من النص. يجب اعتبار الرمز المرئي حساسًا وعدم مشاركته أو إعادة استخدامه، مع إبطال الجلسة إن كانت لا تزال صالحة وقد انتشرت اللقطة.
+- إن أردت مراجعة استجابة البحث، اختر search_iraqi_company نفسه لا lucide.json، وافتح Headers/Payload/Response بعد إخفاء الرموز السرية والبيانات الشخصية.
+- لا يوجد في هذه الصور إثبات لنقطة ضعف في التفويض أو تسريب بيانات أو خلل في حماية CORS.
+
+نهاية تحليل الصور التسع.
+
+===============================================================================
+الملحق الجديد: الصور 46–54
+===============================================================================
+
+UBOOR | تحليل مجموعة الصور 46–54 من DevTools Network
+تاريخ التحرير: 09 نوفمبر 2026
+المصدر: تسع لقطات شاشة أرسلها المستخدم؛ لم تُجرَ استعلامات حية للموقع الحكومي.
+النطاق: DevTools → Network → Response / Headers / Preview لصفحة company-owner.
+مهم: هذه اللقطات مؤرخة في واجهة Windows بتاريخ 21-01-2026، ولا تصف بالضرورة الحالة الحالية للموقع.
+حُجبت أي رموز سرية أو معلومات شخصية. هويات السجلات الظاهرة لأغراض التحليل فقط.
+
+===============================================================================
+المُلخّص المؤكد
+===============================================================================
+أ) ثلاثة من الصور تعرض استجابة api.iconify.design/lucide.json?icons=loader-circle؛ هي بيانات أيقونة SVG ولا تتعلق بالسجلات الكمركية.
+ب) ثلاث صور تعرض استجابة JSON لطلب get_company_items، وأخرى تعرض ترويساته، وصورتان تعرضان معاينته.
+ج) استجابة الأصناف تحتوي items بطول واحد، و total_items: 1، وتفاصيل: منظفات سائلة، قدرة 1837، دورية سنوية، وحدة طن، السجل نشط وغير محذوف، وتوقيت 2026-01-05 10:09:36.
+د) الاستجابة تظهر parent_hash_id مطابقاً للمعرّف المستخدم في مسار GET؛ لا يدل ذلك على صلاحية الوصول إلى سجلات أخرى.
+
+===============================================================================
+الملفات بالترتيب — صورةً صورة
+===============================================================================
+
+الصورة 46 | IMG_6046_Original.jpeg
+----------------------------------
+الواجهة: Network، محدد lucide.json?icons=loader-circle، التبويب Response.
+النص الظاهر:
+  "prefix": "lucide"
+  "lastModified": 1768633885
+  "aliases": {}
+  "width": 24
+  "height": 24
+  "icons": {"loader-circle": {"body": "<path ...>"}}
+تفاصيل SVG غير كاملة في عرض الصورة؛ تظهر خصائص fill="none" وstroke="currentColor" وstroke-linecap="round" وstroke-linejoin="round" وstroke-width="2".
+النتيجة: استجابة تعريف أيقونة الانتظار. لا توجد هنا بيانات شركة ولا وثيقة كمركية ولا باركود PDF.
+
+الصورة 47 | IMG_6045_Original.jpeg
+----------------------------------
+الواجهة: Response للطلب نفسه إلى مكتبة Lucide/Iconify.
+القيم المؤكدة: prefix=lucide، width=24، height=24، lastModified=1768633885، icons.loader-circle.body.
+اللوحة اليسرى تعرض في قائمة الطلبات أيضاً search_iraqi_company وطلب معرف شركة وCustoms.jpg وiraqEagle.png وqr?text=...؛ لكن لوحة Response المفتوحة ليست لأي منها.
+النتيجة: لقطة ثانية تؤكد تماثل محتوى Response الخاص بالأيقونة، وليست عملية بحث جديدة.
+
+الصورة 48 | IMG_6045_Original(1).jpeg
+-------------------------------------
+الواجهة: تكبير شاشة Response الخاصة بـ lucide.json?icons=loader-circle.
+بنية JSON الظاهرة:
+  prefix (سلسلة نصية): "lucide"
+  lastModified (عدد): 1768633885
+  aliases (كائن): {}
+  width (عدد): 24
+  height (عدد): 24
+  icons (كائن) → loader-circle → body (مقطع SVG)
+النتيجة: بيانات عرض رسومية 24×24 وليست دقة مستند PDF ولا قيمة QR. لم يظهر محتوى SVG كاملاً بسبب العرض الأفقي المحدود.
+
+الصورة 49 | IMG_6047_Original.jpeg
+----------------------------------
+الواجهة: Network → Response لطلب القائمة ذي الاسم المختصر bf31e6128301d31bb4014faf... .
+المحتوى الظاهر: JSON يحوي مصفوفة items ومفتاح parent_hash_id ومفتاح total_items.
+داخل العنصر:
+  hash_id: معرف سداسي عشري طويل
+  is_active: true
+  is_delete: false
+  item_name: سلسلة Unicode عربية مكتوبة بصيغة escapes
+  monthly_yearly: سلسلة Unicode عربية مكتوبة بصيغة escapes
+  production_capacity: "1837"
+  time_stamp: "2026-01-05 10:09:36"
+  unit: Unicode عربي
+خارج المصفوفة:
+  parent_hash_id: bf31e6128301d31bb4014faf6b1e0f05f3ab8877
+  total_items: 1
+النتيجة: توجد نتيجة صنف واحدة في هذه الاستجابة. حالة true/false تعكس حقول قاعدة البيانات المرسلة ولا تثبت اعتماد الترخيص أو صحة جميع البيانات.
+
+الصورة 50 | IMG_6047_Original(1).jpeg
+-------------------------------------
+الواجهة: تكبير Response نفسه؛ النص الأوضح للمجموعة.
+سلاسل Unicode المقروءة من الشاشة بعد فك الترميز:
+  item_name = "منظفات سائلة"
+  monthly_yearly = "سنوية"
+  unit = "طن"
+  production_capacity = "1837" (مخزن في الاستجابة كسلسلة وليس كرقم JSON)
+  time_stamp = "2026-01-05 10:09:36"
+  is_active = true
+  is_delete = false
+  total_items = 1
+  parent_hash_id = bf31e6128301d31bb4014faf6b1e0f05f3ab8877
+  hash_id = dcaadad1cfce437735b81ab025f776e5857e4855 [أفضل تفريغ بصري للحروف؛ ينبغي تأكيده بالنسخ من DevTools إن لزم تطابق حرفي]
+التحليل: القدرة الإنتاجية المسجلة 1837 طن سنوياً لصنف منظفات سائلة، ولا يمكن استنتاج الإنتاج الفعلي أو حجم الشحنات.
+
+الصورة 51 | IMG_6046_Original(1).jpeg
+-------------------------------------
+الواجهة: عودة إلى Response الخاص بـ lucide.json?icons=loader-circle في لقطة أفقية.
+الحقول المكررة: prefix=lucide، aliases={}، width=24، height=24، icons.loader-circle.body.
+النتيجة: دليل على تحميل تعريف رسومي للواجهة وليس على جلب بيانات الأصناف. لا ينبغي خلط Response الأيقونة مع Response الشركة.
+
+الصورة 52 | IMG_6049_Original.jpeg
+----------------------------------
+الواجهة: Network → Headers للطلب get_company_items.
+General:
+  Request URL: https://customs-uboor.ur.gov.iq/api/local_form/get_company_items/bf31e6128301d31bb4014faf6b1e0f05f3ab8877
+  Request Method: GET
+  Status Code: 200 OK
+  Remote Address: 78.41.60.7:443
+  Referrer Policy: strict-origin-when-cross-origin
+Response Headers الظاهرة:
+  Access-Control-Allow-Credentials: true
+  Access-Control-Allow-Headers: DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range
+  Access-Control-Allow-Methods: GET, POST, OPTIONS
+  Access-Control-Allow-Origin: http://localhost:5173
+  Access-Control-Allow-Origin: *     [ظهر سطر آخر من الاسم نفسه في واجهة DevTools؛ التحقق النصي مطلوب]
+  Connection: keep-alive
+  Content-Length: 467 [قراءة مرئية محتملة؛ تحقق من النسخة النصية]
+  Content-Type: application/json
+المعنى:
+  - GET نجح وأعاد جسم JSON لمعرّف المسار المبين.
+  - سطرا Access-Control-Allow-Origin الظاهران مع Credentials=true قد يشيران إلى إعداد CORS يحتاج فحصاً على بيئة مخولة؛ لا يكفي التصوير لإثبات قابلية استغلال أو حتى أن المتصفح قبل استجابة عبر أصل مختلف.
+  - Request Headers بما فيها Authorization لم تُعرض هنا؛ لا يوجد دليل في هذه الصورة على أن الطلب غير موثق.
+
+الصورة 53 | IMG_6048_Original.jpeg
+----------------------------------
+الواجهة: Network → Preview لطلب get_company_items.
+الحقول الظاهرة في البنية الموسّعة:
+  items: Array(1)
+    0: { hash_id: "dcaadad1cfce...e4855", is_active: true, is_delete: false, ... }
+  parent_hash_id: "bf31e6128301d31bb4014faf6b1e0f05f3ab8877"
+  total_items: 1
+هذا العرض أكثر اختصاراً من Response؛ تفاصيل العنصر مطوية تحت 0.
+النتيجة: تأكيد بنيوي مستقل داخل نفس جلسة المتصفح بأن الاستجابة تحوي عنصراً واحداً.
+
+الصورة 54 | IMG_6048_Original(1).jpeg
+-------------------------------------
+الواجهة: صورة عمودية لواجهة Preview نفسها للطلب get_company_items.
+المثبت بصرياً:
+  مفتاح items يحتوي عنصراً واحداً؛ داخل العنصر is_active=true و is_delete=false؛ مفتاح parent_hash_id ومفتاح total_items=1 ظاهران.
+اللوحة اليسرى تتضمن طلب search_iraqi_company و lucide.json و bf31e612... و 75764f1e...، لكن Preview المفتوح يخص طلب أصناف الشركة المحدد.
+النتيجة: هذه لقطة أخرى للاستجابة نفسها، لا دليل على وجود صنف ثانٍ أو طلب جديد مستقل.
+
+===============================================================================
+القيمة العملية للتحليل وروابط التسلسل
+===============================================================================
+استناداً إلى الصور السابقة والجديدة، التسلسل المرئي المرجح هو:
+1) POST /api/local_form/search_iraqi_company مع استعلام على company_hash_code؛ سبق ظهور Payload لهذا الطلب.
+2) GET /api/local_form/get_company_items/{parent_hash_id} وقد أرجع عنصراً واحداً في هذه الصور.
+3) يظهر أيضاً مسار /api/local_form/return_company_doc/{company_hash_code} في اللقطات الأقدم، لكن هذه المجموعة لا تعرض محتوى استجابته.
+4) خدمة quickchart.io/qr?text=... ظهرت في لقطات أقدم لتوفير صورة QR؛ لا يوجد هنا إثبات لتوقيع رسمي للرمز أو موافقة الوثيقة.
+
+تمثيل توضيحي *مُعاد بناؤه* من صور Response (ليس نسخاً رقمياً حرفياً من الخادم):
+{
+  "items": [
+    {
+      "hash_id": "dcaadad1cfce437735b81ab025f776e5857e4855",
+      "is_active": true,
+      "is_delete": false,
+      "item_name": "منظفات سائلة",
+      "monthly_yearly": "سنوية",
+      "production_capacity": "1837",
+      "time_stamp": "2026-01-05 10:09:36",
+      "unit": "طن"
+    }
+  ],
+  "parent_hash_id": "bf31e6128301d31bb4014faf6b1e0f05f3ab8877",
+  "total_items": 1
+}
+يجب عدم اعتبار التمثيل التوضيحي ملف API أصلياً. للتحقق الحرفي من hash_id وبقية الرموز، استخدم Copy Response داخل DevTools من جلسة مخولة مع حجب الترويسات السرية.
+
+===============================================================================
+ملاحظات أمنية وحدود الأدلة
+===============================================================================
+1) GET 200 لا يثبت وجود ثغرة IDOR أو انعدام التوثيق؛ الطلب الأصلي نفذ في سياق جلسة مستخدم ولم تعرض صورة Headers الخاصة به حقل Authorization.
+2) تأمين الوصول يراجع بتفويض صريح على مستوى الخادم لكل معرّف، وليس بالتخمين من شكل hash_id.
+3) ظهور Access-Control-Allow-Credentials:true وOrigin خاص بـ localhost وOrigin:* في الصورة يستحق تدقيقاً إدارياً لتناسق CORS؛ لا تجزم بوجود ثغرة من الصور فقط. وطلبات نفس الأصل لا تقاس بالضرورة بقيود CORS العابرة للأصول.
+4) أيقونة loader-circle من Iconify تستخدم موارد عامة، وأبعادها 24×24 وليست متعلقة بدقة الوثيقة أو الرمز الشريطي.
+5) الملف يحجب أسرار المصادقة ورقم الهاتف. لا تُشارك ملف HAR الخام إذا احتوى Bearer أو Cookie أو بيانات شركات خاصة دون تنقيح.
+6) الصور تُظهر القيم كما رجعت من الخادم في لقطة قديمة، دون إثبات صحتها الواقعية أو استمرار صلاحيتها في نوفمبر 2026.
+
+انتهى تحليل الصور 46–54.
+
+
+==========================================================================
+القسم الرابع — فهرس الملفات النصية المرجعية التي جُمعت هنا
+==========================================================================
+مصدر الأقسام التفصيلية الرئيسي: UBOOR_Network_54_Images_Consolidated_2026.txt
+تقارير مصدرية في /mnt/data دعمت البناء السابق (لا تُطلب كملفات منفصلة لأن هذا النص موحّد):
+- تحليل_الصور_التسع_Network_بوابة_عبور.txt
+- UBOOR_Network_18_Photos_Analysis_2026.txt
+- UBOOR_New_9_Network_Photos_2026.txt
+- UBOOR_Network_New_18_Headers_Payload_Preview_2026.txt
+- UBOOR_Network_36_Images_Consolidated_2026.txt
+- UBOOR_Network_New_9_Iconify_Analysis_2026.txt
+- UBOOR_Network_45_Images_Consolidated_2026.txt
+- UBOOR_Network_New_9_Company_Items_Analysis_2026.txt
+
+حدود أساسية:
+- TXT لا يحمل الصورة الأصلية نفسها؛ يحتوي التفريغ النصي والوصف لكل شاشة.
+- أحياناً يظهر الاسم نفسه في أكثر من صورة؛ حُفظت المداخل لتطابق سجل المستخدم التاريخي.
+- قيم Bearer وCookie وQR الطويلة لم تُستنسخ حرفياً لأنها غير مقروءة بالكامل من اللقطات، لا لأن بقية الأرقام أو المعرّفات حُذفت.
+- لا يمكن الحصول على كل بايت/حرف مخفي خلف (...) دون Copy Response أو HAR أصلي، فلا يجوز اختلاقه.
+
+نهاية الملف الموحّد.
+
+
+===============================================================================
+القسم الخامس — الصور الجديدة 55–63 (دفعة IMG_6049(1) إلى IMG_6054)
+===============================================================================
+ترتيب هذا القسم يطابق ترتيب عرض المستخدم للصور التسع، لا ترتيب أسماء الملفات.
+
+الصورة 55 | IMG_6050_Original.jpeg
+-----------------------------------
+الواجهة: Microsoft Edge DevTools → Network → Headers.
+الطلب المحدد في القائمة اليسرى: bf31e6128301d31bb4014faf6b1e0f05f3ab8877
+[المعرّف مكتوب كاملاً كما يظهر أيضاً في رابط Request URL والدفعات السابقة].
+
+General:
+  Request URL: https://customs-uboor.ur.gov.iq/api/local_form/get_company_items/bf31e6128301d31bb4014faf6b1e0f05f3ab8877
+  Request Method: GET
+  Status Code: 200 OK
+  Remote Address: 78.41.60.7:443
+  Referrer Policy: strict-origin-when-cross-origin
+
+Response Headers المميزة:
+  Access-Control-Allow-Credentials: true
+  Access-Control-Allow-Headers: DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range
+  Access-Control-Allow-Methods: GET, POST, OPTIONS
+  Access-Control-Allow-Origin: http://localhost:5173
+  Access-Control-Allow-Origin: *
+  Connection: keep-alive
+  Content-Length: 467
+  Content-Type: application/json
+
+القراءة: نرى سطرين بالاسم نفسه Access-Control-Allow-Origin، الأول عنوان localhost والثاني نجمة.
+هذه ملاحظة تدقيقية على عرض ترويسات الاستجابة ولا تكفي لإثبات CORS قابل للاستغلال.
+وجود Access-Control-Allow-Credentials:true لا يعني أن الجلسة متاحة للمتصفح من أي أصل.
+
+إحصائيات نفس سجل Network الظاهرة أسفل الشاشة:
+  Requests: 35
+  Transferred: 688 kB
+  Resources: 3.4 MB تقريباً
+  توقيت شريط Windows: 21/01/2026 نحو 16:25 (وقت الجهاز الظاهر وليس توقيت الخادم).
+
+الصورة 56 | IMG_6050_Original(1).jpeg
+--------------------------------------
+الواجهة: تكبير لذات الطلب get_company_items في تبويب Headers.
+النص المؤكد والمكرر:
+  Request URL: https://customs-uboor.ur.gov.iq/api/local_form/get_company_items/bf31e6128301d31bb4014faf6b1e0f05f3ab8877
+  Request Method: GET
+  Status Code: 200 OK
+  Remote Address: 78.41.60.7:443
+  Referrer Policy: strict-origin-when-cross-origin
+  Access-Control-Allow-Credentials: true
+  Access-Control-Allow-Headers: DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range
+  Access-Control-Allow-Methods: GET, POST, OPTIONS
+  Access-Control-Allow-Origin: http://localhost:5173
+  Access-Control-Allow-Origin: *
+  Connection: keep-alive
+  Content-Length: 467
+  Content-Type: application/json
+
+تفسير: هذه اللقطة لا تثبت حصول طلب إضافي مستقل؛ إنها زاوية أوضح لمعلومات الصورة السابقة.
+
+الصورة 57 | IMG_6049_Original(1).jpeg
+--------------------------------------
+الواجهة: Network → Headers لنفس مسار get_company_items.
+General:
+  https://customs-uboor.ur.gov.iq/api/local_form/get_company_items/bf31e6128301d31bb4014faf6b1e0f05f3ab8877
+  GET ; 200 OK ; 78.41.60.7:443
+Response Headers المقروءة:
+  Access-Control-Allow-Credentials: true
+  Access-Control-Allow-Headers: DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range
+  Access-Control-Allow-Methods: GET, POST, OPTIONS
+  Access-Control-Allow-Origin: http://localhost:5173
+  Access-Control-Allow-Origin: *
+  Connection: keep-alive
+  Content-Length: 467
+  Content-Type: application/json
+
+تفسير: تكرار القيم في الصورة 55 و56 و57 يقوي قراءتها بصرياً، لكنه ليس اختباراً ثانياً لصلاحيات الخادم.
+المطلوب لفحص ازدواج CORS على بيئة مخولة هو قراءة Raw headers في الطلب نفسه.
+
+الصورة 58 | IMG_6052_Original.jpeg
+----------------------------------
+الواجهة: Network → Headers لطلب أيقونات خارجي، وليس طلب بيانات شركات.
+الطلب المحدد يساراً: lucide.json?icons=factory%2Cfile-text%2Cmap-pin%2Cphone%2Cprinter%2Cshield-check%2Ctruck%2Cuser
+General:
+  Request URL: https://api.iconify.design/lucide.json?icons=factory%2Cfile-text%2Cmap-pin%2Cphone%2Cprinter%2Cshield-check%2Ctruck%2Cuser
+  Request Method: GET
+  Status Code: 200 OK (from disk cache)
+  Remote Address: 172.67.71.159:443
+  Referrer Policy: strict-origin-when-cross-origin
+
+Response Headers الظاهرة:
+  Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Accept-Encoding
+  Access-Control-Allow-Methods: GET, OPTIONS
+  Access-Control-Allow-Origin: *
+  Access-Control-Max-Age: 86400 [قراءة مرجحة من الصورة]
+  Age: 157427 [قراءة مرجحة؛ الرقم بحاجة لتأكيد من المصدر الرقمي]
+  Cache-Control: public, max-age=604800, ... immutable [جزء الوسط غير واضح]
+  Cf-Cache-Status: HIT
+  Cf-Ray: [معرّف Cloudflare غير واضح بالكامل]
+  Content-Encoding: br [الجزء السفلي غير واضح]
+
+أسماء الأيقونات في طلب واحد (8 أيقونات): factory / file-text / map-pin / phone / printer / shield-check / truck / user.
+الخلاصة: تحميل موارد رسم أيقونات عبر Iconify من الكاش المحلي؛ لا يعد استجابة API للمستندات أو الشركات.
+
+الصورة 59 | IMG_6051_Original.jpeg
+----------------------------------
+الواجهة: Network → Headers → Request Headers لطلب get_company_items المحدد في القائمة.
+
+الحقول المصورة:
+  Accept: application/json, text/plain, */*
+  Accept-Encoding: gzip, deflate, br, zstd
+  Accept-Language: en-US,en;q=0.9,en-GB;q=0.8
+  Authorization: Bearer [قيمة الرمز غير منسوخة]
+  Connection: keep-alive
+  Content-Type: [غير ظاهر في هذه اللقطة؛ لا نفترض قيمة]
+  Cookie: _ga=... ; _ga_...=... [أجزاء طويلة وغير واضحة]
+  Host: customs-uboor.ur.gov.iq
+  Referer: https://customs-uboor.ur.gov.iq/company-owner?phone=9647734554346
+  Sec-CH-UA: "Microsoft Edge";v="129", "Not=A?Brand";v="8", "Chromium";v="129" [الترتيب ونسخة العلامة بحسب النص المقروء تقريباً]
+  Sec-CH-UA-Mobile: ?0
+  Sec-CH-UA-Platform: "Windows"
+
+ما تثبته الصورة: ترويسة Bearer مرفقة بهذا الطلب المصور؛ لذلك لا يجوز الاستدلال من HTTP 200 على أن طلب get_company_items يعمل بلا مصادقة.
+رمز التفويض ظاهر في الصورة، لكن إدراج قيمة قابلة لإعادة التشغيل في أرشيف TXT عام غير مناسب، وحروفه لا يمكن ضمانها من الصورة.
+
+الصورة 60 | IMG_6051_Original(1).jpeg
+-------------------------------------
+الواجهة: زاوية واسعة لنفس Headers → Request Headers.
+القيم المؤكدة/المكررة:
+  Accept: application/json, text/plain, */*
+  Accept-Encoding: gzip, deflate, br, zstd
+  Accept-Language: en-US,en;q=0.9,en-GB;q=0.8
+  Authorization: Bearer [رمز غير منسوخ]
+  Connection: keep-alive
+  Cookie: معرّفات تحليلية _ga/... [القيم الكاملة غير موثوقة بصرياً]
+  Host: customs-uboor.ur.gov.iq
+  Referer: https://customs-uboor.ur.gov.iq/company-owner?phone=9647734554346
+  Sec-CH-UA: Microsoft Edge / Chromium (v129 تقريباً)
+  Sec-CH-UA-Mobile: ?0
+  Sec-CH-UA-Platform: "Windows"
+
+تفسير: الصورة مكررة للطلب/المحتوى في الصورة 59؛ لا تُعتبر استجابة جديدة.
+
+الصورة 61 | IMG_6054_Original.jpeg
+----------------------------------
+الواجهة: Headers، أسفل Response Headers لطلب أيقونات Iconify.
+النص الظاهر:
+  Cf-Cache-Status: HIT
+  Cf-Ray: [معرف غير واضح]
+  Content-Encoding: br
+  Content-Type: application/json; charset=utf-8
+  Cross-Origin-Resource-Policy: cross-origin
+  Date: Wed, 21 Jan 2026 07:22:13 GMT [قراءة مرجحة]
+  Last-Modified: Mon, 19 Jan 2026 08:51:45 GMT [قراءة مرجحة]
+  NEL: {"report_to": "cf-nel", "success_fraction": 0.0, "max_age": 604800} [المفاتيح واضحة، صياغة توضيحية]
+  Report-To: مجموعة cf-nel ونقطة Cloudflare الخاصة بتقارير الشبكة [السلسلة الطويلة غير مقروءة كاملاً]
+  Server: cloudflare
+  Vary: accept-encoding
+
+تنبيه DevTools المصور:
+  Provisional headers are shown. Disable cache to see full headers. Learn more
+وتحت Request Headers:
+  Referer: https://customs-uboor.ur.gov.iq/
+  Sec-CH-UA: Microsoft Edge / Chromium
+  Sec-CH-UA-Mobile: ?0
+  Sec-CH-UA-Platform: "Windows"
+  User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 ... [الجزء الأخير غير واضح]
+
+هذا لا يكشف رمز الشركة أو إذن المستخدم؛ الطلب لمورد عام من Iconify.
+
+الصورة 62 | IMG_6053_Original.jpeg
+----------------------------------
+الواجهة: نفس قسم Response Headers التابع لأيقونات Iconify.
+الحقول المرئية:
+  Cf-Cache-Status: HIT
+  Cf-Ray: [غير واضح]
+  Content-Encoding: br
+  Content-Type: application/json; charset=utf-8
+  Cross-Origin-Resource-Policy: cross-origin
+  Date: Wed, 21 Jan 2026 07:22:13 GMT [قراءة مرجحة]
+  Last-Modified: Mon, 19 Jan 2026 08:51:45 GMT [قراءة مرجحة]
+  NEL: إعداد تقارير Cloudflare
+  Report-To: Cloudflare endpoint مع سلسلة طويلة مقطوعة
+  Server: cloudflare
+  Vary: accept-encoding
+  Provisional headers are shown. Disable cache to see full headers.
+
+التفسير: صورة أخرى للمحتوى نفسه ولا تغير استنتاجات الطلب.
+
+الصورة 63 | IMG_6052_Original(1).jpeg
+-------------------------------------
+الواجهة: Network → Headers (الجزء العلوي) لطلب أيقونات متعدّدة.
+General:
+  Request URL: https://api.iconify.design/lucide.json?icons=factory%2Cfile-text%2Cmap-pin%2Cphone%2Cprinter%2Cshield-check%2Ctruck%2Cuser
+  Request Method: GET
+  Status Code: 200 OK (from disk cache)
+  Remote Address: 172.67.71.159:443
+  Referrer Policy: strict-origin-when-cross-origin
+Response Headers:
+  Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Accept-Encoding
+  Access-Control-Allow-Methods: GET, OPTIONS
+  Access-Control-Allow-Origin: *
+  Access-Control-Max-Age: 86400 [قراءة مرجحة]
+  Age: 157427 [قراءة مرجحة]
+  Cache-Control: public, max-age=604800, ... immutable [الجزء الأوسط غير واضح]
+  Cf-Cache-Status: HIT
+
+النتيجة: 200 من كاش القرص يعني أن المتصفح استخدم الاستجابة المخزنة محلياً.
+لا ينبغي تفسير استخدام خدمة Iconify بأنه اتصال API جديد للبيانات الحكومية.
+
+===============================================================================
+ملخص التقاطع بين الصور 55–63 والصور السابقة
+===============================================================================
+A) get_company_items:
+  URL: https://customs-uboor.ur.gov.iq/api/local_form/get_company_items/bf31e6128301d31bb4014faf6b1e0f05f3ab8877
+  GET | 200 OK | 78.41.60.7:443
+  Response Headers: Allow-Credentials true؛ وAllow-Origin قيمتان ظاهرتان localhost:5173 و*.
+  Request Headers: Authorization: Bearer موجودة.
+  Response body ظهر في الدفعة السابقة (الصورة 49–54): items=[عنصر واحد]، total_items=1، production_capacity="1837"، item_name="منظفات سائلة"، unit="طن"، monthly_yearly="سنوية"، is_active=true، is_delete=false، time_stamp="2026-01-05 10:09:36".
+
+B) search_iraqi_company (من المجموعات السابقة، وليس طلباً جديداً في الصور 55–63):
+  POST /api/local_form/search_iraqi_company
+  Payload: page=1; per_page=10; searchdata[0].company_hash_code="75764f1ead79fecd"; sort_by="id"; sort_dir="desc".
+  Response HTTP 200؛ تأكيد بيانات البحث يستند إلى Preview في صور سابقة.
+
+C) return_company_doc (مسار ظهر في Initiator في صور سابقة):
+  /api/local_form/return_company_doc/75764f1ead79fecd
+  هذه المجموعة لا تحتوي Payload أو Response لهذه الوثيقة.
+
+D) Iconify:
+  https://api.iconify.design/lucide.json?icons=factory%2Cfile-text%2Cmap-pin%2Cphone%2Cprinter%2Cshield-check%2Ctruck%2Cuser
+  GET 200 OK (from disk cache)، مع Access-Control-Allow-Origin:* وCf-Cache-Status:HIT.
+  بيانات خدمة الأيقونات العامة غير مرتبطة بخصوصية CORS أو تفويض API الحكومي.
+
+محددات الاستنتاج:
+  • نجاح GET 200 بجلسة ذات Bearer لا يثبت وجود منفذ وصول بلا توثيق.
+  • ظهور localhost:5173 و* في ترويسات CORS جدير بالمراجعة، لكنه لا يثبت نجاح طلب cross-origin في المتصفح؛ قد تصبح الاستجابة غير مقبولة وفق طريقة إرسالها، ويستلزم الأمر Raw headers وتجربة مخولة مضبوطة.
+  • Cache HIT / disk cache يخصان الأيقونات، وليس سجلات الشركات.
+  • لم تُنسخ القيم الطويلة المقتطعة أو غير المقروءة، ولم تُختلق قيم JSON غير ظاهرة.
+
+نهاية الإضافة للصور 55–63.
+
+
+
+===============================================================================
+الملحق الجديد — الصور المرسلة حديثاً: المدخلات التحليلية 64–73
+===============================================================================
+عدد صور الملحق: 10 صور JPEG. تم تحليل كل صورة بحسب ترتيب إرسالها.
+المصدر الوحيد لهذا الملحق: الصور المرفوعة؛ لا يتم إرسال طلبات إلى الموقع.
+
+فهرس الصور الجديدة:
+64. IMG_8917D66C-558D-4118-B3BA-1560FADA3031_Original.jpeg
+65. IMG_6056_Original.jpeg
+66. IMG_6055_Original.jpeg
+67. E644FFC4-7C6C-45B9-BE27-B63A47690DF4_Original.jpeg
+68. A5CB3959-84DB-425C-B41B-3AFEB7DA7BEA_Original.jpeg
+69. 26769290-40F0-44B0-8C16-DBF223B59242_Original.jpeg
+70. 6C058BFB-B967-4647-8ACD-9253BB301126_Original.jpeg
+71. 883CA053-E35E-4FA9-A2F6-6C95E7B21BD3_Original.jpeg
+72. CF9CD597-F6E0-422D-8465-98D1020B90A9_Original.jpeg
+73. 6B0ABCC5-49DB-48B1-B01D-BB5E1523AFEF_Original.jpeg
+
+-------------------------------------------------------------------------------
+الصورة 64 — IMG_8917D66C-558D-4118-B3BA-1560FADA3031_Original.jpeg
+-------------------------------------------------------------------------------
+نوع المحتوى: صورة لشاشة Windows 11 — Event Viewer (عارض الأحداث)، وليست
+لقطة DevTools من موقع عبور. الصورة الأصلية مصورة جانبياً؛ بعد تدويرها
+تظهر نافذة سجل معالج الرسوميات.
+
+نصوص نافذة النظام الظاهرة:
+  Event Viewer
+  ملف / إجراء / عرض / تعليمات
+  (Local) مستوى واحد للأعلى
+  Custom Views
+  Administrative Events
+  إدارة الأجهزة - Intel(R) Iris(R) Xe Graphics
+  Windows Logs
+  Applications and Services Logs
+  Subscriptions
+  Number of events: 5
+
+جدول الأحداث:
+  Level         Date and Time          Source
+  Information   29-12-2025 2:05:59     Kernel-... [مقتطع]
+  Information   29-12-2025 2:05:57     Kernel-... [مقتطع]
+  Information   29-12-2025 2:05:57     Kernel-... [مقتطع]
+  Information   29-12-2025 2:05:39     Kernel-... [مقتطع]
+  Information   29-12-2025 2:05:35     Kernel-... [مقتطع]
+
+التفاصيل في الجزء السفلي:
+  Event 410, Kernel-PnP
+  General / Details
+  Device PCI\VEN_8086&DEV_9A40&SUBSYS_3E4... [السلسلة مقطوعة عند يمين الحقل]
+  Driver Name: oem73.inf
+  Class GUID: {4d36e968-e325-11ce-bfc1-08002be... [مقتطع]
+  الشريط السفلي: Attach when an event is fired satisfying this view
+
+قائمة Actions الظاهرة:
+  Open Saved Log
+  Create Custom View
+  Import Custom View
+  Filter Current Custom View
+  Properties
+  Find
+  Save All Events in Custom View As
+  Export Custom View
+  Copy Custom View
+  Attach Task To This Custom View
+  عرض / حذف / إعادة تسمية / تحديث / تعليمات
+
+على خلفية سطح المكتب:
+  Microsoft Edge
+  مجلد جديد (2)
+  Kleopatra
+  الفيديوهات ذات الصلة [في نافذة خلفية]
+
+التحليل: خمسة أحداث من مستوى Information مرتبطة برسوميات Intel Iris Xe؛
+اختيار Event 410 (Kernel-PnP) يكشف اسم ملف تعريف oem73.inf وهوية جهاز PCI
+جزئية. لا تثبت هذه اللقطة وجود خطأ برمجي أو اختراق أو علاقة تقنية مباشرة
+بواجهة UBOOR. حقول PCI وClass GUID لا تظهر كاملة لذا لا تُستكمل من معرفة خارجية.
+
+-------------------------------------------------------------------------------
+الصورة 65 — IMG_6056_Original.jpeg
+-------------------------------------------------------------------------------
+المشهد: Microsoft Edge DevTools → Network → Headers.
+الطلب المحدد يساراً: lucide.json?icons=circle-x
+
+General:
+  Request URL: https://api.iconify.design/lucide.json?icons=circle-x
+  Request Method: GET
+  Status Code: 200 OK (from disk cache)
+  Remote Address: 172.67.71.159:443
+  Referrer Policy: strict-origin-when-cross-origin
+
+Response Headers الظاهرة:
+  Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Accept-Encoding
+  Access-Control-Allow-Methods: GET, OPTIONS
+  Access-Control-Allow-Origin: *
+  Access-Control-Max-Age: 86400
+  Age: [رقم ظاهر غير واضح بالكامل؛ يقارب 158 ألف ثانية]
+  Cache-Control: public, max-age=604800, min-refresh=604800, immutable
+      [صيغة الجزء الأوسط قراءة مرجحة من اللقطة]
+  Cf-Cache-Status: HIT
+  Cf-Ray: [معرّف Cloudflare غير واضح]
+
+قائمة الطلبات الجانبية، بشكل مختصر دون تغيير نوعها:
+  CompanyOwnerView-CiTq5... [CSS]
+  longpooling?get&nocache=...
+  ur-logo.png
+  customes-logo.png
+  customes-logo.png
+  lucide.json?icons=building-...
+  lucide.json?icons=circle-x  ← المحدد
+  search_iraqi_company
+  lucide.json?icons=loader-circle
+  bf31e6128301d31bb4014faf6b1e0f05f3ab8877
+  lucide.json?icons=factory%2Cfile-text%2Cmap-pin...
+  75764f1ead79fecd
+  Customs.jpg
+  iraqEagle.png
+  qr?text=...
+
+التحليل: استجابة أيقونة circle-x من Iconify، مخزنة في كاش القرص.
+أسماء الطلبات المجاورة ليست محتويات Response لهذا الطلب.
+
+-------------------------------------------------------------------------------
+الصورة 66 — IMG_6055_Original.jpeg
+-------------------------------------------------------------------------------
+المشهد: Network → Headers (General وResponse Headers) للطلب المحدد:
+  75764f1ead79fecd
+
+General (معلومة جديدة مؤكدة في هذه الدفعة):
+  Request URL:
+    https://customs-uboor.ur.gov.iq/api/local_form/return_company_doc/75764f1ead79fecd
+  Request Method: POST
+  Status Code: 200 OK
+  Remote Address: 78.41.60.7:443
+  Referrer Policy: strict-origin-when-cross-origin
+
+Response Headers:
+  Access-Control-Allow-Headers: DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range
+  Access-Control-Allow-Methods: GET, POST, OPTIONS
+  Access-Control-Allow-Origin: *
+  Connection: keep-alive
+  Content-Length: [عدد مكوّن من أربعة أرقام، غير مقروء بشكل قطعي]
+  Content-Type: application/json
+  Date: Wed, 21 Jan 2026 ... GMT [الوقت غير مؤكد]
+  Server: elb [النص مرجح حسب شواهد الصور السابقة]
+
+دلالة هذه الصورة: أداة المتصفح تُظهر أن endpoint استرجاع وثيقة الشركة تلقّى
+POST وأرجع HTTP 200. لا يظهر تبويب Response أو Preview لهذا الطلب، لذا لا
+يمكن استنتاج أن الاستجابة تحتوي PDF أو QR أو صلاحية/توقيع رسمي. HTTP 200
+هو نجاح استجابة HTTP فقط. هذه صورة أفضل من لقطات Initiator السابقة لإثبات
+طريقة الطلب (POST).
+
+-------------------------------------------------------------------------------
+الصورة 67 — E644FFC4-7C6C-45B9-BE27-B63A47690DF4_Original.jpeg
+-------------------------------------------------------------------------------
+المشهد: Network → Initiator للملف الرئيسي أو صفحة company-owner.
+تظهر سلسلة المسارات التالية بحسب ترتيبها في لوحة Initiator:
+
+  https://customs-uboor.ur.gov.iq/assets/Input-CQ8L9pvo.js
+  https://customs-uboor.ur.gov.iq/assets/iraqEagle-BF406BBV.js
+  https://customs-uboor.ur.gov.iq/assets/Textarea-BbPyTmzv.js
+  https://customs-uboor.ur.gov.iq/assets/Table-CksvXkpH.js
+  https://customs-uboor.ur.gov.iq/assets/BaseModal-Cj4w6vKq.js
+  https://customs-uboor.ur.gov.iq/assets/BaseModal-DrRLsYCw.css
+  https://customs-uboor.ur.gov.iq/assets/vue3-treeselect.min-CxYj0h6r.js
+  https://customs-uboor.ur.gov.iq/assets/vue3-treeselect-BzQE87YR.css
+  https://customs-uboor.ur.gov.iq/assets/Form-CrcvXBv-.js
+  https://customs-uboor.ur.gov.iq/assets/CompanyOwnerView-CiTq539C.css
+  https://api.iconify.design/lucide.json?icons=building-2%2Cchevron-down%2Cfacebook%2Chash%2Cinstagram%2Cmoon%2Csearch%2Ctwitter%2Cuser-circle
+  https://api.iconify.design/lucide.json?icons=circle-x
+  https://customs-uboor.ur.gov.iq/api/local_form/search_iraqi_company
+  https://api.iconify.design/lucide.json?icons=loader-circle
+  https://customs-uboor.ur.gov.iq/api/local_form/get_company_items/bf31e6128301d31bb4014faf6b1e0f05f3ab8877
+  https://api.iconify.design/lucide.json?icons=factory%2Cfile-text%2Cmap-pin%2Cphone%2Cprinter%2Cshield-check%2Ctruck%2Cuser
+  https://customs-uboor.ur.gov.iq/api/local_form/return_company_doc/75764f1ead79fecd
+  https://customs-uboor.ur.gov.iq/images/Customs.jpg
+  https://quickchart.io/qr?text=gAAAAAB... [قيمة النص طويلة ومقطوعة]
+  https://customs-uboor.ur.gov.iq/images/iraqEagle.png
+  https://customs-uboor.ur.gov.iq/assets/index-RnlGKhol.css
+  https://customs-uboor.ur.gov.iq/assets/Cairo-Regular-CB0NqkA_.ttf
+  https://customs-uboor.ur.gov.iq/assets/Cairo-Bold-CFhkSe12.ttf
+
+Tooltip الظاهر:
+  https://customs-uboor.ur.gov.iq/assets/CompanyOwnerView-CiTq539C.css
+
+التفسير: أسماء الموارد والعلاقات المرئية في لوحة Initiator، وليس قائمة
+بعمليات أجراها المستخدم بترتيب تنفيذ معتمد. قسم Iconify للأيقونات وقسم
+quickchart.io للـQR هما خدمات طرف ثالث؛ ثلاث واجهات local_form تخص الموقع.
+
+-------------------------------------------------------------------------------
+الصورة 68 — A5CB3959-84DB-425C-B41B-3AFEB7DA7BEA_Original.jpeg
+-------------------------------------------------------------------------------
+المشهد: Network → Headers (الجزء الأوسط والأسفل)، ويبدو أن المحدد هو
+search_iraqi_company في قائمة الطلبات.
+
+Referrer Policy: strict-origin-when-cross-origin
+Response Headers المقرؤة:
+  Access-Control-Allow-Headers: DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range
+  Access-Control-Allow-Methods: GET, POST, OPTIONS
+  Access-Control-Allow-Origin: *
+  Connection: keep-alive
+  Content-Length: 3009 [قراءة راجحة متسقة مع لقطة search السابقة]
+  Content-Type: application/json
+  Date: Wed, 21 Jan 2026 ... GMT [الوقت غير واضح بالصورة الحالية]
+  Server: elb [قراءة راجحة]
+
+يبدأ قسم Request Headers في أسفل الشاشة، لكن معظم عناصره خارج الإطار.
+شرح: هذه ترويسات استجابة JSON لاستعلام الشركة كما ظهر في الصور السابقة،
+وليست بيانات JSON نفسها. وجود Access-Control-Allow-Origin:* لا يكفي لإثبات
+ثغرة صلاحيات أو تجاوز مصادقة.
+
+-------------------------------------------------------------------------------
+الصورة 69 — 26769290-40F0-44B0-8C16-DBF223B59242_Original.jpeg
+-------------------------------------------------------------------------------
+المشهد: Network → Payload لطلب search_iraqi_company. الصورة تؤكد JSON
+المرسل سابقاً بدقة جيدة، ولا تظهر أي Bearer Token.
+
+Request Payload كما في لوحة DevTools:
+  page: 1
+  per_page: 10
+  searchdata: [{company_hash_code: "75764f1ead79fecd"}]
+  sort_by: "id"
+  sort_dir: "desc"
+
+إعادة تمثيل نصية دقيقة للبنية المقروءة (ليست raw body مصدّراً):
+{
+  "page": 1,
+  "per_page": 10,
+  "searchdata": [
+    {"company_hash_code": "75764f1ead79fecd"}
+  ],
+  "sort_by": "id",
+  "sort_dir": "desc"
+}
+
+التحليل: الشركة تُبحث بـ company_hash_code، ثم تقسم النتائج إلى عشر سجلات
+في الصفحة، بترتيب id تنازلياً. لا يجوز تفسير هذا الاستعلام بأنه آلية تسجيل
+دخول أو أنه يجيز الوصول للبيانات دون توثيق؛ توثّق صورة أخرى Authorization.
+
+-------------------------------------------------------------------------------
+الصورة 70 — 6C058BFB-B967-4647-8ACD-9253BB301126_Original.jpeg
+-------------------------------------------------------------------------------
+المشهد: Network → All، جدول الاستجابات بعد التصفح والبحث.
+بعض أسماء الموارد التي تظهر في عمود Name:
+  Form-CrcvXBv-.js
+  vue3-treeselect-BzQE87YR.css
+  CompanyOwnerView-CiTq539C.css
+  longpooling?get&nocache=...
+  ur-logo.png
+  customes-logo.png (قد يظهر أكثر من مرة)
+  lucide.json?icons=building-...
+  lucide.json?icons=circle-x
+  search_iraqi_company
+  lucide.json?icons=loader-circle
+  bf31e6128301d31bb4014faf6b1e0f05f3ab8877
+  lucide.json?icons=factory%2Cfile-text%2Cmap-pin...
+  75764f1ead79fecd
+  Customs.jpg
+  iraqEagle.png
+  qr?text=gAAAAAB... [مقتطع]
+
+Type: script / stylesheet / xhr / fetch / png / jpeg بحسب الصفوف.
+Status: 200 لمعظم الموارد المرئية.
+ملخص شريط الشبكة: 35 requests؛ ~688 kB transferred؛ ~3.4 MB resources؛
+Finish: ~1.6 min؛ DOMContentLoaded: 687 ms؛ Load: 747 ms.
+تفسير: كشف نطاق واسع من طلبات الجلسة نفسها، وليس 35 عملية بحث عن شركة.
+
+-------------------------------------------------------------------------------
+الصورة 71 — 883CA053-E35E-4FA9-A2F6-6C95E7B21BD3_Original.jpeg
+-------------------------------------------------------------------------------
+المشهد: Network → All، جزء أعلى من قائمة الملفات.
+النصوص المقروءة:
+  company-owner
+  index-D1j-Jb9C.js
+  index-RnlGKhol.css
+  main.js?attr=...
+  main.css?attr=...
+  init?data=...
+  Cairo-Regular-CB0NqkA_.ttf
+  Cairo-Bold-CFhkSe12.ttf
+  CompanyOwnerView-DWbcwxR4.js
+  Card-CZWmUXpA.js
+  Badge-DqlBKNZz.js
+  Input-CQ8L9pvo.js
+  iraqEagle-BF406BBV.js
+  Textarea-BbPyTmzv.js
+  Table-CksvXkpH.js
+  BaseModal-Cj4w6vKq.js
+  BaseModal-DrRLsYCw.css
+  vue3-treeselect.min-CxYj0h6r.js
+  vue3-treeselect-BzQE87YR.css
+  Form-CrcvXBv-.js
+  CompanyOwnerView-CiTq539C.css
+  longpooling?get&nocache=...
+  ur-logo.png
+  customes-logo.png
+
+تظهر حالات 200 في العمود المخصص للحالة. Initiator في صفوف ملفات الواجهة
+هو غالباً index-D1j-Jb9C.js:20، وفي بعض العناصر Other.
+التفسير: لقطات قائمة الملفات متداخلة زمنياً مع الصور السابقة، وتؤكد تحميل
+مكونات Vue والأنماط والعناصر؛ ليست ملفات مصدر جديدة مختلفة.
+
+-------------------------------------------------------------------------------
+الصورة 72 — CF9CD597-F6E0-422D-8465-98D1020B90A9_Original.jpeg
+-------------------------------------------------------------------------------
+المشهد: Network → Initiator في صفحة company-owner.
+تظهر في اللوحة روابط ملفات/موارد متفرعة من الملف الرئيسي، من بينها:
+  https://customs-uboor.ur.gov.iq/assets/CompanyOwnerView-DWbcwxR4.js
+  https://customs-uboor.ur.gov.iq/assets/Card-CZWmUXpA.js
+  https://customs-uboor.ur.gov.iq/assets/Badge-DqlBKNZz.js
+  https://customs-uboor.ur.gov.iq/assets/Input-CQ8L9pvo.js
+  https://customs-uboor.ur.gov.iq/assets/iraqEagle-BF406BBV.js
+  https://customs-uboor.ur.gov.iq/assets/Textarea-BbPyTmzv.js
+  https://customs-uboor.ur.gov.iq/assets/Table-CksvXkpH.js
+  https://customs-uboor.ur.gov.iq/assets/BaseModal-Cj4w6vKq.js
+  https://customs-uboor.ur.gov.iq/assets/BaseModal-DrRLsYCw.css
+  https://customs-uboor.ur.gov.iq/assets/vue3-treeselect.min-CxYj0h6r.js
+  https://customs-uboor.ur.gov.iq/assets/Form-CrcvXBv-.js
+  https://customs-uboor.ur.gov.iq/api/local_form/search_iraqi_company
+  https://customs-uboor.ur.gov.iq/api/local_form/get_company_items/bf31e6128301d31bb4014faf6b1e0f05f3ab8877
+  https://customs-uboor.ur.gov.iq/api/local_form/return_company_doc/75764f1ead79fecd
+  https://quickchart.io/qr?text=gAAAAAB... [مقتطع]
+
+Tooltip في هذه الزاوية: اسم مورد CSS أو JS ظاهر جزئياً، ولا يغيّر مسارات
+API المدونة. توثيق التكرار مقصود لحفظ سياق كل صورة دون اختراع أحداث جديدة.
+
+-------------------------------------------------------------------------------
+الصورة 73 — 6B0ABCC5-49DB-48B1-B01D-BB5E1523AFEF_Original.jpeg
+-------------------------------------------------------------------------------
+المشهد: Network → All، أول تحميل صفحة company-owner عبر رابط الهاتف.
+
+URL الظاهر أعلى DevTools:
+  customs-uboor.ur.gov.iq/company-owner?phone=9647734554346
+
+أول الطلبات:
+  company-owner?phone=9647734554346        | document   | 200
+  index-D1j-Jb9C.js                          | script     | 200
+  index-RnlGKhol.css                         | stylesheet | 200
+  main.js?attr=...                            | script     | 200
+  main.css?attr=...                           | stylesheet | 200
+  init?data=...                               | xhr        | 200
+  Cairo-Regular-CB0NqkA_.ttf                 | font       | 200
+  Cairo-Bold-CFhkSe12.ttf                    | font       | 200
+  CompanyOwnerView-DWbcwxR4.js              | script     | 200
+  Card-CZWmUXpA.js                           | script     | 200
+  Badge-DqlBKNZz.js                          | script     | 200
+  Input-CQ8L9pvo.js                          | script     | 200
+  iraqEagle-BF406BBV.js                      | script     | 200
+  Textarea-BbPyTmzv.js                       | script     | 200
+  Table-CksvXkpH.js                          | script     | 200
+  BaseModal-Cj4w6vKq.js                      | script     | 200
+  BaseModal-DrRLsYCw.css                     | stylesheet | 200
+
+صفحة أول التحميل:
+  25 requests
+  679 kB transferred
+  2.8 MB resources
+  Finish: 882 ms
+  DOMContentLoaded: 742 ms
+  Load: 785 ms
+
+التفسير: المؤشرات تخص تحميل الصفحة في اللقطة، وليست دليلاً على اكتمال عملية
+تحقق أو مطابقة سجل أو إنشاء وثيقة صالحة. القيم الطويلة في attr/data مقتطعة
+في الصورة ولا يمكن نقلها كاملة دون ملف HAR الأصلي.
+
+===============================================================================
+مقارنة الملحق الجديد بالمجموعات السابقة — ما هو جديد وما هو مكرر
+===============================================================================
+جديد بدرجة جيدة:
+1) Event Viewer لـ Intel(R) Iris(R) Xe Graphics مع 5 أحداث Information
+   بتاريخ 29-12-2025 وEvent 410 Kernel-PnP وoem73.inf؛ موضوع مستقل عن UBOOR.
+2) Headers للطلب return_company_doc أكدت Request Method = POST، وHTTP 200.
+3) أيقونة circle-x من Iconify باستخدام GET 200 من disk cache.
+
+معاد تأكيده:
+4) search_iraqi_company يحمل JSON: page=1 / per_page=10 / searchdata[0].
+   company_hash_code=75764f1ead79fecd / sort_by=id / sort_dir=desc.
+5) get_company_items/{hash_id} وreturn_company_doc/{company_hash_code} يظهران
+   ضمن قائمة Initiator، إلى جانب quickchart.io لإنشاء/جلب صورة QR.
+6) معظم ملفات الواجهة JS/CSS والخطوط ظهرت بحالة 200، واللقطات متعددة
+   لنفس الجلسة وليست نسخاً جديدة من الخادم.
+
+خط سير بصري *مرجح* من الصور جميعاً (ليس تصريحاً عن منطق الخادم):
+  تحميل company-owner → POST search_iraqi_company → جلب معلومات الشركة →
+  GET get_company_items/{hash_id} → POST return_company_doc/{company_hash_code}
+  → تحميل صور وشعار وطلب QR من QuickChart.
+ملاحظة: وقوع الموارد ضمن Initiator لا يثبت الترتيب الزمني القطعي أو
+العلاقة السببية بين كل طلب؛ كما أن Response الخاص بالوثيقة لم يُعرض بعد.
+
+مراجعة أمنية غير تدخّلية:
+  • الترويسات وأسماء المسارات وحدها لا تثبت BOLA/IDOR أو أي تجاوز تفويض.
+  • GET 200/POST 200 في جلسة بها Bearer لا يعني أن الخدمة عامة.
+  • CORS لدى أيقونات Iconify يختلف عن CORS للخدمات التابعة للموقع.
+  • وجود رقم هاتف أو hash في URLs يتطلب مراجعة سياسة السجلات والخصوصية؛
+    لكنه ليس بمفرده دليلاً على كشف غير مصرح به.
+  • لا تنسخ JWT أو Cookies إلى تقرير يمكن تداوله؛ احتفظ بوجود الترويسة فقط.
+
+نهاية التقرير الموحد للمدخلات 1–73.
