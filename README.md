@@ -634,3 +634,38 @@ python3 -m unittest discover -s tests \
 The checker is an offline *frontend indicator inventory*, not a backend
 authentication test or certificate signature validator. Existing Canva
 documentation is a snapshot and is not automatically synced to these commits.
+
+## QR/UBOOR review batch 5 — Pagination and BaseModal (9 November 2026)
+
+Seven user-supplied frontend JavaScript files were checked against
+SHA-256 and Git blob SHA-1: **five are byte-identical to existing
+archives**, and **two are newly archived**:
+
+- [AppPagination source](research/user-supplied/2026-11-09/AppPagination.vue_vue_type_script_setup_true_lang-DzdlD2T5.js)
+- [BaseModal source](research/user-supplied/2026-11-09/BaseModal-DjCaQzje.js)
+
+The [Arabic file-by-file review](reviews/2026-11-09/qr-uboor-batch-5/LINE_BY_LINE_AR.md)
+covers all seven submissions; [manifest](reviews/2026-11-09/qr-uboor-batch-5/manifest.json)
+pins the exact bytes and original upload names, and
+[60 source anchors](reviews/2026-11-09/qr-uboor-batch-5/SOURCE_ANCHORS.json)
+map the minified UI conditions to literal source offsets and physical lines.
+
+**Key UI findings:** `AppPagination` derives pageCount from totalRows/perPage
+while declaring but not using totalPages, and resets invalid per-page input
+without emitting the change. `BaseModal` sets body overflow/paddingRight
+to empty strings on close rather than restoring prior styles, creating a
+possible conflict with nested dialogs. These are **frontend** observations,
+not verified government backend vulnerabilities.
+
+Read-only local integrity checker and automated tests:
+
+```sh
+python3 tools/ish/qr_batch5_integrity.py
+python3 -m unittest discover -s tests -p 'test_qr_batch5_integrity.py' -v
+```
+
+- [Checker](tools/ish/qr_batch5_integrity.py)
+- [11 synthetic/integrity tests](tests/test_qr_batch5_integrity.py)
+
+The GitHub repository is public. No authenticated government API requests
+were sent, and no live QR data, passwords or personal records were included.
