@@ -708,3 +708,48 @@ remains `index-ccmhdhtn.js`**; the separately uploaded
 The original HTML, its phone-number-bearing filename, the owner's contact
 details, and the populated company code were **not published**. An HTML
 button or success toast is not proof of a backend-issued official document.
+
+## Complete historical UBOOR Network transcription — 73 entries / 65 images (9 November 2026)
+
+The original user-provided **137,148-byte, 2,291-line UTF-8 transcript**
+has been added **byte-for-byte unchanged** to the **private** GitHub
+repository, including all supplied historical company identifiers and
+paper-document figures. GitHub byte-for-byte fetch comparison verified the
+archived text and file length. No original user evidence was edited.
+
+- [Original private full-text evidence](research/private-evidence/2026-11-09/UBOOR_ALL_73_IMAGES_COMPLETE_TEXT_2026-11-09%202.txt)
+- [Detailed Arabic source-range and screenshot-group review](reviews/2026-11-09/uboor-73-entries/DEEP_LINE_BY_LINE_ANALYSIS_AR.md)
+- [All 2,291 original lines with analytical labels](reviews/2026-11-09/uboor-73-entries/ANNOTATED_LINE_INDEX.tsv)
+- [Evidence-level API/request/QR dependency graph](reviews/2026-11-09/uboor-73-entries/EVIDENCE_GRAPH.json)
+- [Source, sizes and scope manifest](reviews/2026-11-09/uboor-73-entries/manifest.json)
+- [Offline integrity checker](tools/ish/uboor_73_integrity.py)
+- [10 source-integrity tests](tests/test_uboor_73_integrity.py)
+
+**Historical evidence:** original browser screenshots described in this TXT
+were captured on **21 January 2026** (one unrelated Windows Event Viewer
+image concerns **29 December 2025**). The described owner/company flow is
+`POST local_form/search_iraqi_company` with `company_hash_code`;
+`GET local_form/get_company_items/{hash_id}` using the different
+company record ID; then the newly confirmed
+`POST local_form/return_company_doc/{company_hash_code}` with HTTP 200.
+The latter request's **actual Response body was not shown**, so no official
+PDF issuance or QR signature is established. A `quickchart.io/qr?text=...`
+external PNG request is observed; its text input is truncated.
+
+The 73 analytical entries describe only 65 original screenshots and include
+repeated enlargements and source reports: **do not treat them as 73 unique
+network requests**. The archive contains transcribed screenshots rather than
+native HAR/JSON, so `[مقتطع]` and `[قراءة مرجحة]` are retained as
+uncertainty markers. Generated per-line notes are a classification aid;
+the detailed report explains technical sections.
+
+Offline verification:
+
+```sh
+python3 tools/ish/uboor_73_integrity.py
+python3 -m unittest discover -s tests -p 'test_uboor_73_integrity.py' -v
+```
+
+The private source includes phone/company-related details from the user's
+upload. Restrict collaborator access; do **not** commit active credentials,
+cookies, or long-lived session tokens, even to a private repository.
