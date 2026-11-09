@@ -53,7 +53,7 @@
 
 ## الربط بمراجعات الملفات السابقة
 
-- `companyownerview-cjdszkn6.js` **مؤرشف مسبقًا** في [مجلد owner-vite](../../../../research/raw-uploads/2026-11-07/company-owner-vite/companyownerview-cjdszkn6.js). هذا مكوّن مختلف عن `CompanyOwnerView-CIdFF3LL.js` الذي حللناه في بناء آخر.
+- `companyownerview-cjdszkn6.js` **مؤرشف مسبقًا** في [مجلد owner-vite](../../../research/raw-uploads/2026-11-07/company-owner-vite/companyownerview-cjdszkn6.js). هذا مكوّن مختلف عن `CompanyOwnerView-CIdFF3LL.js` الذي حللناه في بناء آخر.
 - `index-dxnlxmd6.css` **مؤرشف مسبقًا** أيضًا.
 - `index-ccmhdhtn.js` **غير موجود** في المستودع وقت المراجعة؛ ورود اسمه داخل `<script src>` لا يعني أننا استلمنا محتواه.
 - `index-cseaomal.js` و`loginview-czys-bdx.js` **غير موجودين** أيضًا.
