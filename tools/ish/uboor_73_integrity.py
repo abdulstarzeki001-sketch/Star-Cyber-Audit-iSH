@@ -34,7 +34,7 @@ def verify(root: Path = ROOT):
     }
     index_path = root / REPORT / "ANNOTATED_LINE_INDEX.tsv"
     with index_path.open("r", encoding="utf-8", newline="") as fp:
-        table = list(csv.DictReader(fp, delimiter="\t"))
+        table = list(csv.DictReader(fp, delimiter="\t", quoting=csv.QUOTE_NONE))
     expected_columns = {"line_no", "section", "kind", "note", "evidence_quality", "original_text"}
     checks["index_columns_match"] = bool(table) and expected_columns.issubset(table[0])
     checks["index_rows_match"] = len(table) == EXPECTED_LINES
