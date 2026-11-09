@@ -1,0 +1,500 @@
+{
+  "date": "2026-11-09",
+  "method": "literal source offsets in minified JavaScript, not runtime execution",
+  "files": [
+    {
+      "source": "research/user-supplied/2026-11-09/AppPagination.vue_vue_type_script_setup_true_lang-DzdlD2T5.js",
+      "blob_sha": "191ac0cf643a77d5e7354addc6e8c1cc2e57af1b",
+      "total_physical_lines": 1,
+      "anchors": [
+        {
+          "id": "PG-01",
+          "note": "Shared pagination context",
+          "fragment": "const[B,re]=H(\"PaginationRoot\")",
+          "offset_utf16": 617,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "PG-02",
+          "note": "Root props and state",
+          "fragment": "__name:\"PaginationRoot\"",
+          "offset_utf16": 659,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "PG-03",
+          "note": "Computed page count",
+          "fragment": "Math.max(1,Math.ceil(e.total/(e.itemsPerPage||1)))",
+          "offset_utf16": 1246,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "PG-04",
+          "note": "Internal update event",
+          "fragment": "emits:[\"update:page\"]",
+          "offset_utf16": 1060,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "PG-05",
+          "note": "Go to first page",
+          "fragment": "__name:\"PaginationFirst\"",
+          "offset_utf16": 1557,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "PG-06",
+          "note": "Go to final page",
+          "fragment": "__name:\"PaginationLast\"",
+          "offset_utf16": 2038,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "PG-07",
+          "note": "Range helper",
+          "fragment": "function C(t,l)",
+          "offset_utf16": 2545,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "PG-08",
+          "note": "Turns numbers into page items",
+          "fragment": "function ge(t)",
+          "offset_utf16": 2616,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "PG-09",
+          "note": "Creates pages and ellipsis",
+          "fragment": "function me(t,l,e,n)",
+          "offset_utf16": 2726,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "PG-10",
+          "note": "Visible page list",
+          "fragment": "__name:\"PaginationList\"",
+          "offset_utf16": 3136,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "PG-11",
+          "note": "Individual page button",
+          "fragment": "__name:\"PaginationListItem\"",
+          "offset_utf16": 3466,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "PG-12",
+          "note": "Next navigation",
+          "fragment": "__name:\"PaginationNext\"",
+          "offset_utf16": 4132,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "PG-13",
+          "note": "Previous navigation",
+          "fragment": "__name:\"PaginationPrev\"",
+          "offset_utf16": 4642,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "PG-14",
+          "note": "Layout group",
+          "fragment": "__name:\"ButtonGroup\"",
+          "offset_utf16": 5301,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "PG-15",
+          "note": "Reusable UI control",
+          "fragment": "__name:\"Pagination\"",
+          "offset_utf16": 5949,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "PG-16",
+          "note": "Application wrapper",
+          "fragment": "__name:\"AppPagination\"",
+          "offset_utf16": 9841,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "PG-17",
+          "note": "TotalPages prop (not consumed in logic)",
+          "fragment": "totalPages:{type:Number",
+          "offset_utf16": 9919,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "PG-18",
+          "note": "Public event names",
+          "fragment": "emits:[\"page-changed\",\"per-page-changed\"]",
+          "offset_utf16": 10058,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "PG-19",
+          "note": "Per-page parsing",
+          "fragment": "const r=Number(a.value)",
+          "offset_utf16": 10194,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "PG-20",
+          "note": "Invalid per-page rejection",
+          "fragment": "if(!r||isNaN(r)||r<=0)",
+          "offset_utf16": 10218,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "PG-21",
+          "note": "Per-page emit resets to 1",
+          "fragment": "n(\"per-page-changed\",{page:1,per_page:r})",
+          "offset_utf16": 10259,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "PG-22",
+          "note": "Page event uses prop perPage",
+          "fragment": "n(\"page-changed\",{page:c,per_page:e.perPage})",
+          "offset_utf16": 10349,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "PG-23",
+          "note": "Sync current page prop",
+          "fragment": "G(()=>e.currentPage",
+          "offset_utf16": 10403,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "PG-24",
+          "note": "Sync per-page prop",
+          "fragment": "G(()=>e.perPage",
+          "offset_utf16": 10450,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "PG-25",
+          "note": "Current page size to UI",
+          "fragment": "\"items-per-page\":t.perPage",
+          "offset_utf16": 10626,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "PG-26",
+          "note": "Uses total rows in UI",
+          "fragment": "total:o.value",
+          "offset_utf16": 10653,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "PG-27",
+          "note": "Press Enter to commit page size",
+          "fragment": "onKeyup:se(g,[\"enter\"])",
+          "offset_utf16": 11147,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "PG-28",
+          "note": "Button to commit page size",
+          "fragment": "onClick:g",
+          "offset_utf16": 11719,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "PG-29",
+          "note": "RTL icon handling",
+          "fragment": "a.value===\"rtl\"?",
+          "offset_utf16": 7054,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "PG-30",
+          "note": "Input dependency",
+          "fragment": "from\"./Input-XMNBc09N.js\"",
+          "offset_utf16": 316,
+          "physical_line": 1,
+          "found": true
+        }
+      ]
+    },
+    {
+      "source": "research/user-supplied/2026-11-09/BaseModal-DjCaQzje.js",
+      "blob_sha": "74e0c2be0b1cbdf8cf9a61d19c0ea12936d9df30",
+      "total_physical_lines": 1,
+      "anchors": [
+        {
+          "id": "BM-01",
+          "note": "Modal component",
+          "fragment": "__name:\"BaseModal\"",
+          "offset_utf16": 499,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "BM-02",
+          "note": "Close and state events",
+          "fragment": "emits:[\"close\",\"update:isOpen\"]",
+          "offset_utf16": 730,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "BM-03",
+          "note": "Backdrop closure disabled default",
+          "fragment": "disableOutsideClick:{type:Boolean,default:!0}",
+          "offset_utf16": 599,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "BM-04",
+          "note": "Close button enabled default",
+          "fragment": "showCloseButton:{type:Boolean,default:!0}",
+          "offset_utf16": 645,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "BM-05",
+          "note": "Escape enabled default",
+          "fragment": "enableEscapeKey:{type:Boolean,default:!0}",
+          "offset_utf16": 687,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "BM-06",
+          "note": "Unique ARIA title id",
+          "fragment": "Math.random().toString(36)",
+          "offset_utf16": 847,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "BM-07",
+          "note": "Custom dimensions",
+          "fragment": "modal-content--custom",
+          "offset_utf16": 916,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "BM-08",
+          "note": "Close notification",
+          "fragment": "y(\"close\"),y(\"update:isOpen\",!1)",
+          "offset_utf16": 1087,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "BM-09",
+          "note": "Backdrop target guard",
+          "fragment": "e.target===e.currentTarget&&u()",
+          "offset_utf16": 1151,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "BM-10",
+          "note": "Scroll lock on open",
+          "fragment": "document.body.style.overflow=\"hidden\"",
+          "offset_utf16": 1222,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "BM-11",
+          "note": "Scrollbar gap compensation",
+          "fragment": "document.body.style.paddingRight=z()+\"px\"",
+          "offset_utf16": 1260,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "BM-12",
+          "note": "Scroll lock reset",
+          "fragment": "document.body.style.overflow=\"\"",
+          "offset_utf16": 1310,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "BM-13",
+          "note": "Padding reset",
+          "fragment": "document.body.style.paddingRight=\"\"",
+          "offset_utf16": 1342,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "BM-14",
+          "note": "Scrollbar width",
+          "fragment": "window.innerWidth-document.documentElement.clientWidth",
+          "offset_utf16": 1385,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "BM-15",
+          "note": "Find focusable descendants",
+          "fragment": "querySelectorAll(e)",
+          "offset_utf16": 1660,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "BM-16",
+          "note": "Tab focus guard",
+          "fragment": "e.key!==\"Tab\"",
+          "offset_utf16": 1702,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "BM-17",
+          "note": "Shift-Tab wrap",
+          "fragment": "document.activeElement===v",
+          "offset_utf16": 1798,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "BM-18",
+          "note": "Tab wrap",
+          "fragment": "document.activeElement===p",
+          "offset_utf16": 1857,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "BM-19",
+          "note": "Watch open state",
+          "fragment": "W(()=>t.isOpen",
+          "offset_utf16": 1924,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "BM-20",
+          "note": "Save previous focus",
+          "fragment": "c.value=document.activeElement",
+          "offset_utf16": 1957,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "BM-21",
+          "note": "Restore focus",
+          "fragment": "c.value&&c.value.focus()",
+          "offset_utf16": 2101,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "BM-22",
+          "note": "Register focus trap",
+          "fragment": "document.addEventListener(\"keydown\",k)",
+          "offset_utf16": 2135,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "BM-23",
+          "note": "Remove focus trap",
+          "fragment": "document.removeEventListener(\"keydown\",k)",
+          "offset_utf16": 2183,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "BM-24",
+          "note": "Teleport to body",
+          "fragment": "to:\"body\"",
+          "offset_utf16": 2258,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "BM-25",
+          "note": "Dialog semantics",
+          "fragment": "role:\"dialog\"",
+          "offset_utf16": 2428,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "BM-26",
+          "note": "Modal semantics",
+          "fragment": "\"aria-modal\":\"true\"",
+          "offset_utf16": 2442,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "BM-27",
+          "note": "Escape key handling",
+          "fragment": "onKeydown:N(T,[\"esc\"])",
+          "offset_utf16": 2741,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "BM-28",
+          "note": "Programmatic focus target",
+          "fragment": "tabindex:\"-1\"",
+          "offset_utf16": 2764,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "BM-29",
+          "note": "Backdrop transition",
+          "fragment": "name:\"modal-fade\"",
+          "offset_utf16": 2275,
+          "physical_line": 1,
+          "found": true
+        },
+        {
+          "id": "BM-30",
+          "note": "Content transition",
+          "fragment": "name:\"modal-slide\"",
+          "offset_utf16": 2495,
+          "physical_line": 1,
+          "found": true
+        }
+      ]
+    }
+  ]
+}
