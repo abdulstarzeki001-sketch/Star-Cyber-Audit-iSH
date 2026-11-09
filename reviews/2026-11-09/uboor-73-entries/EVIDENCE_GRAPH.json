@@ -1,0 +1,265 @@
+{
+  "date": "2026-11-09",
+  "file_metadata": {
+    "original_path": "research/private-evidence/2026-11-09/UBOOR_ALL_73_IMAGES_COMPLETE_TEXT_2026-11-09 2.txt",
+    "file_bytes": 137148,
+    "source_lines": 2291,
+    "git_blob_sha1": "54282a0c7d4711a7b493d394712e02a7fb820e2f",
+    "declared_original_images": 65,
+    "declared_analytical_entries": 73,
+    "date_of_browser_screenshots": "2026-01-21",
+    "event_viewer_image_date": "2025-12-29",
+    "primary_source_type": "historical annotated transcription of JPEG screenshots, not native HAR or live server responses"
+  },
+  "evidence_tiers": {
+    "A": "transcription provides requested HTTP method or visible field with specific screenshot and range, still unverified against original pixels",
+    "B": "same claim repeated in separate transcribed screenshots",
+    "C": "inferred from UI or paths, requires raw Request/Response or backend to confirm",
+    "N": "not established by source"
+  },
+  "entities": [
+    {
+      "id": "owner_page",
+      "kind": "browser_page",
+      "name": "/company-owner",
+      "redact_query_parameter": true,
+      "evidence_lines": [
+        180,
+        185
+      ]
+    },
+    {
+      "id": "search",
+      "kind": "api_request",
+      "method": "POST",
+      "path": "/api/local_form/search_iraqi_company",
+      "body_keys": [
+        "page",
+        "per_page",
+        "searchdata[].company_hash_code",
+        "sort_by",
+        "sort_dir"
+      ],
+      "response_observed": true,
+      "tier": "A",
+      "evidence_lines": [
+        222,
+        288
+      ],
+      "repeat_lines": [
+        930,
+        993,
+        2106,
+        2132
+      ]
+    },
+    {
+      "id": "items",
+      "kind": "api_request",
+      "method": "GET",
+      "path_template": "/api/local_form/get_company_items/{hash_id}",
+      "body_keys": [],
+      "response_observed": true,
+      "observed_response_keys": [
+        "items",
+        "parent_hash_id",
+        "total_items",
+        "items[].hash_id",
+        "items[].item_name",
+        "items[].unit",
+        "items[].production_capacity",
+        "items[].monthly_yearly",
+        "items[].time_stamp"
+      ],
+      "tier": "A",
+      "evidence_lines": [
+        290,
+        320
+      ],
+      "repeat_lines": [
+        1507,
+        1540,
+        1547,
+        1588,
+        1658,
+        1730
+      ]
+    },
+    {
+      "id": "company_document",
+      "kind": "api_request",
+      "method": "POST",
+      "path_template": "/api/local_form/return_company_doc/{company_hash_code}",
+      "response_observed": false,
+      "http_status_observed": 200,
+      "unknown_response_content": true,
+      "tier": "A",
+      "evidence_lines": [
+        322,
+        325
+      ],
+      "repeat_lines": [
+        2017,
+        2046
+      ]
+    },
+    {
+      "id": "external_qr_image",
+      "kind": "third_party_request",
+      "host": "quickchart.io",
+      "path": "/qr",
+      "query_parameters": [
+        "text"
+      ],
+      "token_value_truncated": true,
+      "tier": "B",
+      "evidence_lines": [
+        327,
+        333
+      ],
+      "repeat_lines": [
+        2047,
+        2082,
+        2197,
+        2220
+      ]
+    },
+    {
+      "id": "iconify",
+      "kind": "third_party_asset",
+      "host": "api.iconify.design",
+      "path": "/lucide.json",
+      "cache": "disk cache in selected screenshots",
+      "tier": "A",
+      "evidence_lines": [
+        335,
+        375
+      ],
+      "repeat_lines": [
+        1275,
+        1452,
+        1973,
+        2016
+      ]
+    },
+    {
+      "id": "polling",
+      "kind": "unknown_request",
+      "name": "longpooling?get&nocache",
+      "method": "unknown",
+      "purpose": "unknown",
+      "tier": "C",
+      "evidence_lines": [
+        377,
+        410
+      ]
+    },
+    {
+      "id": "init",
+      "kind": "unknown_request",
+      "name": "init?data=...",
+      "method": "unknown",
+      "purpose": "unknown",
+      "tier": "C",
+      "evidence_lines": [
+        377,
+        410
+      ]
+    },
+    {
+      "id": "paper_invoice",
+      "kind": "independent_visible_paper",
+      "quantity_total": 286,
+      "weight_as_printed": 4175,
+      "amount_as_printed": 1661.75,
+      "confirmed_api_link": false,
+      "tier": "B",
+      "evidence_lines": [
+        413,
+        442
+      ]
+    },
+    {
+      "id": "graphics_event",
+      "kind": "unrelated_windows_diagnostic",
+      "event_number": 410,
+      "source": "Kernel-PnP",
+      "date": "2025-12-29",
+      "relationship_to_uboor": "none established",
+      "tier": "A",
+      "evidence_lines": [
+        1914,
+        1972
+      ]
+    }
+  ],
+  "identifiers": [
+    {
+      "name": "company_hash_code",
+      "usage": "search_iraqi_company Payload/response and return_company_doc URL",
+      "evidence_lines": [
+        236,
+        243,
+        270,
+        288,
+        322,
+        325,
+        1001,
+        1003
+      ],
+      "not_equivalent_to": "hash_id",
+      "raw_value_storage": "original private evidence only"
+    },
+    {
+      "name": "hash_id",
+      "usage": "company response and get_company_items URL",
+      "evidence_lines": [
+        270,
+        288,
+        290,
+        320,
+        1001,
+        1004
+      ],
+      "not_equivalent_to": "company_hash_code",
+      "raw_value_storage": "original private evidence only"
+    }
+  ],
+  "edges": [
+    [
+      "owner_page",
+      "search",
+      "the UI sends search condition; bearer header observed"
+    ],
+    [
+      "search",
+      "items",
+      "company record hash_id correlates with request URL"
+    ],
+    [
+      "search",
+      "company_document",
+      "company_hash_code correlates with document endpoint"
+    ],
+    [
+      "company_document",
+      "external_qr_image",
+      "same captured network sequence; causality and exact payload unproven"
+    ]
+  ],
+  "unresolved_questions": [
+    "Full authenticated POST return_company_doc response body/Preview and returned media type",
+    "How backend authorizes access to requested company/items/documents",
+    "Whether QuickChart QR input is sensitive, signed or opaque; visible string is truncated",
+    "CORS exact headers on ONE response; textual archive shows localhost:5173 and wildcard in different screenshots",
+    "Role of init?data and longpooling requests",
+    "Which deployed JS build corresponds to which screenshot date (hashed asset names differ)",
+    "Direct JPEG or HAR verification of some read-as-likely fields"
+  ],
+  "cautions": [
+    "No working credentials, bearer tokens or cookies supplied",
+    "Do not invoke the government API on guessed IDs",
+    "HTTP 200 doesn't prove authorized issuance",
+    "Frontend source and captured screenshots cannot establish server signing or policy"
+  ]
+}
