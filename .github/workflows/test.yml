@@ -17,6 +17,10 @@ jobs:
         run: |
           python -m py_compile analyze.py
           python -m unittest discover -s tests -v
+      - name: Test dashboard and local companion
+        run: |
+          node --test tests/test_dashboard.mjs tests/test_companion_ui.mjs
+          python -m unittest discover -s tools/companion/tests -v
       - name: Integration test using saved source snapshots (offline)
         run: |
           python analyze.py --local research
@@ -113,3 +117,4 @@ jobs:
             reports/report.html
           if-no-files-found: error
           retention-days: 14
+
