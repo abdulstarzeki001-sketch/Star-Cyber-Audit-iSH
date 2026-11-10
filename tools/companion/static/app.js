@@ -29,9 +29,10 @@
   document.querySelectorAll('.node-button').forEach(button=>button.addEventListener('click',()=>selectNode(button.dataset.node)));
   window.StarScene?.onSelect(selectNode);
   function syncChat(){
-    const ready=state.configured&&state.goclaw==='online';
+    const ready=state.configured&&(state.goclaw==='online'||state.goclaw==='auth');
     el.send.disabled=!ready||state.busy;
     if (!state.configured) el.chatStatus.textContent='يلزم إعداد رمز الوصول في الخادم';
+    else if (state.goclaw==='auth') el.chatStatus.textContent='تستجيب البوابة؛ سيتم التحقق من الصلاحية عند الإرسال';
     else if (state.goclaw!=='online') el.chatStatus.textContent='بانتظار اتصال بوابة المساعد';
     else el.chatStatus.textContent='البوابة متاحة · جاهز للمراسلة';
   }
@@ -62,14 +63,26 @@
     const label=document.createElement('span');label.className='message-label';label.textContent=role==='user'?'YOU':'STAR ASSISTANT';
     const p=document.createElement('p');p.textContent=content;box.append(label,p);el.messages.append(box);el.messages.scrollTop=el.messages.scrollHeight;
   }
+  function boundedContext(history, current){
+    // Keep the new message and the newest valid context within the server's UTF-8 limit.
+    let result=[{role:'user',content:current}];
+    const encoder=new TextEncoder();
+    for(let i=history.length-1;i>=0&&result.length<19;i--){
+      const item={role:history[i].role,content:Array.from(history[i].content).slice(0,6000).join('')};
+      const candidate=[item,...result];
+      if(encoder.encode(JSON.stringify({messages:candidate})).length>60*1024)break;
+      result=candidate;
+    }
+    return result;
+  }
   el.form.addEventListener('submit',async event=>{
     event.preventDefault();el.error.hidden=true;const text=el.input.value.trim();if(!text||state.busy||!state.csrf)return;
-    const proposed=[...state.messages,{role:'user',content:text}].slice(-19);
+    const proposed=boundedContext(state.messages,text);
     addMessage('user',text);el.input.value='';state.busy=true;syncChat();
     try{
       const res=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json','X-Star-CSRF':state.csrf},body:JSON.stringify({messages:proposed})});
       const data=await res.json();if(!res.ok)throw new Error(data.error||'تعذّر إرسال الرسالة');
-      addMessage('assistant',data.reply);state.messages=[...proposed,{role:'assistant',content:data.reply}].slice(-18);
+      addMessage('assistant',data.reply);state.messages=[...proposed,{role:'assistant',content:Array.from(data.reply).slice(0,6000).join('')}].slice(-18);
     }catch(error){el.error.textContent=error.message||'تعذّر إرسال الرسالة';el.error.hidden=false;el.input.value=text;}
     finally{state.busy=false;syncChat();}
   });

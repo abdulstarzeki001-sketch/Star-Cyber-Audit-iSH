@@ -48,7 +48,7 @@ sh run.sh                         # تحليل النسخ المحلية offline
 اختبار الإضافات محلياً:
 
 ```sh
-node --test tests/test_dashboard.mjs
+node --test tests/test_dashboard.mjs tests/test_companion_ui.mjs
 python3 -m unittest discover -s tools/companion/tests -v
 ```
 
